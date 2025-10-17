@@ -1,3 +1,5 @@
+$OutputEncoding = [System.Text.Encoding]::UTF8
+
 # Digital Program Board for SAFe PI Planning
 
 class ProgramBoard {
@@ -133,11 +135,9 @@ class ProgramBoard {
     }
     
     [string] GenerateBoard() {
-        $boardDisplay = @"
-╔════════════════════════════════════════════════════════════════╗
-║                    PROGRAM BOARD - PI $($this.PINumber)                    ║
-╠════════════════════════════════════════════════════════════════╣
-"@
+        $boardDisplay = "╔════════════════════════════════════════════════════════════════╗`n"
+        $boardDisplay += "║                    PROGRAM BOARD - PI $($this.PINumber)                    ║`n"
+        $boardDisplay += "╠════════════════════════════════════════════════════════════════╣`n"
         
         # Header row with iterations
         $header = "║ TEAM         "
@@ -145,29 +145,29 @@ class ProgramBoard {
             $header += "│ ITER $iteration     "
         }
         $header += "║"
-        $boardDisplay += "`n$header"
-        $boardDisplay += "`n╠══════════════"
+        $boardDisplay += "$header`n"
+        $boardDisplay += "╠══════════════"
         foreach ($i in $this.Iterations) {
             $boardDisplay += "╪════════════"
         }
-        $boardDisplay += "╣"
+        $boardDisplay += "╣`n"
         
         # Team rows
         foreach ($team in $this.Teams) {
-            $row = "`n║ {0,-12} " -f $team
+            $row = "║ {0,-12} " -f $team
             foreach ($iteration in $this.Iterations) {
                 $iterData = $this.Board[$team]["I$iteration"]
                 $capacity = "$($iterData.Committed)/$($iterData.Capacity)"
                 $row += "│ {0,-10} " -f $capacity
             }
             $row += "║"
-            $boardDisplay += $row
+            $boardDisplay += "$row`n"
         }
         
-        $boardDisplay += "`n╚════════════════════════════════════════════════════════════════╝"
+        $boardDisplay += "╚════════════════════════════════════════════════════════════════╝`n"
         
         # Dependency summary
-        $boardDisplay += "`n`nDEPENDENCIES:"
+        $boardDisplay += "`n`nDEPENDENCIES:`n"
         foreach ($depId in $this.Dependencies.Keys) {
             $dep = $this.Dependencies[$depId]
             $status = switch ($dep.Status) {
@@ -175,7 +175,7 @@ class ProgramBoard {
                 "RESOLVED" { "[✓]" }
                 default { "[ ]" }
             }
-            $boardDisplay += "`n$status $($dep.Provider.Team) I$($dep.Provider.Iteration) → $($dep.Consumer.Team) I$($dep.Consumer.Iteration): $($dep.Deliverable)"
+            $boardDisplay += "$status $($dep.Provider.Team) I$($dep.Provider.Iteration) → $($dep.Consumer.Team) I$($dep.Consumer.Iteration): $($dep.Deliverable)`n"
         }
         
         return $boardDisplay
