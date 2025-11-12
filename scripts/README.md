@@ -10,6 +10,8 @@ Claude memory and session state management scripts:
 - **embed_and_store.py** - Stores session summaries and context by embedding content via Google Gemini API into ChromaDB vector database for Claude's long-term memory
 - **query_chroma.py** - Retrieves stored session summaries and context from Claude's memory (ChromaDB session_summaries collection)
 - **neo4j_updater.py** - Updates Claude's knowledge graph in Neo4j to maintain relationships and context across sessions
+- **session_YYYYMMDD_setup.cypher** - Session-specific Cypher scripts to initialize or update knowledge graph state
+- **session_YYYYMMDD_setup.txt** - Human-readable session summaries documenting goals, components, and actions
 
 ## Purpose
 
