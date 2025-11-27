@@ -1,0 +1,101 @@
+{
+    "title": "Incident Response",
+    "description": "Structured incident response process for managing service disruptions, outages, and critical issues. Includes triage, investigation, resolution, and post-mortem phases.",
+    "version": 1,
+    "channel_name_template": "incident-<name>",
+    "message_on_join_enabled": true,
+    "message_on_join": "**INCIDENT CHANNEL**\n\nThis channel was created to manage an active incident. Please keep all incident-related communication here.\n\n**Incident Commander:** @[to be assigned]\n**Status:** Active\n\n**Quick Actions:**\n- `/zoom start` - Start bridge call\n- `/jira create` - Create incident ticket\n\n**Remember:** Update the run summary with current status regularly.",
+    "run_summary_template_enabled": true,
+    "run_summary_template": "**Incident Summary**\n\n**Status:** (Investigating / Identified / Monitoring / Resolved)\n**Severity:** #sev-1 / #sev-2 / #sev-3\n**Started:** \n**Duration:** \n\n**Impact:**\n- Affected Services: \n- Customer Impact: \n- Users Affected: \n\n**Current Status:**\n\n\n**Responders:**\n- Incident Commander: \n- Technical Lead: \n- Communications: \n\n**ETA to Resolution:**",
+    "status_update_enabled": true,
+    "reminder_timer_default_seconds": 1800,
+    "retrospective_enabled": true,
+    "retrospective_reminder_interval_seconds": 86400,
+    "retrospective_template": "### Incident Summary\nBrief 2-3 sentence overview of what happened, the impact, and how it was resolved.\n\n### Timeline\n| Time | Event |\n|------|-------|\n| | Incident detected |\n| | Investigation started |\n| | Root cause identified |\n| | Fix implemented |\n| | Incident resolved |\n\n### Impact Assessment\n- **Duration:** \n- **Affected Users:** \n- **Revenue Impact:** \n- **SLA Impact:** \n\n### Root Cause\nDetailed explanation of what caused the incident.\n\n### Resolution\nWhat was done to resolve the incident.\n\n### What Went Well\n- Detection and response time\n- Communication\n- Technical response\n\n### What Could Be Improved\n- Gaps in monitoring\n- Process improvements\n- Documentation needs\n\n### Action Items\n| Action | Owner | Due Date | Status |\n|--------|-------|----------|--------|\n| | | | |\n\n### Lessons Learned\nKey takeaways to prevent similar incidents.",
+    "signal_any_keywords_enabled": true,
+    "signal_any_keywords": [
+        "sev-1",
+        "sev-2",
+        "#incident",
+        "outage",
+        "down",
+        "critical issue",
+        "production issue"
+    ],
+    "metrics": [],
+    "checklists": [
+        {
+            "title": "Triage & Initial Response",
+            "items": [
+                {"title": "Acknowledge the incident"},
+                {"title": "Assign Incident Commander"},
+                {"title": "Start bridge call", "command": "/zoom start"},
+                {"title": "Create incident ticket", "command": "/jira create"},
+                {"title": "Determine initial severity (SEV-1/2/3)"},
+                {"title": "Update run summary with current status"},
+                {"title": "Identify affected services and scope"},
+                {"title": "Estimate customer impact"},
+                {"title": "Add relevant team members to channel"},
+                {"title": "If SEV-1: Notify leadership immediately"},
+                {"title": "If SEV-1: Notify customer success team"},
+                {"title": "Post initial status update to stakeholders"}
+            ]
+        },
+        {
+            "title": "Investigation",
+            "items": [
+                {"title": "Review monitoring dashboards and alerts"},
+                {"title": "Check recent deployments or changes"},
+                {"title": "Review relevant logs"},
+                {"title": "Identify potential root causes"},
+                {"title": "Document hypotheses being tested"},
+                {"title": "Assign investigation tasks to team members"},
+                {"title": "Update status every 30 minutes"},
+                {"title": "Escalate to additional teams if needed"},
+                {"title": "Document timeline of events"},
+                {"title": "Root cause identified and documented"}
+            ]
+        },
+        {
+            "title": "Mitigation & Resolution",
+            "items": [
+                {"title": "Develop mitigation plan"},
+                {"title": "Get approval for mitigation (if needed)"},
+                {"title": "Implement mitigation/fix"},
+                {"title": "Verify fix in staging (if applicable)"},
+                {"title": "Deploy fix to production"},
+                {"title": "Monitor for effectiveness"},
+                {"title": "Confirm services restored"},
+                {"title": "Verify customer-facing functionality"},
+                {"title": "Update status to 'Monitoring'"},
+                {"title": "Continue monitoring for 30+ minutes"}
+            ]
+        },
+        {
+            "title": "Communication",
+            "items": [
+                {"title": "Post initial customer communication"},
+                {"title": "Update status page (if applicable)"},
+                {"title": "Send updates every 30 min during active incident"},
+                {"title": "Notify customer success of resolution"},
+                {"title": "Send resolution communication to customers"},
+                {"title": "Update status page to resolved"},
+                {"title": "Send internal summary to leadership"}
+            ]
+        },
+        {
+            "title": "Post-Incident",
+            "items": [
+                {"title": "Update final incident status"},
+                {"title": "Close incident ticket"},
+                {"title": "Schedule post-mortem meeting"},
+                {"title": "Collect timeline from all participants"},
+                {"title": "Complete retrospective document"},
+                {"title": "Review and assign action items"},
+                {"title": "Share post-mortem with stakeholders"},
+                {"title": "Track action items to completion"},
+                {"title": "Archive incident channel (optional)"}
+            ]
+        }
+    ]
+}

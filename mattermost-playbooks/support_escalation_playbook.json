@@ -1,0 +1,129 @@
+{
+    "title": "Customer Support Escalation",
+    "description": "Structured process for managing escalated customer support issues. Ensures proper handling, communication, and resolution of high-priority customer problems.",
+    "version": 1,
+    "channel_name_template": "escalation-<name>",
+    "message_on_join_enabled": true,
+    "message_on_join": "**Support Escalation Channel**\n\nThis channel was created to manage an escalated customer issue requiring cross-functional attention.\n\n**Escalation Team:**\n- Support Lead: @[to be assigned]\n- Technical SME: @[to be assigned]\n- Account Manager: @[to be assigned]\n- Engineering (if needed): @[to be assigned]\n\n**Customer Details:**\n- Ticket #: [Link]\n- Account Tier: \n- ARR: $\n\n**SLA:** Respond within [X hours]",
+    "run_summary_template_enabled": true,
+    "run_summary_template": "**Escalation Summary**\n\n**Customer:** \n**Account Tier:** (Enterprise / Pro / Standard)\n**ARR:** $\n**Ticket #:** \n\n**Issue:**\n\n\n**Priority:** (P1 / P2 / P3)\n**Status:** (New / Investigating / Waiting on Customer / Waiting on Engineering / Resolved)\n\n**Impact:**\n- Users Affected: \n- Business Impact: \n- Workaround Available: Yes / No\n\n**Owner:** \n**ETA to Resolution:** \n\n**Executive Attention Required:** Yes / No",
+    "status_update_enabled": true,
+    "reminder_timer_default_seconds": 14400,
+    "retrospective_enabled": true,
+    "retrospective_reminder_interval_seconds": 172800,
+    "retrospective_template": "### Escalation Summary\nBrief overview of the issue and resolution.\n\n### Metrics\n- Time to Resolution: ___ hours/days\n- Number of Updates Provided: ___\n- Customer Satisfaction: ___/5\n- SLA Met: Yes / No\n\n### Root Cause\nWhat caused this issue?\n\n### Resolution\nHow was the issue resolved?\n\n### Customer Impact\n- Duration of impact\n- Business consequences\n- Relationship impact\n\n### What Went Well\n- Response time\n- Communication quality\n- Technical resolution\n\n### What Could Be Improved\n- Process gaps\n- Communication delays\n- Technical gaps\n\n### Preventive Measures\n- Product improvements needed\n- Documentation updates\n- Process changes\n- Training needs\n\n### Follow-up Actions\n| Action | Owner | Due Date |\n|--------|-------|----------|\n| | | |",
+    "signal_any_keywords_enabled": true,
+    "signal_any_keywords": [
+        "escalation",
+        "escalate",
+        "urgent customer",
+        "executive escalation",
+        "customer unhappy",
+        "churn risk"
+    ],
+    "metrics": [],
+    "checklists": [
+        {
+            "title": "Escalation Intake",
+            "items": [
+                {"title": "Escalation received and acknowledged"},
+                {"title": "Original ticket reviewed"},
+                {"title": "Customer account details gathered"},
+                {"title": "Issue clearly documented"},
+                {"title": "Priority level assigned (P1/P2/P3)"},
+                {"title": "Impact assessment completed"},
+                {"title": "QUESTION: What has been tried so far?"},
+                {"title": "QUESTION: What is the customer expecting?"},
+                {"title": "Escalation owner assigned"},
+                {"title": "Relevant team members added to channel"},
+                {"title": "SLA clock started"},
+                {"title": "Initial acknowledgment sent to customer"}
+            ]
+        },
+        {
+            "title": "Investigation",
+            "items": [
+                {"title": "Technical SME engaged"},
+                {"title": "Logs and data collected"},
+                {"title": "Issue reproduced (if possible)"},
+                {"title": "Root cause identified"},
+                {"title": "QUESTION: Is this a known issue?"},
+                {"title": "QUESTION: Are other customers affected?"},
+                {"title": "Workaround identified (if available)"},
+                {"title": "Engineering escalation (if needed)"},
+                {"title": "Status update sent to customer"},
+                {"title": "Internal status documented"}
+            ]
+        },
+        {
+            "title": "Resolution Planning",
+            "items": [
+                {"title": "Resolution options identified"},
+                {"title": "Timeline estimated"},
+                {"title": "Resources allocated"},
+                {"title": "If bug: Engineering ticket created"},
+                {"title": "If config issue: Change plan created"},
+                {"title": "Customer updated on resolution plan"},
+                {"title": "ETA communicated"},
+                {"title": "Workaround provided (if applicable)"},
+                {"title": "Account Manager briefed"},
+                {"title": "Executive briefing (if P1)"}
+            ]
+        },
+        {
+            "title": "Resolution Execution",
+            "items": [
+                {"title": "Fix developed/implemented"},
+                {"title": "Fix tested"},
+                {"title": "Customer notified of resolution"},
+                {"title": "Fix deployed/applied"},
+                {"title": "Customer confirms issue resolved"},
+                {"title": "Verification period completed"},
+                {"title": "Documentation updated"},
+                {"title": "Knowledge base article created/updated"}
+            ]
+        },
+        {
+            "title": "Customer Communication",
+            "items": [
+                {"title": "Regular status updates sent (per SLA)"},
+                {"title": "Transparent about timeline"},
+                {"title": "Proactive communication maintained"},
+                {"title": "Account Manager kept informed"},
+                {"title": "Executive summary provided (if needed)"},
+                {"title": "Resolution confirmation sent"},
+                {"title": "Follow-up scheduled"},
+                {"title": "Customer satisfaction checked"}
+            ]
+        },
+        {
+            "title": "Closure & Follow-up",
+            "items": [
+                {"title": "Ticket marked as resolved"},
+                {"title": "Customer confirms satisfaction"},
+                {"title": "CSAT survey sent"},
+                {"title": "Internal retrospective completed"},
+                {"title": "Preventive measures identified"},
+                {"title": "Product feedback submitted (if applicable)"},
+                {"title": "Documentation improved"},
+                {"title": "Account health assessed"},
+                {"title": "Relationship repair actions (if needed)"},
+                {"title": "Executive follow-up (if needed)"},
+                {"title": "Archive escalation channel"}
+            ]
+        },
+        {
+            "title": "At-Risk Account Actions (If Applicable)",
+            "items": [
+                {"title": "Churn risk assessed"},
+                {"title": "Account Manager alerted"},
+                {"title": "Executive sponsor engaged"},
+                {"title": "Goodwill gesture considered (credit, etc.)"},
+                {"title": "Recovery plan created"},
+                {"title": "Follow-up cadence established"},
+                {"title": "Success metrics defined"},
+                {"title": "Relationship recovery tracked"}
+            ]
+        }
+    ]
+}

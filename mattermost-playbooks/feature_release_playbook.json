@@ -1,0 +1,145 @@
+{
+    "title": "Feature Release",
+    "description": "End-to-end feature release playbook covering planning, development, testing, launch, and post-launch phases. Ensures coordinated releases across all teams.",
+    "version": 1,
+    "channel_name_template": "release-<name>",
+    "message_on_join_enabled": true,
+    "message_on_join": "**Feature Release Channel**\n\nThis channel coordinates all activities for this feature release.\n\n**Release Team:**\n- Product Manager: @[to be assigned]\n- Engineering Lead: @[to be assigned]\n- QA Lead: @[to be assigned]\n- Marketing: @[to be assigned]\n- Customer Success: @[to be assigned]\n\n**Key Dates:**\n- Target Release: [Date]\n- Code Freeze: [Date]\n- Beta Start: [Date]\n\n**Resources:**\n- PRD: [Link]\n- Design Specs: [Link]\n- Release Checklist: [Link]",
+    "run_summary_template_enabled": true,
+    "run_summary_template": "**Release Overview**\n\n**Feature Name:** \n**Version:** \n**Release Type:** (Major / Minor / Patch)\n\n**Key Dates:**\n- Development Start: \n- Code Freeze: \n- Beta/Staging: \n- Target Release: \n\n**Status:** (Planning / In Development / Testing / Ready / Released)\n\n**Team:**\n- PM: \n- Eng Lead: \n- QA Lead: \n\n**Risks/Blockers:**\n\n\n**Go/No-Go Decision:**",
+    "status_update_enabled": true,
+    "reminder_timer_default_seconds": 259200,
+    "retrospective_enabled": true,
+    "retrospective_reminder_interval_seconds": 604800,
+    "retrospective_template": "### Release Summary\nBrief overview of what was released, key features, and overall success.\n\n### Metrics\n- On-time delivery: Yes / No (if no, days delayed: ___)\n- Bugs found in production: ___\n- Customer adoption (first week): ___%\n- Support tickets related to release: ___\n\n### What Went Well\n- Development process\n- Testing coverage\n- Communication\n- Launch execution\n\n### What Could Be Improved\n- Planning\n- Coordination\n- Testing\n- Documentation\n\n### Customer Feedback\n- Positive feedback:\n- Issues reported:\n- Feature requests:\n\n### Action Items\n| Action | Owner | Due Date |\n|--------|-------|----------|\n| | | |\n\n### Lessons for Next Release\nKey takeaways to apply to future releases.",
+    "signal_any_keywords_enabled": true,
+    "signal_any_keywords": [
+        "feature release",
+        "product launch",
+        "go-live",
+        "release ready",
+        "shipping"
+    ],
+    "metrics": [],
+    "checklists": [
+        {
+            "title": "Planning & Kickoff",
+            "items": [
+                {"title": "PRD/Requirements document finalized"},
+                {"title": "Design specs completed and approved"},
+                {"title": "Technical design review completed"},
+                {"title": "Engineering estimates provided"},
+                {"title": "Release date agreed upon"},
+                {"title": "Success metrics defined"},
+                {"title": "Dependencies identified"},
+                {"title": "Risk assessment completed"},
+                {"title": "Team resources confirmed"},
+                {"title": "Kickoff meeting held with all stakeholders"},
+                {"title": "Release channel created and team added"}
+            ]
+        },
+        {
+            "title": "Development",
+            "items": [
+                {"title": "Development sprint(s) planned"},
+                {"title": "Feature flags configured"},
+                {"title": "Development started"},
+                {"title": "Daily standups scheduled"},
+                {"title": "Code reviews in progress"},
+                {"title": "Unit tests written"},
+                {"title": "Integration tests written"},
+                {"title": "Development complete"},
+                {"title": "Code merged to main branch"},
+                {"title": "CHECKPOINT: Code freeze date met"}
+            ]
+        },
+        {
+            "title": "Testing & QA",
+            "items": [
+                {"title": "Test plan created"},
+                {"title": "QA environment set up"},
+                {"title": "Functional testing complete"},
+                {"title": "Integration testing complete"},
+                {"title": "Performance testing complete"},
+                {"title": "Security review complete"},
+                {"title": "Accessibility testing complete"},
+                {"title": "Regression testing complete"},
+                {"title": "Bug fixes verified"},
+                {"title": "UAT sign-off received"},
+                {"title": "CHECKPOINT: QA approved for release"}
+            ]
+        },
+        {
+            "title": "Documentation & Training",
+            "items": [
+                {"title": "User documentation written"},
+                {"title": "API documentation updated"},
+                {"title": "Release notes drafted"},
+                {"title": "Help center articles created"},
+                {"title": "Internal training materials prepared"},
+                {"title": "Support team trained"},
+                {"title": "Sales team trained"},
+                {"title": "Customer success team briefed"},
+                {"title": "FAQ document prepared"}
+            ]
+        },
+        {
+            "title": "Marketing & Communications",
+            "items": [
+                {"title": "Marketing plan finalized"},
+                {"title": "Blog post drafted"},
+                {"title": "Email announcement prepared"},
+                {"title": "Social media content created"},
+                {"title": "In-app messaging configured"},
+                {"title": "Press release (if applicable)"},
+                {"title": "Customer communication scheduled"},
+                {"title": "Internal announcement prepared"}
+            ]
+        },
+        {
+            "title": "Pre-Launch Checklist",
+            "items": [
+                {"title": "Go/No-Go meeting scheduled"},
+                {"title": "All blockers resolved"},
+                {"title": "Rollback plan documented"},
+                {"title": "Monitoring dashboards ready"},
+                {"title": "Alerting configured"},
+                {"title": "On-call team briefed"},
+                {"title": "Support team ready"},
+                {"title": "All approvals obtained"},
+                {"title": "DECISION: Go/No-Go confirmed"}
+            ]
+        },
+        {
+            "title": "Launch Execution",
+            "items": [
+                {"title": "Deploy to production"},
+                {"title": "Verify deployment successful"},
+                {"title": "Enable feature flag (if applicable)"},
+                {"title": "Smoke tests passed"},
+                {"title": "Monitor error rates"},
+                {"title": "Monitor performance metrics"},
+                {"title": "Send customer communications"},
+                {"title": "Publish blog post"},
+                {"title": "Post social media updates"},
+                {"title": "Send internal announcement"},
+                {"title": "Update status page (if applicable)"}
+            ]
+        },
+        {
+            "title": "Post-Launch",
+            "items": [
+                {"title": "Monitor adoption metrics"},
+                {"title": "Track support tickets"},
+                {"title": "Collect customer feedback"},
+                {"title": "Address any critical issues"},
+                {"title": "48-hour stability check"},
+                {"title": "One-week review meeting"},
+                {"title": "Update documentation based on feedback"},
+                {"title": "Complete retrospective"},
+                {"title": "Share learnings with team"},
+                {"title": "Archive release channel"}
+            ]
+        }
+    ]
+}

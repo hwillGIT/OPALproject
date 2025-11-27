@@ -1,0 +1,139 @@
+{
+    "title": "Employee Onboarding",
+    "description": "Comprehensive employee onboarding playbook covering pre-boarding, first day, first week, 30/60/90 day milestones. Ensures new hires are set up for success.",
+    "version": 1,
+    "channel_name_template": "onboard-<name>",
+    "message_on_join_enabled": true,
+    "message_on_join": "**Welcome to the Team!**\n\nThis channel is your onboarding hub. Your manager and onboarding buddy will guide you through everything you need to get started.\n\n**Your Onboarding Team:**\n- Manager: @[to be assigned]\n- Onboarding Buddy: @[to be assigned]\n- HR Contact: @[to be assigned]\n\n**Key Resources:**\n- Employee Handbook: [Link]\n- IT Setup Guide: [Link]\n- Benefits Information: [Link]\n\nDon't hesitate to ask questions here!",
+    "run_summary_template_enabled": true,
+    "run_summary_template": "**New Hire Information**\n\n**Name:** \n**Role:** \n**Department:** \n**Start Date:** \n**Location:** (Remote / Office / Hybrid)\n\n**Manager:** \n**Onboarding Buddy:** \n\n**Equipment Status:**\n- Laptop: (Ordered / Shipped / Delivered / Setup)\n- Accounts: (Pending / Created)\n\n**Current Phase:** \n**Overall Status:** (On Track / At Risk / Behind)",
+    "status_update_enabled": true,
+    "reminder_timer_default_seconds": 604800,
+    "retrospective_enabled": true,
+    "retrospective_reminder_interval_seconds": 604800,
+    "retrospective_template": "### 90-Day Onboarding Review\n\n### New Hire Feedback\n- What went well during onboarding?\n- What could have been better?\n- What information was missing?\n- How prepared do you feel for your role?\n\n### Manager Assessment\n- Is the new hire meeting expectations?\n- What additional support is needed?\n- Any concerns to address?\n\n### Metrics\n- Time to first contribution: ___ days\n- Training completion: ___%\n- 30-day check-in rating: ___/5\n- 60-day check-in rating: ___/5\n- 90-day check-in rating: ___/5\n\n### Process Improvements\n- What should we change in the onboarding process?\n- Resources to add or update?\n\n### Next Steps\n- Development goals for next quarter\n- Training opportunities\n- Career path discussion scheduled",
+    "signal_any_keywords_enabled": true,
+    "signal_any_keywords": [
+        "new hire",
+        "new employee",
+        "starting monday",
+        "first day"
+    ],
+    "metrics": [],
+    "checklists": [
+        {
+            "title": "Pre-Boarding (Before Start Date)",
+            "items": [
+                {"title": "Send offer letter and collect signed documents"},
+                {"title": "Run background check"},
+                {"title": "Order laptop and equipment"},
+                {"title": "Create email account"},
+                {"title": "Set up accounts: Slack, Mattermost, HRIS"},
+                {"title": "Add to relevant email distribution lists"},
+                {"title": "Assign onboarding buddy"},
+                {"title": "Schedule first week meetings"},
+                {"title": "Prepare workspace (if in-office)"},
+                {"title": "Send welcome email with first day instructions"},
+                {"title": "Ship equipment (if remote)"},
+                {"title": "Add to team calendar"},
+                {"title": "Prepare onboarding materials packet"},
+                {"title": "Notify team of new hire start date"}
+            ]
+        },
+        {
+            "title": "Day 1: Welcome & Setup",
+            "items": [
+                {"title": "Welcome meeting with manager"},
+                {"title": "Complete HR paperwork and I-9"},
+                {"title": "Set up laptop and accounts"},
+                {"title": "Review IT security policies"},
+                {"title": "Building/badge access (if in-office)"},
+                {"title": "Add profile photo to company systems"},
+                {"title": "Meet onboarding buddy"},
+                {"title": "Tour office or virtual workspace overview"},
+                {"title": "Lunch with team (virtual or in-person)"},
+                {"title": "Review org chart and key contacts"},
+                {"title": "Set up voicemail and communication tools"},
+                {"title": "End of day check-in with manager"}
+            ]
+        },
+        {
+            "title": "Week 1: Orientation & Learning",
+            "items": [
+                {"title": "Complete company orientation training"},
+                {"title": "Review employee handbook"},
+                {"title": "Enroll in benefits"},
+                {"title": "Set up direct deposit"},
+                {"title": "Complete compliance training"},
+                {"title": "Meet with key stakeholders"},
+                {"title": "Shadow team members"},
+                {"title": "Review team documentation and wikis"},
+                {"title": "Understand team goals and OKRs"},
+                {"title": "Set up 1:1 meeting cadence with manager"},
+                {"title": "Access all necessary tools and systems"},
+                {"title": "Complete IT security training"},
+                {"title": "Week 1 feedback session with manager"}
+            ]
+        },
+        {
+            "title": "Week 2-4: Integration",
+            "items": [
+                {"title": "Complete role-specific training"},
+                {"title": "First small project or task assigned"},
+                {"title": "Meet with cross-functional partners"},
+                {"title": "Attend team meetings"},
+                {"title": "Start contributing to daily work"},
+                {"title": "Review and understand key processes"},
+                {"title": "Document questions and learnings"},
+                {"title": "Buddy check-in sessions"},
+                {"title": "Understand escalation procedures"},
+                {"title": "Review team roadmap and priorities"}
+            ]
+        },
+        {
+            "title": "30-Day Checkpoint",
+            "items": [
+                {"title": "30-day manager check-in scheduled"},
+                {"title": "Review initial goals and expectations"},
+                {"title": "Gather new hire feedback"},
+                {"title": "Assess training completion"},
+                {"title": "Discuss any concerns or blockers"},
+                {"title": "Adjust onboarding plan if needed"},
+                {"title": "Confirm benefits enrollment complete"},
+                {"title": "Set goals for next 30 days"},
+                {"title": "QUESTION: How is the role matching expectations?"},
+                {"title": "QUESTION: What additional support is needed?"}
+            ]
+        },
+        {
+            "title": "60-Day Checkpoint",
+            "items": [
+                {"title": "60-day manager check-in scheduled"},
+                {"title": "Review progress on goals"},
+                {"title": "Assess integration with team"},
+                {"title": "Evaluate performance trajectory"},
+                {"title": "Identify development opportunities"},
+                {"title": "Discuss career growth path"},
+                {"title": "Address any ongoing concerns"},
+                {"title": "QUESTION: What's going well?"},
+                {"title": "QUESTION: What could be better?"},
+                {"title": "Set goals for final 30 days of onboarding"}
+            ]
+        },
+        {
+            "title": "90-Day Checkpoint & Completion",
+            "items": [
+                {"title": "90-day review meeting scheduled"},
+                {"title": "Formal performance review"},
+                {"title": "Complete onboarding survey"},
+                {"title": "Confirm all training complete"},
+                {"title": "Transition from onboarding buddy"},
+                {"title": "Set Q1 performance goals"},
+                {"title": "Discuss long-term career development"},
+                {"title": "Celebrate successful onboarding"},
+                {"title": "Complete retrospective"},
+                {"title": "Archive onboarding channel"}
+            ]
+        }
+    ]
+}

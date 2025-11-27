@@ -1,0 +1,146 @@
+{
+    "title": "Sales Deal Management",
+    "description": "Structured sales process playbook for managing deals from qualification through close. Includes discovery, demo, proposal, negotiation, and close phases with key questions and exit criteria.",
+    "version": 1,
+    "channel_name_template": "deal-<name>",
+    "message_on_join_enabled": true,
+    "message_on_join": "**Sales Deal Room**\n\nThis channel is dedicated to coordinating this sales opportunity.\n\n**Deal Team:**\n- Account Executive: @[to be assigned]\n- Sales Engineer: @[to be assigned]\n- Account Manager: @[to be assigned]\n\n**Key Resources:**\n- CRM Record: [Link]\n- Proposal Template: [Link]\n- Pricing Calculator: [Link]\n\n**Remember:** Keep all deal communications and decisions documented here.",
+    "run_summary_template_enabled": true,
+    "run_summary_template": "**Deal Overview**\n\n**Account:** \n**Opportunity Name:** \n**Deal Value:** $\n**Close Date:** \n\n**Stage:** (Qualification / Discovery / Demo / Proposal / Negotiation / Closed)\n**Probability:** %\n\n**Decision Maker:** \n**Champion:** \n**Economic Buyer:** \n\n**Competition:** \n**Key Pain Points:**\n\n\n**Next Steps:**\n\n\n**Risks:**",
+    "status_update_enabled": true,
+    "reminder_timer_default_seconds": 259200,
+    "retrospective_enabled": true,
+    "retrospective_reminder_interval_seconds": 604800,
+    "retrospective_template": "### Deal Summary\nBrief overview of the deal outcome.\n\n### Result\n- **Won / Lost**\n- Final Deal Value: $___\n- Sales Cycle Length: ___ days\n- Discount Given: ___%\n\n### If Won:\n- What made us win?\n- Key differentiators\n- Champion effectiveness\n- Competitive advantages used\n\n### If Lost:\n- Primary reason for loss\n- Competitor who won (if applicable)\n- What could we have done differently?\n- Were there early warning signs?\n\n### Process Assessment\n- Discovery effectiveness: ___/5\n- Demo quality: ___/5\n- Proposal accuracy: ___/5\n- Responsiveness: ___/5\n\n### Lessons Learned\n- What worked well?\n- What should we improve?\n- Insights about this market/segment?\n\n### Follow-up Actions\n- If won: Handoff to CS notes\n- If lost: Nurture plan",
+    "signal_any_keywords_enabled": true,
+    "signal_any_keywords": [
+        "new deal",
+        "new opportunity",
+        "RFP received",
+        "proposal request"
+    ],
+    "metrics": [],
+    "checklists": [
+        {
+            "title": "Qualification (BANT/MEDDIC)",
+            "items": [
+                {"title": "Lead source identified"},
+                {"title": "Initial research on company completed"},
+                {"title": "BUDGET: What is their budget range?"},
+                {"title": "AUTHORITY: Who is the decision maker?"},
+                {"title": "NEED: What problem are they trying to solve?"},
+                {"title": "TIMELINE: When do they need a solution?"},
+                {"title": "METRICS: How will they measure success?"},
+                {"title": "ECONOMIC BUYER: Who controls the budget?"},
+                {"title": "DECISION CRITERIA: How will they decide?"},
+                {"title": "DECISION PROCESS: What is their buying process?"},
+                {"title": "IDENTIFY PAIN: What happens if they don't solve this?"},
+                {"title": "CHAMPION: Who is our internal advocate?"},
+                {"title": "COMPETITION: Who else are they evaluating?"},
+                {"title": "Deal created in CRM"},
+                {"title": "EXIT: Deal qualified - proceed to Discovery"}
+            ]
+        },
+        {
+            "title": "Discovery",
+            "items": [
+                {"title": "Discovery call scheduled"},
+                {"title": "Pre-call research completed"},
+                {"title": "Stakeholder map created"},
+                {"title": "QUESTION: What triggered this initiative now?"},
+                {"title": "QUESTION: What have you tried before?"},
+                {"title": "QUESTION: What does success look like?"},
+                {"title": "QUESTION: Who else needs to be involved?"},
+                {"title": "QUESTION: What's the cost of doing nothing?"},
+                {"title": "Current state documented"},
+                {"title": "Desired future state documented"},
+                {"title": "Technical requirements identified"},
+                {"title": "Integration needs identified"},
+                {"title": "Security/compliance requirements noted"},
+                {"title": "Discovery summary sent to prospect"},
+                {"title": "EXIT: Clear understanding of needs - proceed to Demo"}
+            ]
+        },
+        {
+            "title": "Demo / Solution Presentation",
+            "items": [
+                {"title": "Demo scheduled with key stakeholders"},
+                {"title": "Custom demo environment prepared"},
+                {"title": "Demo tailored to their specific use cases"},
+                {"title": "Technical team involved (if needed)"},
+                {"title": "Demo delivered"},
+                {"title": "Questions answered"},
+                {"title": "Objections addressed"},
+                {"title": "QUESTION: How does this compare to what you expected?"},
+                {"title": "QUESTION: What would prevent you from moving forward?"},
+                {"title": "Next steps agreed upon"},
+                {"title": "Demo follow-up sent"},
+                {"title": "Trial/POC discussed (if applicable)"},
+                {"title": "EXIT: Positive demo feedback - proceed to Proposal"}
+            ]
+        },
+        {
+            "title": "Proposal / Quote",
+            "items": [
+                {"title": "Pricing approved internally"},
+                {"title": "Proposal document created"},
+                {"title": "Custom terms reviewed (if any)"},
+                {"title": "Legal review completed (if needed)"},
+                {"title": "ROI/business case included"},
+                {"title": "Implementation timeline included"},
+                {"title": "Proposal delivered to prospect"},
+                {"title": "Proposal walkthrough meeting held"},
+                {"title": "QUESTION: Does this meet your expectations?"},
+                {"title": "QUESTION: What concerns do you have?"},
+                {"title": "Feedback collected"},
+                {"title": "Revisions made (if needed)"},
+                {"title": "EXIT: Proposal accepted - proceed to Negotiation"}
+            ]
+        },
+        {
+            "title": "Negotiation",
+            "items": [
+                {"title": "Procurement/legal contact identified"},
+                {"title": "Their contract requirements understood"},
+                {"title": "Redlines received and reviewed"},
+                {"title": "Internal approval for any concessions"},
+                {"title": "Security questionnaire completed"},
+                {"title": "Reference calls provided (if requested)"},
+                {"title": "Final pricing agreed"},
+                {"title": "Contract terms agreed"},
+                {"title": "Implementation start date confirmed"},
+                {"title": "QUESTION: What else do you need to sign?"},
+                {"title": "EXIT: Terms agreed - proceed to Close"}
+            ]
+        },
+        {
+            "title": "Close",
+            "items": [
+                {"title": "Final contract sent for signature"},
+                {"title": "Contract signed by prospect"},
+                {"title": "Contract countersigned internally"},
+                {"title": "PO received (if required)"},
+                {"title": "Deal marked as Closed Won in CRM"},
+                {"title": "Finance notified for invoicing"},
+                {"title": "Customer Success introduced"},
+                {"title": "Implementation kickoff scheduled"},
+                {"title": "Internal win announcement"},
+                {"title": "Thank you note sent to champion"},
+                {"title": "Complete deal retrospective"}
+            ]
+        },
+        {
+            "title": "Deal Lost (If Applicable)",
+            "items": [
+                {"title": "Loss reason documented"},
+                {"title": "Competitor identified (if applicable)"},
+                {"title": "Deal marked as Closed Lost in CRM"},
+                {"title": "Loss debrief with prospect (if possible)"},
+                {"title": "Lessons learned documented"},
+                {"title": "Nurture campaign set up"},
+                {"title": "Complete deal retrospective"},
+                {"title": "Archive deal channel"}
+            ]
+        }
+    ]
+}
