@@ -1,0 +1,335 @@
+{
+    "title": "Customer Onboarding - Best Practice",
+    "description": "Comprehensive customer onboarding playbook with 6 phases: Pre-Onboarding, Kickoff & Discovery, Technical Implementation, Training & Enablement, Go-Live & Hypercare, and Steady State. Includes embedded questions, exit criteria, and automation triggers.",
+    "version": 1,
+    "channel_name_template": "onboarding-<name>",
+    "message_on_join_enabled": true,
+    "message_on_join": "Welcome to the **Customer Onboarding** channel!\n\nThis channel was created as part of the Customer Onboarding playbook. All discussions, updates, and decisions related to this customer's onboarding will happen here.\n\n**Key Resources:**\n- Success Plan: [Link to be added]\n- Technical Requirements: [Link to be added]\n- Training Schedule: [Link to be added]\n\n**Team:**\n- CS Manager: @[to be assigned]\n- Implementation: @[to be assigned]\n- Training: @[to be assigned]",
+    "run_summary_template_enabled": true,
+    "run_summary_template": "**Customer:** \n**Segment:** (Self-serve / Scaled / High-touch / Strategic)\n**ARR:** $\n**Contract Start:** \n**Target Go-Live:** \n\n**Success Criteria:**\n- Primary Metric: \n- Target Value: \n\n**Key Stakeholders:**\n- Executive Sponsor: \n- Project Lead: \n- Technical Lead: \n\n**Current Phase:** \n**Health Score:** (Green/Yellow/Red)",
+    "status_update_enabled": true,
+    "reminder_timer_default_seconds": 604800,
+    "retrospective_enabled": true,
+    "retrospective_reminder_interval_seconds": 604800,
+    "retrospective_template": "### Onboarding Summary\nBrief overview of the customer onboarding journey - what went well, what was challenging, and key outcomes achieved.\n\n### Time-to-Value Achieved\n- Time-to-First-Value: ___ days (target: <14)\n- Time-to-Go-Live: ___ days\n- Training Completion: ___% (target: >85%)\n\n### What Went Well\n- What worked that we should repeat?\n- What made this customer successful?\n- What automation saved time?\n\n### What Could Be Improved\n- Where did we struggle?\n- What took longer than expected?\n- What did the customer find frustrating?\n\n### Customer Feedback\n- Go-Live CSAT: ___/5\n- Day 90 NPS: ___\n- Key quotes from customer:\n\n### Process Improvements\n- Changes to make to this playbook:\n- New resources needed:\n- Training improvements:\n\n### Follow-up Actions\nList action items with owners and due dates to implement learnings.",
+    "signal_any_keywords_enabled": true,
+    "signal_any_keywords": [
+        "new customer",
+        "customer onboarding",
+        "kickoff call",
+        "go-live"
+    ],
+    "metrics": [],
+    "checklists": [
+        {
+            "title": "Phase 0: Pre-Onboarding - Sales Handoff",
+            "items": [
+                {"title": "Customer Profile: Company name, industry, size, geography documented"},
+                {"title": "ARR and contract length recorded"},
+                {"title": "Segment identified (Self-serve / Scaled / High-touch / Strategic)"},
+                {"title": "Contract start date confirmed"},
+                {"title": "QUESTION: Why did they buy? (Business problem solved)"},
+                {"title": "QUESTION: Why now? (Trigger event)"},
+                {"title": "QUESTION: Why us? (Differentiator that won)"},
+                {"title": "QUESTION: Who did they evaluate? (Competitors)"},
+                {"title": "QUESTION: What did we promise? (Commitments made)"},
+                {"title": "QUESTION: What concerns remain? (Unresolved objections)"},
+                {"title": "Executive Sponsor identified with contact info"},
+                {"title": "Project Lead identified with contact info"},
+                {"title": "Technical Lead identified with contact info"},
+                {"title": "Change Champion identified"},
+                {"title": "Primary success metric defined and quantified"},
+                {"title": "Target timeline documented"},
+                {"title": "Current tech stack documented"},
+                {"title": "Integration requirements listed"},
+                {"title": "Data migration scope assessed"},
+                {"title": "Security requirements identified (SSO, compliance)"},
+                {"title": "Timeline risks identified"},
+                {"title": "Resource risks identified"},
+                {"title": "Technical risks identified"},
+                {"title": "Handoff meeting completed (Sales + CS)"},
+                {"title": "Customer channel created"},
+                {"title": "Welcome email sent to customer"},
+                {"title": "EXIT: Handoff document 100% complete"},
+                {"title": "EXIT: CSM assigned and accepted"},
+                {"title": "EXIT: Kickoff meeting scheduled"}
+            ]
+        },
+        {
+            "title": "Phase 1: Kickoff & Discovery",
+            "items": [
+                {"title": "Handoff document reviewed thoroughly"},
+                {"title": "Kickoff deck customized (not generic)"},
+                {"title": "3 key validation questions prepared"},
+                {"title": "Preliminary success plan drafted"},
+                {"title": "KICKOFF: Introductions completed - your team and their team"},
+                {"title": "KICKOFF: Validate understanding of goals"},
+                {"title": "KICKOFF: Validate success criteria"},
+                {"title": "KICKOFF: Validate key dates and constraints"},
+                {"title": "Primary success metric confirmed"},
+                {"title": "QUESTION: How will we measure success?"},
+                {"title": "QUESTION: What is the baseline today?"},
+                {"title": "Targets defined: 30/60/90 days"},
+                {"title": "What's IN scope documented"},
+                {"title": "What's OUT of scope documented"},
+                {"title": "Key milestones identified with dates"},
+                {"title": "Meeting cadence agreed"},
+                {"title": "Communication channel agreed"},
+                {"title": "QUESTION: If stuck, who do we escalate to?"},
+                {"title": "TECHNICAL: Current architecture obtained"},
+                {"title": "TECHNICAL: SSO provider identified"},
+                {"title": "TECHNICAL: Integration inventory completed"},
+                {"title": "PROCESS: How do they do core workflow today?"},
+                {"title": "PROCESS: Where does current process break?"},
+                {"title": "PROCESS: Who are users, how many, where?"},
+                {"title": "Success Plan document created"},
+                {"title": "Technical Requirements documented"},
+                {"title": "Risk Register created"},
+                {"title": "EXIT: Success Plan signed off"},
+                {"title": "EXIT: Technical requirements validated"},
+                {"title": "EXIT: Phase 2 kickoff scheduled"}
+            ]
+        },
+        {
+            "title": "Phase 2: Technical Implementation - Core Setup",
+            "items": [
+                {"title": "Environment/tenant provisioned"},
+                {"title": "Organization settings configured"},
+                {"title": "User authentication set up"},
+                {"title": "Admin accounts created"},
+                {"title": "Roles and permissions configured"},
+                {"title": "Basic branding applied"},
+                {"title": "CHECKPOINT: Admin can log in and navigate"}
+            ]
+        },
+        {
+            "title": "Phase 2: Technical Implementation - Integrations",
+            "items": [
+                {"title": "Integration requirements reviewed"},
+                {"title": "QUESTION: Do we have all API credentials?"},
+                {"title": "API credentials obtained and stored"},
+                {"title": "Integration development started"},
+                {"title": "Integration testing (sandbox) completed"},
+                {"title": "Integration testing (production) completed"},
+                {"title": "Error handling configured"},
+                {"title": "CHECKPOINT: Data flows correctly"}
+            ]
+        },
+        {
+            "title": "Phase 2: Technical Implementation - Data Migration",
+            "items": [
+                {"title": "Data inventory completed"},
+                {"title": "Data mapping document created"},
+                {"title": "QUESTION: Has customer cleaned source data?"},
+                {"title": "Migration scripts developed"},
+                {"title": "Dry run migration completed"},
+                {"title": "Data validation completed"},
+                {"title": "Production migration scheduled"},
+                {"title": "Production migration executed"},
+                {"title": "Post-migration validation completed"},
+                {"title": "CHECKPOINT: Historical data accessible"}
+            ]
+        },
+        {
+            "title": "Phase 2: Technical Implementation - Security",
+            "items": [
+                {"title": "Security questionnaire completed"},
+                {"title": "QUESTION: SSO/SAML configuration details?"},
+                {"title": "SSO/SAML configured"},
+                {"title": "MFA enabled (if required)"},
+                {"title": "Audit logging configured"},
+                {"title": "Data retention policies set"},
+                {"title": "DPA/BAA signed (if required)"},
+                {"title": "CHECKPOINT: Security team sign-off"}
+            ]
+        },
+        {
+            "title": "Phase 2: Exit Criteria",
+            "items": [
+                {"title": "EXIT: Core platform configured and tested"},
+                {"title": "EXIT: All critical integrations working"},
+                {"title": "EXIT: Data migrated and validated"},
+                {"title": "EXIT: Security requirements met"},
+                {"title": "EXIT: Admin trained on basics"},
+                {"title": "EXIT: Test users validated workflows"},
+                {"title": "EXIT: Documentation complete"},
+                {"title": "EXIT: Ready for training phase"}
+            ]
+        },
+        {
+            "title": "Phase 3: Training - Change Management",
+            "items": [
+                {"title": "ADKAR: Awareness - 'Why' communicated"},
+                {"title": "ADKAR: Desire - 'What's in it for me' articulated"},
+                {"title": "ADKAR: Knowledge - Curriculum mapped to roles"},
+                {"title": "ADKAR: Ability - Practice environment ready"},
+                {"title": "ADKAR: Reinforcement - Support plan ready"}
+            ]
+        },
+        {
+            "title": "Phase 3: Training - Executive Sponsor (30 min)",
+            "items": [
+                {"title": "Training scheduled with Executive Sponsor"},
+                {"title": "Business value dashboard walkthrough"},
+                {"title": "Success metrics overview"},
+                {"title": "Escalation process explained"},
+                {"title": "QBR preview"},
+                {"title": "QUESTION: Any concerns from sponsor?"}
+            ]
+        },
+        {
+            "title": "Phase 3: Training - Admin/Power Users (4-8 hrs)",
+            "items": [
+                {"title": "Training sessions scheduled"},
+                {"title": "System administration covered"},
+                {"title": "User management covered"},
+                {"title": "Configuration covered"},
+                {"title": "Reporting and analytics covered"},
+                {"title": "Troubleshooting covered"},
+                {"title": "Best practices shared"},
+                {"title": "QUESTION: Do admins feel confident?"}
+            ]
+        },
+        {
+            "title": "Phase 3: Training - End Users (1-2 hrs)",
+            "items": [
+                {"title": "Training sessions scheduled"},
+                {"title": "Login and navigation covered"},
+                {"title": "Core workflow #1 trained"},
+                {"title": "Core workflow #2 trained"},
+                {"title": "Core workflow #3 trained"},
+                {"title": "Getting help explained"},
+                {"title": "Quick reference guide distributed"},
+                {"title": "QUESTION: What questions do users have?"}
+            ]
+        },
+        {
+            "title": "Phase 3: Training - Champions",
+            "items": [
+                {"title": "Champions identified (1 per team)"},
+                {"title": "Advanced features training"},
+                {"title": "How to train others session"},
+                {"title": "Feedback collection process"},
+                {"title": "Community access provided"},
+                {"title": "Recognition program explained"}
+            ]
+        },
+        {
+            "title": "Phase 3: Exit Criteria",
+            "items": [
+                {"title": "EXIT: Training completion >85%"},
+                {"title": "EXIT: All personas trained"},
+                {"title": "EXIT: Champions activated"},
+                {"title": "EXIT: Support resources accessible"},
+                {"title": "EXIT: Users can perform workflows independently"},
+                {"title": "EXIT: Go-live readiness confirmed"}
+            ]
+        },
+        {
+            "title": "Phase 4: Go-Live Readiness - Technical",
+            "items": [
+                {"title": "All integrations tested in production"},
+                {"title": "Data migration validated"},
+                {"title": "Performance baseline captured"},
+                {"title": "Monitoring and alerting configured"},
+                {"title": "Backup and recovery tested"},
+                {"title": "Rollback plan documented"},
+                {"title": "SSL certificates valid"},
+                {"title": "DNS configured"}
+            ]
+        },
+        {
+            "title": "Phase 4: Go-Live Readiness - Users & Support",
+            "items": [
+                {"title": "All users have accounts"},
+                {"title": "SSO working for all users"},
+                {"title": "Training completion verified"},
+                {"title": "Support resources documented"},
+                {"title": "Support team briefed"},
+                {"title": "Escalation contacts confirmed"},
+                {"title": "Hypercare SLAs activated (4h response)"},
+                {"title": "War room channel created"}
+            ]
+        },
+        {
+            "title": "Phase 4: Go-Live Execution",
+            "items": [
+                {"title": "Final go/no-go decision made"},
+                {"title": "Go-live communication sent"},
+                {"title": "Production environment activated"},
+                {"title": "Monitoring dashboards active"},
+                {"title": "First hours: no critical issues"},
+                {"title": "Day 1 status update sent"}
+            ]
+        },
+        {
+            "title": "Phase 4: Hypercare (Daily for 1-2 weeks)",
+            "items": [
+                {"title": "Morning: Check dashboards"},
+                {"title": "Morning: Internal standup"},
+                {"title": "Midday: Proactive customer outreach"},
+                {"title": "Afternoon: Issue triage"},
+                {"title": "End of day: Status update"},
+                {"title": "P1 issues resolved within 4 hours"},
+                {"title": "P2 issues resolved within 24 hours"},
+                {"title": "EXIT: 7 days with no P1 issues"},
+                {"title": "EXIT: Ticket volume stabilized"},
+                {"title": "EXIT: Customer confirms comfort level"}
+            ]
+        },
+        {
+            "title": "Phase 5: Day 30 Check-in",
+            "items": [
+                {"title": "Day 30 meeting scheduled"},
+                {"title": "Adoption metrics reviewed (DAU/WAU)"},
+                {"title": "Feature adoption measured"},
+                {"title": "QUESTION: What's working well?"},
+                {"title": "QUESTION: What's frustrating?"},
+                {"title": "QUESTION: What's missing?"},
+                {"title": "Quick wins celebrated"},
+                {"title": "Blockers addressed"},
+                {"title": "Plan adjusted if needed"},
+                {"title": "Day 60 check-in scheduled"}
+            ]
+        },
+        {
+            "title": "Phase 5: Day 60 Check-in",
+            "items": [
+                {"title": "Day 60 meeting scheduled"},
+                {"title": "QUESTION: Are you seeing expected value?"},
+                {"title": "Metrics compared to baseline"},
+                {"title": "Wins and ROI documented"},
+                {"title": "Optimization opportunities identified"},
+                {"title": "Expansion conversation started"},
+                {"title": "Support health reviewed"},
+                {"title": "QBR preparation started"}
+            ]
+        },
+        {
+            "title": "Phase 5: Day 90 Business Review (QBR)",
+            "items": [
+                {"title": "QBR deck prepared"},
+                {"title": "Success metrics vs targets analyzed"},
+                {"title": "ROI calculation completed"},
+                {"title": "Roadmap preview prepared"},
+                {"title": "QUESTION: What are priorities for next quarter?"},
+                {"title": "Expansion discussion completed"},
+                {"title": "Reference/case study ask made"},
+                {"title": "QBR summary sent"},
+                {"title": "Next QBR scheduled"}
+            ]
+        },
+        {
+            "title": "Ongoing: Health Monitoring",
+            "items": [
+                {"title": "Weekly: DAU/WAU/MAU tracked"},
+                {"title": "Weekly: Feature adoption measured"},
+                {"title": "Weekly: Support ticket trend analyzed"},
+                {"title": "Monthly: NPS/CSAT collected"},
+                {"title": "Monthly: Stakeholder changes noted"},
+                {"title": "Quarterly: Renewal likelihood assessed"},
+                {"title": "Quarterly: Expansion potential evaluated"}
+            ]
+        }
+    ]
+}
