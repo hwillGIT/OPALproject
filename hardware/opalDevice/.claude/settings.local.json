@@ -19,7 +19,10 @@
       "Bash(git push:*)",
       "Bash(git pull:*)",
       "Bash(git log:*)",
-      "Bash(git lfs:*)"
+      "Bash(git lfs:*)",
+      "Bash(gh repo view:*)",
+      "Bash(gh api:*)",
+      "Bash(git rm:*)"
     ],
     "deny": [],
     "ask": []
