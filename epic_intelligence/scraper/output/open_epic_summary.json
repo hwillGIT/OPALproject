@@ -1,0 +1,16 @@
+{
+  "site": "Open Epic",
+  "baseUrl": "https://open.epic.com",
+  "crawledAt": "2026-03-31T00:36:28.902Z",
+  "totalPages": 0,
+  "totalErrors": 1,
+  "totalWords": 0,
+  "pages": [],
+  "errors": [
+    {
+      "url": "https://open.epic.com/DeveloperResources",
+      "error": "request to https://open.epic.com/DeveloperResources failed, reason: getaddrinfo EAI_AGAIN open.epic.com",
+      "depth": 0
+    }
+  ]
+}
