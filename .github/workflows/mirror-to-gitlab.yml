@@ -1,8 +1,10 @@
 name: Mirror to GitLab
+
 on:
   push:
-    branches: ["**"]
-  delete: {}
+    branches: ['**']
+  workflow_dispatch:
+
 jobs:
   mirror:
     runs-on: ubuntu-latest
@@ -10,11 +12,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          lfs: true
-      - name: Push mirror to GitLab
+      - name: Push to GitLab
         env:
           GL_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+          REPO_NAME: ${{ github.event.repository.name }}
         run: |
-          git lfs fetch --all
-          git push --prune "https://oauth2:${GL_TOKEN}@gitlab.com/hwillGIT/OPALproject.git" "+refs/remotes/origin/*:refs/heads/*" "+refs/tags/*:refs/tags/*"
-          git lfs push --all "https://oauth2:${GL_TOKEN}@gitlab.com/hwillGIT/OPALproject.git"
+          git push --prune "https://oauth2:${GL_TOKEN}@gitlab.com/hwillGIT/${REPO_NAME}.git" "+refs/remotes/origin/*:refs/heads/*" "+refs/tags/*:refs/tags/*"
