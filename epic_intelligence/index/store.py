@@ -223,4 +223,4 @@ def _make_snippet(text: str, max_chars: int) -> str:
     last_space = cut.rfind(" ")
     if last_space > max_chars * 0.6:
         cut = cut[:last_space]
-    return cut.rstrip() + "…"
+    return cut.rstrip() + "..."

@@ -1,4 +1,4 @@
-"""End-to-end ingestion pipeline: scraper output → chunker → ChromaDB.
+"""End-to-end ingestion pipeline: scraper output -> chunker -> ChromaDB.
 
 The Node-based scraper writes three sibling directories per site:
 
@@ -220,7 +220,7 @@ def main(argv: list[str] | None = None) -> int:
         s = ingest_scraped_site(args.scraper_output, site, store,
                                 config_name=args.config)
         print(f"  site '{site}': "
-              f"{s.files_processed} files → {s.chunks_emitted} chunks "
+              f"{s.files_processed} files -> {s.chunks_emitted} chunks "
               f"({s.chunks_upserted} upserted, {s.skipped_files} skipped)")
         totals = IngestStats(
             totals.files_processed + s.files_processed,
@@ -235,7 +235,7 @@ def main(argv: list[str] | None = None) -> int:
         title = entry[2] if len(entry) > 2 else ""
         s = ingest_extra_doc(path, url, store, title=title)
         print(f"  extra '{path.name}': "
-              f"{s.files_processed} files → {s.chunks_emitted} chunks "
+              f"{s.files_processed} files -> {s.chunks_emitted} chunks "
               f"({s.chunks_upserted} upserted, {s.skipped_files} skipped)")
         totals = IngestStats(
             totals.files_processed + s.files_processed,
@@ -245,7 +245,7 @@ def main(argv: list[str] | None = None) -> int:
         )
 
     print()
-    print(f"total: {totals.files_processed} files → "
+    print(f"total: {totals.files_processed} files -> "
           f"{totals.chunks_emitted} chunks "
           f"({totals.chunks_upserted} upserted, "
           f"{totals.skipped_files} skipped); "

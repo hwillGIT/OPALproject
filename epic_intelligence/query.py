@@ -51,7 +51,7 @@ def format_hit_pretty(hit: QueryHit, idx: int) -> str:
         f"[{idx}] {hit.title}\n"
         f"    section: {section}\n"
         f"    source : {url}\n"
-        f"    score  : {score}  (cosine distance — lower = closer)\n"
+        f"    score  : {score}  (cosine distance - lower = closer)\n"
         f"    chunk  : {hit.chunk_id}\n"
         f"    ---\n"
         f"    {hit.snippet}\n"
@@ -96,7 +96,7 @@ def main(argv: list[str] | None = None) -> int:
         embedder_pref=args.embedder,
     )
     if not hits:
-        print("(no results — index may be empty; run the ingestion pipeline first)",
+        print("(no results - index may be empty; run the ingestion pipeline first)",
               file=sys.stderr)
         return 1
 
@@ -109,7 +109,7 @@ def main(argv: list[str] | None = None) -> int:
             indent=2,
         ))
     else:
-        print(f"# Query: {args.query_text!r} — top {len(hits)} hits\n")
+        print(f"# Query: {args.query_text!r} - top {len(hits)} hits\n")
         for i, hit in enumerate(hits, 1):
             print(format_hit_pretty(hit, i))
     return 0
