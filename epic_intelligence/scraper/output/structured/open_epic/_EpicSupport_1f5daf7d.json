@@ -1,0 +1,35 @@
+{
+  "url": "https://open.epic.com/EpicSupport",
+  "fileId": "_EpicSupport_1f5daf7d",
+  "title": "open.epic :: Developer Support",
+  "description": "",
+  "crawledAt": "2026-05-15T07:20:55.821Z",
+  "depth": 1,
+  "textLength": 3226,
+  "wordCount": 463,
+  "links": [
+    "https://open.epic.com",
+    "https://open.epic.com/DesignOverview",
+    "https://open.epic.com/Playbooks",
+    "https://open.epic.com/Contact"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Developer Support"
+    },
+    {
+      "level": 2,
+      "text": "open.epic"
+    },
+    {
+      "level": 2,
+      "text": "Vendor Services"
+    },
+    {
+      "level": 2,
+      "text": "Comparison Table"
+    }
+  ],
+  "siteName": "Open Epic"
+}

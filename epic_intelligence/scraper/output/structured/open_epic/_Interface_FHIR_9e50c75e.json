@@ -1,0 +1,419 @@
+{
+  "url": "https://open.epic.com/Interface/FHIR",
+  "fileId": "_Interface_FHIR_9e50c75e",
+  "title": "open.epic :: Explore By Interface Type",
+  "description": "",
+  "crawledAt": "2026-05-15T07:20:49.323Z",
+  "depth": 0,
+  "textLength": 57847,
+  "wordCount": 6353,
+  "links": [
+    "https://open.epic.com",
+    "https://open.epic.com/Tutorial/OAuth",
+    "https://open.epic.com/Tech/TechSpec?spec=5413",
+    "https://open.epic.com/Tech/TechSpec?spec=9465",
+    "https://open.epic.com/Tech/TechSpec?spec=5154",
+    "https://open.epic.com/Tech/TechSpec?spec=5458",
+    "https://open.epic.com/Interface/HL7v2",
+    "https://open.epic.com/Interface/WebServices/Other",
+    "https://open.epic.com/Interface/FHIR",
+    "https://open.epic.com/Tech/TechSpec?spec=9450",
+    "https://open.epic.com/Tech/TechSpec?spec=5454",
+    "https://open.epic.com/Tech/TechSpec?spec=5453",
+    "https://open.epic.com/Tech/TechSpec?spec=5451",
+    "https://open.epic.com/Tech/TechSpec?spec=5450",
+    "https://open.epic.com/Tech/TechSpec?spec=5449",
+    "https://open.epic.com/Tech/TechSpec?spec=5448"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "By Interface Type"
+    },
+    {
+      "level": 2,
+      "text": "FHIR"
+    },
+    {
+      "level": 3,
+      "text": "$submit-attachment (Prior Auth) (R4)\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Account"
+    },
+    {
+      "level": 3,
+      "text": "AdverseEvent"
+    },
+    {
+      "level": 3,
+      "text": "AGL ScanViewing Action\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "AGL ScanViewing Closing\n\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "AGL ScanViewing DocumentDisplay\n\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "AGL ScanViewing Handshake\n\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "AGL TelephoneAlert\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "AllergyIntolerance"
+    },
+    {
+      "level": 3,
+      "text": "Appointment, Schedule, Slot"
+    },
+    {
+      "level": 3,
+      "text": "Authentication and Single Sign-On (SSO)"
+    },
+    {
+      "level": 3,
+      "text": "Binary"
+    },
+    {
+      "level": 3,
+      "text": "BodyStructure"
+    },
+    {
+      "level": 3,
+      "text": "Bulk Data Access"
+    },
+    {
+      "level": 3,
+      "text": "CarePlan, Goal"
+    },
+    {
+      "level": 3,
+      "text": "CareTeam"
+    },
+    {
+      "level": 3,
+      "text": "CDS Hooks\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Claim.$inquire (Prior Auth) (R4)\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Claim.$submit (Prior Auth) (R4)\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Communication"
+    },
+    {
+      "level": 3,
+      "text": "Computer-Telephony Integration (Incoming)"
+    },
+    {
+      "level": 3,
+      "text": "Computer-Telephony Integration (Outgoing)"
+    },
+    {
+      "level": 3,
+      "text": "Condition"
+    },
+    {
+      "level": 3,
+      "text": "Consent"
+    },
+    {
+      "level": 3,
+      "text": "Contract"
+    },
+    {
+      "level": 3,
+      "text": "Coverage"
+    },
+    {
+      "level": 3,
+      "text": "Coverage Requirements Discovery (R4)\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Coverage Requirements Discovery Endpoint Discovery (R4)\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "COVID SMART Scheduling Links"
+    },
+    {
+      "level": 3,
+      "text": "Da Vinci Plan Net Provider Directory\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Device, DeviceRequest, DeviceUseStatement"
+    },
+    {
+      "level": 3,
+      "text": "Device.$auxiliary-function (Auxiliary Function Notification) (R4)\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "DiagnosticReport"
+    },
+    {
+      "level": 3,
+      "text": "Document & Image Management\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference"
+    },
+    {
+      "level": 3,
+      "text": "Encoder Interface API\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Encounter"
+    },
+    {
+      "level": 3,
+      "text": "Endpoint"
+    },
+    {
+      "level": 3,
+      "text": "EpisodeOfCare"
+    },
+    {
+      "level": 3,
+      "text": "ExplanationOfBenefit"
+    },
+    {
+      "level": 3,
+      "text": "ExplanationOfBenefit.Read (Prior Auth) (R4)\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "ExplanationOfBenefit.Search (Prior Auth) (R4)\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "FamilyMemberHistory"
+    },
+    {
+      "level": 3,
+      "text": "Flag"
+    },
+    {
+      "level": 3,
+      "text": "GetDepartmentWaitTimes\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "GetProviderWaitTimes\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "GetScanSignatureContext\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "GetWaitTimes\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Group"
+    },
+    {
+      "level": 3,
+      "text": "Group.$bulk-member-match File Request\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Group.$bulk-member-match Kickoff\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Group.$bulk-member-match Status Request\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "ImagingStudy"
+    },
+    {
+      "level": 3,
+      "text": "Immunization, ImmunizationRecommendation"
+    },
+    {
+      "level": 3,
+      "text": "Incoming FHIR Message Acknowledgement - Denmark"
+    },
+    {
+      "level": 3,
+      "text": "InitializeDeviceResponse\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "International Patient Summary (IPS)"
+    },
+    {
+      "level": 3,
+      "text": "Introspect"
+    },
+    {
+      "level": 3,
+      "text": "List"
+    },
+    {
+      "level": 3,
+      "text": "Location"
+    },
+    {
+      "level": 3,
+      "text": "Medication, MedicationOrder, MedicationRequest, MedicationStatement, MedicationDispense"
+    },
+    {
+      "level": 3,
+      "text": "NutritionOrder"
+    },
+    {
+      "level": 3,
+      "text": "Observation"
+    },
+    {
+      "level": 3,
+      "text": "Organization"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Hospital Notification"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Vital Records Death Reporting\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "PAS Incoming Claim Response Notification\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Patient"
+    },
+    {
+      "level": 3,
+      "text": "Patient Lookup and Identifiers\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Personnel Management\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Practitioner, PractitionerRole"
+    },
+    {
+      "level": 3,
+      "text": "Print Job Status\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "PrintTestPage\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "PrintTestPageToTray\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Procedure, ProcedureRequest, ServiceRequest"
+    },
+    {
+      "level": 3,
+      "text": "ProcessTransactionResponse\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Provenance"
+    },
+    {
+      "level": 3,
+      "text": "Questionnaire, QuestionnaireResponse"
+    },
+    {
+      "level": 3,
+      "text": "Questionnaire.$log-questionnaire-errors (R4)\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Questionnaire.$next-question (R4)\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Questionnaire.$questionnaire-package (R4)\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "RelatedPerson"
+    },
+    {
+      "level": 3,
+      "text": "Release of Information\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "RequestGroup"
+    },
+    {
+      "level": 3,
+      "text": "ResearchStudy"
+    },
+    {
+      "level": 3,
+      "text": "ResearchSubject"
+    },
+    {
+      "level": 3,
+      "text": "Scan Signature Deficiencies\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Security Information and Event Management (SIEM)"
+    },
+    {
+      "level": 3,
+      "text": "Specimen"
+    },
+    {
+      "level": 3,
+      "text": "Substance"
+    },
+    {
+      "level": 3,
+      "text": "Task"
+    },
+    {
+      "level": 3,
+      "text": "UpdateUserDemographics\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Utilization Management\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "ValueSet"
+    },
+    {
+      "level": 3,
+      "text": "ValueSet.$expand (DTR Payer Guidelines) (R4)\n\t\t\tread the spec"
+    }
+  ],
+  "siteName": "Open Epic"
+}

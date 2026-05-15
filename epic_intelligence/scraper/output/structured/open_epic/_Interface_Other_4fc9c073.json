@@ -1,0 +1,676 @@
+{
+  "url": "https://open.epic.com/Interface/Other",
+  "fileId": "_Interface_Other_4fc9c073",
+  "title": "open.epic :: Explore By Interface Type",
+  "description": "",
+  "crawledAt": "2026-05-15T07:21:33.469Z",
+  "depth": 1,
+  "textLength": 50247,
+  "wordCount": 7189,
+  "links": [
+    "https://open.epic.com",
+    "https://open.epic.com/Interface/Other",
+    "https://open.epic.com/Tech/TechSpec?spec=6097",
+    "https://open.epic.com/Tech/TechSpec?spec=5218",
+    "https://open.epic.com/Tech/TechSpec?spec=5807",
+    "https://open.epic.com/Tech/TechSpec?spec=5203",
+    "https://open.epic.com/Tech/TechSpec?spec=5205",
+    "https://open.epic.com/Tech/TechSpec?spec=5209",
+    "https://open.epic.com/Tech/TechSpec?spec=5294",
+    "https://open.epic.com/Tech/TechSpec?spec=5269",
+    "https://open.epic.com/Tech/TechSpec?spec=8644",
+    "https://open.epic.com/Tech/TechSpec?spec=8643",
+    "https://open.epic.com/Tech/TechSpec?spec=5356",
+    "https://open.epic.com/Tech/TechSpec?spec=6076",
+    "https://open.epic.com/Tech/TechSpec?spec=5332",
+    "https://open.epic.com/Tech/TechSpec?spec=6087",
+    "https://open.epic.com/Tech/TechSpec?spec=5373",
+    "https://open.epic.com/Tech/TechSpec?spec=5320",
+    "https://open.epic.com/Tech/TechSpec?spec=5231",
+    "https://open.epic.com/Tech/TechSpec?spec=5232",
+    "https://open.epic.com/Tech/TechSpec?spec=5233",
+    "https://open.epic.com/Tech/TechSpec?spec=6433",
+    "https://open.epic.com/Tech/TechSpec?spec=8005",
+    "https://open.epic.com/Tech/TechSpec?spec=8004",
+    "https://open.epic.com/Tech/TechSpec?spec=5437",
+    "https://open.epic.com/Tech/TechSpec?spec=5222",
+    "https://open.epic.com/Tech/TechSpec?spec=5325",
+    "https://open.epic.com/Tech/TechSpec?spec=5244",
+    "https://open.epic.com/Tech/TechSpec?spec=6551",
+    "https://open.epic.com/Tech/TechSpec?spec=5252",
+    "https://open.epic.com/Tech/TechSpec?spec=5293",
+    "https://open.epic.com/Tech/TechSpec?spec=8007",
+    "https://open.epic.com/Tech/TechSpec?spec=8008",
+    "https://open.epic.com/Tech/TechSpec?spec=5266",
+    "https://open.epic.com/Tech/TechSpec?spec=5230",
+    "https://open.epic.com/Tech/TechSpec?spec=5263",
+    "https://open.epic.com/Tech/TechSpec?spec=6435",
+    "https://open.epic.com/Tech/TechSpec?spec=8006",
+    "https://open.epic.com/Tech/TechSpec?spec=5312",
+    "https://open.epic.com/Tech/TechSpec?spec=5309",
+    "https://open.epic.com/Tech/TechSpec?spec=5434",
+    "https://open.epic.com/Tech/TechSpec?spec=5187",
+    "https://open.epic.com/Tech/TechSpec?spec=5411",
+    "https://open.epic.com/Tech/TechSpec?spec=5428",
+    "https://open.epic.com/Tech/TechSpec?spec=5410",
+    "https://open.epic.com/Tech/TechSpec?spec=5159",
+    "https://open.epic.com/Tech/TechSpec?spec=5303",
+    "https://open.epic.com/Tech/TechSpec?spec=5302",
+    "https://open.epic.com/Tech/TechSpec?spec=5438",
+    "https://open.epic.com/Tech/TechSpec?spec=5306",
+    "https://open.epic.com/Tech/TechSpec?spec=5310",
+    "https://open.epic.com/Prototype/Hyperdrive",
+    "https://open.epic.com/Tech/TechSpec?spec=5429",
+    "https://open.epic.com/Interface/FHIR",
+    "https://open.epic.com/Tech/TechSpec?spec=5407",
+    "https://open.epic.com/Tech/TechSpec?spec=5416",
+    "https://open.epic.com/Tech/TechSpec?spec=5414",
+    "https://open.epic.com/Tech/TechSpec?spec=5415",
+    "https://open.epic.com/Tech/TechSpec?spec=5327",
+    "https://open.epic.com/Tech/TechSpec?spec=5217",
+    "https://open.epic.com/Interface/HL7v2",
+    "https://open.epic.com/Tech/TechSpec?spec=5370",
+    "https://open.epic.com/Tech/TechSpec?spec=9495",
+    "https://open.epic.com/Tech/TechSpec?spec=5419",
+    "https://open.epic.com/Tech/TechSpec?spec=5421",
+    "https://open.epic.com/Tech/TechSpec?spec=5191",
+    "https://open.epic.com/Tech/TechSpec?spec=5190",
+    "https://open.epic.com/Tech/TechSpec?spec=5406",
+    "https://open.epic.com/Interface/WebServices",
+    "https://open.epic.com/Tech/TechSpec?spec=5188",
+    "https://open.epic.com/Tech/TechSpec?spec=5417",
+    "https://open.epic.com/Tech/TechSpec?spec=5311",
+    "https://open.epic.com/Clinical/EHRtoEHR",
+    "https://open.epic.com/EHITables",
+    "https://open.epic.com/Tech/TechSpec?spec=5153",
+    "https://open.epic.com/Tech/TechSpec?spec=5757",
+    "https://open.epic.com/Tech/TechSpec?spec=6101",
+    "https://open.epic.com/Tech/TechSpec?spec=6440",
+    "https://open.epic.com/Tech/TechSpec?spec=6476",
+    "https://open.epic.com/Tech/TechSpec?spec=7517",
+    "https://open.epic.com/Tech/TechSpec?spec=7988",
+    "https://open.epic.com/Tech/TechSpec?spec=8706",
+    "https://open.epic.com/Tech/TechSpec?spec=8737",
+    "https://open.epic.com/Tech/TechSpec?spec=9421",
+    "https://open.epic.com/Tech/TechSpec?spec=9494",
+    "https://open.epic.com/Tech/TechSpec?spec=9493",
+    "https://open.epic.com/Tech/TechSpec?spec=9773",
+    "https://open.epic.com/Tech/TechSpec?spec=9921",
+    "https://open.epic.com/Tech/TechSpec?spec=10311"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "By Interface Type"
+    },
+    {
+      "level": 2,
+      "text": "Other Integrations"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Real Time Prescription Benefit Inquiry and Response"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Newborn Personal Identity Code Request and Response"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Death Notification and Response\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Provider Query"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing eArchive Documents and Query"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Demographics Query"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing QRDA Documents\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Bidirectional Referrals\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Document Notification Interface - Finland"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Social Care Document Query"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Dental Summary Interface - Singapore"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Referral and Provider Communication Notification Interface - Singapore"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Demographics Query Interface - Singapore"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Transaction Notification Interface - Belgium"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Transaction Query Interface - Belgium"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Birth Notification and Medical Form Interface - Belgium"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Medication Orders Request and Response Interface - Belgium"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Social Care Need Query Interface - Finland"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Financial Transactions Query Interface - Belgium"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Imaging Document and Response Interface - Finland"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Vaccination History Query Interface - Norway\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Vaccination Administration Request and Response Interface - Norway\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Sick Leave Interface - Norway\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing External Repricing Request Query (X12 837)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Health Care Services Authorization Interface - Netherlands"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Birth Notification Interface - Norway\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Vaccination Codeset Update Request and Response Interface - Norway"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Financial Information Query Interface - Norway"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Birth Registry Interface - Norway"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing GP Patient List Subscription and Response\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing ePrescribing Service Request and Response Interface - Norway\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming ePrescribing Service Notification Interface - Norway\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming MDS CMS Validation Report\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Vaccination Administration Request and Response - Australia\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Provider Communications Interface - Finland\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Provider Communications - Finland\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Incoming Bank Reconciliation"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Incoming Benefit Accumulations"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Outgoing Positive Pay Files"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Drug Supply Chain Event Notification to Willow Inventory\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Dialysis Updates to CMS\n\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing eMultidose Patient Medication List Change Query"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing eMultidose Responsibility Update"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Social Care Disclosure Notification - Finland"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Scheduling Slot Availability Query\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing PDS Tracing Query\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing PDS Demographics Synchronisation Query\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing PDS NHS Number Allocation Request for Acute Care\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing PDS Newborn Notification\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Medication Orders\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Medication Dispense History Query"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Medication Orders\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Medication Dispenses\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Laboratory Results"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Radiology Results"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Discharge Summaries"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing ED Summaries"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Surgical Summaries"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Health Care Claim Grouper and Pricer\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Municipality Integrations"
+    },
+    {
+      "level": 3,
+      "text": "Bidirectional Correspondence\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Newborn CPR Assignment Request and Response"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Order Requisitions"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Pathology Results"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Lab Results Interface"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Referrals and Booking Confirmation"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Referrals and Booking Confirmation"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Binary Documents"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Binary Documents"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Procedure Log Data\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Referral Scheduling Request Query\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Summary of Care Interface"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Summary of Care Interface"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing PAS Data and Response Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Data Exchange with 3M Core Grouping Software or Grouper Plus Content Services"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing FMK Medication Card Services Request and Response\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Medication Orders to Prescription Exchange Service\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Birth Notification Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing ECPR Assignment Request and Response"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Rehabilitation Plan Summary"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Rehabilitation Plan Summary"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Prescription Prior Authorization Request and Response\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Claim Submission from Willow Ambulatory\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Remittance Advice Download to Willow Ambulatory\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing COV Verification Query"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing IHI Verification Query\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Perinatal Data\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Initial Public Health Case Report (eICR)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing FMK Ordered Refill Request and Response\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing eRx Services Request and Response"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Prescription Upload Request and Response\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Prescription Download Request and Response"
+    },
+    {
+      "level": 3,
+      "text": "HL7 InfoButton\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Mobile App Integration\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Clinical Context Manager Integration\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Patient Portal Links\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Cash Management\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Claim Status Batch (Flat File)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Self-pay Payments\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Monthly Premium Withholding Report (MPWR)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing 1095-B (Simple)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing 1099-MISC\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Batch Eligibility Query (BEQ)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outbound Medicare Advantage and Prescription Drug System (MARx) files\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Document Linker DMS Integration\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Collections Extract and Import\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "SAML 2.0 Idp-initiated Single Sign-On (SSO)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Single Sign-On (SSO) into MyChart"
+    },
+    {
+      "level": 3,
+      "text": "Single Sign-On (SSO) into EpicCare Link\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Appointment Notifications\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Recall Notifications\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Request Notifications\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Receipts\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Receipts\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "eMediplan APIs"
+    },
+    {
+      "level": 3,
+      "text": "Incoming External Clinical Data\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Paid Claims Import\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "EDManager\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Desktop Generic Authentication\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Scan Acquisition\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Scan Viewing\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "EPS Document Retrieval Plugin\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "SIEM Feed\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Epic Access Logging\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Speech Recognition (Classic VB Client)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Computable Exports"
+    },
+    {
+      "level": 3,
+      "text": "Welcome Accessibility for Vendors\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Welcome Hardware Guide For Vendors\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "PB Statement Form 807\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "SBO Statement Form 808\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Active Guidelines\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Kiosk Generic Authentication\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "OpenID Connect\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Translation of Patient-Facing Content\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Care Gaps Import\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Bluetooth® Generic Health Sensor Device Integration with MyChart\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Risk Adjustment Import\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Supplemental Data Import\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Verified Safety Checks\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Bluetooth Wayfinding\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Prospective Patient Import\n\t\t\t\tread the spec"
+    }
+  ],
+  "siteName": "Open Epic"
+}

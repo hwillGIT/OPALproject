@@ -1,0 +1,54 @@
+{
+  "url": "https://open.epic.com/Contact",
+  "fileId": "_Contact_1f29b9fa",
+  "title": "open.epic :: Contact",
+  "description": "",
+  "crawledAt": "2026-05-15T07:20:54.194Z",
+  "depth": 1,
+  "textLength": 7448,
+  "wordCount": 1161,
+  "links": [
+    "https://open.epic.com",
+    "https://open.epic.com/Tutorial/PatientAuthentication",
+    "https://open.epic.com/MyApps/Endpoints"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Contact Us"
+    },
+    {
+      "level": 2,
+      "text": "Data Sharing Technology Guidance"
+    },
+    {
+      "level": 2,
+      "text": "Consultant Access to Epic Applications and Documentation"
+    },
+    {
+      "level": 2,
+      "text": "Looking for Something Else?"
+    },
+    {
+      "level": 3,
+      "text": "For Organizations Using Epic Software"
+    },
+    {
+      "level": 3,
+      "text": "For Patients"
+    },
+    {
+      "level": 3,
+      "text": "For App Developers"
+    },
+    {
+      "level": 3,
+      "text": "For Protectors of Patient Privacy"
+    },
+    {
+      "level": 3,
+      "text": "Still Need Help?"
+    }
+  ],
+  "siteName": "Open Epic"
+}

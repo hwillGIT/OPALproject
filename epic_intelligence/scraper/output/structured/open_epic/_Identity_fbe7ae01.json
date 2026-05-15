@@ -1,0 +1,20 @@
+{
+  "url": "https://open.epic.com/Identity",
+  "fileId": "_Identity_fbe7ae01",
+  "title": "open.epic :: Managing Identity and Registration",
+  "description": "",
+  "crawledAt": "2026-05-15T07:21:39.925Z",
+  "depth": 1,
+  "textLength": 269,
+  "wordCount": 34,
+  "links": [
+    "https://open.epic.com"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Registration & Identity"
+    }
+  ],
+  "siteName": "Open Epic"
+}

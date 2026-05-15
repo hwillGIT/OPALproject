@@ -1,0 +1,71 @@
+{
+  "url": "https://open.epic.com/DesignOverview",
+  "fileId": "_DesignOverview_b553f1a2",
+  "title": "open.epic :: Design Overview",
+  "description": "",
+  "crawledAt": "2026-05-15T07:20:57.585Z",
+  "depth": 1,
+  "textLength": 16876,
+  "wordCount": 2662,
+  "links": [
+    "https://open.epic.com",
+    "https://open.epic.com/Playbooks",
+    "https://open.epic.com/DesignOverview",
+    "https://open.epic.com/TechnicalSpecifications",
+    "https://open.epic.com/Interface/WebServices",
+    "https://open.epic.com/EpicSupport",
+    "https://open.epic.com/DeveloperResources",
+    "https://open.epic.com/Interface/HL7v2"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Design Overview"
+    },
+    {
+      "level": 2,
+      "text": "Discover Recommended Connection Practices"
+    },
+    {
+      "level": 2,
+      "text": "What Should I Consider When Designing My Data Exchange?"
+    },
+    {
+      "level": 3,
+      "text": "Types of Data to Exchange"
+    },
+    {
+      "level": 3,
+      "text": "Direction of Data Exchange"
+    },
+    {
+      "level": 3,
+      "text": "Workflows Using Data Exchange"
+    },
+    {
+      "level": 3,
+      "text": "Data Exchange Method"
+    },
+    {
+      "level": 3,
+      "text": "Security Mechanisms"
+    },
+    {
+      "level": 3,
+      "text": "Where Do I Go from Here?"
+    },
+    {
+      "level": 2,
+      "text": "Case Studies"
+    },
+    {
+      "level": 3,
+      "text": "Case Study A: Scheduling"
+    },
+    {
+      "level": 3,
+      "text": "Case Study B: Reference Labs"
+    }
+  ],
+  "siteName": "Open Epic"
+}
