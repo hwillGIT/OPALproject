@@ -1,0 +1,20 @@
+{
+  "url": "https://open.epic.com/Clinical",
+  "fileId": "_Clinical_7f492d69",
+  "title": "open.epic :: Exchanging Clinical Findings",
+  "description": "",
+  "crawledAt": "2026-05-15T07:21:36.710Z",
+  "depth": 1,
+  "textLength": 330,
+  "wordCount": 60,
+  "links": [
+    "https://open.epic.com"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Clinical Information"
+    }
+  ],
+  "siteName": "Open Epic"
+}

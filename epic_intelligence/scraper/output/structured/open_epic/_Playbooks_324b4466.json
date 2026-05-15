@@ -1,0 +1,453 @@
+{
+  "url": "https://open.epic.com/Playbooks",
+  "fileId": "_Playbooks_324b4466",
+  "title": "open.epic :: Data Sharing Playbooks",
+  "description": "",
+  "crawledAt": "2026-05-15T07:20:47.593Z",
+  "depth": 0,
+  "textLength": 23065,
+  "wordCount": 3192,
+  "links": [
+    "https://open.epic.com",
+    "https://open.epic.com/Contact"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Data Sharing Playbooks"
+    },
+    {
+      "level": 2,
+      "text": "Alert Managers"
+    },
+    {
+      "level": 2,
+      "text": "Ambulatory Cardiac Devices"
+    },
+    {
+      "level": 2,
+      "text": "Automated Dispensing System"
+    },
+    {
+      "level": 2,
+      "text": "Bayesian Medication Dosing Decision Support"
+    },
+    {
+      "level": 2,
+      "text": "Bedside Dining"
+    },
+    {
+      "level": 2,
+      "text": "Clinical Decision Support"
+    },
+    {
+      "level": 2,
+      "text": "Clinical Knowledge Set Apps"
+    },
+    {
+      "level": 2,
+      "text": "Computer Telephony Integration (CTI)"
+    },
+    {
+      "level": 2,
+      "text": "Deploying Predictive Models"
+    },
+    {
+      "level": 2,
+      "text": "Digital Pathology"
+    },
+    {
+      "level": 2,
+      "text": "ECG Management System"
+    },
+    {
+      "level": 2,
+      "text": "ED Pre-Arrival EMS Workflows"
+    },
+    {
+      "level": 2,
+      "text": "Encoder"
+    },
+    {
+      "level": 2,
+      "text": "Endoscope Data Capture"
+    },
+    {
+      "level": 2,
+      "text": "End-User Authentication"
+    },
+    {
+      "level": 2,
+      "text": "External Health Records for Patient Treatment"
+    },
+    {
+      "level": 2,
+      "text": "Fully Autonomous Coding"
+    },
+    {
+      "level": 2,
+      "text": "Hemodyamics System"
+    },
+    {
+      "level": 2,
+      "text": "Home Dialysis"
+    },
+    {
+      "level": 2,
+      "text": "Implantable Cardiac Devices"
+    },
+    {
+      "level": 2,
+      "text": "Infusion Pumps"
+    },
+    {
+      "level": 2,
+      "text": "International Patient Summary"
+    },
+    {
+      "level": 2,
+      "text": "Medication Carousels & Robots"
+    },
+    {
+      "level": 2,
+      "text": "Medication Ordering Decision Support"
+    },
+    {
+      "level": 2,
+      "text": "Patient Rostering"
+    },
+    {
+      "level": 2,
+      "text": "Patient, Payer, and Provider Access"
+    },
+    {
+      "level": 2,
+      "text": "Patient-Facing / Consumer Health Apps"
+    },
+    {
+      "level": 2,
+      "text": "Payer Connections to Epic Providers"
+    },
+    {
+      "level": 2,
+      "text": "Payment Device Integrations"
+    },
+    {
+      "level": 2,
+      "text": "Perioperative Workflows"
+    },
+    {
+      "level": 2,
+      "text": "Point-of-care Middleware Integrations"
+    },
+    {
+      "level": 2,
+      "text": "Printing Output Management Integrations"
+    },
+    {
+      "level": 2,
+      "text": "Prior Authorization"
+    },
+    {
+      "level": 2,
+      "text": "Radiation Therapy Treatment Management System"
+    },
+    {
+      "level": 2,
+      "text": "Real Time Location Systems"
+    },
+    {
+      "level": 2,
+      "text": "Reference Labs"
+    },
+    {
+      "level": 2,
+      "text": "Remote Patient Monitoring with Devices"
+    },
+    {
+      "level": 2,
+      "text": "Specialty Registries"
+    },
+    {
+      "level": 2,
+      "text": "Standard Lab Middleware Integrations"
+    },
+    {
+      "level": 2,
+      "text": "Surgical Supplies"
+    },
+    {
+      "level": 2,
+      "text": "Telehealth Providers"
+    },
+    {
+      "level": 2,
+      "text": "TPN Compounders"
+    },
+    {
+      "level": 2,
+      "text": "Vaccine Credentials / SMART Health Cards"
+    },
+    {
+      "level": 2,
+      "text": "Validating AI Features"
+    },
+    {
+      "level": 2,
+      "text": "Vitals Gateway and Middleware Device Integration"
+    },
+    {
+      "level": 2,
+      "text": "Waveform Visualization"
+    },
+    {
+      "level": 2,
+      "text": "Wayfinding"
+    },
+    {
+      "level": 2,
+      "text": "Wound Care Apps"
+    },
+    {
+      "level": 2,
+      "text": "Ambulatory Cardiac Devices"
+    },
+    {
+      "level": 2,
+      "text": "Bedside Dining"
+    },
+    {
+      "level": 2,
+      "text": "Encoder"
+    },
+    {
+      "level": 2,
+      "text": "Home Dialysis"
+    },
+    {
+      "level": 2,
+      "text": "Patient Rostering"
+    },
+    {
+      "level": 2,
+      "text": "Patient-Facing / Consumer Health Apps"
+    },
+    {
+      "level": 2,
+      "text": "Remote Patient Monitoring with Devices"
+    },
+    {
+      "level": 2,
+      "text": "Telehealth Providers"
+    },
+    {
+      "level": 2,
+      "text": "Vaccine Credentials / SMART Health Cards"
+    },
+    {
+      "level": 2,
+      "text": "Validating AI Features"
+    },
+    {
+      "level": 2,
+      "text": "Wayfinding"
+    },
+    {
+      "level": 2,
+      "text": "Wound Care Apps"
+    },
+    {
+      "level": 2,
+      "text": "Alert Managers"
+    },
+    {
+      "level": 2,
+      "text": "Ambulatory Cardiac Devices"
+    },
+    {
+      "level": 2,
+      "text": "Automated Dispensing System"
+    },
+    {
+      "level": 2,
+      "text": "Bayesian Medication Dosing Decision Support"
+    },
+    {
+      "level": 2,
+      "text": "Clinical Decision Support"
+    },
+    {
+      "level": 2,
+      "text": "Clinical Knowledge Set Apps"
+    },
+    {
+      "level": 2,
+      "text": "Deploying Predictive Models"
+    },
+    {
+      "level": 2,
+      "text": "Digital Pathology"
+    },
+    {
+      "level": 2,
+      "text": "ECG Management System"
+    },
+    {
+      "level": 2,
+      "text": "ED Pre-Arrival EMS Workflows"
+    },
+    {
+      "level": 2,
+      "text": "Endoscope Data Capture"
+    },
+    {
+      "level": 2,
+      "text": "End-User Authentication"
+    },
+    {
+      "level": 2,
+      "text": "External Health Records for Patient Treatment"
+    },
+    {
+      "level": 2,
+      "text": "Hemodyamics System"
+    },
+    {
+      "level": 2,
+      "text": "Implantable Cardiac Devices"
+    },
+    {
+      "level": 2,
+      "text": "Infusion Pumps"
+    },
+    {
+      "level": 2,
+      "text": "International Patient Summary"
+    },
+    {
+      "level": 2,
+      "text": "Medication Carousels & Robots"
+    },
+    {
+      "level": 2,
+      "text": "Medication Ordering Decision Support"
+    },
+    {
+      "level": 2,
+      "text": "Patient Rostering"
+    },
+    {
+      "level": 2,
+      "text": "Perioperative Workflows"
+    },
+    {
+      "level": 2,
+      "text": "Point-of-care Middleware Integrations"
+    },
+    {
+      "level": 2,
+      "text": "Printing Output Management Integrations"
+    },
+    {
+      "level": 2,
+      "text": "Radiation Therapy Treatment Management System"
+    },
+    {
+      "level": 2,
+      "text": "Real Time Location Systems"
+    },
+    {
+      "level": 2,
+      "text": "Reference Labs"
+    },
+    {
+      "level": 2,
+      "text": "Remote Patient Monitoring with Devices"
+    },
+    {
+      "level": 2,
+      "text": "Standard Lab Middleware Integrations"
+    },
+    {
+      "level": 2,
+      "text": "Telehealth Providers"
+    },
+    {
+      "level": 2,
+      "text": "TPN Compounders"
+    },
+    {
+      "level": 2,
+      "text": "Validating AI Features"
+    },
+    {
+      "level": 2,
+      "text": "Vitals Gateway and Middleware Device Integration"
+    },
+    {
+      "level": 2,
+      "text": "Waveform Visualization"
+    },
+    {
+      "level": 2,
+      "text": "Automated Dispensing System"
+    },
+    {
+      "level": 2,
+      "text": "Computer Telephony Integration (CTI)"
+    },
+    {
+      "level": 2,
+      "text": "Deploying Predictive Models"
+    },
+    {
+      "level": 2,
+      "text": "End-User Authentication"
+    },
+    {
+      "level": 2,
+      "text": "Fully Autonomous Coding"
+    },
+    {
+      "level": 2,
+      "text": "Patient Rostering"
+    },
+    {
+      "level": 2,
+      "text": "Patient, Payer, and Provider Access"
+    },
+    {
+      "level": 2,
+      "text": "Payer Connections to Epic Providers"
+    },
+    {
+      "level": 2,
+      "text": "Payment Device Integrations"
+    },
+    {
+      "level": 2,
+      "text": "Printing Output Management Integrations"
+    },
+    {
+      "level": 2,
+      "text": "Prior Authorization"
+    },
+    {
+      "level": 2,
+      "text": "Specialty Registries"
+    },
+    {
+      "level": 2,
+      "text": "Surgical Supplies"
+    },
+    {
+      "level": 2,
+      "text": "TPN Compounders"
+    },
+    {
+      "level": 2,
+      "text": "Validating AI Features"
+    }
+  ],
+  "siteName": "Open Epic"
+}

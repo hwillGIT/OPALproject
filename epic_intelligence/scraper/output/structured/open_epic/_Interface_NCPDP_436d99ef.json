@@ -1,0 +1,88 @@
+{
+  "url": "https://open.epic.com/Interface/NCPDP",
+  "fileId": "_Interface_NCPDP_436d99ef",
+  "title": "open.epic :: Explore By Interface Type",
+  "description": "",
+  "crawledAt": "2026-05-15T07:21:30.232Z",
+  "depth": 1,
+  "textLength": 5095,
+  "wordCount": 669,
+  "links": [
+    "https://open.epic.com",
+    "https://open.epic.com/Tech/TechSpec?spec=5256",
+    "https://open.epic.com/Interface/NCPDP",
+    "https://open.epic.com/Tech/TechSpec?spec=5367",
+    "https://open.epic.com/Tech/TechSpec?spec=5224",
+    "https://open.epic.com/Tech/TechSpec?spec=5254",
+    "https://open.epic.com/Tech/TechSpec?spec=8009",
+    "https://open.epic.com/Tech/TechSpec?spec=5352",
+    "https://open.epic.com/Tech/TechSpec?spec=5229"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "By Interface Type"
+    },
+    {
+      "level": 2,
+      "text": "NCPDP"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Medication History for Populations Request and Response\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming External Paid Pharmacy Claims Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Prescription Prior Authorization Request and Reponse\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Prescription Information from Prescriber to Pharmacies\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Prescription Information from Pharmacies to Prescriber\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Medication Dispense History Query\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Prescription Information from Prescribers to Pharmacy\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Prescription Information from Pharmacy to Prescribers\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Pharmacy Update from Willow Ambulatory to E-Prescribing System Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Provider Download to E-Prescribing System Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Organization Download to E-Prescribing System\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Provider Update to E-Prescribing System Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Formulary Query to e-Prescribing System\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Pharmacy Benefit Claims Adjudication Query\n\t\t\t\tread the spec"
+    }
+  ],
+  "siteName": "Open Epic"
+}

@@ -1,0 +1,175 @@
+{
+  "url": "https://open.epic.com/Interface/WebServices/Other",
+  "fileId": "_Interface_WebServices_Other_25e27be7",
+  "title": "open.epic :: Explore By Interface Type",
+  "description": "",
+  "crawledAt": "2026-05-15T07:21:14.653Z",
+  "depth": 1,
+  "textLength": 12109,
+  "wordCount": 1841,
+  "links": [
+    "https://open.epic.com",
+    "https://open.epic.com/Tech/TechSpec?spec=5458",
+    "https://open.epic.com/Interface/Interface/HL7v2",
+    "https://open.epic.com/Tech/TechSpec?spec=5454",
+    "https://open.epic.com/Tech/TechSpec?spec=5453",
+    "https://open.epic.com/Tech/TechSpec?spec=5452",
+    "https://open.epic.com/Tech/TechSpec?spec=5451",
+    "https://open.epic.com/Tech/TechSpec?spec=5450",
+    "https://open.epic.com/Tech/TechSpec?spec=5448",
+    "https://open.epic.com/Tech/TechSpec?spec=5449",
+    "https://open.epic.com/Tech/TechSpec?spec=5455",
+    "https://open.epic.com/Tech/TechSpec?spec=5456",
+    "https://open.epic.com/Tech/TechSpec?spec=5459",
+    "https://open.epic.com/Interface/WebServices/Other",
+    "https://open.epic.com/Tech/TechSpec?spec=5426",
+    "https://open.epic.com/Tech/TechSpec?spec=5404",
+    "https://open.epic.com/Tech/TechSpec?spec=5408",
+    "https://open.epic.com/Tech/TechSpec?spec=5393",
+    "https://open.epic.com/Tech/TechSpec?spec=5412",
+    "https://open.epic.com/Tech/TechSpec?spec=5376",
+    "https://open.epic.com/Tech/TechSpec?spec=5283",
+    "https://open.epic.com/Tech/TechSpec?spec=5308",
+    "https://open.epic.com/Tech/TechSpec?spec=5422",
+    "https://open.epic.com/Tech/TechSpec?spec=5392",
+    "https://open.epic.com/Tech/TechSpec?spec=5307",
+    "https://open.epic.com/Tech/TechSpec?spec=5405",
+    "https://open.epic.com/Tech/TechSpec?spec=5760",
+    "https://open.epic.com/Tech/TechSpec?spec=5803",
+    "https://open.epic.com/Tech/TechSpec?spec=5806",
+    "https://open.epic.com/Tech/TechSpec?spec=6055",
+    "https://open.epic.com/Tech/TechSpec?spec=5164",
+    "https://open.epic.com/Tech/TechSpec?spec=10323"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "By Interface Type"
+    },
+    {
+      "level": 2,
+      "text": "Web Services"
+    },
+    {
+      "level": 3,
+      "text": "Encoder Interface API\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Patient Lookup and Identifiers\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Personnel Management\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Phone System Pause/Resume\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Print Job Status\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Release of Information\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Utilization Management\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Scan Signature Deficiencies\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing SMS\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "MyChart Bedside MDM Patient Data Wipe\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Embedded Context-Aware Linking for Epic Monitor\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Enterprise Image Access"
+    },
+    {
+      "level": 3,
+      "text": "Content Linking\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "E-Signature\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Credit Card and Bank Account Integration\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Document Linker DMS Integration\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Credit Card and Check Scanning Device Integration\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Computer-Telephony Integration\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Computer-Telephony Integration\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outbound Fax Services with Epic Print Service\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "SAML 2.0 Reauthentication for Haiku and Canto EPCS\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Binary Data Retrieval\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing MDS Data for MDS Scrubbers\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "EPS Document Retrieval Web Service\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Wait Time APIs\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Print Test Page\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Output Management Web Service\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Encryption Guide\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Generic Code Editor\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Disassociate Mobile Device\n\t\t\t\tread the spec"
+    }
+  ],
+  "siteName": "Open Epic"
+}

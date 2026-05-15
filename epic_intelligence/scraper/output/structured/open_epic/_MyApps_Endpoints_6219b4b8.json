@@ -1,0 +1,57 @@
+{
+  "url": "https://open.epic.com/MyApps/Endpoints",
+  "fileId": "_MyApps_Endpoints_6219b4b8",
+  "title": "open.epic :: Endpoints",
+  "description": "",
+  "crawledAt": "2026-05-15T07:21:01.173Z",
+  "depth": 1,
+  "textLength": 111546,
+  "wordCount": 7300,
+  "links": [
+    "https://open.epic.com",
+    "https://open.epic.com/MyApps/Endpoints",
+    "https://open.epic.com/Endpoints/Brands",
+    "https://open.epic.com/Endpoints/DSTU2",
+    "https://open.epic.com/Endpoints/R4",
+    "https://open.epic.com/MyApps/EndpointsJson"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Sandbox Endpoints"
+    },
+    {
+      "level": 2,
+      "text": "Production Endpoints"
+    },
+    {
+      "level": 3,
+      "text": "User-access Brands Bundle"
+    },
+    {
+      "level": 2,
+      "text": "Organization (Primary Brand)"
+    },
+    {
+      "level": 2,
+      "text": "Organization (Care Facility)"
+    },
+    {
+      "level": 2,
+      "text": "Endpoint (FHIR Service Base URL)"
+    },
+    {
+      "level": 3,
+      "text": "Endpoint Bundle"
+    },
+    {
+      "level": 3,
+      "text": "JSON File"
+    },
+    {
+      "level": 3,
+      "text": "Table View"
+    }
+  ],
+  "siteName": "Open Epic"
+}

@@ -1,0 +1,127 @@
+{
+  "url": "https://open.epic.com/Hyperdrive/Hyperdrive",
+  "fileId": "_Hyperdrive_Hyperdrive_c2f1d94f",
+  "title": "open.epic :: Hyperdrive",
+  "description": "",
+  "crawledAt": "2026-05-15T07:20:59.197Z",
+  "depth": 1,
+  "textLength": 10018,
+  "wordCount": 1477,
+  "links": [
+    "https://open.epic.com",
+    "https://open.epic.com/Hyperdrive/HyperdriveDownload",
+    "https://open.epic.com/Tech/TechSpec?spec=5393",
+    "https://open.epic.com/Tech/TechSpec?spec=5421",
+    "https://open.epic.com/Tech/TechSpec?spec=5185",
+    "https://open.epic.com/Tech/TechSpec?spec=5184",
+    "https://open.epic.com/Tech/TechSpec?spec=5304",
+    "https://open.epic.com/Tech/TechSpec?spec=5403",
+    "https://open.epic.com/Tech/TechSpec?spec=5395",
+    "https://open.epic.com/Tech/TechSpec?spec=5394",
+    "https://open.epic.com/Ancillary/Imaging",
+    "https://open.epic.com/Tech/TechSpec?spec=7215",
+    "https://open.epic.com/Tech/TechSpec?spec=5402",
+    "https://open.epic.com/Interface/WebServices",
+    "https://open.epic.com/Tech/TechSpec?spec=5401",
+    "https://open.epic.com/Tech/TechSpec?spec=5400",
+    "https://open.epic.com/Tech/TechSpec?spec=7517",
+    "https://open.epic.com/Tech/TechSpec?spec=7988",
+    "https://open.epic.com/Tech/TechSpec?spec=8293",
+    "https://open.epic.com/Tech/TechSpec?spec=10307"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Hyperdrive"
+    },
+    {
+      "level": 2,
+      "text": ""
+    },
+    {
+      "level": 3,
+      "text": "Changes for Integrations"
+    },
+    {
+      "level": 3,
+      "text": "Testing Integrations in Hyperdrive"
+    },
+    {
+      "level": 3,
+      "text": "Timelines"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Document Linker DMS Integration\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Desktop Generic Authentication\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Subspace Communication Framework\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Subspace User Session Management\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Other Subspace APIs\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "E-Signature\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Scan Acquisition\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Scan Viewing\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "XML Context Synchronization"
+    },
+    {
+      "level": 3,
+      "text": "Speech Recognition\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "FHIRcast\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Credit Card and Bank Account Integration"
+    },
+    {
+      "level": 3,
+      "text": "Subspace Encoder\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Web Services Encoder\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Kiosk Generic Authentication\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "OpenID Connect\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Speech Recognition for Embedded Applications\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "FHIRcast Content Sharing in Subspace\n\t\t\t\tread the spec"
+    }
+  ],
+  "siteName": "Open Epic"
+}

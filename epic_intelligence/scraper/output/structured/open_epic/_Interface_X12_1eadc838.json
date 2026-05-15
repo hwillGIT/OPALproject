@@ -1,0 +1,247 @@
+{
+  "url": "https://open.epic.com/Interface/X12",
+  "fileId": "_Interface_X12_1eadc838",
+  "title": "open.epic :: Explore By Interface Type",
+  "description": "",
+  "crawledAt": "2026-05-15T07:21:28.623Z",
+  "depth": 1,
+  "textLength": 18246,
+  "wordCount": 2558,
+  "links": [
+    "https://open.epic.com",
+    "https://open.epic.com/Interface/X12",
+    "https://open.epic.com/Tech/TechSpec?spec=5337",
+    "https://open.epic.com/Tech/TechSpec?spec=5261",
+    "https://open.epic.com/Tech/TechSpec?spec=5329",
+    "https://open.epic.com/Tech/TechSpec?spec=5157",
+    "https://open.epic.com/Tech/TechSpec?spec=5175",
+    "https://open.epic.com/Tech/TechSpec?spec=5167",
+    "https://open.epic.com/Tech/TechSpec?spec=5439",
+    "https://open.epic.com/Tech/TechSpec?spec=5228",
+    "https://open.epic.com/Tech/TechSpec?spec=5300",
+    "https://open.epic.com/Tech/TechSpec?spec=5172",
+    "https://open.epic.com/Tech/TechSpec?spec=5361",
+    "https://open.epic.com/Tech/TechSpec?spec=5321",
+    "https://open.epic.com/Tech/TechSpec?spec=5268",
+    "https://open.epic.com/Tech/TechSpec?spec=5156",
+    "https://open.epic.com/Tech/TechSpec?spec=6443",
+    "https://open.epic.com/Tech/TechSpec?spec=5194",
+    "https://open.epic.com/Tech/TechSpec?spec=5174",
+    "https://open.epic.com/Tech/TechSpec?spec=5178",
+    "https://open.epic.com/Tech/TechSpec?spec=5177",
+    "https://open.epic.com/Tech/TechSpec?spec=5176",
+    "https://open.epic.com/Tech/TechSpec?spec=5161",
+    "https://open.epic.com/Tech/TechSpec?spec=5170",
+    "https://open.epic.com/Tech/TechSpec?spec=5440",
+    "https://open.epic.com/Tech/TechSpec?spec=9398",
+    "https://open.epic.com/Tech/TechSpec?spec=8001",
+    "https://open.epic.com/Tech/TechSpec?spec=9924"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "By Interface Type"
+    },
+    {
+      "level": 2,
+      "text": "ASC X12"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Healthcare Claim Repricing Request (X12 837)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming External Paid Medical Claims (X12 837)"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Pharmacy Price Sales Catalog to Willow Inventory Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Additional Information to Support a Health Care Services Authorization\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Claim File Acknowledgment Interface – 999\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Authorization Request as Notification (X12 278R)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Incoming Marketplace Benefit Enrollment and Maintenance"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Incoming Marketplace Premium Payment Information"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Outgoing Marketplace Benefit Enrollment and Maintenance"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Incoming Referral Transfer Attachment (X12 275)"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Additional Information to Support a Health Care Services Review - 275"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Additional Information for Health Care Claim (X12 275)"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Outgoing Healthcare Claim: Dental (X12 837)"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Pharmacy Purchase Order from Willow Inventory\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Pharmacy Purchase Order Invoice to Willow Inventory\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Healthcare Claim: Professional (X12 837 Batch)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Healthcare Claim: Professional (X12 837)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Healthcare Claim Payment/Advice (X12 835)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Benefit Enrollment and Maintenance (X12 834)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Claim Status Inquiry (X12 276/277)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Payment Order/Remittance Advice (X12 820 Batch)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Benefit Enrollment and Maintenance (X12 834)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Eligibility Verification Query (X12 270/271)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Referral Request for Review (X12 278R)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Unsolcited Healthcare Claim Pending Status Notification (X12 277P)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Authorization Notification (X12 278N)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Incoming Referral Transfer Attachment (X12 275)"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Eligibility Verification Query (X12 270/271)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Claims Status Request (X12 276/277)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Authorization Request for Review and Response (X12 278R)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Pharmacy Benefit Eligibility Query - 270/271\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Admission Notification (X12 278)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Authorization Notification (X12 278N)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Purchase Order Acknowledgement to Willow Inventory\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Shipment Notification to Willow Inventory\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Health Care Claims for Institutional, Professional, and Dental Services\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Health Care Data Reporting Claims\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Rapid Retest \n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Health Care Claim Payment/Advice\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Health Care Claim Acknowledgement\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Outgoing X12 Acknowledgment (X12 999)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Outgoing Front-End Claim Status Acknowledgment (X12 277CA)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Marketplace Benefit Enrollment and Maintenance  (HIX 834)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming X12 HIX 820\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Tapestry Outgoing Marketplace Benefit Enrollment (X12 834)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Authorization Inquiry (X12 278I)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Claim Status Batch (X12 277)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "X12 278 Endpoint Specifications\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Payer Platform Outgoing Claims Status Request (X12 276/277)\n\t\t\t\tread the spec"
+    }
+  ],
+  "siteName": "Open Epic"
+}

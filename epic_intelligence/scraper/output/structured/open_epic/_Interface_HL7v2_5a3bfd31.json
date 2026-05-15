@@ -1,0 +1,510 @@
+{
+  "url": "https://open.epic.com/Interface/HL7v2",
+  "fileId": "_Interface_HL7v2_5a3bfd31",
+  "title": "open.epic :: Explore By Interface Type",
+  "description": "",
+  "crawledAt": "2026-05-15T07:21:13.028Z",
+  "depth": 1,
+  "textLength": 138207,
+  "wordCount": 18103,
+  "links": [
+    "https://open.epic.com",
+    "https://open.epic.com/Tech/TechSpec?spec=5357",
+    "https://open.epic.com/Interface/HL7v2",
+    "https://open.epic.com/Tech/TechSpec?spec=5369",
+    "https://open.epic.com/Tech/TechSpec?spec=5274",
+    "https://open.epic.com/Tech/TechSpec?spec=5365",
+    "https://open.epic.com/Tech/TechSpec?spec=5235",
+    "https://open.epic.com/Tech/TechSpec?spec=5262",
+    "https://open.epic.com/Tech/TechSpec?spec=5292",
+    "https://open.epic.com/Tech/TechSpec?spec=5368",
+    "https://open.epic.com/Tech/TechSpec?spec=5383",
+    "https://open.epic.com/Tech/TechSpec?spec=5279",
+    "https://open.epic.com/Tech/TechSpec?spec=5221",
+    "https://open.epic.com/Tech/TechSpec?spec=5250",
+    "https://open.epic.com/Tech/TechSpec?spec=5276",
+    "https://open.epic.com/Tech/TechSpec?spec=5331",
+    "https://open.epic.com/Tech/TechSpec?spec=5295",
+    "https://open.epic.com/Tech/TechSpec?spec=5371",
+    "https://open.epic.com/Tech/TechSpec?spec=6436",
+    "https://open.epic.com/Tech/TechSpec?spec=5330",
+    "https://open.epic.com/Tech/TechSpec?spec=5778",
+    "https://open.epic.com/Tech/TechSpec?spec=5220",
+    "https://open.epic.com/Tech/TechSpec?spec=10257",
+    "https://open.epic.com/Tech/TechSpec?spec=6420",
+    "https://open.epic.com/Tech/TechSpec?spec=5364",
+    "https://open.epic.com/Tech/TechSpec?spec=5334",
+    "https://open.epic.com/Tech/TechSpec?spec=5211",
+    "https://open.epic.com/Tech/TechSpec?spec=5319",
+    "https://open.epic.com/Tech/TechSpec?spec=5264",
+    "https://open.epic.com/Tech/TechSpec?spec=9907",
+    "https://open.epic.com/Tech/TechSpec?spec=5340",
+    "https://open.epic.com/Tech/TechSpec?spec=5236",
+    "https://open.epic.com/Tech/TechSpec?spec=5375",
+    "https://open.epic.com/Tech/TechSpec?spec=5342",
+    "https://open.epic.com/Tech/TechSpec?spec=5335",
+    "https://open.epic.com/Tech/TechSpec?spec=5223",
+    "https://open.epic.com/Tech/TechSpec?spec=5378",
+    "https://open.epic.com/Tech/TechSpec?spec=5298",
+    "https://open.epic.com/Tech/TechSpec?spec=5259",
+    "https://open.epic.com/Tech/TechSpec?spec=5280",
+    "https://open.epic.com/Tech/TechSpec?spec=5265",
+    "https://open.epic.com/Tech/TechSpec?spec=5382",
+    "https://open.epic.com/Tech/TechSpec?spec=5349",
+    "https://open.epic.com/Tech/TechSpec?spec=5253",
+    "https://open.epic.com/Tech/TechSpec?spec=5210",
+    "https://open.epic.com/Tech/TechSpec?spec=8000",
+    "https://open.epic.com/Tech/TechSpec?spec=5354",
+    "https://open.epic.com/Tech/TechSpec?spec=5200",
+    "https://open.epic.com/Tech/TechSpec?spec=5238",
+    "https://open.epic.com/Tech/TechSpec?spec=5270",
+    "https://open.epic.com/Tech/TechSpec?spec=5372",
+    "https://open.epic.com/Tech/TechSpec?spec=5374",
+    "https://open.epic.com/Interface/WebServices",
+    "https://open.epic.com/Tech/TechSpec?spec=5249",
+    "https://open.epic.com/Tech/TechSpec?spec=5286",
+    "https://open.epic.com/Tech/TechSpec?spec=5384",
+    "https://open.epic.com/Tech/TechSpec?spec=5322",
+    "https://open.epic.com/Tech/TechSpec?spec=5379",
+    "https://open.epic.com/Tech/TechSpec?spec=5333",
+    "https://open.epic.com/Tech/TechSpec?spec=5273",
+    "https://open.epic.com/Tech/TechSpec?spec=5207",
+    "https://open.epic.com/Tech/TechSpec?spec=5215",
+    "https://open.epic.com/Tech/TechSpec?spec=5296",
+    "https://open.epic.com/Tech/TechSpec?spec=5377",
+    "https://open.epic.com/Tech/TechSpec?spec=5318",
+    "https://open.epic.com/Tech/TechSpec?spec=5251",
+    "https://open.epic.com/Tech/TechSpec?spec=5208",
+    "https://open.epic.com/Tech/TechSpec?spec=5247",
+    "https://open.epic.com/Tech/TechSpec?spec=5353",
+    "https://open.epic.com/Tech/TechSpec?spec=5255",
+    "https://open.epic.com/Tech/TechSpec?spec=5363",
+    "https://open.epic.com/Tech/TechSpec?spec=9755",
+    "https://open.epic.com/Tech/TechSpec?spec=5355",
+    "https://open.epic.com/Tech/TechSpec?spec=5350",
+    "https://open.epic.com/Tech/TechSpec?spec=5387",
+    "https://open.epic.com/Tech/TechSpec?spec=7986",
+    "https://open.epic.com/Tech/TechSpec?spec=5390",
+    "https://open.epic.com/Tech/TechSpec?spec=5420",
+    "https://open.epic.com/Tech/TechSpec?spec=5316",
+    "https://open.epic.com/Tech/TechSpec?spec=5323",
+    "https://open.epic.com/Tech/TechSpec?spec=5206",
+    "https://open.epic.com/Tech/TechSpec?spec=5237",
+    "https://open.epic.com/Tech/TechSpec?spec=5430",
+    "https://open.epic.com/Tech/TechSpec?spec=5214",
+    "https://open.epic.com/Tech/TechSpec?spec=5315",
+    "https://open.epic.com/Tech/TechSpec?spec=5201",
+    "https://open.epic.com/Tech/TechSpec?spec=5204",
+    "https://open.epic.com/Tech/TechSpec?spec=5341",
+    "https://open.epic.com/Tech/TechSpec?spec=5326",
+    "https://open.epic.com/Clinical/EHRtoEHR",
+    "https://open.epic.com/Tech/TechSpec?spec=5216"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "By Interface Type"
+    },
+    {
+      "level": 2,
+      "text": "HL7v2"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Materials Management\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming External Encounters\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Fills to Automated Fill System from Willow Ambulatory\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Fill Status Updates and Load/Unload from Automated Fill System\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Patient Waiting Time from Patient Administration System\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Inventory Depletion\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Blood Transfusion Status Notification\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming External Outpatient Medication Orders Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Asynchronous Acknowledgement\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Documentation\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Provider Communications Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Medication Verification Queue Update Notification from Willow Inpatient Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing External Encounters\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Provider Communications Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Asynchronous Acknowledgement Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming External Appointments Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing External Appointments Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Provider Information\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Medication Stock Reservation to Willow Inventory\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Provider Information\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Device Association Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Drug Supply Receipt to Willow Inventory\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Birth Registry Reporting - Canada"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Financial Transactions\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Procedural Supply Usage\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Results and Orders\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Surgical Cart Tracking\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Infusion Orders\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming External Push Notifications\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Patient Education Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Patient Education Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Deficiency Tracking\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Patient Administration\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Problem List\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Problem List\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Clinical Observations\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Ancillary Orders\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Medication Administration Notification\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Diet Orders\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Imaging Results and Orders\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Blood Product Matching to BPAM\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Medication Orders to EpicCare Ambulatory\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Medication Orders from EpicCare Ambulatory\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Scanned Document Link Maintenance\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Results from Lab Instruments\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Orders to Lab Instruments\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Orders from CPOE Systems\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Medication Dispenses and Load/Unload from ADS to Willow Inpatient\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Verified Medication Orders from Willow Inpatient\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Patient Administration\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Formulary Information to ADS from Willow Inpatient Interface\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming EOB Scanning\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Device Data\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming MPI and Demographics Query\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Personnel Management\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Location and Department Information\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing MPI and Demographics Query\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Claim Scrubber Query\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Address Verification Query\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Clinical Documentation Flowsheet Data\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Appointment Scheduling\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Schedule Query\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Clinical Documentation Flowsheet Data\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Procedure Log Data\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Financial Transactions\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Syndromic Data\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Results Query to Ontario Lab Information System"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Registration to Home Device Data Concentrator\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Appointment Scheduling\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Coding - Incoming Query and Response\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Surgical Case Tracking\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Medication Stock Transfer Request and Response\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Surgical Case Scheduling\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing OCIO Medication Orders from EpicCare Ambulatory\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Medication Inventory Management\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Medication Inventory Depletion\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Surgical Resource Data\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Infusion Documentation\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Alerts from Alert Manager and Alert Reporting from Patient Care Devices\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Medication Administration Notification\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Prescriptions from Legacy Pharmacy to Willow Ambulatory\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Ancillary Results\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Discrete Genomic Results\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Ancillary Results - Imaging\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Digital Pathology\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Transcriptions\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Scanned Document Link\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Smoking Cessation Integration\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Electronic Fetal Monitoring"
+    },
+    {
+      "level": 3,
+      "text": "Event Notifications via Direct\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Coding - Bidirectional\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Electronic Laboratory Reporting"
+    },
+    {
+      "level": 3,
+      "text": "NAACCR Pathology Reporting\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Vaccination Administration\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Vaccination Query\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Vaccination Administration\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Patient Administration from Population Register\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Referral Notification\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Referral Notification\n\t\t\t\tread the spec"
+    }
+  ],
+  "siteName": "Open Epic"
+}

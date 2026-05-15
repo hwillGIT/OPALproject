@@ -1,0 +1,20 @@
+{
+  "url": "https://open.epic.com/Tech/TechSpec?spec=5458",
+  "fileId": "_Tech_TechSpec_a7591320",
+  "title": "open.epic :: Log In",
+  "description": "",
+  "crawledAt": "2026-05-15T07:21:11.209Z",
+  "depth": 1,
+  "textLength": 529,
+  "wordCount": 80,
+  "links": [
+    "https://open.epic.com"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Log in"
+    }
+  ],
+  "siteName": "Open Epic"
+}

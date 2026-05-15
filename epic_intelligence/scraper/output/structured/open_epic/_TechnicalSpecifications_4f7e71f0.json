@@ -1,0 +1,85 @@
+{
+  "url": "https://open.epic.com/TechnicalSpecifications",
+  "fileId": "_TechnicalSpecifications_4f7e71f0",
+  "title": "open.epic :: Technical Specifications",
+  "description": "",
+  "crawledAt": "2026-05-15T07:20:50.962Z",
+  "depth": 0,
+  "textLength": 7372,
+  "wordCount": 1083,
+  "links": [
+    "https://open.epic.com",
+    "https://open.epic.com/Interface/HL7v2",
+    "https://open.epic.com/Interface/X12",
+    "https://open.epic.com/Interface/NCPDP",
+    "https://open.epic.com/Interface/DICOM",
+    "https://open.epic.com/Interface/Other",
+    "https://open.epic.com/Ancillary",
+    "https://open.epic.com/Clinical",
+    "https://open.epic.com/Financial",
+    "https://open.epic.com/Identity",
+    "https://open.epic.com/CountrySpecific",
+    "https://open.epic.com/Operational",
+    "https://open.epic.com/PublicHealth",
+    "https://open.epic.com/Scheduling",
+    "https://open.epic.com/Interface/FHIR",
+    "https://open.epic.com/interface/FHIR",
+    "https://open.epic.com/Hyperdrive",
+    "https://open.epic.com/Interface/WebServices",
+    "https://open.epic.com/Home/oeAPIList",
+    "https://open.epic.com/Clinical/EHRtoEHR",
+    "https://open.epic.com/EHITables",
+    "https://open.epic.com/Contact"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Data Sharing Specifications"
+    },
+    {
+      "level": 2,
+      "text": "Interfaces"
+    },
+    {
+      "level": 2,
+      "text": "FHIR"
+    },
+    {
+      "level": 3,
+      "text": "If you're just getting started with FHIR:"
+    },
+    {
+      "level": 3,
+      "text": "When you're creating a new app and registering the client ID with Epic:"
+    },
+    {
+      "level": 3,
+      "text": "Advanced FHIR use cases:"
+    },
+    {
+      "level": 2,
+      "text": "Additional Industry-Standard and Public APIs"
+    },
+    {
+      "level": 2,
+      "text": "Epic Private APIs"
+    },
+    {
+      "level": 2,
+      "text": "Exports"
+    },
+    {
+      "level": 3,
+      "text": "SQL Exports from Relational Reporting Databases"
+    },
+    {
+      "level": 2,
+      "text": "External Health Records"
+    },
+    {
+      "level": 2,
+      "text": "Couldn't find it?"
+    }
+  ],
+  "siteName": "Open Epic"
+}

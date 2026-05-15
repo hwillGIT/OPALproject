@@ -1,0 +1,22 @@
+{
+  "name": "epic-doc-scraper",
+  "version": "1.0.0",
+  "description": "Playwright-based scraper for Epic EHR documentation",
+  "main": "playwright_crawler.js",
+  "scripts": {
+    "crawl:open-epic": "node playwright_crawler.js --site open_epic",
+    "crawl:fhir-epic": "node playwright_crawler.js --site fhir_epic",
+    "crawl:hl7-fhir": "node playwright_crawler.js --site hl7_fhir",
+    "crawl:cds-hooks": "node playwright_crawler.js --site cds_hooks",
+    "crawl:smart": "node playwright_crawler.js --site smart_app_launch",
+    "crawl:all": "node playwright_crawler.js --all",
+    "crawl:url": "node playwright_crawler.js --url"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "node-fetch": "^2.7.0",
+    "playwright": "^1.58.2"
+  },
+  "author": "OPAL Epic Intelligence",
+  "license": "MIT"
+}

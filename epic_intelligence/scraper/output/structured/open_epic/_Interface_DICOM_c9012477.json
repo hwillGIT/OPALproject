@@ -1,0 +1,52 @@
+{
+  "url": "https://open.epic.com/Interface/DICOM",
+  "fileId": "_Interface_DICOM_c9012477",
+  "title": "open.epic :: Explore By Interface Type",
+  "description": "",
+  "crawledAt": "2026-05-15T07:21:31.845Z",
+  "depth": 1,
+  "textLength": 2124,
+  "wordCount": 310,
+  "links": [
+    "https://open.epic.com",
+    "https://open.epic.com/Tech/TechSpec?spec=5152",
+    "https://open.epic.com/Tech/TechSpec?spec=Epic.EncryptionValidator.exe&specType=tools",
+    "https://open.epic.com/Interface/DICOM",
+    "https://open.epic.com/Tech/TechSpec?spec=5409"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "By Interface Type"
+    },
+    {
+      "level": 2,
+      "text": "DICOM"
+    },
+    {
+      "level": 3,
+      "text": "Imaging Integration\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "MWL (Modality Work List)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "MPPS (Modality Performed Procedure Step)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "SR (Structured Reporting)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "SC (Secondary Capture)\n\t\t\t\tread the spec"
+    },
+    {
+      "level": 3,
+      "text": "WADO (Web Access to DICOM Objects) Import of Key Objects\n\t\t\t\tread the spec"
+    }
+  ],
+  "siteName": "Open Epic"
+}
