@@ -31,11 +31,25 @@ All modules in this package are pure-functional where possible.
 Storage is the only I/O.
 """
 
+from .adversarial import (
+    AdversarialReviewer,
+    ReviewRequest,
+    ReviewVerdict,
+    StubReviewer,
+    Verdict,
+    build_review_prompt,
+    parse_review_response,
+)
 from .identifiers import (
     make_rollback_id,
     make_scope_id,
     make_transition_id,
     slugify,
+)
+from .lifecycle_gating import (
+    GatingResult,
+    annotate_transition_with_verdict,
+    gate_tier_2,
 )
 from .models import (
     Scope,
@@ -53,16 +67,26 @@ from .transitions import (
 
 __all__ = [
     "ALLOWED_TRANSITIONS",
+    "AdversarialReviewer",
+    "GatingResult",
+    "ReviewRequest",
+    "ReviewVerdict",
     "Scope",
     "ScopeMember",
     "ScopeStatus",
     "ScopeTransition",
+    "StubReviewer",
     "Tier",
     "TransitionActor",
+    "Verdict",
+    "annotate_transition_with_verdict",
+    "build_review_prompt",
     "can_transition",
+    "gate_tier_2",
     "make_rollback_id",
     "make_scope_id",
     "make_transition_id",
+    "parse_review_response",
     "slugify",
     "tier_of",
 ]

@@ -230,6 +230,81 @@ from `events/cli.py`) which:
 
 Failures are non-fatal — the JSONL log is always the source of truth.
 
+## Adversarial review of Tier-2 transitions (E-1)
+
+Tier-2 transitions (`active -> canonical`, `* -> deprecated`) are
+autonomous **but gated by adversarial review**. The reviewer is a
+loyal-opposition LLM call: its job is to argue AGAINST the proposal
+with specifics from the scope state + recent events. It returns a
+structured verdict the gating layer reads to decide what to apply.
+
+### Modules
+
+| File | Role |
+|---|---|
+| `memory_system/scopes/adversarial.py` | `AdversarialReviewer`, `StubReviewer`, `ReviewRequest`, `ReviewVerdict`, prompt builder, response parser |
+| `memory_system/scopes/lifecycle_gating.py` | `gate_tier_2()` runs the reviewer over every Tier-2 proposal; returns `GatingResult(approved, rejected, verdicts)` |
+
+### Output contract
+
+The adversary MUST emit:
+
+```
+VERDICT: APPROVED | REJECTED
+REASONING: <one to three sentences>
+ALTERNATIVE: <one line, or 'none'>
+```
+
+A malformed response fails safe to `REJECTED` with a "parse failure"
+reasoning. A provider exception fails safe to `REJECTED`. The design
+treats silent approval as the worst outcome.
+
+### Two bars (the reviewer's system prompt enforces this)
+
+**Promotion to canonical** — high bar. The canonical vocabulary is
+the predicate engine's source of truth; a wrong promotion contaminates
+retrieval. Reject when: member tags are drifting, activity is a
+single short burst, the scope's name looks like a transient codename,
+or adjacent canonical concepts already cover this ground.
+
+**Deprecation** — moderate bar. Deprecation is reversible
+(`deprecated -> active` is allowed), but every false deprecation
+costs an operator revert. Reject when: silence could be a measurement
+gap, a recent CONTEXT_CHANGE suggests dormant-not-dead, or the scope
+was just promoted.
+
+### CLI
+
+```bash
+# Dry-run with adversarial review (default: stub reviewer; pass
+# --adversary-provider anthropic|openai|gemini for the real thing)
+python -m memory_system.scopes.cli lifecycle --with-adversarial-review
+
+# Commit only the approved Tier-1 + approved Tier-2 transitions
+python -m memory_system.scopes.cli lifecycle \
+    --apply --with-adversarial-review --adversary-provider anthropic
+```
+
+The legacy `--apply-tier-2` (no review) still exists for emergencies
+but is documented as NOT RECOMMENDED. The approved-by-the-adversary
+path is the operational default.
+
+### Provider reuse
+
+The adversarial reviewer reuses the pluggable LLM provider from
+`epic_intelligence.synthesis.provider` (Anthropic / OpenAI / Gemini /
+Stub). No duplicate plumbing. Env overrides:
+`OPAL_SYNTHESIS_PROVIDER`, `OPAL_SYNTHESIS_MODEL`.
+
+### Audit trail
+
+`annotate_transition_with_verdict()` re-emits the approved transition
+with the adversary's reasoning baked into its `reason` field, and
+changes the `actor` to `adversary_rejected` on the rejected path. The
+store records the full transition either way, so every Tier-2
+decision is reconstructable from the JSONL audit log alone — no
+separate verdict store needed.
+
 ## Open follow-ups (out of scope)
 
 - **Neo4j projection** — emit memory events as graph nodes/edges for
@@ -239,14 +314,14 @@ Failures are non-fatal — the JSONL log is always the source of truth.
 - **Workflow orchestrator integration** — make the bot platform
   automatically append events as workflows execute, instead of
   relying on the operator to do it by hand.
-- **Adversarial-review module for Tier-2 transitions** — currently
-  `lifecycle.py` returns Tier-2 proposals without running adversarial
-  review. The CLI gates them behind `--apply-tier-2` for explicit
-  operator opt-in until the review module lands.
 - **DSPy assertions** — validate AI-generated events against the
   schema (e.g., PREDICTION must include a confidence value).
 - **Briefing personalization** — filter briefings to the actor or
   department the operator is currently context-switched into.
+- **Multi-round adversarial debate** — currently the reviewer is a
+  single LLM call. A proposer + critic + judge architecture could
+  surface more nuanced disagreements at the cost of additional
+  latency + tokens.
 
 ## Test coverage
 
