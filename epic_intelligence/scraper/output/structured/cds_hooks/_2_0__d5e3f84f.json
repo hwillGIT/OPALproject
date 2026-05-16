@@ -1,0 +1,198 @@
+{
+  "url": "https://cds-hooks.hl7.org/2.0/",
+  "fileId": "_2_0__d5e3f84f",
+  "title": "2.0 - CDS Hooks",
+  "description": "",
+  "crawledAt": "2026-05-16T14:45:03.956Z",
+  "depth": 0,
+  "textLength": 78595,
+  "wordCount": 12069,
+  "links": [
+    "https://cds-hooks.hl7.org/2.0",
+    "https://cds-hooks.hl7.org/hooks/patient-view",
+    "https://cds-hooks.hl7.org/hooks/template"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "2.0"
+    },
+    {
+      "level": 2,
+      "text": "Overview"
+    },
+    {
+      "level": 3,
+      "text": "Conformance Language"
+    },
+    {
+      "level": 3,
+      "text": "Use of JSON"
+    },
+    {
+      "level": 2,
+      "text": "CDS Hooks Anatomy"
+    },
+    {
+      "level": 3,
+      "text": "CDS Services"
+    },
+    {
+      "level": 3,
+      "text": "CDS Clients"
+    },
+    {
+      "level": 3,
+      "text": "Cards"
+    },
+    {
+      "level": 2,
+      "text": "Discovery"
+    },
+    {
+      "level": 3,
+      "text": "HTTP Request"
+    },
+    {
+      "level": 3,
+      "text": "Response"
+    },
+    {
+      "level": 3,
+      "text": "HTTP Status Codes"
+    },
+    {
+      "level": 3,
+      "text": "Discovery Example"
+    },
+    {
+      "level": 2,
+      "text": "Calling a CDS Service"
+    },
+    {
+      "level": 3,
+      "text": "HTTP Request"
+    },
+    {
+      "level": 3,
+      "text": "Example"
+    },
+    {
+      "level": 2,
+      "text": "Providing FHIR Resources to a CDS Service"
+    },
+    {
+      "level": 3,
+      "text": "Prefetch Template"
+    },
+    {
+      "level": 3,
+      "text": "FHIR Resource Access"
+    },
+    {
+      "level": 2,
+      "text": "CDS Service Response"
+    },
+    {
+      "level": 3,
+      "text": "HTTP Status Codes"
+    },
+    {
+      "level": 3,
+      "text": "HTTP Response"
+    },
+    {
+      "level": 3,
+      "text": "Card Attributes"
+    },
+    {
+      "level": 3,
+      "text": "System Action"
+    },
+    {
+      "level": 3,
+      "text": "Example"
+    },
+    {
+      "level": 2,
+      "text": "Feedback"
+    },
+    {
+      "level": 3,
+      "text": "Suggestion accepted"
+    },
+    {
+      "level": 3,
+      "text": "Card ignored"
+    },
+    {
+      "level": 3,
+      "text": "Overridden guidance"
+    },
+    {
+      "level": 3,
+      "text": "Explicit reject with override reasons"
+    },
+    {
+      "level": 2,
+      "text": "Security and Safety"
+    },
+    {
+      "level": 3,
+      "text": "Trusting CDS Services"
+    },
+    {
+      "level": 3,
+      "text": "Trusting CDS Clients"
+    },
+    {
+      "level": 3,
+      "text": "Cross-Origin Resource Sharing"
+    },
+    {
+      "level": 3,
+      "text": "Update stale guidance"
+    },
+    {
+      "level": 2,
+      "text": "Extensions"
+    },
+    {
+      "level": 2,
+      "text": "Data Types"
+    },
+    {
+      "level": 3,
+      "text": "Coding"
+    },
+    {
+      "level": 2,
+      "text": "Hooks"
+    },
+    {
+      "level": 3,
+      "text": "Overview"
+    },
+    {
+      "level": 3,
+      "text": "Hook context and prefetch"
+    },
+    {
+      "level": 3,
+      "text": "Hook Definition Format"
+    },
+    {
+      "level": 3,
+      "text": "Context"
+    },
+    {
+      "level": 3,
+      "text": "Hook Maturity Model"
+    },
+    {
+      "level": 3,
+      "text": "Changes to a Hook"
+    }
+  ],
+  "siteName": "CDS Hooks"
+}

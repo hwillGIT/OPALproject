@@ -1,0 +1,48 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/example-app-launch-public.html",
+  "fileId": "_ig_HL7_smart_app_launch_example_app_launch_public_fb6c1789",
+  "title": "Example App Launch for Public Client - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:22.852Z",
+  "depth": 1,
+  "textLength": 12816,
+  "wordCount": 407,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/examples.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/example-app-launch-public.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Example App Launch for Public Client"
+    },
+    {
+      "level": 3,
+      "text": "Launch App"
+    },
+    {
+      "level": 3,
+      "text": "Retrieve .well-known/smart-configuration"
+    },
+    {
+      "level": 3,
+      "text": "Obtain authorization code"
+    },
+    {
+      "level": 3,
+      "text": "Retrieve access token"
+    },
+    {
+      "level": 3,
+      "text": "Access FHIR API"
+    },
+    {
+      "level": 3,
+      "text": "Refresh access token"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

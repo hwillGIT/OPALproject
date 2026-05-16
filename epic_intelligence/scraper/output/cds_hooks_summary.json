@@ -1,0 +1,51 @@
+{
+  "site": "CDS Hooks",
+  "baseUrl": "https://cds-hooks.hl7.org",
+  "crawledAt": "2026-05-16T14:46:01.433Z",
+  "totalPages": 2,
+  "totalErrors": 5,
+  "totalWords": 24138,
+  "pages": [
+    {
+      "url": "https://cds-hooks.hl7.org/2.0/",
+      "title": "2.0 - CDS Hooks",
+      "fileId": "_2_0__d5e3f84f",
+      "depth": 0,
+      "wordCount": 12069
+    },
+    {
+      "url": "https://cds-hooks.hl7.org/2.0",
+      "title": "2.0 - CDS Hooks",
+      "fileId": "_2_0_3c01d03f",
+      "depth": 1,
+      "wordCount": 12069
+    }
+  ],
+  "errors": [
+    {
+      "url": "https://cds-hooks.hl7.org/hooks/patient-view/",
+      "error": "HTTP 403: Forbidden",
+      "depth": 0
+    },
+    {
+      "url": "https://cds-hooks.hl7.org/hooks/order-select/",
+      "error": "HTTP 403: Forbidden",
+      "depth": 0
+    },
+    {
+      "url": "https://cds-hooks.hl7.org/hooks/order-sign/",
+      "error": "HTTP 403: Forbidden",
+      "depth": 0
+    },
+    {
+      "url": "https://cds-hooks.hl7.org/hooks/patient-view",
+      "error": "HTTP 403: Forbidden",
+      "depth": 1
+    },
+    {
+      "url": "https://cds-hooks.hl7.org/hooks/template",
+      "error": "HTTP 404: Not Found",
+      "depth": 1
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "url": "https://hl7.org/fhir/R4/clinicalimpression.html",
+  "fileId": "_fhir_R4_clinicalimpression_html_4551d7fe",
+  "title": "ClinicalImpression - FHIR v4.0.1Business identifiers assigned to this clinical impression by the performer or other systems which remain constant as the resource is updated and propagates from server to serverIdentifies the workflow status of the assessment (this element modifies the meaning of other elements)The workflow state of a clinical impression. (Strength=Required)Captures the reason for the current state of the ClinicalImpressionCategorizes the type of clinical assessment performedA summary of the context and/or cause of the assessment - why / where it was performed, and what patient events/status prompted itThe patient or group of individuals assessed as part of this recordThe Encounter during which this ClinicalImpression was created or to which the creation of this record is tightly associatedThe point in time or period over which the subject was assessedIndicates when the documentation of the assessment was completeThe clinician performing the assessmentA reference to the last assessment that was conducted on this patient. Assessments are often/usually ongoing in nature; a care provider (practitioner or team) will make new assessments on an ongoing basis as new data arises or the patient's conditions changesA list of the relevant problems/conditions for a patientReference to a specific published clinical protocol that was followed during this assessment, and/or that provides evidence in support of the diagnosisA text summary of the investigations and the diagnosisEstimate of likely outcomePrognosis or outlook findings. (Strength=Example)RiskAssessment expressing likely outcomeInformation supporting the clinical impressionCommentary about the impression, typically recorded after the impression itself was made, though supplemental notes by the original author could also appearA name/code for the group (\"set\") of investigations. Typically, this will be something like \"signs\", \"symptoms\", \"clinical\", \"diagnostic\", but the list is not constrained, and others such groups such as (exposure|family|travel|nutritional) history may be usedA name/code for a set of investigations. (Strength=Example)A record of a specific investigation that was undertakenSpecific text or code for finding or diagnosis, which may include ruled-out or resolved conditionsIdentification of the Condition or diagnosis. (Strength=Example)Specific reference for finding or diagnosis, which may include ruled-out or resolved conditionsWhich investigations support finding or diagnosisOne or more sets of investigations (signs, symptoms, etc.). The actual grouping of investigations varies greatly depending on the type and context of the assessment. These investigations may include data generated during the assessment process, or data previously generated and recorded that is pertinent to the outcomesSpecific findings or diagnoses that were considered likely or relevant to ongoing treatmentBusiness identifiers assigned to this clinical impression by the performer or other systems which remain constant as the resource is updated and propagates from server to serverIdentifies the workflow status of the assessment (this element modifies the meaning of other elements)The workflow state of a clinical impression. (Strength=Required)Captures the reason for the current state of the ClinicalImpressionCategorizes the type of clinical assessment performedA summary of the context and/or cause of the assessment - why / where it was performed, and what patient events/status prompted itThe patient or group of individuals assessed as part of this recordThe Encounter during which this ClinicalImpression was created or to which the creation of this record is tightly associatedThe point in time or period over which the subject was assessedIndicates when the documentation of the assessment was completeThe clinician performing the assessmentA reference to the last assessment that was conducted on this patient. Assessments are often/usually ongoing in nature; a care provider (practitioner or team) will make new assessments on an ongoing basis as new data arises or the patient's conditions changesA list of the relevant problems/conditions for a patientReference to a specific published clinical protocol that was followed during this assessment, and/or that provides evidence in support of the diagnosisA text summary of the investigations and the diagnosisEstimate of likely outcomePrognosis or outlook findings. (Strength=Example)RiskAssessment expressing likely outcomeInformation supporting the clinical impressionCommentary about the impression, typically recorded after the impression itself was made, though supplemental notes by the original author could also appearA name/code for the group (\"set\") of investigations. Typically, this will be something like \"signs\", \"symptoms\", \"clinical\", \"diagnostic\", but the list is not constrained, and others such groups such as (exposure|family|travel|nutritional) history may be usedA name/code for a set of investigations. (Strength=Example)A record of a specific investigation that was undertakenSpecific text or code for finding or diagnosis, which may include ruled-out or resolved conditionsIdentification of the Condition or diagnosis. (Strength=Example)Specific reference for finding or diagnosis, which may include ruled-out or resolved conditionsWhich investigations support finding or diagnosisOne or more sets of investigations (signs, symptoms, etc.). The actual grouping of investigations varies greatly depending on the type and context of the assessment. These investigations may include data generated during the assessment process, or data previously generated and recorded that is pertinent to the outcomesSpecific findings or diagnoses that were considered likely or relevant to ongoing treatment",
+  "description": "",
+  "crawledAt": "2026-05-16T14:44:49.813Z",
+  "depth": 1,
+  "textLength": 37899,
+  "wordCount": 4336,
+  "links": [
+    "https://hl7.org/fhir/R4/clinicalsummary-module.html",
+    "https://hl7.org/fhir/R4/clinicalimpression.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/security.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-encounter.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-patient.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-practitioner.html",
+    "https://hl7.org/fhir/R4/observation.html",
+    "https://hl7.org/fhir/R4/questionnaire.html",
+    "https://hl7.org/fhir/R4/workflow.html",
+    "https://hl7.org/fhir/R4/event.html",
+    "https://hl7.org/fhir/R4/condition.html",
+    "https://hl7.org/fhir/R4/formats.html",
+    "https://hl7.org/fhir/R4/clinicalimpression-definitions.html",
+    "https://hl7.org/fhir/R4/domainresource.html",
+    "https://hl7.org/fhir/R4/resource.html",
+    "https://hl7.org/fhir/R4/elementdefinition-definitions.html",
+    "https://hl7.org/fhir/R4/datatypes.html",
+    "https://hl7.org/fhir/R4/conformance-rules.html",
+    "https://hl7.org/fhir/R4/valueset-clinicalimpression-status.html",
+    "https://hl7.org/fhir/R4/terminologies.html",
+    "https://hl7.org/fhir/R4/references.html",
+    "https://hl7.org/fhir/R4/patient.html",
+    "https://hl7.org/fhir/R4/group.html",
+    "https://hl7.org/fhir/R4/encounter.html",
+    "https://hl7.org/fhir/R4/practitioner.html",
+    "https://hl7.org/fhir/R4/practitionerrole.html",
+    "https://hl7.org/fhir/R4/allergyintolerance.html",
+    "https://hl7.org/fhir/R4/backboneelement.html",
+    "https://hl7.org/fhir/R4/valueset-investigation-sets.html",
+    "https://hl7.org/fhir/R4/questionnaireresponse.html",
+    "https://hl7.org/fhir/R4/familymemberhistory.html",
+    "https://hl7.org/fhir/R4/diagnosticreport.html",
+    "https://hl7.org/fhir/R4/riskassessment.html",
+    "https://hl7.org/fhir/R4/imagingstudy.html",
+    "https://hl7.org/fhir/R4/media.html",
+    "https://hl7.org/fhir/R4/valueset-condition-code.html",
+    "https://hl7.org/fhir/R4/valueset-clinicalimpression-prognosis.html",
+    "https://hl7.org/fhir/R4/resourcelist.html",
+    "https://hl7.org/fhir/R4/xml.html",
+    "https://hl7.org/fhir/R4/narrative.html",
+    "https://hl7.org/fhir/R4/extensibility.html",
+    "https://hl7.org/fhir/R4/json.html",
+    "https://hl7.org/fhir/R4/rdf.html",
+    "https://hl7.org/fhir/R4/diff.html",
+    "https://hl7.org/fhir/R4/clinicalimpression-version-maps.html",
+    "https://hl7.org/fhir/R4/clinicalimpression-profiles.html",
+    "https://hl7.org/fhir/R4/clinicalimpression.profile.xml.html",
+    "https://hl7.org/fhir/R4/clinicalimpression.profile.json.html",
+    "https://hl7.org/fhir/R4/clinicalimpression.xsd",
+    "https://hl7.org/fhir/R4/clinicalimpression.sch",
+    "https://hl7.org/fhir/R4/clinicalimpression.schema.json.html",
+    "https://hl7.org/fhir/R4/clinicalimpression.shex.html",
+    "https://hl7.org/fhir/R4/clinicalimpression-dependencies.html",
+    "https://hl7.org/fhir/R4/search.html",
+    "https://hl7.org/fhir/R4/searchparameter-registry.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "9.8  Resource ClinicalImpression - Content"
+    },
+    {
+      "level": 2,
+      "text": "9.8.1 Scope and Usage"
+    },
+    {
+      "level": 2,
+      "text": "9.8.2 Boundaries and Relationships"
+    },
+    {
+      "level": 2,
+      "text": "9.8.3 Background and Context"
+    },
+    {
+      "level": 2,
+      "text": "9.8.4 \nResource Content"
+    },
+    {
+      "level": 3,
+      "text": "9.8.4.1 \nTerminology Bindings"
+    },
+    {
+      "level": 3,
+      "text": "9.8.4.2  Known Issue"
+    },
+    {
+      "level": 2,
+      "text": "9.8.5 Search Parameters"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}
