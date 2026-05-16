@@ -21,9 +21,9 @@ needs an outside voice (clinician, CMO, IP attorney, market analyst).
 | Persona | Role | Status |
 |---|---|---|
 | **Dr. Claire** | Clinical Advisor — practising clinician perspective on workflow + safety | existing |
-| **CMO Advisor** | Hospital CMO peer — gravitas for sales credibility + executive sponsorship paths | **new (PR 3)** |
+| **Dr. Devon** | CMO Advisor — Hospital CMO peer; gravitas for sales credibility + executive sponsorship paths | existing |
 | **Vera** | Healthcare Industry Analyst — payer dynamics, reimbursement, market trends | existing |
-| **IP Counsel** | External patent / IP attorney — prosecution strategy, freedom-to-operate, claim defense | **new (PR 3)** |
+| **Adriana** | IP Counsel — External patent / IP attorney; prosecution strategy, freedom-to-operate, claim defense | existing |
 
 ---
 
@@ -55,10 +55,10 @@ clear charter.
 
 | Persona | Role | Status |
 |---|---|---|
-| **Hardware Lead** | Firmware, ESP32-C6, audio codec, I2C, PCB | **new (PR 3)** |
-| **Industrial Designer** | Wearable form factor, ergonomics, human-factors for clinicians | **new (PR 3)** |
-| **UI/UX Expert** | Dashboards, mobile apps, EPIC-integration screens, admin consoles | **new (PR 3)** |
-| **Reliability Engineer** | Patient-safety failure modes, FMEA, incident analysis | **new (PR 3)** |
+| **Diego** | Hardware Lead — Firmware, ESP32-C6, audio codec, I2C, PCB | existing |
+| **Yuki** | Industrial Designer — Wearable form factor, ergonomics, human-factors for clinicians | existing |
+| **Sasha** | UI/UX Expert — Dashboards, mobile apps, EPIC-integration screens, admin consoles | existing |
+| **Bjorn** | Reliability Engineer — Patient-safety failure modes, FMEA, incident analysis | existing |
 
 ### 4. Healthcare & Clinical
 > Hospital-system context, regulatory pathway, on-site deployment. Translates between OPAL's tech and the clinical environment it lands in.
@@ -67,7 +67,7 @@ clear charter.
 |---|---|---|
 | **Helena** | Healthcare Enterprise Architect — EPIC/Cerner integration patterns, FHIR | existing |
 | **Regina** | Regulatory Affairs Specialist — FDA pathway, software as a medical device | existing |
-| **Clinical Ops / Pilot Manager** | Site selection, workflow integration, pilot ROI tracking | **new (PR 3)** |
+| **Imani** | Clinical Ops / Pilot Manager — Site selection, workflow integration, pilot ROI tracking | existing |
 
 ### 5. Go-to-Market & Partnerships
 > Pipeline, narrative, ecosystem. Owns who-we-talk-to and what-we-say.
@@ -77,7 +77,7 @@ clear charter.
 | **Maya** | Growth Lead — campaigns, top-of-funnel, content | existing |
 | **Rex** | Sales & BD — deal motion, objection handling, account plans | existing |
 | **Suki** | Compliance & Ops — sales-side compliance, BAA workflow | existing |
-| **Partnership Lead** | Hospital systems, EPIC App Orchard, payer partnerships | **new (PR 3)** |
+| **Wei** | Partnership Lead — Hospital systems, EPIC App Orchard, payer partnerships | existing |
 
 ### 6. Finance & Operations
 > Capital, runway, suppliers. Keeps the company solvent and the prototype line moving.
@@ -85,8 +85,8 @@ clear charter.
 | Persona | Role | Status |
 |---|---|---|
 | **Kai** | Finance Analyst — unit economics, model maintenance | existing |
-| **CFO** | Term sheets, runway management, investor narrative | **new (PR 3)** |
-| **Manufacturing Ops** | Prototype firms, supplier contracts, BOM cost engineering | **new (PR 3)** |
+| **Naomi** | CFO — Term sheets, runway management, investor narrative | existing |
+| **Ramon** | Manufacturing Operations — Prototype firms, supplier contracts, BOM cost engineering | existing |
 
 ---
 
@@ -120,9 +120,9 @@ Advisors first, Core Team second."
 
 | Stage | What lands | Status |
 |---|---|---|
-| **PR 1** (this PR) | DEPARTMENTS.md + TENSIONS.md + department/tier fields on persona-router + validation script | in flight |
-| **PR 2** | `bots/shared/workflows/` (named multi-agent workflows) + Memory-First Protocol integration in `memory_system/` | next |
-| **PR 3** | The 10 new personas above + their persona files + router wiring | after PR 2 |
+| **PR 1** | DEPARTMENTS.md + TENSIONS.md + department/tier fields on persona-router + validation script | merged / in PR #6 |
+| **PR 2** | `bots/shared/workflows/business/` (named multi-agent workflows) + Memory-First Protocol in `memory_system/` | in PR #7 |
+| **PR 3** (this PR) | The 10 new personas + their persona files + router wiring + topic patterns | in flight |
 
 ---
 
@@ -130,15 +130,15 @@ Advisors first, Core Team second."
 
 | Tier / Group | Count |
 |---|---|
-| Board of Advisors | 4 (2 existing + 2 new in PR 3) |
+| Board of Advisors | 4 |
 | Strategy & Leadership | 2 |
 | Engineering & Platform | 4 |
-| Hardware & Design | 4 (0 existing + 4 new in PR 3) |
-| Healthcare & Clinical | 3 (2 existing + 1 new in PR 3) |
-| Go-to-Market & Partnerships | 4 (3 existing + 1 new in PR 3) |
-| Finance & Operations | 3 (1 existing + 2 new in PR 3) |
+| Hardware & Design | 4 |
+| Healthcare & Clinical | 3 |
+| Go-to-Market & Partnerships | 4 |
+| Finance & Operations | 3 |
 | Cross-functional bots | 2 |
-| **Total personas (Tiers 1+2)** | **24** (14 existing + 10 new) |
+| **Total personas (Tiers 1+2)** | **24** |
 | **Total bots** | **2** (cross-functional) |
 
 ---

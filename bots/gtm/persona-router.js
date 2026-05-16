@@ -112,6 +112,73 @@ const TOPIC_PATTERNS = {
     'presubmission', 'clinical trial', 'predicate', 'classification',
     'post-market', 'qms', 'mdr', 'ce marking medical', 'notified body',
   ],
+
+  // === HARDWARE & DESIGN ===
+
+  'hardware-lead': [
+    'firmware', 'pcb', 'i2c', 'i2s', 'spi', 'adc', 'esp32', 'esp-idf', 'esp-adf',
+    'ota', 'audio codec', 'es8311', 'pull-up', 'battery', 'lipo', 'wearable hardware',
+    'antenna', 'thermal', 'power budget', 'low power', 'sleep mode', 'signal integrity',
+  ],
+  'industrial-designer': [
+    'industrial design', 'form factor', 'ergonomic', 'ergonomics', 'anthropometric',
+    'wearable design', 'enclosure', 'mould', 'moulding', 'finish', 'haptic',
+    'led placement', 'audio aperture', 'wear test', 'fit', 'comfort', 'tactile',
+  ],
+  'ui-ux-expert': [
+    'dashboard', 'ux', 'ui', 'design system', 'figma', 'wireframe', 'mockup',
+    'accessibility', 'wcag', 'screen', 'flow', 'companion app', 'admin console',
+    'on-screen', 'hud', 'visual hierarchy', 'usability test',
+  ],
+  'reliability-engineer': [
+    'reliability', 'fmea', 'failure mode', 'incident', 'post-mortem', 'postmortem',
+    'sla', 'slo', 'error budget', 'mtbf', 'mttr', 'blast radius', 'rollback',
+    'feature flag', 'observability', 'telemetry', 'alerting', 'iec 62366', 'iso 14971',
+  ],
+
+  // === HEALTHCARE & CLINICAL (PR 3) ===
+
+  'clinical-ops': [
+    'pilot', 'pilot site', 'deployment', 'site selection', 'clinical champion',
+    'irb', 'baa', 'procurement', 'training', 'change management', 'go-live',
+    'site readiness', 'pilot kickoff', 'week-one',
+  ],
+
+  // === BOARD OF ADVISORS (PR 3) ===
+
+  'cmo-advisor': [
+    'cmo', 'chief medical officer', 'medical leadership', 'medical staff',
+    'executive sponsor', 'hcahps', 'cms quality', 'value based care',
+    'readmission', 'length of stay', 'malpractice exposure', 'rn turnover',
+    'board reportable', 'amc', 'community hospital',
+  ],
+  'ip-counsel': [
+    'patent', 'ip', 'claim', 'prior art', 'uspto', 'epo', 'pct',
+    'freedom to operate', 'fto', 'defensive publication', 'trade secret',
+    'file history', 'claim construction', 'alice', 'doctrine of equivalents',
+    'design around',
+  ],
+
+  // === GO-TO-MARKET & PARTNERSHIPS (PR 3) ===
+
+  'partnership-lead': [
+    'partnership', 'alliance', 'app orchard', 'oem', 'white-label', 'co-sell',
+    'rev share', 'channel', 'integration partner', 'master service agreement',
+    'msa', 'mfn', 'exclusivity', 'system contract',
+  ],
+
+  // === FINANCE & OPERATIONS (PR 3) ===
+
+  cfo: [
+    'cfo', 'runway', 'term sheet', 'cap table', 'dilution', 'liquidation preference',
+    'preferred', 'series a', 'series b', 'pre-money', 'post-money', 'fundraise',
+    'bridge round', 'board reporting', 'investor update', 'sbir', 'sttr',
+  ],
+  'manufacturing-ops': [
+    'manufacturing', 'supplier', 'contract manufacturer', 'bom', 'dfm', 'dfa',
+    'tooling', 'mould tooling', 'yield', 'moq', 'lead time', 'consignment',
+    'iso 13485', 'inventory', 'second source', 'single source',
+  ],
 };
 
 // Channel-to-persona mapping (configured in config.json, set at init)
