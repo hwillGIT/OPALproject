@@ -46,3 +46,13 @@ EPIC EHR INTELLIGENCE LAYER (RAG over Epic docs):
 - Pipeline:                     python -m epic_intelligence.ingestion.pipeline
 - Citation-aware query:         python -m epic_intelligence.query "<question>" --top-k 5
 - Pytest:                       python -m pytest epic_intelligence/tests/
+
+WORKFLOW ORCHESTRATOR RUNTIME (turns YAML workflows into executable runs):
+- Module:                       orchestrator/
+- List workflows:               python -m orchestrator.cli list
+- Show one workflow:            python -m orchestrator.cli show <name>
+- Run a workflow:               python -m orchestrator.cli run <name> [--provider stub|auto|...] [--dry-run] [--json]
+- Default provider:             built-in StubProvider (no deps, no API key)
+- Real LLMs:                    --provider auto delegates to epic_intelligence.synthesis
+- Emits typed events to:        memory_system.events.write.append_event
+- Pytest:                       python -m pytest orchestrator/tests/

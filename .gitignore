@@ -58,3 +58,6 @@ hardware/opalDevice/esp-adf-temp/
 epic_intelligence/scraper/output/raw/
 epic_intelligence/scraper/output/*/raw/
 epic_intelligence/scraper/node_modules/
+
+# Memory system — runtime event log (per-day JSONL, regenerable from upstream sinks)
+memory_system/events/log/
