@@ -30,11 +30,15 @@ BUSINESS WORKFLOWS (multi-persona, OPAL-domain):
 - Workflow validator:           node bots/shared/workflows/validate.js
 - See README:                   bots/shared/workflows/README.md
 
-MEMORY-FIRST PROTOCOL (typed events):
+MEMORY-FIRST PROTOCOL (typed events + scopes + retrieval + ontology):
 - Protocol doc:                 memory_system/PROTOCOL.md
 - Event schema:                 memory_system/events/schema.py
 - Write + briefing CLI:         python -m memory_system.events.cli {write|briefing|rebuild}
 - JSONL source of truth:        memory_system/events/log/YYYY-MM-DD.jsonl
+- Scope primitive (auto-detect on every write):
+                                memory_system/scopes/ + python -m memory_system.scopes.cli {list|lifecycle|revert|rebuild}
+- Hybrid retrieval pipeline:    memory_system/retrieval/ (filter -> hybrid_search -> scope_expand -> window_truncate)
+- Ontology + predicate engine:  memory_system/ontology/{taxonomy,predicates}.json
 - Pytest:                       python -m pytest memory_system/tests/
 
 EPIC EHR INTELLIGENCE LAYER (RAG over Epic docs):

@@ -147,17 +147,106 @@ emits:
 - The fact is already retrievable from another source (ChromaDB doc, git history, an artifact)
 - You'd be writing a duplicate of an existing event id
 
-## Open follow-ups (out of scope for this PR)
+## Architecture additions ported from RTRevenue collab-memory
+
+The base Memory-First Protocol (typed events + JSONL + briefing) was
+the first piece. The richer architecture from RTRevenue's
+collab-memory has now been ported into OPAL's `memory_system/`:
+
+### Scope / namespace primitive (`memory_system/scopes/`)
+
+Two-tier vocabulary: any tag a writer attaches at write-time is
+provisional; the canonical taxonomy lives in
+`memory_system/ontology/taxonomy.json`. **Scopes** bridge the two —
+inferred clusters of related provisional tags with their own
+lifecycle (`provisional → active → canonical → deprecated`). Solves
+the new-initiative problem: a pilot kickoff that introduces a
+project codename + 5-10 internal terms is absorbed in one event
+without blocking the writer.
+
+```
+memory_system/scopes/
+├── models.py        Scope / ScopeMember / ScopeTransition (frozen)
+├── identifiers.py   Deterministic scope/transition/rollback id minting
+├── transitions.py   State-machine + tier classification table
+├── detect.py        Pure burst detector (single-event + windowed)
+├── lifecycle.py     Pure promotion / canonicalization / deprecation
+├── store.py         SQLite store (3 tables, idempotent schema)
+├── auto_detect.py   Hook called from events/cli.py on every accepted write
+└── cli.py           python -m memory_system.scopes.cli {list|lifecycle|revert|rebuild}
+```
+
+Tiered authority for transitions:
+
+| Tier | Move | Authority |
+|---|---|---|
+| 0 | Tag application + scope creation | Autonomous, no review |
+| 1 | provisional → active | Autonomous, 7-day rollback window |
+| 2 | active → canonical, * → deprecated | Autonomous + adversarial review (gated externally) |
+| 3 | canonical → active, active → provisional | Operator only |
+
+All Tier-1/Tier-2 transitions carry a deterministic `rollback_id`. One
+`memory-scopes revert <rollback_id>` undoes a Tier-1 move by appending
+a compensating transition (audit-preserving — nothing is deleted).
+
+### Hybrid retrieval pipeline (`memory_system/retrieval/`)
+
+Composable, pure-functional stages:
+
+```
+filter_only      structured filter by type/actor/workflow/tags/dates
+hybrid_search    RRF-merge of FTS5 hits + ChromaDB vector hits
+scope_expand     pull events sharing a scope membership with hits
+window_truncate  enforce token budget; oldest-or-lowest-score dropped first
+```
+
+Pipeline is `compose(*stages)`. Each stage is `(StageContext) -> StageContext`.
+Backends (FTS5, vectors, scope membership lookup) are injected as
+callbacks so the same pipeline runs in tests with in-memory fakes
+and in production with the real ChromaDB / SQLite backends.
+
+### Ontology + predicate engine (`memory_system/ontology/`)
+
+`taxonomy.json` is a SKOS-flavoured JSON tree (no rdflib dependency).
+`predicates.json` declares proactive pub/sub rules consulted by the
+briefing engine on triggers (`session_start`, `pre_query`,
+`post_write`). The bundled OPAL ontology covers clinical / hardware /
+regulatory / EHR-integration / pilot / fundraising / manufacturing /
+IP / strategy concepts; the bundled predicates surface open ACTIONs,
+recent DECISIONs, CONTEXT_CHANGEs, clinical-safety touches,
+regulatory touches, investor-pitch tracking, and pilot status at every
+session start.
+
+### Auto-detection on write
+
+Every accepted event flows through `scopes/auto_detect.py` (called
+from `events/cli.py`) which:
+  1. Loads canonical tags from the ontology
+  2. Loads tags-already-attached-to-existing-scopes from the SQLite store
+  3. Runs `detect()` over the new event + recent context
+  4. Materializes any candidate scopes into Scope + ScopeMember[] +
+     ScopeTransition rows in SQLite
+  5. Returns the materializations to the caller for surfacing
+
+Failures are non-fatal — the JSONL log is always the source of truth.
+
+## Open follow-ups (out of scope)
 
 - **Neo4j projection** — emit memory events as graph nodes/edges for
-  cross-persona traversal queries.
+  cross-persona traversal queries (OPAL already has Neo4j wired in
+  via `save_session.py` / `recall_context.py`; the new typed-events
+  layer doesn't push to Neo4j yet).
 - **Workflow orchestrator integration** — make the bot platform
   automatically append events as workflows execute, instead of
   relying on the operator to do it by hand.
+- **Adversarial-review module for Tier-2 transitions** — currently
+  `lifecycle.py` returns Tier-2 proposals without running adversarial
+  review. The CLI gates them behind `--apply-tier-2` for explicit
+  operator opt-in until the review module lands.
+- **DSPy assertions** — validate AI-generated events against the
+  schema (e.g., PREDICTION must include a confidence value).
 - **Briefing personalization** — filter briefings to the actor or
   department the operator is currently context-switched into.
-- **DSPy assertions** — validate that AI-generated events comply with
-  the schema (e.g., PREDICTION must include a confidence value).
 
 ## Test coverage
 
