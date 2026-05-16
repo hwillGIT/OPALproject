@@ -69,6 +69,10 @@ def _cmd_write(args: argparse.Namespace) -> int:
             chroma_path=args.chroma_path,
         )
         print(f"chroma upsert: {'OK' if ok else 'FAILED (see stderr)'}")
+    if args.neo4j_project:
+        from .neo4j_projection import project_to_neo4j
+        ok = project_to_neo4j(ev.to_dict())
+        print(f"neo4j upsert: {'OK' if ok else 'FAILED (see stderr)'}")
     if not args.no_autodetect:
         # Best-effort scope auto-detection. The function logs to stderr
         # and returns [] if anything goes wrong; the event is already
@@ -115,6 +119,15 @@ def _cmd_rebuild(args: argparse.Namespace) -> int:
     return 0 if seen == ok else 1
 
 
+def _cmd_neo4j_rebuild(args: argparse.Namespace) -> int:
+    from .neo4j_projection import rebuild_neo4j_from_log
+    from .write import read_log
+    events = read_log(args.log_dir)
+    seen, ok = rebuild_neo4j_from_log(events)
+    print(f"neo4j-rebuild: saw {seen} events; projected {ok} into Neo4j")
+    return 0 if seen == ok else 1
+
+
 def _add_log_dir(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
         "--log-dir", type=Path, default=DEFAULT_LOG_DIR,
@@ -145,6 +158,10 @@ def build_parser() -> argparse.ArgumentParser:
                     help="Override ChromaDB persistent directory")
     pw.add_argument("--no-autodetect", action="store_true",
                     help="Skip the scope burst-detector hook")
+    pw.add_argument("--neo4j-project", action="store_true",
+                    help="Also upsert into Neo4j after the JSONL append. "
+                         "Best-effort: failures log to stderr; JSONL is "
+                         "always the source of truth.")
     pw.set_defaults(func=_cmd_write)
 
     pb = sub.add_parser("briefing", help="Render a session-start briefing")
@@ -159,6 +176,14 @@ def build_parser() -> argparse.ArgumentParser:
     pr.add_argument("--chroma-path", type=Path,
                     help="Override ChromaDB persistent directory")
     pr.set_defaults(func=_cmd_rebuild)
+
+    pn = sub.add_parser(
+        "neo4j-rebuild",
+        help="Replay JSONL log into Neo4j (best-effort, uses "
+             "NEO4J_* env vars)",
+    )
+    _add_log_dir(pn)
+    pn.set_defaults(func=_cmd_neo4j_rebuild)
 
     return p
 
