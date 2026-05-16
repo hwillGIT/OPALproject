@@ -1,0 +1,77 @@
+# Regulatory Risk Assessment
+# Score a proposed change for its impact on FDA pathway, HIPAA
+# posture, IP claim defensibility, and design-controls discipline.
+
+name: regulatory-risk-assessment
+category: business
+domain: regulatory
+version: "1.0"
+description: >
+  Any change that touches data flow, model behavior, on-device firmware,
+  or clinical interaction surface gets graded here. Output classifies
+  risk (low/medium/high) and names the artifacts the change forces
+  (predicate update, design-history-file entry, threat-model delta).
+
+backpressure:
+  - Change is classified low/medium/high with explicit rationale
+  - Required regulatory artifacts are named with owners
+  - Threat-model delta is documented or explicitly "none"
+  - IP impact (claim narrowing? new claim?) is documented or explicitly "none"
+
+phases:
+  - id: fda-pathway-impact
+    lead: regulatory-affairs
+    supporting: [software-architect, ml-engineer]
+    tensions:
+      - regulatory-affairs<>software-architect
+    questions:
+      - "Does this change the device's intended use or indications for use?"
+      - "Does this move us between predicate-eligible and de novo?"
+      - "What design-history-file entries does this change force?"
+    output: "FDA pathway impact statement + required DHF entries"
+
+  - id: design-controls-discipline
+    lead: regulatory-affairs
+    supporting: [industrial-designer, hardware-lead]
+    tensions:
+      - regulatory-affairs<>industrial-designer
+    questions:
+      - "Does this trigger a design-input change, a design-output change, or both?"
+      - "Where is the agile-iteration evidence (commits, PRs) that will become DHF evidence?"
+    output: "Design-controls delta: which V&V activities to redo or new"
+
+  - id: hipaa-and-privacy
+    lead: security-architect
+    supporting: [cloud-architect]
+    questions:
+      - "What PHI categories does this newly touch?"
+      - "Does the data flow change? Does the BAA need updating?"
+      - "What's the breach-impact delta?"
+    output: "Threat-model delta + BAA touch list"
+
+  - id: ip-defensibility
+    lead: ip-counsel
+    supporting: [software-architect, ml-engineer]
+    tensions:
+      - ip-counsel<>software-architect
+    questions:
+      - "Does the change narrow or strengthen any active claim?"
+      - "Does it create new disclosable subject matter we should patent or defensively publish?"
+      - "Does it cross into a competitor's recently-issued claim?"
+    output: "IP impact statement + new claim opportunities (if any)"
+
+  - id: synthesis
+    lead: regulatory-affairs
+    supporting: [strategist, product-owner]
+    pattern: dialectic-debate
+    questions:
+      - "Final classification: low, medium, high?"
+      - "What's the timeline impact on the FDA submission?"
+      - "Approve, defer, or escalate to outside counsel?"
+    output: "Classified risk verdict + timeline impact + action list + memory writes"
+
+emits:
+  - DECISION
+  - INSIGHT
+  - ACTION
+  - CONTEXT_CHANGE

@@ -1,0 +1,67 @@
+# Clinical Decision Loop
+# Validate any clinician-facing change against bedside reality, EPIC
+# plumbing, and patient-safety failure modes before it ships.
+
+name: clinical-decision-loop
+category: business
+domain: clinical
+version: "1.0"
+description: >
+  Run any change that touches a clinician's workflow through bedside
+  reality, EPIC integration constraints, and failure-mode analysis.
+  Surfaces tensions explicitly; produces a decision artifact + open
+  actions in memory.
+
+backpressure:
+  - Lead clinician persona has said "I would not slow my workflow to use this"
+  - EPIC integration points are mapped to specific FHIR resources + write/read scopes
+  - Reliability engineer has reviewed at least one worst-case failure-mode
+  - Memory event ARTIFACT recorded with the final spec + open actions
+
+phases:
+  - id: bedside-reality
+    lead: clinical-advisor
+    supporting: [enterprise-architect]
+    tensions:
+      - clinical-advisor<>enterprise-architect
+    questions:
+      - "What does the clinician see, think, and feel at each step?"
+      - "Where do EPIC's workflow patterns force constraints on the design?"
+      - "What's the floor-level objection nobody on this thread has voiced?"
+    output: "Clinical workflow sketch with named EPIC integration points"
+
+  - id: failure-mode-scan
+    lead: reliability-engineer
+    supporting: [clinical-ops, security-architect]
+    tensions:
+      - reliability-engineer<>clinical-ops
+    questions:
+      - "What are the 3 ways this hurts a patient if it goes wrong?"
+      - "What real-ward failures has Clinical Ops actually seen with similar tools?"
+      - "Does the failure surface to the clinician or fail silently?"
+    output: "FMEA entry per failure mode + mitigation strategy"
+
+  - id: executive-resonance
+    lead: cmo-advisor
+    supporting: [clinical-advisor]
+    tensions:
+      - clinical-advisor<>cmo-advisor
+    questions:
+      - "Does a hospital CMO see this as solving a real reported problem?"
+      - "What clinical metric does this move that the C-suite tracks?"
+    output: "One-line CMO-grade value statement"
+
+  - id: synthesis
+    lead: product-owner
+    supporting: [strategist]
+    pattern: dialectic-debate
+    questions:
+      - "Given all three lenses, what should we build, in what sequence?"
+      - "What evidence would change our minds?"
+    output: "Versioned spec + acceptance criteria + memory writes"
+
+emits:
+  - DECISION
+  - INSIGHT
+  - ARTIFACT
+  - ACTION

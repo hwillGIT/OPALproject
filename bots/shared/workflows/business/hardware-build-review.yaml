@@ -1,0 +1,89 @@
+# Hardware Build Review
+# Greenlight a build/firmware change without breaking ID, physics,
+# ML/compute budget, or compliance.
+
+name: hardware-build-review
+category: business
+domain: hardware
+version: "1.0"
+description: >
+  Cross-functional review for any change to the ESP32-C6 wearable's
+  firmware, BOM, form factor, or compute targets. Forces the
+  industrial-design / hardware-physics / software-architecture /
+  reliability tradeoffs to be made consciously.
+
+backpressure:
+  - Form-factor change has been weighed against BOM + DFM constraints
+  - Compute change is feasible within the model-size/latency budget
+  - Failure-mode coverage for new component or firmware path exists
+  - Decision is recorded with a rollback path (what version it replaces)
+
+phases:
+  - id: change-framing
+    lead: hardware-lead
+    supporting: [product-owner]
+    questions:
+      - "What is the proposed change in concrete electrical/firmware terms?"
+      - "What problem does it solve that the current build doesn't?"
+      - "What does it explicitly NOT solve?"
+    output: "Change brief: before, after, scope boundary"
+
+  - id: physics-and-form
+    lead: industrial-designer
+    supporting: [hardware-lead]
+    tensions:
+      - industrial-designer<>hardware-lead
+    questions:
+      - "Does the change survive ergonomic constraints (weight, balance, contact points)?"
+      - "Does the change survive manufacturing (DFM, yield, supplier-side BOM)?"
+      - "What does the user see/feel that they didn't before?"
+    output: "ID + DFM verdict per option"
+
+  - id: software-architecture-fit
+    lead: software-architect
+    supporting: [ml-engineer, cloud-architect]
+    tensions:
+      - software-architect<>hardware-lead
+      - ml-engineer<>hardware-lead
+    questions:
+      - "What new API contracts (device <-> cloud) does this imply?"
+      - "Does the change fit within on-device compute / memory / energy budgets?"
+      - "What cloud-side changes are forced as a consequence?"
+    output: "Updated architecture diagram (device + cloud boundary) + budget table"
+
+  - id: security-and-reliability
+    lead: security-architect
+    supporting: [reliability-engineer]
+    tensions:
+      - security-architect<>hardware-lead
+      - reliability-engineer<>hardware-lead
+    questions:
+      - "Does the change open new attack surface (e.g., new I/O, new wireless mode)?"
+      - "What new failure modes exist? Which are silent vs surfaced?"
+      - "Is the OTA update path still safe?"
+    output: "Threat-model delta + failure-mode delta"
+
+  - id: ux-handoff
+    lead: ui-ux-expert
+    supporting: [industrial-designer]
+    tensions:
+      - ui-ux-expert<>industrial-designer
+    questions:
+      - "Does the change require companion-app or dashboard updates?"
+      - "Are the device-side mode-switch affordances still legible to clinicians?"
+    output: "UX impact summary (screens to update, none, or new screens)"
+
+  - id: synthesis
+    lead: hardware-lead
+    supporting: [product-owner, manufacturing-ops]
+    pattern: team-deliberation
+    questions:
+      - "Approve, defer, or reject? With what rollback path?"
+      - "What BOM-cost impact does this carry per unit at scale?"
+    output: "Versioned build approval + rollback path + memory writes"
+
+emits:
+  - DECISION
+  - ARTIFACT
+  - INSIGHT
+  - CONTEXT_CHANGE
