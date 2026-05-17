@@ -1,0 +1,47 @@
+# Weak-fit example — a site that looks interesting on paper but
+# doesn't actually meet the gates. Used to anchor the lower end of
+# the rubric for tests + operator calibration.
+
+name: Generic Memorial Hospital (hypothetical)
+
+# A common failure mode: the IT department invited us in for a demo,
+# but no clinician at the site has actually said they have the
+# problem OPAL solves.
+
+clinical_pain_addressed: false
+week_one_plausible: false
+
+champion_candidates:
+  - name: Bob Smith
+    role: IT Manager
+    authority_level: 1
+    bandwidth: 3
+    motivation: 4                    # interested in "AI projects"
+                                     # generally; not in nursing comms
+                                     # specifically
+    evidence: []                     # no concrete trace
+
+cmo_aligned: false
+c_suite_metric_mapped: false
+
+epic_version: "Aug 2019"
+epic_supported: false                # unsupported old build — hard stop
+
+fhir_endpoints_exposed: false
+device_provisioning_path: false
+
+baa_path_days: 120                   # slow legal
+irb_required: null                   # unknown
+security_review_path: false
+
+pricing_fit: false
+reference_design_value: false        # community hospital, not a
+                                     # reference for the segment we
+                                     # actually want
+
+site_bandwidth: false
+decision_maker_accessible: false
+
+notes:
+  - "Hypothetical. Anchors the rubric's lower bound."
+  - "Classic 'IT-led, no clinician demand' failure mode."
