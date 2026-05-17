@@ -13,22 +13,22 @@ pointers to where the implementation lives.
 ## 1. What the Intelligence Layer is
 
 The OPAL Intelligence Layer is the software that makes our voice
-assistant (LYNA) **useful at the bedside** and our team
-(advisors + founders + bots) **coherent across days and weeks**.
-
-In one sentence: **it's the layer that turns Epic's data and Epic's
-documentation into answers a nurse can act on in under two seconds,
-and turns every conversation our team has into structured memory we
-can navigate later.**
+assistant (LYNA) **useful at the bedside**. It is what turns Epic's
+patient data and Epic's published documentation into spoken answers
+a nurse can act on in under two seconds — cited, accurate, and
+delivered without leaving the room.
 
 It sits between two worlds:
 
 - **Below it:** Epic's EHR (FHIR, CDS Hooks, SMART on FHIR, the
-  hospital network), the LYNA voice device, the bot platform, and
-  whatever LLM is most appropriate at the moment.
-- **Above it:** the clinician asking "what's the latest creatinine
-  on bed 14?", the operator deciding whether to pursue a pilot at
-  Mt Sinai, the advisory board deciding whether to ship a feature.
+  hospital network), the per-site Operational Knowledge Base (door
+  codes, supply locations, on-call rosters, prep checklists), the
+  LYNA voice device, and whichever AI model is most appropriate for
+  the question.
+- **Above it:** a clinician asking "what's the last pain med for
+  bed 14?", a float nurse asking "where are the sterile dressings
+  on this unit?", a charge nurse asking "give me a unit status for
+  handoff."
 
 The middle is where all the work is.
 
@@ -209,9 +209,20 @@ Where humans and bots actually meet.
 
 ## 4. User journeys
 
-The point of the layer is concrete. Five stories.
+The intended users of LYNA are **clinical and medical staff at the
+hospitals that have bought it** — nurses on the floor, charge nurses
+running a unit, the wider clinical team during a shift. They never
+see the orchestrator, the memory log, or any of the engineering
+machinery; they talk to LYNA and LYNA answers. The Intelligence Layer
+is invisible plumbing that makes those answers fast, accurate, and
+cited — sub-two-second voice replies grounded in the hospital's own
+Epic instance and in published Epic documentation.
 
-### Journey 1 — Sarah, a med-surg nurse, at the bedside
+Three stories from the floor. All three are nurses, because LYNA is
+positioned for nurses specifically — "Information OUT for nurses,"
+distinct from physician-documentation tools like Suki or Abridge.
+
+### 4.1 — Sarah, a med-surg nurse, at the bedside
 
 It's 2:15 AM. Sarah is on a night shift, four hours into a 12-hour
 stretch. Bed 14 just buzzed: the patient is asking for pain meds
@@ -257,293 +268,155 @@ She walks back to the room knowing exactly what to do.
   corpus in `epic_intelligence/scraper/output/markdown/`.
 - Synthesis: `epic_intelligence/synthesis/synthesizer.py`.
 
-### Journey 2 — Dr. Mendez, CMIO, evaluating LYNA on a Tuesday afternoon
+### 4.2 — Linh, a float nurse, on her first shift on 4-South
 
-Dr. Mendez is the Chief Medical Information Officer at a 600-bed
-academic medical center. He's meeting with Ruth and Hubert at 2 PM.
-He has 45 minutes and three competing vendors on his calendar this
-week.
+Linh is a float-pool RN who was assigned to 4-South tonight because
+the regular staff is short. She has never worked this unit before.
+In the first 30 minutes of her shift she needs to know: where the
+sterile dressings are, what the door code is for the medication
+room, who the charge nurse is tonight, and which of the unit's
+attendings is on call.
 
-He asks: *"How does LYNA integrate with our Epic build? We're on
-the May 2023 release; we run CDS Hooks; we're allergic to vendors
-who can't tell us exactly which FHIR endpoints they hit."*
+**Without LYNA:** Linh hunts for the charge nurse three separate
+times in 30 minutes, interrupts two other RNs to ask where supplies
+are, and asks Sarah for the med-room door code (which Sarah has to
+look up because she only knows her own units). Roughly 15 minutes
+of every float nurse's first shift evaporate this way.
 
-Hubert opens his laptop and types:
+**With LYNA:**
 
-```
-python -m pilot.cli score pilot/sites/mendez-amc.yaml
-```
+> "Where are the sterile dressing supplies on this unit?"
+>
+> "On 4-South, sterile dressings are in the clean utility room
+> across from bed 12 — second cabinet from the left, second shelf.
+> Sizes 4x4 and 2x2 are stocked; if you need larger, the supply
+> room on 4-North has them."
 
-In under a second, the Intelligence Layer prints:
+A minute later:
 
-```
-# Mendez AMC: HOLD (62.4/100)
-Worth pursuing — fix the named gaps before signing.
-Top gaps: CMO alignment confirmed; specific C-suite metric not yet
-mapped; champion candidate scores 71/100 (good but evidence trail
-is thin).
+> "What's the med-room door code?"
+>
+> "4-South medication room: 2-4-1-3-#. Code rotates monthly; this
+> one is good through 2026-05-31."
 
-## Dimension breakdown
-  [integration_feasibility]  raw=100/100  weighted=20.0
-    + Epic May 2023 is supported by our integration.
-    + FHIR resources we need are live + reachable.
-    + Device provisioning path (wifi/MDM/segmentation) is mapped.
-...
-```
+A minute after that:
 
-Hubert turns the laptop toward Dr. Mendez. *"Here's what we know
-about your build. Here are the FHIR endpoints we hit. Here's the
-device path. Here's the named gap — your nursing-vacancy metric
-isn't mapped to anything LYNA moves, and that's the thing your CFO
-will ask about."*
+> "Who's the charge nurse tonight?"
+>
+> "Tonight's charge on 4-South is Devon Park. Devon is on the unit
+> until 7 AM. To page Devon: hospital pager 4471, or say 'page
+> Devon Park' and I'll send."
 
-Dr. Mendez doesn't need to wait six weeks for a written assessment.
-He spends the rest of the meeting on the actual problem (the
-unmapped CFO metric), and they're 30 minutes ahead of where they
-would have been.
+By the time Linh's first patient call light goes off, she knows the
+unit well enough to work without flagging anyone down.
 
 **Under the hood:**
 
-1. The rubric (`pilot/`) is pure Python — no LLM call, no network.
-   It scores six dimensions against the operator's site YAML and
-   reports the verdict.
-2. Each dimension's rationale and gaps are surfaced so Dr. Mendez
-   can argue with the score rather than accept it as a black box.
-3. After the meeting, Hubert emits a memory event:
-
-```bash
-python -m memory_system.events.cli write \
-  --type INSIGHT --actor founder \
-  --title "Mendez AMC nursing-vacancy metric gap" \
-  --content "..." --tags pilot,mendez-amc,c-suite-metric
-```
-
-That event lands in tomorrow's briefing.
+1. None of these queries touch Epic or any PHI. They hit the
+   **Operational Knowledge Base** — the institutional layer of door
+   codes, supply locations, pager numbers, prep checklists, and
+   unit-specific procedures that every hospital has but almost
+   none of them have searchable.
+2. The Operational KB is the single most defensible piece of LYNA's
+   data position. Every pilot site contributes its own KB; that
+   KB compounds with every nurse-shift of usage and is the reason
+   a float nurse onboards in minutes instead of hours.
+3. The "page Devon Park" command would route through the **execution
+   layer** — LYNA can not only retrieve but act (send pages, place
+   calls, broadcast to teams) once the operator has confirmed the
+   action.
 
 **Where in the code:**
 
-- Scoring: `pilot/scoring.py`, `pilot/champion.py`.
-- Site templates: `pilot/examples/`.
-- Memory write: `memory_system/events/write.py`.
+- Operational KB lookup is upstream of the LYNA Intelligence Layer
+  (per-site data store). The Intelligence Layer's role here is the
+  query router that recognizes "where is X?" and "who is on call?"
+  as Operational KB queries (vs. Epic FHIR queries vs. Epic doc
+  queries) and dispatches accordingly.
+- Query router: `epic_intelligence/assistant/voice_router_stub.py`
+  (the production router lives downstream and consumes the same
+  contract).
+- Execution layer (page / call / broadcast): not yet implemented —
+  documented as a v2 capability in the LYNA product brief.
 
-### Journey 3 — Ruth runs the BAA workflow with St. Vincent's legal team
+### 4.3 — Marcus, charge nurse on 4-South, end of shift handoff
 
-St. Vincent's said yes to a pilot. Their general counsel sent over
-a 14-page BAA template Tuesday. Ruth has done this twice before;
-both times it took six weeks she didn't have.
+It's 6:45 AM. Marcus has been charge on 4-South for the 7p-7a
+shift. In 15 minutes he hands off to the day-shift charge, Anita.
+He needs to compile a unit-status summary: which patients have open
+issues, who's NPO for AM procedures, who's pending discharge, and
+whether any beds are free for the ED to admit into.
 
-She types:
+**Without LYNA:** Marcus opens Epic, scans every chart on the unit
+(28 patients tonight), writes notes on a paper sheet, doublechecks
+the surgical schedule for who's NPO, and asks two of his RNs about
+incidents he might have missed. 20-25 minutes.
 
-```
-python -m orchestrator.cli run baa-negotiation \
-  --provider anthropic \
-  --context "Site: St. Vincent's; PHI surface: read Patient, MedicationRequest, Observation; write Communication; no at-rest storage on our side"
-```
+**With LYNA:**
 
-The orchestrator walks the personas through six phases:
+> "Give me a unit status for 4-South for handoff."
 
-1. **scope-the-phi** — Helena (enterprise architect) and Cyrus
-   (security architect) map the exact PHI surface together. The
-   tension Helena↔Cyrus produces the right answer: Helena wants
-   the broadest possible integration; Cyrus wants the narrowest
-   possible PHI exposure. The agreed scope lands as an INSIGHT.
-2. **read-their-template** — Suki (compliance) classifies every
-   clause in the BAA Ruth got: standard HHS-sample / customized /
-   cross-referenced.
-3. **identify-friction** — Suki, Cyrus, and Helena (tension
-   Suki↔Cyrus surfaces "contract language vs threat model")
-   produce a red-line table with proposed text + rationale.
-4. **counterparty-position** — Suki and Wei (partnership lead)
-   name the signer, the negotiator, and the institution's
-   documented BAA SLA.
-5. **timeline-and-blockers** — dated critical path with named
-   blockers and escalation triggers.
-6. **sign-or-walk** — dialectic debate between Suki and Wei
-   (Suki↔Wei: "close timeline vs relationship"). Output is a
-   DECISION recorded as a memory event.
+In about 8 seconds:
 
-Each phase produces a section in
-[`pilot/templates/baa-checklist.md`](pilot/templates/baa-checklist.md)
-that Ruth hands to St. Vincent's counsel. Each persona emits a
-typed event the briefing surfaces.
+> "4-South, 28/32 beds occupied, 4 free for ED admits.
+>
+> **Open clinical issues:**
+> - Bed 4 (Cruz, J.) — pain not controlled on current regimen; PRN
+>   used 4 times overnight, last at 04:20. Pain service consulted,
+>   note pending.
+> - Bed 18 (Patel, A.) — temp spike to 38.9°C at 02:15; blood
+>   cultures drawn; on q4h vitals; covered with broad-spectrum.
+> - Bed 22 (Williams, R.) — fall earlier this shift; per protocol,
+>   incident report filed, family notified, neuro checks q1h.
+>
+> **AM procedures (NPO since midnight):**
+> - Bed 7 (Garcia, M.) — colonoscopy at 08:00, GI prep complete.
+> - Bed 19 (Chen, K.) — cardiac cath at 09:30, consent obtained.
+>
+> **Pending discharge today:**
+> - Bed 11 (Roberts, T.) — awaiting transport; ride confirmed for
+>   11:00.
+> - Bed 25 (Liu, S.) — pending PT clearance, expected mid-afternoon.
+>
+> **Pending admits:** ED holding 1 patient (chest pain rule-out)
+> for bed 4 once Cruz is repositioned to a quieter room.
+>
+> Citations: all data pulled from Epic at 06:42 AM; supply / bed-
+> availability cross-checked against unit board."
 
-Two days later, when Ruth meets with St. Vincent's counsel, she
-walks in with the red-line, the rationale for every change, the
-expected timeline, and a memory of every decision the team made
-about it. The meeting is 30 minutes, not three hours.
+Marcus reads it once, edits one line (Garcia's prep is actually
+incomplete — the bowel-prep nurse called out), and hands it to
+Anita as the foundation for the handoff. The handoff itself goes
+from 20 minutes to 6.
 
 **Under the hood:**
 
-1. `orchestrator.cli run baa-negotiation` loads
-   [`bots/shared/workflows/business/baa-negotiation.yaml`](bots/shared/workflows/business/baa-negotiation.yaml).
-2. For each phase, the orchestrator loads the lead persona's
-   system prompt, prepends the **memory-emit protocol** preamble
-   (the persona is taught that it — not a classifier — decides
-   what's memory-worthy), builds a prompt that includes the
-   tensions explicitly, and calls the LLM.
-3. The persona's reply may contain a fenced `memory-emit` YAML
-   block. The orchestrator parses it, validates it, and appends
-   typed events. Out-of-vocab types are demoted to CONTEXT_CHANGE
-   with the original type preserved.
-4. Post-write predicates fire on each emit ("this ACTION is open
-   — surfaces in next briefing"; "this CONTEXT_CHANGE — broader
-   scope likely needs re-evaluation").
+1. LYNA fires parallel FHIR queries against Epic for every patient
+   on the unit: `Encounter` (active), `Observation` (vitals + labs
+   in the last 12h), `MedicationAdministration` (PRN usage),
+   `Procedure` (scheduled), `DiagnosticReport` (incidents).
+2. Results are deduplicated, grouped by patient, and templated into
+   a charge-nurse handoff shape. The Intelligence Layer applies the
+   institution's handoff conventions (some sites use I-PASS, others
+   SBAR, others a local template) from the Operational KB.
+3. Free-bed count cross-references the unit's census board (also
+   in the Operational KB) so the number reflects reality, not just
+   Epic's discharge timestamps.
+4. Every section carries a source so Anita knows what came from
+   Epic vs. the unit board vs. Marcus's own notes.
 
 **Where in the code:**
 
-- Workflow YAML: `bots/shared/workflows/business/baa-negotiation.yaml`.
-- Workflow runner: `orchestrator/runner.py`.
-- Emit parser: `orchestrator/emit_parser.py`.
-- Persona preamble: `orchestrator/persona.py:_PREAMBLE`.
-- Operator checklist: `pilot/templates/baa-checklist.md`.
-
-### Journey 4 — The OPAL team's daily briefing
-
-It's 9 AM Eastern, Monday. Hubert opens Mattermost. The first post
-in `#town-square` is from Briefing Bot:
-
-```
-# Briefing — window 2026-05-15T00:00 → 2026-05-16T09:00
-  47 events in window; 9 distinct actors
-
-## Open actions (6)
-  - [open] Order 10 ESP32-S3 dev boards by Friday
-    (owner: hardware-lead; id: evt-9f3a4b...)
-  - [in-progress] Schedule call with Mt Sinai Innovation Program lead
-    (owner: founder; id: evt-c7d1e9...)
-  - [open] Draft IRB protocol skeleton for St. Vincent's pilot
-    (owner: regulatory-affairs; id: evt-aa2b88...)
-  ...
-
-## Overdue predictions (1)
-  - [conf=0.7] Device case will fit in standard scrubs pocket
-    (horizon: 2026-05-10; id: evt-44dd...)
-
-## Recent CONTEXT_CHANGE (2)
-  - Mt Sinai Innovation Program announced new spring cohort
-    (actor: founder; id: evt-1e2f3a...)
-  - Epic announced FHIR R5 GA for 2027 — likely no impact pre-pilot
-    (actor: enterprise-architect; id: evt-7c8d9e...)
-
-## Counts by type (in window)
-  ACTION: 12
-  DECISION: 8
-  INSIGHT: 14
-  PREDICTION: 5
-  CONTEXT_CHANGE: 2
-  ARTIFACT: 6
-
-## Activity by actor
-  strategist: 9
-  product-owner: 8
-  regulatory-affairs: 7
-  hardware-lead: 6
-  ...
-```
-
-Hubert reads it in two minutes. He now knows what's open, what's
-late, what shifted. The team starts the week aligned without a
-meeting.
-
-**Under the hood:**
-
-1. A cron job runs `python -m memory_system.events.cli
-   briefing-post --lookback-days 1`.
-2. That command reads yesterday's JSONL log, runs the briefing
-   engine to summarize, then POSTs the markdown to a Mattermost
-   incoming webhook configured in env.
-3. Chunks longer than ~15k chars are split on blank-line
-   boundaries so a busy week's briefing arrives in order across
-   multiple posts with `_(continued N/M)_` prefixes.
-
-**Where in the code:**
-
-- Briefing render: `memory_system/events/briefing.py`.
-- Mattermost POST: `memory_system/events/mattermost_post.py`.
-- CLI + cron docs: `memory_system/events/BRIEFING_POST.md`.
-
-### Journey 5 — Athena and Diego disagree on Tuesday afternoon
-
-Hubert, prepping for a board meeting, asks Athena (the strategist
-persona, summoned via `!strategist` in Mattermost):
-
-> *"Should we lead the seed pitch with the hardware moat or the
-> data moat?"*
-
-Athena replies in character, with reasoning. At the end of her
-reply, she appends:
-
-````
-```memory-emit
-- type: DECISION
-  title: Lead seed pitch with data moat (operational KB), hardware as proof
-  content: |
-    The operational knowledge base is uniquely defensible — door
-    codes, pager numbers, prep checklists — and compounds with
-    every pilot. Hardware is necessary but not sufficient as a
-    moat; Vocera proved it commoditizes.
-  confidence: 0.75
-  tags: [seed-pitch, positioning, moat]
-- type: ACTION
-  title: Re-order pitch deck pages 4-7 to put operational KB first
-  related: [evt-prior-pitch-draft-id]
-```
-````
-
-The Mattermost bot **strips the fenced block** before posting
-Athena's reply to the channel (Hubert sees a clean answer, no YAML
-noise). The block itself becomes two memory events: a DECISION
-with confidence 0.75, and an ACTION with the pitch-deck reorder
-auto-assigned to Athena.
-
-Diego (hardware lead) sees the post in `#strategy` and disagrees.
-Hubert summons him: `!hardware`. Diego argues, in character, for
-hardware-first positioning. At the end of *his* reply:
-
-````
-```memory-emit
-- type: DEBATE
-  title: Hardware vs data moat — opposing case
-  content: |
-    Operational KB is replicable; the badge form factor isn't.
-    Vocera commoditized because they stopped iterating on the
-    badge. Our differentiator is the device, period.
-  related: [evt-athena-decision-id]
-  tags: [seed-pitch, positioning, hardware]
-```
-````
-
-Now the memory log has a DECISION, an ACTION, and a DEBATE
-explicitly linked. Tomorrow's briefing surfaces all three. The
-predicate `matches-context-change` fires because a DEBATE on the
-same topic as an existing DECISION is a signal that scope likely
-needs re-evaluation.
-
-Three weeks later, when Hubert is reviewing the pitch deck before
-the board meeting, he searches the memory log for `seed-pitch`
-events. The DECISION, the ACTION, the DEBATE, and any subsequent
-OUTCOME are all there, linked, with timestamps and reasoning. He
-doesn't have to remember; the system did.
-
-**Under the hood:**
-
-1. The bot's system prompt teaches every persona the
-   memory-emit protocol (the same one the orchestrator uses).
-2. The JS-side parser (`bots/shared/memory-emit/parser.js`)
-   extracts the fenced block, validates each entry against the
-   schema, strips the block from the human-visible message, and
-   feeds each entry to `bots/shared/institutional-memory/`.
-3. The Python side (workflow runs) and the JS side (live bot
-   chat) both produce the same shape of event — contract-compatible
-   parsers on both sides.
-
-**Where in the code:**
-
-- JS parser: `bots/shared/memory-emit/parser.js`.
-- Protocol preamble (JS): `bots/shared/memory-emit/preamble.js`.
-- Bot wiring: `bots/gtm/index.js` (look for `emitParsedToMemory`).
-- Python equivalents: `orchestrator/emit_parser.py`,
-  `orchestrator/persona.py:_PREAMBLE`.
+- Parallel FHIR fan-out + templating: downstream of the
+  Intelligence Layer's query router; the Layer's contract with the
+  EHR adapter is a single "unit-status for {unit}" request that
+  returns the structured shape above.
+- Handoff template selection (per-site I-PASS / SBAR / local):
+  driven by Operational KB metadata, the same per-site data that
+  Linh's queries hit in §4.2.
+- Citation strategy: same as Sarah's bedside query in §4.1 — every
+  fact carries its source, never narrate a claim without a
+  citation.
 
 ---
 
