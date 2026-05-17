@@ -218,7 +218,12 @@ is invisible plumbing that makes those answers fast, accurate, and
 cited — sub-two-second voice replies grounded in the hospital's own
 Epic instance and in published Epic documentation.
 
-Three stories from the floor. All three are nurses, because LYNA is
+Seven stories from the floor, spanning the day-to-day shape of
+nursing work: a routine bedside lookup, onboarding to an unfamiliar
+unit, a multi-patient handoff, taking over patients at the start of
+shift, a new graduate building confidence, a safety check at the
+point of medication administration, and a single-patient
+deterioration in the ICU. All seven are nurses, because LYNA is
 positioned for nurses specifically — "Information OUT for nurses,"
 distinct from physician-documentation tools like Suki or Abridge.
 
@@ -417,6 +422,326 @@ from 20 minutes to 6.
 - Citation strategy: same as Sarah's bedside query in §4.1 — every
   fact carries its source, never narrate a claim without a
   citation.
+
+### 4.4 — Jamal, day-shift med-surg nurse, coming onto a 4-patient assignment
+
+It's 7:05 AM. Jamal has just walked onto 4-South for his 12-hour
+day shift. He picked up four patients, two of whom carried over
+from Sarah's night-shift assignment (the same Sarah from §4.1).
+The verbal handoff in the break room was three minutes long. He
+needs to fill in the gaps before he sees any of his patients.
+
+**Without LYNA:** Jamal sits down at the workstation, opens Epic,
+and reads each patient's chart end-to-end — overnight vitals,
+notes from the off-going RN, the MAR, any new orders, pending
+results, the problem list. Five minutes per patient on a good day,
+eight on a bad one. He's still at the workstation 30 minutes into
+his shift; the first call light went off five minutes ago.
+
+**With LYNA:** Jamal pulls his patient list up on the unit tablet
+and says:
+
+> "Sign-on summary for my four patients."
+
+In about 10 seconds:
+
+> "Four patients on assignment:
+>
+> **Bed 4 (Cruz, J., 67M, day 3 post-CABG)** — pain not controlled
+> overnight per Sarah's handoff. PRN hydromorphone used 4x, last
+> 04:20. Pain service consulted; recommendation note posted 06:32
+> by Dr. Patel — start scheduled oxycodone 5 mg q6h, taper PRN.
+> Order pending pharmacy verification. Watch for: respiratory
+> rate, oversedation. No new abnormal vitals since handoff.
+>
+> **Bed 7 (Garcia, M., 54F)** — NPO since midnight for colonoscopy
+> at 08:00, *but* bowel-prep nurse noted incomplete prep at 23:40;
+> GI team aware. Status uncertain — confirm before transport.
+>
+> **Bed 12 (Whitfield, A., 81F)** — admitted overnight, ESRD on
+> HD, dialysis scheduled today at 13:00. Yesterday's pre-HD potassium
+> 5.1. Last vitals 06:15 stable. Family meeting at 10 AM per
+> charge note.
+>
+> **Bed 19 (Chen, K., 72M)** — cardiac cath at 09:30, consent
+> signed, NPO compliant. No overnight events. Watch for: site
+> prep timing.
+>
+> Open issues that need you in the next 30 minutes:
+>  1. Verify the new oxycodone order for Cruz before 09:00 dose
+>     window
+>  2. Confirm Garcia's prep status with GI before transport
+>  3. Whitfield's family meeting prep — review yesterday's care
+>     plan note from social work."
+
+Jamal reads it once and walks onto the unit knowing exactly what
+each patient needs in the next hour. The first hour isn't lost to
+chart-scanning; it goes into rounds.
+
+**Under the hood:**
+
+1. LYNA pulls the same parallel FHIR queries Marcus's handoff
+   uses (§4.3) — `Encounter`, `Observation`, `MedicationRequest`,
+   `MedicationAdministration`, pending `DiagnosticReport` — but
+   scoped to Jamal's 4-patient list instead of the whole unit.
+2. The "since handoff" framing comes from a per-shift cutover
+   timestamp the Operational KB tracks (when day shift formally
+   takes over). Anything that landed between Marcus's handoff
+   summary and Jamal's sign-on is flagged.
+3. The prioritized "needs you in the next 30 minutes" list is
+   templated against the same per-site sign-on shape (some sites
+   call this a brain sheet, others a focus card); template
+   selection lives in the Operational KB.
+4. Cross-reference with Sarah's handoff notes happens because the
+   off-going-shift handoff (Marcus → Anita, Sarah → Jamal) is
+   structured data the Operational KB keeps for the day — Jamal
+   sees both the formal Epic chart AND the colored notes his
+   off-going colleague flagged.
+
+**Where in the code:**
+
+- Parallel FHIR fan-out: same downstream EHR adapter as §4.3
+  (Marcus), scoped to the assignment instead of the unit.
+- Sign-on template selection: Operational KB per-site, same
+  metadata mechanism §4.3 uses for handoff template selection.
+- Cross-shift continuity: per-shift cutover timestamps + handoff
+  artifact storage (per-site, lives alongside the unit board in
+  the Operational KB layer).
+
+### 4.5 — Tanya, two weeks out of orientation, with a patient refusing a med
+
+Tanya is fourteen days off her formal preceptor period on 4-North.
+Her clinical instincts are still building. At 19:40 she walks into
+bed 8 with the evening dose of metoprolol; the patient, Mr.
+Donaldson, looks her in the eye and says "no, I don't want it
+tonight."
+
+Tanya knows there's a hospital policy for refused meds — she has
+to chart the refusal, notify the prescribing provider, document
+the patient's stated reason, and update the care plan. She
+remembers the broad strokes but not the exact steps. Her preceptor
+is off today. The charge nurse is dealing with a fall on the other
+end of the unit.
+
+**Without LYNA:** Tanya pages her preceptor and leaves a voicemail.
+She digs through the hospital intranet for the policy on refused
+medications. She isn't sure which menu in Epic is the correct one
+for documenting the refusal. 10-15 minutes of trying not to look
+unsure in front of the patient.
+
+**With LYNA:** She steps just outside bed 8 and asks:
+
+> "What's our policy for a patient refusing a scheduled cardiac med?"
+
+In two seconds:
+
+> "Hospital policy NU-MED-027 (Refused Medication, revised
+> 2025-08-14): for a refused scheduled cardiac med, you need to:
+> (1) chart the refusal in Epic under the MAR with reason code,
+> (2) notify the prescribing provider within 30 minutes, (3)
+> document the patient's stated reason verbatim, (4) reassess
+> within 1 hour and re-offer if clinically appropriate, and (5)
+> notify the charge nurse if the refusal is repeated.
+>
+> For metoprolol specifically: holding a scheduled beta-blocker
+> can be appropriate, but the prescribing provider needs to know
+> because of risk of rebound tachycardia if the patient has been
+> on it >7 days.
+>
+> Source: hospital policy NU-MED-027 + Drug Info for metoprolol."
+
+Tanya goes back into the room, asks Mr. Donaldson why ("it makes
+me feel dizzy"), charts the refusal with the cited reason, pages
+the cardiologist on call, and goes back to the rest of her round.
+Eight minutes total instead of 25.
+
+**Under the hood:**
+
+1. The query "what's our policy for..." dispatches to the **Policy
+   system** (one of the 7 integration systems behind LYNA). The
+   Policy system is a per-site index of the hospital's own
+   policies and procedures, kept current via a documented ingestion
+   process.
+2. The drug-specific addendum ("for metoprolol specifically...")
+   comes from the **Drug Info system** — a separate integration
+   that LYNA reaches into when the query is about a specific
+   medication.
+3. The answer carries both citations explicitly. Tanya knows where
+   the institutional policy ends and where the drug-specific
+   guidance begins — important when she charts the rationale.
+
+**Where in the code:**
+
+- Query router classification (policy vs. drug-info vs. EHR vs.
+  Epic-doc): `epic_intelligence/assistant/voice_router_stub.py`.
+- Policy system + Drug Info system are upstream integrations the
+  Intelligence Layer queries through the same contract used for
+  Epic-doc lookups (`epic_intelligence/query.py`); only the
+  underlying corpus differs.
+- Citation strategy: same as §4.1 — every answer carries its
+  source, never narrate a claim without a citation.
+
+### 4.6 — Robert verifies a new medication at the point of administration
+
+It's 14:20. Robert is administering a first dose of ciprofloxacin
+500 mg to Mr. Alvarez in bed 22. The order is new — it came in
+from infectious disease this morning for a wound infection.
+Mr. Alvarez is on six other active medications, including warfarin
+for a-fib.
+
+**Without LYNA (current best practice):** Robert scans the
+medication barcode, the system confirms it matches the order, and
+the dose is administered. The check-against-everything-else
+happens at pharmacy verification before the order goes live. *In
+theory* it catches interactions. *In practice* the cipro-warfarin
+interaction (cipro inhibits warfarin metabolism, raising INR over
+3-5 days) is a known one but routinely missed if the patient's INR
+isn't already trending high.
+
+**With LYNA:** Robert scans the barcode at bedside as usual, then
+adds:
+
+> "Verify safety for bed 22."
+
+In about 4 seconds:
+
+> "Ciprofloxacin 500 mg PO for Mr. Alvarez, bed 22 — verified
+> against active orders and barcode.
+>
+> **Allergies:** no documented cipro or fluoroquinolone allergy.
+>
+> **Interaction flag:** ciprofloxacin + warfarin. Cipro inhibits
+> warfarin metabolism and typically raises INR over 3-5 days.
+> Patient's last INR (2026-05-14) was 2.4, in range. Recommend:
+> recheck INR in 48 hours, communicate to anticoag service.
+>
+> **Other:** no max-dose issues, no renal-dose adjustment needed
+> at the patient's most recent creatinine (1.1)."
+
+Robert administers the dose. Before the end of his shift, he sends
+a routine message to anticoagulation pharmacy flagging the new
+cipro start and the INR recheck recommendation. The interaction
+gets handled the same shift it was introduced — not 72 hours later
+when the patient's INR is suddenly 4.8.
+
+**Under the hood:**
+
+1. The barcode scan is normal Epic / BCMA flow; LYNA layers on a
+   second, broader safety pass.
+2. The interaction check pulls from the **Drug Info system**
+   (cross-reference: meds the patient is actively on per FHIR
+   `MedicationRequest`, plus the one being administered).
+3. The dose-adjustment check uses the patient's recent `Observation`
+   values (creatinine) via Epic FHIR.
+4. The "flag and recommend" output is structured so Robert can act
+   immediately without having to go back to a workstation to look
+   things up.
+5. LYNA does **not** auto-page anticoagulation pharmacy here —
+   that's an action that needs Robert's deliberate confirmation
+   via the execution layer. The recommendation is surfaced; the
+   action is operator-initiated.
+
+**Where in the code:**
+
+- Drug Info + Epic FHIR pull: query router dispatches based on the
+  intent ("verify safety" classifies as a multi-source safety
+  check) — `epic_intelligence/assistant/voice_router_stub.py`.
+- Interaction matrix: the Drug Info system carries pairwise + n-way
+  interactions; the Intelligence Layer composes them with the
+  patient's active med list to produce a per-patient verdict.
+- Execution-layer paging (when Robert chooses to send): same path
+  as Linh's "page Devon Park" in §4.2, requires explicit operator
+  confirmation.
+
+### 4.7 — Sofia, ICU nurse, single patient deteriorating at 04:35
+
+Sofia is the assigned RN for bed 6 in the ICU — a 68-year-old man
+on day 2 post-CABG. The unit is quiet. At 04:35 the cardiac
+monitor alarms: heart rate jumped from 78 to 130 with new ST
+depression in leads II and aVF. Sofia looks at the patient: he's
+diaphoretic and gripping his chest. The on-call resident is on
+another unit. The attending is at home.
+
+She has 60-90 seconds before this becomes a code.
+
+**Without LYNA:** Sofia hits the overhead-page button for rapid
+response, runs to the doorway to flag a colleague to bring the
+crash cart, mentally runs through the ACS protocol (aspirin? IV
+access? 12-lead?), tries to reach the on-call cardiologist by
+pager. Each of those is one action; she can only do them serially.
+The patient is unattended for stretches of 20-30 seconds in
+between. Best case 3 minutes of coordinated response; worst case
+the patient codes before any of it is in place.
+
+**With LYNA:** Sofia hits the LYNA badge once and says:
+
+> "Rapid response, bed 6, ST changes."
+
+LYNA executes in parallel, in under 5 seconds:
+
+> "Rapid response activated for ICU bed 6 — overhead page sent,
+> RRT alerted by direct page, ETA 90 seconds.
+>
+> **On-call cardiology paged:** Dr. Chen, room 2418, acknowledged.
+>
+> **ACS protocol on bedside display.** Most recent troponin
+> (2026-05-17 00:30): 0.08, positive. Active orders: ASA 81 mg
+> daily (last given 06:00 yesterday), heparin SC 5000u q12h (last
+> given 04:00 today). No documented aspirin allergy.
+>
+> **Next-action prompts surfaced:** establish second large-bore
+> IV; 12-lead EKG; recheck troponin; prepare for possible cath
+> lab activation.
+>
+> Event logged at 04:35:17."
+
+Sofia never had to take her eyes off the patient. The rapid
+response team is already running down the hall. The protocol is
+on the wall. Cardiology is already paged. Her hands stay on her
+patient.
+
+**Without LYNA, she would have done all of this — but serially,
+across three minutes of one-handed multi-tasking.** With LYNA,
+the same set of actions happens in five seconds in parallel, and
+the patient is never alone.
+
+**Under the hood:**
+
+1. "Rapid response, bed 6, ST changes" is recognized as an
+   emergency intent. The query router dispatches it through a
+   special emergency path with parallel fan-out.
+2. **Execution layer in emergency mode:** the overhead page and
+   the rapid-response-team direct page both fire automatically
+   (no operator confirmation, because this is an emergency intent
+   and the nurse's voice command IS the authorization). Cardiology
+   paging IS auto-confirmed for ST-change/MI intents.
+3. **Protocol surfacing:** the ACS protocol is pulled from the
+   Policy system and rendered on the bedside display (LYNA's v2+
+   form factor includes a small display at bedside; the v1 iPhone
+   form factor renders to the phone).
+4. **Patient context pulled in one breath:** parallel FHIR queries
+   for the patient's last 24 hours of relevant observations (this
+   is the same parallel fan-out from §4.3 Marcus's handoff,
+   scoped to one patient and one clinical concern).
+5. **Event logging:** the rapid response activation is logged as
+   an event so the case can be reviewed downstream — when, what
+   was paged, what protocol was surfaced, what the clinical state
+   was at the moment of activation.
+
+**Where in the code:**
+
+- Emergency-intent classification + parallel dispatch: the query
+  router has a fast-path for known emergency intents; lives in
+  `epic_intelligence/assistant/voice_router_stub.py` (production
+  router lives downstream and consumes the same contract).
+- Execution layer in emergency mode: not yet implemented at the
+  level described here; documented as part of LYNA's v2+ feature
+  set, on the roadmap behind the v1 iPhone-app baseline.
+- Protocol surfacing from Policy system: same path as Tanya's
+  policy lookup in §4.5; the difference is the rendering target
+  (bedside display vs. nurse's headset).
+- Patient-context fan-out: same parallel FHIR pattern as §4.3 and
+  §4.4, scoped to one patient and one clinical concern (ACS).
 
 ---
 

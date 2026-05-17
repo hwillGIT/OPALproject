@@ -4,10 +4,11 @@ OPAL is a nurse-worn medical assistant platform combining embedded hardware, an 
 
 > **New here? Start with [INTELLIGENCE_LAYER.md](INTELLIGENCE_LAYER.md)** — a
 > plain-English guide to what the OPAL Intelligence Layer is, why it
-> exists, and what it lets clinical staff do at the bedside: med-surg
-> nurse retrieving a med history, float nurse onboarding to a new unit
-> in minutes, charge nurse compiling a unit-status handoff. Uses Epic
-> as the reference EHR throughout.
+> exists, and seven LYNA user journeys spanning the shape of nursing
+> work: bedside med lookup, float-nurse onboarding, charge-nurse
+> handoff, coming-on-shift sign-on, new-grad policy lookup, med-admin
+> safety check, and ICU patient deterioration. Uses Epic as the
+> reference EHR throughout.
 
 ## Repository Structure
 
