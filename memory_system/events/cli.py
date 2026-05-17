@@ -128,6 +128,45 @@ def _cmd_neo4j_rebuild(args: argparse.Namespace) -> int:
     return 0 if seen == ok else 1
 
 
+def _cmd_briefing_post(args: argparse.Namespace) -> int:
+    from .mattermost_post import (
+        WebhookPostError,
+        post_briefing,
+        resolve_webhook_url,
+    )
+    text = briefing_from_log(
+        log_dir=args.log_dir,
+        lookback_days=args.lookback_days,
+    )
+    try:
+        url = resolve_webhook_url(args.webhook_url)
+    except WebhookPostError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 2
+    try:
+        result = post_briefing(
+            text,
+            webhook_url=url,
+            channel=args.channel,
+            username=args.username,
+            icon_emoji=args.icon_emoji,
+            dry_run=args.dry_run,
+        )
+    except WebhookPostError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 1
+    if result.skipped and args.dry_run:
+        print(
+            f"dry-run: would post {len(result.chunks)} chunk(s) "
+            f"({sum(len(c) for c in result.chunks)} chars total)"
+        )
+    elif result.skipped:
+        print("nothing to post (briefing was empty)")
+    else:
+        print(f"posted {result.posted} chunk(s) to Mattermost")
+    return 0
+
+
 def _add_log_dir(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
         "--log-dir", type=Path, default=DEFAULT_LOG_DIR,
@@ -184,6 +223,30 @@ def build_parser() -> argparse.ArgumentParser:
     )
     _add_log_dir(pn)
     pn.set_defaults(func=_cmd_neo4j_rebuild)
+
+    pbp = sub.add_parser(
+        "briefing-post",
+        help="Render the briefing and POST it to a Mattermost "
+             "incoming webhook (cron-friendly).",
+    )
+    _add_log_dir(pbp)
+    pbp.add_argument("--lookback-days", type=int, default=1,
+                     help="Lookback window in days. Default 1 (daily cron).")
+    pbp.add_argument(
+        "--webhook-url",
+        help="Mattermost incoming webhook URL. "
+             "Falls back to env MATTERMOST_BRIEFING_WEBHOOK_URL then "
+             "MATTERMOST_WEBHOOK_URL.",
+    )
+    pbp.add_argument("--channel", help="Override channel from the webhook")
+    pbp.add_argument("--username", default="Briefing Bot",
+                     help="Display name on the post (default: %(default)s)")
+    pbp.add_argument("--icon-emoji", default=":calendar:",
+                     help="Emoji shortcode for the post avatar "
+                          "(default: %(default)s)")
+    pbp.add_argument("--dry-run", action="store_true",
+                     help="Compute + chunk but skip the actual HTTP POST")
+    pbp.set_defaults(func=_cmd_briefing_post)
 
     return p
 
