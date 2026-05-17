@@ -1,0 +1,94 @@
+# BAA Negotiation
+# Walk a pilot site's Business Associate Agreement from "we got their
+# template" to "signed both ways" without burning weeks on theatrical
+# legal review.
+#
+# Used by: the operator + a candidate site's legal/privacy team.
+# Pairs with: pilot/ rubric (compliance_burden dimension), the
+# pilot-site-assessment workflow's compliance phase, and the BAA
+# checklist template in pilot/templates/baa-checklist.md.
+
+name: baa-negotiation
+category: business
+domain: pilot
+version: "1.0"
+description: >
+  Pull a candidate site's BAA template, map the PHI surface OPAL
+  actually touches, identify the negotiable clauses, set a timeline
+  with named counterparty signatories, and reach signed-both-ways or
+  an explicit walk decision.
+
+backpressure:
+  - Specific PHI flow mapped (which fields, which direction, at-rest vs in-transit)
+  - Site's BAA template received and read end-to-end (not skimmed)
+  - At least 3 friction clauses identified by line number with our position
+  - Named counterparty signatory + expected turnaround in writing
+  - Either signed BAA recorded as ARTIFACT or explicit walk decision recorded as DECISION
+
+phases:
+  - id: scope-the-phi
+    lead: enterprise-architect
+    supporting: [security-architect, clinical-ops]
+    tensions:
+      - enterprise-architect<>security-architect
+    questions:
+      - "Which FHIR resources + fields does OPAL actually read or write at this site?"
+      - "What stays transient vs. at-rest in OPAL's environment?"
+      - "What never leaves the site's network?"
+    output: "PHI flow diagram (table form) + at-rest / in-transit / never-leaves classification"
+
+  - id: read-their-template
+    lead: compliance-ops
+    supporting: [security-architect]
+    questions:
+      - "What's the exact text of their BAA? Where can we get it?"
+      - "Which clauses match the HHS sample BAA verbatim vs. customized?"
+      - "Which sections refer to other documents (security addenda, audit rights)?"
+    output: "Their BAA + a per-clause map: standard / custom / cross-referenced"
+
+  - id: identify-friction
+    lead: compliance-ops
+    supporting: [security-architect, enterprise-architect]
+    tensions:
+      - compliance-ops<>security-architect
+    questions:
+      - "Which 3-5 clauses materially affect OPAL's product (data use limits, breach notification timelines, audit cadence)?"
+      - "Which clauses are unworkable for us as written?"
+      - "What's our suggested redline + the rationale we'll give counsel?"
+    output: "Redline table: clause -> their text -> our proposed text -> rationale"
+
+  - id: counterparty-position
+    lead: compliance-ops
+    supporting: [partnership-lead]
+    questions:
+      - "Who at the site signs BAAs (name, title, email)?"
+      - "Who at the site negotiates (often a different person)?"
+      - "What's the documented BAA SLA at this institution (median days to signed)?"
+    output: "Named signer + negotiator + documented turnaround expectation"
+
+  - id: timeline-and-blockers
+    lead: compliance-ops
+    supporting: [partnership-lead]
+    questions:
+      - "What's the critical-path order: redline -> their counsel review -> ours -> exec sign?"
+      - "Where are the predictable stalls (legal queue, exec calendar, holiday)?"
+      - "What's the latest signed-by date that still preserves the pilot start?"
+    output: "Dated timeline with named blockers + escalation triggers"
+
+  - id: sign-or-walk
+    lead: compliance-ops
+    supporting: [regulatory-affairs, partnership-lead]
+    pattern: dialectic-debate
+    tensions:
+      - compliance-ops<>partnership-lead
+    questions:
+      - "Are the residual disagreements material to OPAL's product or just legal-theater?"
+      - "Is the timeline still inside the pilot's evaluation window?"
+      - "If we sign as-is, what's the risk we accept? If we walk, what's the cost?"
+    output: "DECISION: signed (record the final BAA as ARTIFACT) or walked (record rationale + what would change our mind)"
+
+emits:
+  - DECISION
+  - ACTION
+  - ARTIFACT
+  - CONTEXT_CHANGE

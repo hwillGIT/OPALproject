@@ -33,7 +33,13 @@ End-to-end:
                                         emitted event ids +
                                         backpressure status)
 """
-from .loader import Workflow, WorkflowPhase, load_workflow, list_workflows
+from .loader import (
+    Workflow,
+    WorkflowPhase,
+    iter_workflows,
+    list_workflows,
+    load_workflow,
+)
 from .persona import Persona, load_persona
 from .runner import (
     PhaseResult,
@@ -50,6 +56,7 @@ __all__ = [
     "WorkflowPhase",
     "WorkflowResult",
     "WorkflowRunner",
+    "iter_workflows",
     "list_workflows",
     "load_persona",
     "load_workflow",
