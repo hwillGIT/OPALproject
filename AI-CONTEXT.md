@@ -1,6 +1,14 @@
 PROJECT: OPAL Project - SAFe PM System
 ROOT: G:\Projects\OPALproject\ProjectWork
 
+PRIMARY USER-FACING REFERENCE:
+- INTELLIGENCE_LAYER.md (repo root) — plain-English guide to the
+  OPAL Intelligence Layer + the 7 LYNA clinical-staff user stories
+  (Sarah/bedside med, Linh/float-nurse onboarding, Marcus/charge
+  handoff, Jamal/coming-on-shift, Tanya/new-grad policy lookup,
+  Robert/med-admin safety check, Sofia/ICU deterioration). Uses
+  Epic as the reference EHR throughout. Start here for anyone new.
+
 SYSTEM CONFIGURATION:
 - Framework: SAFe 6.0
 - Location: .github/spec-kit/

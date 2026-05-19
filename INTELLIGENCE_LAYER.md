@@ -227,6 +227,42 @@ deterioration in the ICU. All seven are nurses, because LYNA is
 positioned for nurses specifically — "Information OUT for nurses,"
 distinct from physician-documentation tools like Suki or Abridge.
 
+### Story index — what's covered, at a glance
+
+Quick scan before you commit to reading each one in full. Each row
+points at the section that has the full narrative, the dialogue,
+and the "under the hood" walkthrough.
+
+| §    | Nurse  | Setting                                | Trigger phrase                             | Layer capability exercised                                            |
+|------|--------|----------------------------------------|--------------------------------------------|------------------------------------------------------------------------|
+| 4.1  | Sarah  | Med-surg, 2:15 AM bedside              | "What's the last pain med for bed 14?"     | Live Epic FHIR (MedicationAdministration) + Epic-doc citation         |
+| 4.2  | Linh   | Float pool, first shift on 4-South     | "Where are the sterile dressings?"         | Operational Knowledge Base (door codes, supplies, on-call)            |
+| 4.3  | Marcus | Charge nurse, end of 7p–7a shift       | "Give me a unit status for 4-South"        | Parallel FHIR fan-out + per-site handoff template (I-PASS / SBAR)     |
+| 4.4  | Jamal  | Day-shift, taking over 4 patients      | "Sign-on summary for my four patients"     | Per-shift cutover + sign-on template + cross-shift continuity         |
+| 4.5  | Tanya  | 2 weeks off orientation, refused med   | "Policy for a patient refusing a cardiac med?" | Policy system + Drug Info (both cited explicitly)                  |
+| 4.6  | Robert | Med-surg, new cipro at bedside         | "Verify safety for bed 22"                 | Drug Info interaction matrix + FHIR med list + renal dose check       |
+| 4.7  | Sofia  | ICU, single patient deteriorating      | "Rapid response, bed 6, ST changes"        | Emergency-intent path: parallel paging + protocol surfacing + FHIR    |
+
+**Cross-cutting themes the seven stories establish:**
+
+- **Sub-2-second answer latency** is the bar in every story — the
+  voice round-trip must complete fast enough that the nurse never
+  takes her hands off the patient (§4.1, §4.7) or her eyes off the
+  task (§4.6).
+- **Every answer carries a citation.** Sarah sees "via Epic MAR /
+  FHIR Observation"; Tanya sees "hospital policy NU-MED-027 + Drug
+  Info"; Marcus sees "all data pulled from Epic at 06:42 AM." LYNA
+  is never allowed to make a claim without its source.
+- **Three knowledge surfaces** appear across the seven: the live
+  EHR (Epic via FHIR), the per-site Operational Knowledge Base
+  (Linh, Marcus, Jamal), and indexed published documentation (Epic
+  developer docs in §4.1, hospital policy in §4.5).
+- **The execution layer** (page, call, broadcast, render to a
+  bedside display) shows up in §4.2 (deferred — operator-confirmed),
+  §4.6 (deferred — operator-confirmed), and §4.7 (autonomous within
+  declared emergency intents). The discipline is consistent:
+  routine actions need confirmation; emergency-intent actions don't.
+
 ### 4.1 — Sarah, a med-surg nurse, at the bedside
 
 It's 2:15 AM. Sarah is on a night shift, four hours into a 12-hour
