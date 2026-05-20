@@ -1,0 +1,61 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/app-state.html",
+  "fileId": "_ig_HL7_smart_app_launch_app_state_html_0ce50f9a",
+  "title": "Persisting App State (Experimental) - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:49.355Z",
+  "depth": 1,
+  "textLength": 21330,
+  "wordCount": 3016,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/apps.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/app-state.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/CapabilityStatement-smart-app-state-server.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-smart-app-state-basic.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/token-introspection.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/scopes-and-launch-context.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Persisting App State (Experimental)"
+    },
+    {
+      "level": 3,
+      "text": "smart-app-state capability EXP"
+    },
+    {
+      "level": 3,
+      "text": "Formal definitions"
+    },
+    {
+      "level": 3,
+      "text": "Discovery"
+    },
+    {
+      "level": 3,
+      "text": "App State Interactions"
+    },
+    {
+      "level": 3,
+      "text": "Managing app state (CRUDS)"
+    },
+    {
+      "level": 3,
+      "text": "API Examples"
+    },
+    {
+      "level": 3,
+      "text": "Security and Access controls"
+    },
+    {
+      "level": 3,
+      "text": "Design Notes"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

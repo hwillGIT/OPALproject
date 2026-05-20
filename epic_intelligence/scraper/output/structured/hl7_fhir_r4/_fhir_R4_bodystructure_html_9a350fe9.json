@@ -1,0 +1,79 @@
+{
+  "url": "https://hl7.org/fhir/R4/bodystructure.html",
+  "fileId": "_fhir_R4_bodystructure_html_9a350fe9",
+  "title": "BodyStructure - FHIR v4.0.1Identifier for this instance of the anatomical structureWhether this body site is in active use (this element modifies the meaning of other elements)The kind of structure being represented by the body structure at `BodyStructure.location`.  This can define both normal and abnormal morphologiesCodes describing anatomic morphology. (Strength=Example)The anatomical location or region of the specimen, lesion, or body structureCodes describing anatomical locations. May include laterality. (Strength=Example)Qualifier to refine the anatomical location.  These include qualifiers for laterality, relative location, directionality, number, and planeConcepts modifying the anatomic location. (Strength=Example)A summary, characterization or explanation of the body structureImage or images used to identify a locationThe person to which the body site belongsIdentifier for this instance of the anatomical structureWhether this body site is in active use (this element modifies the meaning of other elements)The kind of structure being represented by the body structure at `BodyStructure.location`.  This can define both normal and abnormal morphologiesCodes describing anatomic morphology. (Strength=Example)The anatomical location or region of the specimen, lesion, or body structureCodes describing anatomical locations. May include laterality. (Strength=Example)Qualifier to refine the anatomical location.  These include qualifiers for laterality, relative location, directionality, number, and planeConcepts modifying the anatomic location. (Strength=Example)A summary, characterization or explanation of the body structureImage or images used to identify a locationThe person to which the body site belongs",
+  "description": "",
+  "crawledAt": "2026-05-16T14:44:39.981Z",
+  "depth": 1,
+  "textLength": 11825,
+  "wordCount": 1445,
+  "links": [
+    "https://hl7.org/fhir/R4/diagnostics-module.html",
+    "https://hl7.org/fhir/R4/bodystructure.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/security.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-patient.html",
+    "https://hl7.org/fhir/R4/procedure.html",
+    "https://hl7.org/fhir/R4/observation.html",
+    "https://hl7.org/fhir/R4/formats.html",
+    "https://hl7.org/fhir/R4/bodystructure-definitions.html",
+    "https://hl7.org/fhir/R4/domainresource.html",
+    "https://hl7.org/fhir/R4/resource.html",
+    "https://hl7.org/fhir/R4/elementdefinition-definitions.html",
+    "https://hl7.org/fhir/R4/datatypes.html",
+    "https://hl7.org/fhir/R4/conformance-rules.html",
+    "https://hl7.org/fhir/R4/valueset-bodystructure-code.html",
+    "https://hl7.org/fhir/R4/terminologies.html",
+    "https://hl7.org/fhir/R4/valueset-body-site.html",
+    "https://hl7.org/fhir/R4/valueset-bodystructure-relative-location.html",
+    "https://hl7.org/fhir/R4/references.html",
+    "https://hl7.org/fhir/R4/patient.html",
+    "https://hl7.org/fhir/R4/xml.html",
+    "https://hl7.org/fhir/R4/narrative.html",
+    "https://hl7.org/fhir/R4/extensibility.html",
+    "https://hl7.org/fhir/R4/json.html",
+    "https://hl7.org/fhir/R4/rdf.html",
+    "https://hl7.org/fhir/R4/bodystructure-version-maps.html",
+    "https://hl7.org/fhir/R4/bodystructure-profiles.html",
+    "https://hl7.org/fhir/R4/bodystructure.profile.xml.html",
+    "https://hl7.org/fhir/R4/bodystructure.profile.json.html",
+    "https://hl7.org/fhir/R4/bodystructure.xsd",
+    "https://hl7.org/fhir/R4/bodystructure.sch",
+    "https://hl7.org/fhir/R4/bodystructure.schema.json.html",
+    "https://hl7.org/fhir/R4/bodystructure.shex.html",
+    "https://hl7.org/fhir/R4/bodystructure-dependencies.html",
+    "https://hl7.org/fhir/R4/search.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "10.9  Resource BodyStructure - Content"
+    },
+    {
+      "level": 2,
+      "text": "10.9.1 Scope and Usage"
+    },
+    {
+      "level": 2,
+      "text": "10.9.2 Boundaries and Relationships"
+    },
+    {
+      "level": 2,
+      "text": "10.9.3 \nResource Content"
+    },
+    {
+      "level": 3,
+      "text": "10.9.3.1 \nTerminology Bindings"
+    },
+    {
+      "level": 2,
+      "text": "10.9.4 Search Parameters"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}

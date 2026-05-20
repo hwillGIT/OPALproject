@@ -1,0 +1,22 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/apps.html",
+  "fileId": "_ig_HL7_smart_app_launch_apps_html_878c667e",
+  "title": "Apps - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:18.103Z",
+  "depth": 1,
+  "textLength": 454,
+  "wordCount": 67,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Apps"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

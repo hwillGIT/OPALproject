@@ -1,0 +1,55 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/client-confidential-asymmetric.html",
+  "fileId": "_ig_HL7_smart_app_launch_client_confidential_asymm_4c91d527",
+  "title": "Client Authentication: Asymmetric (public key) - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:11.799Z",
+  "depth": 0,
+  "textLength": 15446,
+  "wordCount": 2169,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/client-authentication.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/client-confidential-asymmetric.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/app-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/backend-services.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/authorization-example-jwks-and-signatures.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/authorization-example-jwks-and-signatures.ipynb",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/example-app-launch-asymmetric-auth.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/example-backend-services.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Client Authentication: Asymmetric (public key)"
+    },
+    {
+      "level": 3,
+      "text": "Profile Audience and Scope"
+    },
+    {
+      "level": 3,
+      "text": "Underlying Standards"
+    },
+    {
+      "level": 3,
+      "text": "Advertising server support for this profile"
+    },
+    {
+      "level": 3,
+      "text": "Registering a client (communicating public keys)"
+    },
+    {
+      "level": 3,
+      "text": "Authenticating to the Token endpoint"
+    },
+    {
+      "level": 3,
+      "text": "Worked example"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

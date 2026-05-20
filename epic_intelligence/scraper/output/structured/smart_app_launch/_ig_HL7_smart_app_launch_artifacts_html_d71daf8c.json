@@ -1,0 +1,60 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/artifacts.html",
+  "fileId": "_ig_HL7_smart_app_launch_artifacts_html_d71daf8c",
+  "title": "Artifacts Summary - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:47:00.393Z",
+  "depth": 1,
+  "textLength": 2525,
+  "wordCount": 378,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/artifacts.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/brands.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-brands-bundle.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-brand.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-endpoint.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/ValueSet-user-access-category.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/example-brands.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/Bundle-example1.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/Bundle-example2.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/Bundle-example3.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/Bundle-example4.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-smart-app-state-basic.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/CapabilityStatement-smart-app-state-server.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/Basic-app-state.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/task-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-task-ehr-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-task-standalone-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/CodeSystem-smart-codes.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/ValueSet-smart-launch-info.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/ValueSet-smart-launch-types.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/Task-task-for-standalone-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/Task-task-for-ehr-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Artifacts Summary"
+    },
+    {
+      "level": 3,
+      "text": "User Access Brands"
+    },
+    {
+      "level": 3,
+      "text": "User Access Brand Examples"
+    },
+    {
+      "level": 3,
+      "text": "SMART App State"
+    },
+    {
+      "level": 3,
+      "text": "SMART Launch Tasks"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}
