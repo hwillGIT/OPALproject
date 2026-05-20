@@ -1,0 +1,116 @@
+{
+  "url": "https://hl7.org/fhir/R4/careteam.html",
+  "fileId": "_fhir_R4_careteam_html_a7cef4c2",
+  "title": "CareTeam - FHIR v4.0.1Business identifiers assigned to this care team by the performer or other systems which remain constant as the resource is updated and propagates from server to serverIndicates the current state of the care team (this element modifies the meaning of other elements)Indicates the status of the care team. (Strength=Required)Identifies what kind of team.  This is to support differentiation between multiple co-existing teams, such as care plan team, episode of care team, longitudinal care teamIndicates the type of care team. (Strength=Example)A label for human use intended to distinguish like teams.  E.g. the \"red\" vs. \"green\" trauma teamsIdentifies the patient or group whose intended care is handled by the teamThe Encounter during which this CareTeam was created or to which the creation of this record is tightly associatedIndicates when the team did (or is intended to) come into effect and endDescribes why the care team existsIndicates the reason for the care team. (Strength=Example)Condition(s) that this care team addressesThe organization responsible for the care teamA central contact detail for the care team (that applies to all members)Comments made about the CareTeamIndicates specific responsibility of an individual within the care team, such as \"Primary care physician\", \"Trained social worker counselor\", \"Caregiver\", etcIndicates specific responsibility of an individual within the care team, such as \"Primary physician\", \"Team coordinator\", \"Caregiver\", etc. (Strength=Example)The specific person or organization who is participating/expected to participate in the care teamThe organization of the practitionerIndicates when the specific member or organization did (or is intended to) come into effect and endIdentifies all people and organizations who are expected to be involved in the care teamBusiness identifiers assigned to this care team by the performer or other systems which remain constant as the resource is updated and propagates from server to serverIndicates the current state of the care team (this element modifies the meaning of other elements)Indicates the status of the care team. (Strength=Required)Identifies what kind of team.  This is to support differentiation between multiple co-existing teams, such as care plan team, episode of care team, longitudinal care teamIndicates the type of care team. (Strength=Example)A label for human use intended to distinguish like teams.  E.g. the \"red\" vs. \"green\" trauma teamsIdentifies the patient or group whose intended care is handled by the teamThe Encounter during which this CareTeam was created or to which the creation of this record is tightly associatedIndicates when the team did (or is intended to) come into effect and endDescribes why the care team existsIndicates the reason for the care team. (Strength=Example)Condition(s) that this care team addressesThe organization responsible for the care teamA central contact detail for the care team (that applies to all members)Comments made about the CareTeamIndicates specific responsibility of an individual within the care team, such as \"Primary care physician\", \"Trained social worker counselor\", \"Caregiver\", etcIndicates specific responsibility of an individual within the care team, such as \"Primary physician\", \"Team coordinator\", \"Caregiver\", etc. (Strength=Example)The specific person or organization who is participating/expected to participate in the care teamThe organization of the practitionerIndicates when the specific member or organization did (or is intended to) come into effect and endIdentifies all people and organizations who are expected to be involved in the care team",
+  "description": "",
+  "crawledAt": "2026-05-16T14:44:43.169Z",
+  "depth": 1,
+  "textLength": 23965,
+  "wordCount": 3061,
+  "links": [
+    "https://hl7.org/fhir/R4/clinicalsummary-module.html",
+    "https://hl7.org/fhir/R4/careteam.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/security.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-encounter.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-patient.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-practitioner.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-relatedperson.html",
+    "https://hl7.org/fhir/R4/careplan.html",
+    "https://hl7.org/fhir/R4/chargeitem.html",
+    "https://hl7.org/fhir/R4/communication.html",
+    "https://hl7.org/fhir/R4/communicationrequest.html",
+    "https://hl7.org/fhir/R4/consent.html",
+    "https://hl7.org/fhir/R4/contract.html",
+    "https://hl7.org/fhir/R4/devicerequest.html",
+    "https://hl7.org/fhir/R4/diagnosticreport.html",
+    "https://hl7.org/fhir/R4/episodeofcare.html",
+    "https://hl7.org/fhir/R4/imagingstudy.html",
+    "https://hl7.org/fhir/R4/media.html",
+    "https://hl7.org/fhir/R4/medicationrequest.html",
+    "https://hl7.org/fhir/R4/observation.html",
+    "https://hl7.org/fhir/R4/servicerequest.html",
+    "https://hl7.org/fhir/R4/task.html",
+    "https://hl7.org/fhir/R4/formats.html",
+    "https://hl7.org/fhir/R4/careteam-definitions.html",
+    "https://hl7.org/fhir/R4/domainresource.html",
+    "https://hl7.org/fhir/R4/resource.html",
+    "https://hl7.org/fhir/R4/elementdefinition-definitions.html",
+    "https://hl7.org/fhir/R4/datatypes.html",
+    "https://hl7.org/fhir/R4/conformance-rules.html",
+    "https://hl7.org/fhir/R4/valueset-care-team-status.html",
+    "https://hl7.org/fhir/R4/terminologies.html",
+    "https://hl7.org/fhir/R4/valueset-care-team-category.html",
+    "https://hl7.org/fhir/R4/references.html",
+    "https://hl7.org/fhir/R4/patient.html",
+    "https://hl7.org/fhir/R4/group.html",
+    "https://hl7.org/fhir/R4/encounter.html",
+    "https://hl7.org/fhir/R4/backboneelement.html",
+    "https://hl7.org/fhir/R4/valueset-participant-role.html",
+    "https://hl7.org/fhir/R4/practitioner.html",
+    "https://hl7.org/fhir/R4/practitionerrole.html",
+    "https://hl7.org/fhir/R4/relatedperson.html",
+    "https://hl7.org/fhir/R4/organization.html",
+    "https://hl7.org/fhir/R4/valueset-clinical-findings.html",
+    "https://hl7.org/fhir/R4/condition.html",
+    "https://hl7.org/fhir/R4/xml.html",
+    "https://hl7.org/fhir/R4/narrative.html",
+    "https://hl7.org/fhir/R4/extensibility.html",
+    "https://hl7.org/fhir/R4/json.html",
+    "https://hl7.org/fhir/R4/rdf.html",
+    "https://hl7.org/fhir/R4/diff.html",
+    "https://hl7.org/fhir/R4/careteam-version-maps.html",
+    "https://hl7.org/fhir/R4/careteam-profiles.html",
+    "https://hl7.org/fhir/R4/careteam.profile.xml.html",
+    "https://hl7.org/fhir/R4/careteam.profile.json.html",
+    "https://hl7.org/fhir/R4/careteam.xsd",
+    "https://hl7.org/fhir/R4/careteam.sch",
+    "https://hl7.org/fhir/R4/careteam.schema.json.html",
+    "https://hl7.org/fhir/R4/careteam.shex.html",
+    "https://hl7.org/fhir/R4/careteam-dependencies.html",
+    "https://hl7.org/fhir/R4/fhirpath.html",
+    "https://hl7.org/fhir/R4/provenance.html",
+    "https://hl7.org/fhir/R4/search.html",
+    "https://hl7.org/fhir/R4/searchparameter-registry.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "9.7  Resource CareTeam - Content"
+    },
+    {
+      "level": 2,
+      "text": "9.7.1 Scope and Usage"
+    },
+    {
+      "level": 2,
+      "text": "9.7.2  Boundaries and Relationships"
+    },
+    {
+      "level": 2,
+      "text": "9.7.3 \nResource Content"
+    },
+    {
+      "level": 3,
+      "text": "9.7.3.1 \nTerminology Bindings"
+    },
+    {
+      "level": 3,
+      "text": "9.7.3.2 Constraints"
+    },
+    {
+      "level": 3,
+      "text": "9.7.3.3  Notes"
+    },
+    {
+      "level": 2,
+      "text": "9.7.4 Search Parameters"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}

@@ -1,0 +1,34 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/task-launch.html",
+  "fileId": "_ig_HL7_smart_app_launch_task_launch_html_6d5941f7",
+  "title": "Task profile for requesting SMART launch (Experimental) - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:50.924Z",
+  "depth": 1,
+  "textLength": 3205,
+  "wordCount": 375,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/apps.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/task-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-task-ehr-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-task-standalone-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Task profile for requesting SMART launch (Experimental)"
+    },
+    {
+      "level": 3,
+      "text": "Requesting an EHR launch"
+    },
+    {
+      "level": 3,
+      "text": "Requesting an standalone launch"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

@@ -1,0 +1,122 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html",
+  "fileId": "_ig_HL7_smart_app_launch_qa_html_b37decb4",
+  "title": "SmartAppLaunch : Validation Results",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:29.117Z",
+  "depth": 1,
+  "textLength": 18596,
+  "wordCount": 1456,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.min.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa-dep.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa-txservers.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/Basic-app-state.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/Bundle-example1.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/Bundle-example2.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/Bundle-example3.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/Bundle-example4.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/Task-task-for-ehr-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/Task-task-for-standalone-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-smart-app-state-basic.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-brands-bundle.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-brand.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-endpoint.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/CapabilityStatement-smart-app-state-server.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/CodeSystem-smart-codes.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/index.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-task-ehr-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-task-standalone-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/ValueSet-smart-launch-info.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/ValueSet-smart-launch-types.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/ValueSet-user-access-category.html"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Validation Results for SmartAppLaunch"
+    },
+    {
+      "level": 2,
+      "text": "n/a Show Validation Information"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/Basic-app-state.json Show Validation Information (1)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/Bundle-example1.json Show Validation Information (5)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/Bundle-example2.json Show Validation Information (11)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/Bundle-example3.json Show Validation Information (7)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/Bundle-example4.json Show Validation Information (7)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/CapabilityStatement-smart-app-state-server.json Show Validation Information (1)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/CodeSystem-smart-codes.json Show Validation Information (1)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/ImplementationGuide-hl7.fhir.uv.smart-app-launch.json Show Validation Information (1)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/StructureDefinition-patient-access-brand.json Show Validation Information (1)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/StructureDefinition-smart-app-state-basic.json Show Validation Information (1)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/StructureDefinition-task-ehr-launch.json Show Validation Information (1)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/StructureDefinition-task-standalone-launch.json Show Validation Information (1)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/StructureDefinition-user-access-brands-bundle.json Show Validation Information (1)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/StructureDefinition-user-access-endpoint.json Show Validation Information (1)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/Task-task-for-ehr-launch.json Show Validation Information (1)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/Task-task-for-standalone-launch.json Show Validation Information (1)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/ValueSet-smart-launch-info.json Show Validation Information (1)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/ValueSet-smart-launch-types.json Show Validation Information (1)"
+    },
+    {
+      "level": 2,
+      "text": "input/resources/ValueSet-user-access-category.json Show Validation Information (1)"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

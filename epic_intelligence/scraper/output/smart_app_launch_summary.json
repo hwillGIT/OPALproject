@@ -1,0 +1,227 @@
+{
+  "site": "SMART App Launch",
+  "baseUrl": "https://build.fhir.org/ig/HL7/smart-app-launch",
+  "crawledAt": "2026-05-16T14:47:07.629Z",
+  "totalPages": 30,
+  "totalErrors": 1,
+  "totalWords": 42515,
+  "pages": [
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/app-launch.html",
+      "title": "App Launch: Launch and Authorization - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_app_launch_html_75dbc366",
+      "depth": 0,
+      "wordCount": 5066
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/scopes-and-launch-context.html",
+      "title": "App Launch: Scopes and Launch Context - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_scopes_and_launch_context_5c2ee1b7",
+      "depth": 0,
+      "wordCount": 5372
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/client-confidential-asymmetric.html",
+      "title": "Client Authentication: Asymmetric (public key) - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_client_confidential_asymm_4c91d527",
+      "depth": 0,
+      "wordCount": 2169
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/backend-services.html",
+      "title": "Backend Services - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_backend_services_html_96ac1aab",
+      "depth": 0,
+      "wordCount": 1759
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+      "title": "Table of Contents - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_toc_html_ebd22c35",
+      "depth": 0,
+      "wordCount": 272
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+      "title": "Search SMART App Launch (Current Build)",
+      "fileId": "_ig_HL7_smart_app_launch_searchform_html_3e2597f9",
+      "depth": 1,
+      "wordCount": 17
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/apps.html",
+      "title": "Apps - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_apps_html_878c667e",
+      "depth": 1,
+      "wordCount": 67
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/index.html",
+      "title": "Overview - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_index_html_eec7e2ea",
+      "depth": 1,
+      "wordCount": 1007
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/client-confidential-symmetric.html",
+      "title": "Client Authentication: Symmetric (shared secret) - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_client_confidential_symme_869c2816",
+      "depth": 1,
+      "wordCount": 204
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/example-app-launch-public.html",
+      "title": "Example App Launch for Public Client - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_example_app_launch_public_fb6c1789",
+      "depth": 1,
+      "wordCount": 407
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/example-app-launch-asymmetric-auth.html",
+      "title": "Example App Launch for Asymmetric Client Auth - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_example_app_launch_asymme_cda66c63",
+      "depth": 1,
+      "wordCount": 461
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/example-app-launch-symmetric-auth.html",
+      "title": "Example App Launch for Symmetric Client Auth - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_example_app_launch_symmet_223e0a1c",
+      "depth": 1,
+      "wordCount": 439
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html",
+      "title": "Conformance - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_conformance_html_183d8d51",
+      "depth": 1,
+      "wordCount": 1628
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html",
+      "title": "SmartAppLaunch : Validation Results",
+      "fileId": "_ig_HL7_smart_app_launch_qa_html_b37decb4",
+      "depth": 1,
+      "wordCount": 1456
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/worked_example_id_token.html",
+      "title": "Example Id Token - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_worked_example_id_token_h_217b4a40",
+      "depth": 1,
+      "wordCount": 339
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/client-authentication.html",
+      "title": "Client Authentication - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_client_authentication_htm_7d54c44e",
+      "depth": 1,
+      "wordCount": 64
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/authorization-example-jwks-and-signatures.html",
+      "title": "Example JWS generation for Asymmetric Client Auth - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_authorization_example_jwk_1c947cfc",
+      "depth": 1,
+      "wordCount": 176
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/example-backend-services.html",
+      "title": "Example Backend Services Flow - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_example_backend_services__ee9529d6",
+      "depth": 1,
+      "wordCount": 184
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/references.html",
+      "title": "References - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_references_html_89901dd4",
+      "depth": 1,
+      "wordCount": 122
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/app-state.html",
+      "title": "Persisting App State (Experimental) - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_app_state_html_0ce50f9a",
+      "depth": 1,
+      "wordCount": 3016
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/task-launch.html",
+      "title": "Task profile for requesting SMART launch (Experimental) - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_task_launch_html_6d5941f7",
+      "depth": 1,
+      "wordCount": 375
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/token-introspection.html",
+      "title": "Token Introspection - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_token_introspection_html_877fec0b",
+      "depth": 1,
+      "wordCount": 487
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/best-practices.html",
+      "title": "Best Practices - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_best_practices_html_75f133d3",
+      "depth": 1,
+      "wordCount": 889
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/brands.html",
+      "title": "User-access Brands and Endpoints - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_brands_html_6bdc476b",
+      "depth": 1,
+      "wordCount": 3164
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/example-brands.html",
+      "title": "User-access Brand Examples - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_example_brands_html_4614b771",
+      "depth": 1,
+      "wordCount": 742
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/examples.html",
+      "title": "Examples - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_examples_html_776c5188",
+      "depth": 1,
+      "wordCount": 91
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/artifacts.html",
+      "title": "Artifacts Summary - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_artifacts_html_d71daf8c",
+      "depth": 1,
+      "wordCount": 378
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-brands-bundle.html",
+      "title": "User Access Brands Bundle Profile - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_StructureDefinition_user__204e5892",
+      "depth": 1,
+      "wordCount": 5726
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-brand.html",
+      "title": "User Access Brand (Organization) Profile - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_StructureDefinition_user__b700b6ec",
+      "depth": 1,
+      "wordCount": 3134
+    },
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-endpoint.html",
+      "title": "User Access Endpoint Profile - SMART App Launch v2.2.0",
+      "fileId": "_ig_HL7_smart_app_launch_StructureDefinition_user__01f6c612",
+      "depth": 1,
+      "wordCount": 3304
+    }
+  ],
+  "errors": [
+    {
+      "url": "https://build.fhir.org/ig/HL7/smart-app-launch/authorization-example-jwks-and-signatures.ipynb",
+      "error": "Non-HTML content type: text/plain; charset=utf-8",
+      "depth": 1
+    }
+  ]
+}
