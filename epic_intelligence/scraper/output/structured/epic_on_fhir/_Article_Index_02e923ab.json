@@ -1,0 +1,18 @@
+{
+  "url": "https://fhir.epic.com/Article/Index?docId=incomingdft",
+  "fileId": "_Article_Index_02e923ab",
+  "title": "Sign out",
+  "description": "",
+  "crawledAt": "2026-05-16T14:42:57.151Z",
+  "depth": 1,
+  "textLength": 97,
+  "wordCount": 16,
+  "links": [],
+  "headings": [
+    {
+      "level": 1,
+      "text": "JavaScript required"
+    }
+  ],
+  "siteName": "Epic on FHIR"
+}

@@ -1,0 +1,62 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/scopes-and-launch-context.html",
+  "fileId": "_ig_HL7_smart_app_launch_scopes_and_launch_context_5c2ee1b7",
+  "title": "App Launch: Scopes and Launch Context - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:10.233Z",
+  "depth": 0,
+  "textLength": 35897,
+  "wordCount": 5372,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/apps.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/scopes-and-launch-context.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/app-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/worked_example_id_token.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "App Launch: Scopes and Launch Context"
+    },
+    {
+      "level": 3,
+      "text": "Quick Start"
+    },
+    {
+      "level": 3,
+      "text": "Scopes for requesting FHIR Resources"
+    },
+    {
+      "level": 3,
+      "text": "Scopes for requesting context data"
+    },
+    {
+      "level": 3,
+      "text": "Scopes for requesting identity data"
+    },
+    {
+      "level": 3,
+      "text": "Scopes for requesting a refresh token"
+    },
+    {
+      "level": 3,
+      "text": "Extensibility"
+    },
+    {
+      "level": 3,
+      "text": "Steps for using an ID token"
+    },
+    {
+      "level": 3,
+      "text": "Worked examples"
+    },
+    {
+      "level": 3,
+      "text": "Appendix: URI representation of scopes"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

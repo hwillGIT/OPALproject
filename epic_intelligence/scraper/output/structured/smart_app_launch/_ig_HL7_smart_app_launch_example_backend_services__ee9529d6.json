@@ -1,0 +1,36 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/example-backend-services.html",
+  "fileId": "_ig_HL7_smart_app_launch_example_backend_services__ee9529d6",
+  "title": "Example Backend Services Flow - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:46.206Z",
+  "depth": 1,
+  "textLength": 4725,
+  "wordCount": 184,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/examples.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/example-backend-services.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Example Backend Services Flow"
+    },
+    {
+      "level": 3,
+      "text": "Retrieve .well-known/smart-configuration"
+    },
+    {
+      "level": 3,
+      "text": "Retrieve access token"
+    },
+    {
+      "level": 3,
+      "text": "Access FHIR API"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

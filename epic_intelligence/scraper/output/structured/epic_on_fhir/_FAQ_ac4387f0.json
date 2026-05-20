@@ -1,0 +1,25 @@
+{
+  "url": "https://fhir.epic.com/FAQ",
+  "fileId": "_FAQ_ac4387f0",
+  "title": "FAQ - Epic on FHIR",
+  "description": "",
+  "crawledAt": "2026-05-16T14:41:25.797Z",
+  "depth": 0,
+  "textLength": 741,
+  "wordCount": 115,
+  "links": [
+    "https://fhir.epic.com/FAQ",
+    "https://fhir.epic.com/Resources/Terms"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Frequently Asked Questions"
+    },
+    {
+      "level": 3,
+      "text": ""
+    }
+  ],
+  "siteName": "Epic on FHIR"
+}

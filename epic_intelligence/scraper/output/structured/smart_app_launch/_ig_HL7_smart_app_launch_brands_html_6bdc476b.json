@@ -1,0 +1,55 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/brands.html",
+  "fileId": "_ig_HL7_smart_app_launch_brands_html_6bdc476b",
+  "title": "User-access Brands and Endpoints - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:55.652Z",
+  "depth": 1,
+  "textLength": 21842,
+  "wordCount": 3164,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/brands.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/example-brands.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-brand.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-endpoint.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-brands-bundle.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "User-access Brands and Endpoints"
+    },
+    {
+      "level": 3,
+      "text": "Introduction"
+    },
+    {
+      "level": 3,
+      "text": "Brands and Endpoints"
+    },
+    {
+      "level": 3,
+      "text": "Design goals"
+    },
+    {
+      "level": 3,
+      "text": "Brand Information"
+    },
+    {
+      "level": 3,
+      "text": "Conformance Overview"
+    },
+    {
+      "level": 3,
+      "text": "FHIR Profiles"
+    },
+    {
+      "level": 3,
+      "text": "Rules And Best Practices"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

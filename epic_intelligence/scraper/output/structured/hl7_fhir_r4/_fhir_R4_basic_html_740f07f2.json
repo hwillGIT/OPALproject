@@ -1,0 +1,106 @@
+{
+  "url": "https://hl7.org/fhir/R4/basic.html",
+  "fileId": "_fhir_R4_basic_html_740f07f2",
+  "title": "Basic - FHIR v4.0.1Identifier assigned to the resource for business purposes, outside the context of FHIRIdentifies the 'type' of resource - equivalent to the resource name for other resources (this element modifies the meaning of other elements)Codes for identifying types of resources not yet defined by FHIR. (Strength=Example)Identifies the patient, practitioner, device or any other resource that is the \"focus\" of this resourceIdentifies when the resource was first createdIndicates who was responsible for creating the resource instanceIdentifier assigned to the resource for business purposes, outside the context of FHIRIdentifies the 'type' of resource - equivalent to the resource name for other resources (this element modifies the meaning of other elements)Codes for identifying types of resources not yet defined by FHIR. (Strength=Example)Identifies the patient, practitioner, device or any other resource that is the \"focus\" of this resourceIdentifies when the resource was first createdIndicates who was responsible for creating the resource instance",
+  "description": "",
+  "crawledAt": "2026-05-16T14:44:36.833Z",
+  "depth": 1,
+  "textLength": 17504,
+  "wordCount": 2443,
+  "links": [
+    "https://hl7.org/fhir/R4/foundation-module.html",
+    "https://hl7.org/fhir/R4/basic.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/security.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-patient.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-practitioner.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-relatedperson.html",
+    "https://hl7.org/fhir/R4/extensibility.html",
+    "https://hl7.org/fhir/R4/formats.html",
+    "https://hl7.org/fhir/R4/basic-definitions.html",
+    "https://hl7.org/fhir/R4/elementdefinition-definitions.html",
+    "https://hl7.org/fhir/R4/domainresource.html",
+    "https://hl7.org/fhir/R4/resource.html",
+    "https://hl7.org/fhir/R4/datatypes.html",
+    "https://hl7.org/fhir/R4/conformance-rules.html",
+    "https://hl7.org/fhir/R4/valueset-basic-resource-type.html",
+    "https://hl7.org/fhir/R4/terminologies.html",
+    "https://hl7.org/fhir/R4/references.html",
+    "https://hl7.org/fhir/R4/resourcelist.html",
+    "https://hl7.org/fhir/R4/practitioner.html",
+    "https://hl7.org/fhir/R4/practitionerrole.html",
+    "https://hl7.org/fhir/R4/patient.html",
+    "https://hl7.org/fhir/R4/relatedperson.html",
+    "https://hl7.org/fhir/R4/organization.html",
+    "https://hl7.org/fhir/R4/xml.html",
+    "https://hl7.org/fhir/R4/narrative.html",
+    "https://hl7.org/fhir/R4/json.html",
+    "https://hl7.org/fhir/R4/rdf.html",
+    "https://hl7.org/fhir/R4/diff.html",
+    "https://hl7.org/fhir/R4/basic-version-maps.html",
+    "https://hl7.org/fhir/R4/basic-profiles.html",
+    "https://hl7.org/fhir/R4/basic.profile.xml.html",
+    "https://hl7.org/fhir/R4/basic.profile.json.html",
+    "https://hl7.org/fhir/R4/basic.xsd",
+    "https://hl7.org/fhir/R4/basic.sch",
+    "https://hl7.org/fhir/R4/basic.schema.json.html",
+    "https://hl7.org/fhir/R4/basic.shex.html",
+    "https://hl7.org/fhir/R4/basic-dependencies.html",
+    "https://hl7.org/fhir/R4/valueset.html",
+    "https://hl7.org/fhir/R4/structuredefinition.html",
+    "https://hl7.org/fhir/R4/list.html",
+    "https://hl7.org/fhir/R4/diagnosticreport.html",
+    "https://hl7.org/fhir/R4/familymemberhistory.html",
+    "https://hl7.org/fhir/R4/auditevent.html",
+    "https://hl7.org/fhir/R4/provenance.html",
+    "https://hl7.org/fhir/R4/search.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "2.34  Resource Basic - Content"
+    },
+    {
+      "level": 2,
+      "text": "2.34.1 Scope and Usage"
+    },
+    {
+      "level": 2,
+      "text": "2.34.2 Background and Context"
+    },
+    {
+      "level": 2,
+      "text": "2.34.3 \nResource Content"
+    },
+    {
+      "level": 3,
+      "text": "2.34.3.1 \nTerminology Bindings"
+    },
+    {
+      "level": 2,
+      "text": "2.34.4 Why not custom resources?"
+    },
+    {
+      "level": 2,
+      "text": "2.34.5 Documents and narrative-only resources"
+    },
+    {
+      "level": 2,
+      "text": "2.34.6 Best practices for using 'Basic'"
+    },
+    {
+      "level": 2,
+      "text": "2.34.7 Referencing Basic resources"
+    },
+    {
+      "level": 2,
+      "text": "2.34.8 Search Parameters"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}
