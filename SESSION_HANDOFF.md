@@ -11,7 +11,7 @@ the whole transcript. Update it at the end of each working session.
 
 ## 1. Where we are right now
 
-**Nine** LYNA clinical-staff user stories live in
+**Ten** LYNA clinical-staff user stories live in
 [`INTELLIGENCE_LAYER.md`](INTELLIGENCE_LAYER.md) §4 — all nurses,
 all anchored to the I-Corps customer-discovery research (H1–H18 +
 BMC V2 themes + Interview #1 David Hernandez and Interview #2
@@ -29,23 +29,36 @@ anchor** block citing what specifically grounds the scenario.
 | 4.7 | Sofia | Cardiac step-down (4-East), deteriorating | "Rapid response, bed 6, ST changes" | H1, H7; BMC V2 ICU explicitly *not* day-one beachhead |
 | 4.8 | Priya | Med-surg, mid-procedure in isolation | "Broadcast 4-South: I need a saline flush in 305" | Interview #2 (group-chat-from-iso unprompted feature request); H7, H14 |
 | 4.9 | Aisha | Med-surg wound documentation | "LYNA, document a pressure injury on bed 18" | H14 (phone owns camera) |
+| 4.10 | Maya | Med-surg night, Spanish-only patient | "Interpreter mode, Spanish" | H5, H8; Mt. Sinai catchment + Title VI; UX-doc Flow 3 precedent |
 
-**Changes vs. the prior 7-story shape:**
+**UI/UX specs (v1 iPhone app + manager dashboard) shipped on the
+same PR:**
+
+- [`hardware/opalDevice/docs/ux/opal-interaction-flows.md`](hardware/opalDevice/docs/ux/opal-interaction-flows.md)
+  — 10-surface inventory (S1–S10) + per-journey flows for §4.1–§4.10.
+- [`hardware/opalDevice/docs/ux/manager-dashboard.md`](hardware/opalDevice/docs/ux/manager-dashboard.md)
+  — 10-view dashboard spec (D1–D10) anchored to H6, H10, H13, H17, H18.
+- [`hardware/opalDevice/docs/ux/README.md`](hardware/opalDevice/docs/ux/README.md)
+  — updated index distinguishing canonical v1 specs from v3 reference material.
+
+**Cumulative changes vs. the prior 7-story shape:**
 - §4.6 rewritten from cipro-warfarin safety check → **AI-awareness gap** (H6) — hospital has bought a nursing clinical-reference AI nobody opens; LYNA routes through it and names it. New "hospital AI registry" concept introduced as a per-site Operational KB extension.
 - §4.7 moved from **ICU → cardiac step-down (4-East)** — interview #2 was explicit that ICU layout / proximity / experience reduces the gap; BMC V2 names med-surg/cardiac as beachhead and ICU as weaker first market.
 - §4.3 setup reframed against **H12** (resource-nurse-offline window as the deployment-window hypothesis).
 - §4.8 NEW — isolation-room broadcast. Direct unprompted feature request from Interview #2.
 - §4.9 NEW — phone coexistence / camera handoff. H14, the most CNIO-sensitive boundary.
-- Citation footers ("Interview anchor") added to all nine stories.
-- Cross-cutting themes expanded from 3 to 5; added "LYNA as router across the hospital's existing AI investments" and "phone coexistence, not replacement."
-- §4 preamble rewritten: "seven stories" → "nine stories" with the new descriptors.
+- §4.10 NEW — ad-hoc bedside interpreter session. Title VI compliance + Mt. Sinai catchment; weakest direct-interview anchor of the ten.
+- Citation footers ("Interview anchor") added to all ten stories.
+- Cross-cutting themes expanded from 3 to 6; added "LYNA as router across the hospital's existing AI investments," "phone coexistence, not replacement," and "session modes for capabilities voice-Q&A alone can't carry."
+- §4 preamble rewritten: "seven stories" → "ten stories" with the new descriptors.
+- v1 iPhone interaction-flows spec + manager-dashboard spec added (see §3 above).
 
-Cross-referenced from `epic_intelligence/README.md` and `AI-CONTEXT.md`.
+Cross-referenced from `epic_intelligence/README.md`, `AI-CONTEXT.md`,
+`README.md`, and `hardware/opalDevice/docs/ux/README.md`.
 
 PR [#20](https://github.com/collabPGC/OPALproject/pull/20) is draft,
 stacked on `feat/baa-irb-templates` (PR #19), open and ready for
-review/merge — now carrying the alignment pass on top of the
-original 7-story draft.
+review/merge — now carrying the alignment pass + v1 UI design pass.
 
 ---
 
@@ -118,35 +131,80 @@ brainstorm-first, propose-then-implement):
 - Brainstorm-first, propose-then-implement was honored: the
   alignment table + proposed adjustments + sample drafts were
   reviewed before any edit was applied.
-- Build a side-by-side table: each interview theme → which of
-  our 7 journeys covers it / which doesn't.
-- Surface 3–5 candidate adjustments (rewrites, additions,
-  removals) and discuss with the user BEFORE editing.
-- The user has been firm about not just charging ahead on doc
-  changes — they want to talk through findings first.
 
 ---
 
-## 3. The next-next ask (after journey alignment)
+## 3. UI design pass — DONE for v1, dashboard SPEC SHIPPED, v3 deferred
 
-Once the journeys are validated against interviews, the user wants
-to move into **UI design**:
+> **User's original ask:** "Let's discuss user flows on the UI
+> what are needed. What are the use cases so we can design these
+> screens and modules?"
 
-> "Let's discuss user flows on the UI what are needed. What are the
-> use cases so we can design these screens and modules?"
+### Status — completed 2026-05-20
 
-### What this likely needs
+Two new specs landed on PR #20:
 
-- A list of UI surfaces (LYNA v1 is iPhone-app; v2 is Vocera /
-  Apple Watch; v3+ is the dedicated LYNA badge). Each surface has
-  different affordances.
-- Per-journey screen flow: what does Sarah see/hear at each step?
-  What about Linh? What about Sofia in an emergency?
-- A modules list: voice-input, voice-output, on-device display,
-  charge-nurse dashboard, etc.
+- [`hardware/opalDevice/docs/ux/opal-interaction-flows.md`](hardware/opalDevice/docs/ux/opal-interaction-flows.md)
+  — v1 iPhone-app spec. 10-surface inventory (S1–S10), per-journey
+  flows for §4.1–§4.10 of INTELLIGENCE_LAYER.md, reusable patterns
+  (mode indicator, AI-source pill, citation footer, voice-surface
+  states, execution-layer affordances, compliance moments),
+  cross-cutting error handling, and a mapping table from the prior
+  8-flow draft. Supersedes the 2025-11-19 draft (preserved in git
+  history).
+- [`hardware/opalDevice/docs/ux/manager-dashboard.md`](hardware/opalDevice/docs/ux/manager-dashboard.md)
+  — companion spec for the web dashboard. 10 views (D1–D10)
+  covering adoption, AI routing, top queries, response times,
+  abandonment, broadcast coverage, critical alerts, interpreter
+  sessions, per-AI-tool detail, and buyer-facing ROI. Anchored to
+  H13 (silent abandonment), H6 (AI awareness gap), H10 (CCIO
+  needs ROI), H17/H18 (renewal economics).
 
-Best done AFTER the journey-vs-interview alignment, because the
-journey shape determines the screen shape.
+A new journey §4.10 — **Maya, interpreter mode** — was added to
+INTELLIGENCE_LAYER.md to cover language-access at the bedside
+(weakest direct-interview anchor of the ten; kept because of
+Mt. Sinai catchment language mix + Title VI compliance + the
+prior UX doc's Flow 3). Cross-references (`README.md`,
+`AI-CONTEXT.md`, `epic_intelligence/README.md`,
+`hardware/opalDevice/docs/ux/README.md`) updated to 10 stories.
+
+### Form-factor decisions locked
+
+| Form factor | Status | Notes |
+|---|---|---|
+| **v1 — iPhone app + Bluetooth earpiece** | spec'd | nurse-side flows + manager dashboard |
+| v2 — Vocera-class / Apple Watch | **skipped** | Interview #2 anti-signal: "hated wearing something heavy" |
+| **v3 — Dedicated LYNA badge** | **deferred** | separate design pass after v1 pilot data; existing wireframes / screen-designs / LVGL theme remain v3 reference |
+
+### Decisions that locked during the design pass
+
+- **v1 form factor:** iPhone app, not the earlier dedicated-device
+  concept. Driven by H14 (phone coexistence), time-to-pilot, and
+  the validated bypass-the-screen pattern.
+- **v2 skipped intentionally.** Interview #2 explicitly hated
+  Vocera; going iPhone (v1) → dedicated optimized hardware (v3)
+  avoids the anti-signal.
+- **Manager dashboard before v3.** Per user direction: v1 nurse
+  surfaces, then manager dashboard, then v3 — because the
+  dashboard is the artifact the CCIO needs to renew the pilot,
+  and v3 hardware comes after pilot data.
+- **Multilingual = §4.10**, not a deferred feature. Title VI
+  compliance + Mt. Sinai catchment mix means it ships in v1.
+- **§4.6 introduces the "hospital AI registry"** as a per-site
+  Operational KB extension. The registry is the data position
+  the dashboard's D2 view reads against — surfacing the H6
+  awareness gap.
+
+### What was preserved vs replaced from the prior UX work
+
+The earlier docs in `hardware/opalDevice/docs/ux/` (wireframes,
+screen designs, LVGL theme) were drawn against the v3
+dedicated-device concept. **The design-system bones
+(`opal-design-system.md`, `design-tokens.json`) are reusable
+as-is for v1 iPhone.** Wireframes and screen designs remain v3
+reference material; a separate v3 design pass will re-anchor
+them against the 10 journeys. The previously-prominent "demo
+mode" + LVGL implementation are explicitly v3-deferred.
 
 ---
 
@@ -171,7 +229,7 @@ squash-merge sequentially.
 | [#17](https://github.com/collabPGC/OPALproject/pull/17) | `feat/briefing-mattermost-cron` | draft | Briefing → Mattermost webhook + cron docs (A-3) |
 | [#18](https://github.com/collabPGC/OPALproject/pull/18) | `feat/pilot-site-scoring` | draft | Pilot-site scoring rubric + champion ID (D-1) |
 | [#19](https://github.com/collabPGC/OPALproject/pull/19) | `feat/baa-irb-templates` | draft | BAA + IRB workflow YAMLs + operator templates (D-2) |
-| [#20](https://github.com/collabPGC/OPALproject/pull/20) | `docs/intelligence-layer-readme` | **current** | INTELLIGENCE_LAYER.md + 9 LYNA user stories (alignment pass over original 7) + cross-refs |
+| [#20](https://github.com/collabPGC/OPALproject/pull/20) | `docs/intelligence-layer-readme` | **current** | INTELLIGENCE_LAYER.md + 10 LYNA user stories (alignment pass + §4.10 interpreter) + v1 iPhone interaction-flows spec + manager-dashboard spec + cross-refs |
 
 **Cumulative test status (last full run):** 282 Python tests passed +
 1 skipped (Neo4j live-integration auto-skip when DB unreachable);
@@ -245,11 +303,21 @@ story.
 2. `git -C G:/Downloads/OPALproject status` — confirm clean working
    tree on `docs/intelligence-layer-readme`.
 3. `gh pr view 20` — confirm PR #20 state.
-4. If continuing the journey/interview alignment: open
-   `i-corps/data-room/problem-validation-research.md` and
-   `i-corps/interviews/interviews-index.md` BEFORE making changes.
-5. If pivoting to UI design: only after the alignment review is
-   done; check this file's §3 for the UI-design framing.
+4. If continuing journey work: open
+   [`INTELLIGENCE_LAYER.md`](INTELLIGENCE_LAYER.md) §4 +
+   `i-corps/interviews/interviews-index.md` before making changes.
+5. If continuing UI work for v1:
+   [`hardware/opalDevice/docs/ux/opal-interaction-flows.md`](hardware/opalDevice/docs/ux/opal-interaction-flows.md)
+   is the canonical spec; v3 reference material is in the same
+   directory and clearly marked.
+6. If starting the v3 design pass: read both v1 specs first (they
+   describe the journeys and behavior the v3 hardware must
+   support), then begin the v3 hardware-affordance pass against
+   the existing `opal-ui-wireframes.md` / `opal-screen-designs.md`
+   / `implementation/lvgl-theme/` material.
+7. If starting the dashboard wireframe pass: the spec is
+   `manager-dashboard.md`; the implementation starting point is
+   `hardware/opalDevice/docs/ux/implementation/react-dashboard/`.
 
 ---
 

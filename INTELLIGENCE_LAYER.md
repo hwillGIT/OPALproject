@@ -218,17 +218,19 @@ is invisible plumbing that makes those answers fast, accurate, and
 cited — sub-two-second voice replies grounded in the hospital's own
 Epic instance and in published Epic documentation.
 
-Nine stories from the floor, spanning the day-to-day shape of
+Ten stories from the floor, spanning the day-to-day shape of
 nursing work: a routine bedside lookup, onboarding to an unfamiliar
 unit, a charge-nurse handoff during the resource-nurse-offline
 window, taking over a patient assignment at start of shift, a new
 graduate looking up policy at the bedside, a nurse finding an AI
 tool the hospital has been paying for that nobody on the floor
 knew was there, a step-down rapid response, a hands-free broadcast
-from an isolation room, and a clean handoff to the phone for a
-camera-dependent task. All nine are nurses, because LYNA is
-positioned for nurses specifically — "Information OUT for nurses,"
-distinct from physician-documentation tools like Suki or Abridge.
+from an isolation room, a clean handoff to the phone for a
+camera-dependent task, and an ad-hoc bedside interpreter session
+at 03:00 when the certified-interpreter queue is full. All ten are
+nurses, because LYNA is positioned for nurses specifically —
+"Information OUT for nurses," distinct from physician-documentation
+tools like Suki or Abridge.
 
 Every story is anchored to the I-Corps customer-discovery research
 (`i-corps/interviews/`, `i-corps/hypothesis-map.md`,
@@ -255,8 +257,9 @@ and the "under the hood" walkthrough.
 | 4.7  | Sofia  | Cardiac step-down (4-East), deteriorating | "Rapid response, bed 6, ST changes"        | Emergency-intent path: parallel paging + protocol surfacing + FHIR     | H1 (med-surg/cardiac beachhead), H7; not day-one ICU    |
 | 4.8  | Priya  | Med-surg, mid-procedure in isolation   | "Broadcast 4-South: I need a saline flush in 305" | Execution layer in non-emergency mode: targeted broadcast + ack    | Interview #2 (group-chat-from-isolation feature request); H7, H14 |
 | 4.9  | Aisha  | Med-surg, wound documentation          | "LYNA, document a pressure injury on bed 18"  | Phone coexistence: voice ↔ camera handoff + workflow resume            | H14 (phone owns camera; LYNA must coexist)              |
+| 4.10 | Maya   | Med-surg night, Spanish-only patient   | "Interpreter mode, Spanish"                   | Session-mode change: bidirectional translation + compliance log        | H5 (formal-system bypass), H8 (chronic-normalized); Mt. Sinai catchment language mix |
 
-**Cross-cutting themes the nine stories establish:**
+**Cross-cutting themes the ten stories establish:**
 
 - **Faster than asking a person — not just faster than the
   screen.** The benchmark from the I-Corps interviews is the
@@ -297,6 +300,15 @@ and the "under the hood" walkthrough.
   (med scanning, pressure-injury photos) and LYNA must hand off
   cleanly (§4.9). Positioning LYNA as a phone replacement is the
   fastest way to lose a CNIO conversation (H14).
+- **Session modes for capabilities voice-Q&A alone can't carry.**
+  Most journeys fit the query/response shape; one (§4.10
+  interpreter) needs a different conversational pattern —
+  bidirectional turn-taking, sub-2-second translation latency in
+  either direction, and explicit compliance gating against the
+  certified-interpreter mandate. Session modes are the
+  architectural extension point for the capabilities (interpreter,
+  documentation dictation, contextual whisper during a call) that
+  break the single-turn query shape.
 
 ### 4.1 — Sarah, a med-surg nurse, at the bedside
 
@@ -1199,6 +1211,154 @@ Epic — and for the hospital's phone-side tools — rather than a
 competing system) and the BMC V2 framing of LYNA as "screenless
 clinical workstation: one voice interface to every tool the
 hospital has."
+
+### 4.10 — Maya bridges a language gap at 03:00
+
+It's 03:00. Maya is the night-shift RN on 4-South. Bed 16 just
+admitted from the ED four hours ago — Mr. Reyes, post-op day 0,
+Spanish-only. His family went home at 22:00. The certified-
+interpreter phone line at this hospital averages a 9–14 minute
+wait at night because the daytime in-house Spanish interpreters
+are off after 23:00 and night coverage is contract video-relay
+with a five-position queue.
+
+Maya needs to know two things, now: is Mr. Reyes in pain, and is
+he comfortable enough to sleep. These are ad-hoc clarifications,
+not the kind of decision that legally requires a certified
+interpreter (consent, discharge teaching, clinical decision-
+making). She has been using her phone's Google Translate app for
+the easy ones — "are you cold?" "do you need water?" — and
+calling the interpreter line for anything substantive.
+
+**Without LYNA:** Maya types into Google Translate, shows the
+phone to Mr. Reyes, he speaks back, she points the mic at him,
+the app translates. Two-handed, screen-mediated, slow. Mr. Reyes
+gets tired of looking at her phone and goes back to wincing
+silently.
+
+**With LYNA:** Maya taps the badge.
+
+> "Interpreter mode, Spanish."
+
+In two seconds:
+
+> "Interpreter mode active. Spanish–English bidirectional. Speak
+> normally; I'll translate both ways. Ad-hoc clarification only —
+> say 'queue interpreter' if you need a certified interpreter for
+> consent or discharge teaching."
+
+Maya speaks naturally into the badge:
+
+> "Mr. Reyes, are you having any pain right now? On a scale of 0
+> to 10."
+
+LYNA reads in Spanish through the room speaker (or through Mr.
+Reyes' bedside earpiece if he's been set up with one):
+
+> "Sr. Reyes, ¿tiene dolor en este momento? En una escala del
+> cero al diez."
+
+Mr. Reyes responds:
+
+> "Sí, como un siete. Aquí, en el pecho."
+
+LYNA reads in English back to Maya through her earpiece:
+
+> "Yes, about a seven. Here, in the chest."
+
+The exchange continues for ninety seconds. Maya gets the pain
+score, the location, the quality, and whether he wants the PRN.
+She gives him the morphine, reorients him to the room, sets the
+expectation that someone will check on him in two hours, and
+leaves him to sleep. Total time: under three minutes. The
+interpreter line was never called.
+
+**The discipline LYNA enforces:**
+
+> "I machine-translated this exchange for ad-hoc bedside
+> clarification. For consent, discharge teaching, or any clinical
+> decision that requires certified interpretation, queue the
+> interpreter service. Logged at 03:01 for compliance audit."
+
+This message appears once at the start of every interpreter-mode
+session and is logged with the session, so the hospital can audit
+machine-translation usage against the cases where certified
+interpretation was legally required.
+
+**Under the hood:**
+
+1. "Interpreter mode, {language}" is classified by the query
+   router as a session-mode change. The voice pipeline switches
+   from query/response to bidirectional translation; the response
+   path now goes through translation before TTS.
+2. **Per-language model selection.** Spanish has the strongest
+   models and is the day-one launch language. The per-site
+   Operational KB declares which languages the hospital has
+   committed to (driven by patient-mix data); LYNA refuses
+   gracefully ("I don't have certified interpreter coverage in
+   {language} at this hospital — let me queue the interpreter
+   service") for languages outside that set.
+3. **Sub-2-second turn latency.** The end-to-end voice path
+   (capture → STT → translate → TTS → speaker/earpiece) stays
+   under two seconds in either direction. This is the bar that
+   makes the conversation feel like a conversation, not a phone
+   relay.
+4. **Compliance log.** Every interpreter-mode session writes a
+   structured event: who initiated, which patient, which language,
+   start time, end time, whether 'queue interpreter' was invoked,
+   transcripts (PHI-handled per the standard rules). This is the
+   audit trail compliance asks for when the hospital signs off on
+   machine translation as a permissible ad-hoc tool.
+5. **Patient-side delivery.** v1 (iPhone) delivers Spanish through
+   the room speaker via Bluetooth or a wired connection — Mr.
+   Reyes hears LYNA from the room, not from Maya's phone. v3
+   (dedicated LYNA badge) can route through a paired bedside
+   earpiece for the patient, keeping the exchange private from
+   other beds in shared rooms.
+6. **Hand-off to certified interpreter.** "Queue interpreter" is
+   an execution-layer action (deferred — operator-confirmed in v1)
+   that places the room in the hospital's interpreter queue and
+   maintains LYNA's ad-hoc translation in the interim. When the
+   certified interpreter joins, LYNA backs off.
+
+**Where in the code:**
+
+- Session-mode classification + bidirectional voice pipeline:
+  `epic_intelligence/assistant/voice_router_stub.py` (the
+  production router routes session-mode commands through a
+  separate path from query/response).
+- Translation models: separate from the query/response LLM stack;
+  per-language model selection lives in the synthesis layer.
+- Per-site language coverage: Operational KB per-site, same data
+  position as §4.6's hospital AI registry.
+- Compliance logging: extension of the memory-event log; see
+  `memory_system/PROTOCOL.md` for the event schema.
+- Interpreter queue hand-off: execution layer, v2+ capability per
+  the LYNA product brief.
+
+**Interview anchor:** This is the weakest direct-interview anchor
+of the ten. Neither Interview #1 (David Hernandez, float pool) nor
+Interview #2 (anonymous ICU travel) raised language barriers as a
+top-of-mind pain — both interviewees are English-comfortable and
+both currently work in English-comfortable units. The story is
+kept in the canonical journey set for three reasons: **(a)** Mt.
+Sinai's catchment area in Manhattan has a high non-English-
+speaking patient mix (35%+ in some service lines), making language
+access a Title VI compliance requirement the hospital must address
+regardless of nurse-side advocacy; **(b)** the prior interaction-
+flows doc (`hardware/opalDevice/docs/ux/opal-interaction-flows.md`
+Flow 3, predates the I-Corps work) included interpreter mode as a
+core capability, reflecting earlier team consensus that this is
+real; **(c)** the pattern maps to **H5** (nurses bypass formal
+systems — the interpreter-line queue is the formal system, "Google
+Translate at the bedside" is the bypass everyone uses anyway) and
+**H8** (chronic-normalized — the 9–14 minute interpreter wait at
+night is accepted as just-how-it-is, not a hair-on-fire problem
+leadership prioritizes). When cluster-2 transcripts are ingested,
+this story should be cross-validated against any interview with an
+RN on a unit with a high non-English-speaking patient mix; for now
+it's documented as an evidence-thin but operationally important
+addition.
 
 ---
 
