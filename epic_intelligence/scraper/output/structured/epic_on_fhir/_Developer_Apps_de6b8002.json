@@ -1,0 +1,37 @@
+{
+  "url": "https://fhir.epic.com/Developer/Apps",
+  "fileId": "_Developer_Apps_de6b8002",
+  "title": "My Apps - Epic on FHIR",
+  "description": "",
+  "crawledAt": "2026-05-16T14:42:18.387Z",
+  "depth": 1,
+  "textLength": 964,
+  "wordCount": 148,
+  "links": [
+    "https://fhir.epic.com/FAQ",
+    "https://fhir.epic.com/Resources/Terms"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "My Apps"
+    },
+    {
+      "level": 1,
+      "text": "Sign Up to Access"
+    },
+    {
+      "level": 3,
+      "text": "Testing Sandbox"
+    },
+    {
+      "level": 3,
+      "text": "Client Registration"
+    },
+    {
+      "level": 3,
+      "text": "Documentation"
+    }
+  ],
+  "siteName": "Epic on FHIR"
+}

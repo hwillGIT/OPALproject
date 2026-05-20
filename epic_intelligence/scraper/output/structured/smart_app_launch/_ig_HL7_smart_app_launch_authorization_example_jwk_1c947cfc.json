@@ -1,0 +1,36 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/authorization-example-jwks-and-signatures.html",
+  "fileId": "_ig_HL7_smart_app_launch_authorization_example_jwk_1c947cfc",
+  "title": "Example JWS generation for Asymmetric Client Auth - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:33.833Z",
+  "depth": 1,
+  "textLength": 2779,
+  "wordCount": 176,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/examples.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/authorization-example-jwks-and-signatures.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Example JWS generation for Asymmetric Client Auth"
+    },
+    {
+      "level": 3,
+      "text": "Python"
+    },
+    {
+      "level": 3,
+      "text": "Encoded JWT with RS384 Signature"
+    },
+    {
+      "level": 3,
+      "text": "Encoded JWT with ES384 Signature"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

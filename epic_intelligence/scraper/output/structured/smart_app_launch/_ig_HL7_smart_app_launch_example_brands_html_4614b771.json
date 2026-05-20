@@ -1,0 +1,40 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/example-brands.html",
+  "fileId": "_ig_HL7_smart_app_launch_example_brands_html_4614b771",
+  "title": "User-access Brand Examples - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:57.250Z",
+  "depth": 1,
+  "textLength": 5171,
+  "wordCount": 742,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/brands.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/example-brands.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "User-access Brand Examples"
+    },
+    {
+      "level": 3,
+      "text": "Example 1: Lab with Locations Nationwide"
+    },
+    {
+      "level": 3,
+      "text": "Example 2: Regional Health System With Independently Branded Affiliates"
+    },
+    {
+      "level": 3,
+      "text": "Example 3: Different EHRs for different sub-populations displayed in a unified card"
+    },
+    {
+      "level": 3,
+      "text": "Example 4: Two co-equal brands (“Brand1” + “Brand2”)"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

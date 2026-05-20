@@ -1,0 +1,74 @@
+{
+  "url": "https://hl7.org/fhir/R4/versions.html",
+  "fileId": "_fhir_R4_versions_html_6dcb4604",
+  "title": "Versions - FHIR v4.0.1",
+  "description": "",
+  "crawledAt": "2026-05-16T14:44:14.638Z",
+  "depth": 1,
+  "textLength": 35626,
+  "wordCount": 5354,
+  "links": [
+    "https://hl7.org/fhir/R4/foundation-module.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/ansi-infrastructure.html",
+    "https://hl7.org/fhir/R4/versioning.html",
+    "https://hl7.org/fhir/R4/bundle-definitions.html",
+    "https://hl7.org/fhir/R4/resource.html",
+    "https://hl7.org/fhir/R4/domainresource.html",
+    "https://hl7.org/fhir/R4/datatypes.html",
+    "https://hl7.org/fhir/R4/todo.html",
+    "https://hl7.org/fhir/R4/capabilitystatement-definitions.html",
+    "https://hl7.org/fhir/R4/structuredefinition.html",
+    "https://hl7.org/fhir/R4/implementationguide.html",
+    "https://hl7.org/fhir/R4/http.html",
+    "https://hl7.org/fhir/R4/search.html",
+    "https://hl7.org/fhir/R4/valueset-definitions.html",
+    "https://hl7.org/fhir/R4/terminologies.html",
+    "https://hl7.org/fhir/R4/operationoutcome-definitions.html",
+    "https://hl7.org/fhir/R4/diff.html",
+    "https://hl7.org/fhir/R4/r3maps.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "2.7.0  Version Management Policy"
+    },
+    {
+      "level": 3,
+      "text": "2.7.0.1 The Standards Development Process"
+    },
+    {
+      "level": 3,
+      "text": "2.7.0.2 Maturity Levels"
+    },
+    {
+      "level": 3,
+      "text": "2.7.0.3 FHIR Releases and Versioning"
+    },
+    {
+      "level": 3,
+      "text": "2.7.0.4 Version identification"
+    },
+    {
+      "level": 3,
+      "text": "2.7.0.5 Rules for Inter-version change"
+    },
+    {
+      "level": 3,
+      "text": "2.7.0.6 Managing Change during the development process"
+    },
+    {
+      "level": 3,
+      "text": "2.7.0.7 Extensions for converting between versions"
+    },
+    {
+      "level": 3,
+      "text": "2.7.0.8 Plans for future releases"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}
