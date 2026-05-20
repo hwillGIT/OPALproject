@@ -116,19 +116,71 @@ def _cmd_lifecycle(args: argparse.Namespace) -> int:
             for t in proposals.tier_2:
                 print(_format_transition_pretty(t))
 
-        if not args.apply and not args.apply_tier_2:
+        if not args.apply and not args.apply_tier_2 and not args.with_adversarial_review:
             print("\n# dry-run -- pass --apply to commit Tier 1, "
-                  "--apply-tier-2 to also commit Tier 2")
+                  "--with-adversarial-review to gate Tier 2 through "
+                  "the adversary, or --apply-tier-2 to commit Tier 2 "
+                  "without review (NOT recommended)")
             return 0
 
+        # ----------------------------------------------------------
+        # Adversarial review of Tier-2 (the safe path)
+        # ----------------------------------------------------------
         scope_by_id = {s.id: s for s in scopes}
-        applied = 0
+        tier_2_approved: tuple[ScopeTransition, ...] = ()
+        gating = None
+        if args.with_adversarial_review and proposals.tier_2:
+            from .adversarial import AdversarialReviewer, StubReviewer
+            from .lifecycle import events_for_scope
+            from .lifecycle_gating import (
+                annotate_transition_with_verdict,
+                gate_tier_2,
+            )
+
+            reviewer = _build_reviewer(args.adversary_provider)
+            print(
+                f"\n# adversarial review (provider={reviewer.provider_name}, "
+                f"model={reviewer.model_name})",
+            )
+            gating = gate_tier_2(
+                proposals=proposals,
+                scope_by_id=scope_by_id,
+                events_for_scope_fn=lambda s: events_for_scope(s, events),
+                reviewer=reviewer,
+            )
+
+            for trans in gating.approved_transitions:
+                v = gating.verdicts[trans.id]
+                print(f"  APPROVED  {trans.scope_id}: {v.reasoning}")
+            for trans in gating.rejected_transitions:
+                v = gating.verdicts[trans.id]
+                alt = f"  alt: {v.suggested_alternative}" if v.suggested_alternative else ""
+                print(f"  REJECTED  {trans.scope_id}: {v.reasoning}{alt}")
+
+            # Annotate approved transitions with the verdict reasoning
+            # so the persisted reason field carries the audit trail.
+            tier_2_approved = tuple(
+                annotate_transition_with_verdict(t, gating.verdicts[t.id])
+                for t in gating.approved_transitions
+            )
+
+        # ----------------------------------------------------------
+        # Compose the apply set
+        # ----------------------------------------------------------
         to_apply: list[ScopeTransition] = []
         if args.apply:
             to_apply.extend(proposals.tier_1)
-        if args.apply_tier_2:
+        if args.with_adversarial_review:
+            to_apply.extend(tier_2_approved)
+        elif args.apply_tier_2:
             to_apply.extend(proposals.tier_2)
 
+        if not to_apply:
+            print("\n# nothing to apply (Tier-1 gate not opened OR "
+                  "Tier-2 was reviewed and rejected)")
+            return 0
+
+        applied = 0
         for trans in to_apply:
             scope = scope_by_id.get(trans.scope_id)
             if scope is None:
@@ -137,7 +189,10 @@ def _cmd_lifecycle(args: argparse.Namespace) -> int:
                     file=sys.stderr,
                 )
                 continue
-            updated = apply_transition(scope, trans)
+            # Use the un-annotated transition for the from_status
+            # match; the annotated one only changes the reason field.
+            base = trans
+            updated = apply_transition(scope, base)
             upsert_scope(conn, updated)
             append_transition(conn, trans)
             scope_by_id[scope.id] = updated
@@ -147,6 +202,26 @@ def _cmd_lifecycle(args: argparse.Namespace) -> int:
     finally:
         conn.close()
     return 0
+
+
+def _build_reviewer(provider_pref: str):
+    """Construct an adversarial reviewer per the --adversary-provider flag."""
+    from .adversarial import AdversarialReviewer, StubReviewer
+    if provider_pref == "stub":
+        return StubReviewer()
+    # Reuse epic_intelligence.synthesis's pluggable provider so we don't
+    # duplicate the Anthropic/OpenAI/Gemini plumbing.
+    try:
+        from epic_intelligence.synthesis import get_provider
+    except Exception as exc:
+        print(
+            f"warn: epic_intelligence.synthesis unavailable ({exc}); "
+            "falling back to stub reviewer",
+            file=sys.stderr,
+        )
+        return StubReviewer()
+    provider = get_provider(prefer=provider_pref)
+    return AdversarialReviewer(provider=provider)
 
 
 def _cmd_revert(args: argparse.Namespace) -> int:
@@ -291,7 +366,18 @@ def build_parser() -> argparse.ArgumentParser:
     pc.add_argument("--apply", action="store_true",
                     help="Auto-apply Tier-1 promotions")
     pc.add_argument("--apply-tier-2", action="store_true",
-                    help="Also auto-apply Tier-2 (canonicalization, deprecation)")
+                    help="Auto-apply Tier-2 (canonicalization, deprecation) "
+                         "WITHOUT adversarial review. NOT recommended; "
+                         "use --with-adversarial-review instead.")
+    pc.add_argument("--with-adversarial-review", action="store_true",
+                    help="Run each Tier-2 proposal through the adversarial "
+                         "reviewer; apply only APPROVED transitions. "
+                         "Stores the verdict reasoning in the transition's "
+                         "audit log.")
+    pc.add_argument("--adversary-provider", default="auto",
+                    choices=["auto", "stub", "anthropic", "openai", "gemini"],
+                    help="LLM provider for the adversarial reviewer "
+                         "(default: auto -> anthropic -> openai -> gemini -> stub)")
     pc.set_defaults(func=_cmd_lifecycle)
 
     pr = sub.add_parser("revert", help="Reverse a Tier-1 transition")
