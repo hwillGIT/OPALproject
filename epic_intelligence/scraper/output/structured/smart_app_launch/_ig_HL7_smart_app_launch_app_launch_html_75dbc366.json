@@ -1,0 +1,80 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/app-launch.html",
+  "fileId": "_ig_HL7_smart_app_launch_app_launch_html_75dbc366",
+  "title": "App Launch: Launch and Authorization - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:08.613Z",
+  "depth": 0,
+  "textLength": 34275,
+  "wordCount": 5066,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/apps.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/app-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/index.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/client-confidential-asymmetric.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/client-confidential-symmetric.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/example-app-launch-public.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/example-app-launch-asymmetric-auth.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/example-app-launch-symmetric-auth.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/scopes-and-launch-context.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "App Launch: Launch and Authorization"
+    },
+    {
+      "level": 3,
+      "text": "Profile audience and scope"
+    },
+    {
+      "level": 3,
+      "text": "Security and Privacy Considerations"
+    },
+    {
+      "level": 3,
+      "text": "SMART authorization & FHIR access: overview"
+    },
+    {
+      "level": 3,
+      "text": "Top-level steps for SMART App Launch"
+    },
+    {
+      "level": 3,
+      "text": "Register App with EHR"
+    },
+    {
+      "level": 3,
+      "text": "Launch App: Standalone Launch"
+    },
+    {
+      "level": 3,
+      "text": "Launch App: EHR Launch"
+    },
+    {
+      "level": 3,
+      "text": "Retrieve .well-known/smart-configuration"
+    },
+    {
+      "level": 3,
+      "text": "Obtain authorization code"
+    },
+    {
+      "level": 3,
+      "text": "Obtain access token"
+    },
+    {
+      "level": 3,
+      "text": "Access FHIR API"
+    },
+    {
+      "level": 3,
+      "text": "Refresh access token"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

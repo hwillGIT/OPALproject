@@ -1,0 +1,101 @@
+{
+  "url": "https://hl7.org/fhir/R4/appointmentresponse.html",
+  "fileId": "_fhir_R4_appointmentresponse_html_07de750c",
+  "title": "AppointmentResponse - FHIR v4.0.1This records identifiers associated with this appointment response concern that are defined by business processes and/ or used to refer to it when a direct URL reference to the resource itself is not appropriateAppointment that this response is replying toDate/Time that the appointment is to take place, or requested new start timeThis may be either the same as the appointment request to confirm the details of the appointment, or alternately a new time to request a re-negotiation of the end timeRole of participant in the appointmentRole of participant in encounter. (Strength=Extensible)A Person, Location, HealthcareService, or Device that is participating in the appointmentParticipation status of the participant. When the status is declined or tentative if the start/end times are different to the appointment, then these times should be interpreted as a requested time change. When the status is accepted, the times can either be the time of the appointment (as a confirmation of the time) or can be empty (this element modifies the meaning of other elements)The Participation status of an appointment. (Strength=Required)Additional comments about the appointmentThis records identifiers associated with this appointment response concern that are defined by business processes and/ or used to refer to it when a direct URL reference to the resource itself is not appropriateAppointment that this response is replying toDate/Time that the appointment is to take place, or requested new start timeThis may be either the same as the appointment request to confirm the details of the appointment, or alternately a new time to request a re-negotiation of the end timeRole of participant in the appointmentRole of participant in encounter. (Strength=Extensible)A Person, Location, HealthcareService, or Device that is participating in the appointmentParticipation status of the participant. When the status is declined or tentative if the start/end times are different to the appointment, then these times should be interpreted as a requested time change. When the status is accepted, the times can either be the time of the appointment (as a confirmation of the time) or can be empty (this element modifies the meaning of other elements)The Participation status of an appointment. (Strength=Required)Additional comments about the appointment",
+  "description": "",
+  "crawledAt": "2026-05-16T14:44:33.666Z",
+  "depth": 1,
+  "textLength": 17696,
+  "wordCount": 2160,
+  "links": [
+    "https://hl7.org/fhir/R4/workflow-module.html",
+    "https://hl7.org/fhir/R4/appointmentresponse.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/security.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-device.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-patient.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-practitioner.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-relatedperson.html",
+    "https://hl7.org/fhir/R4/imagingstudy.html",
+    "https://hl7.org/fhir/R4/formats.html",
+    "https://hl7.org/fhir/R4/appointmentresponse-definitions.html",
+    "https://hl7.org/fhir/R4/conformance-rules.html",
+    "https://hl7.org/fhir/R4/domainresource.html",
+    "https://hl7.org/fhir/R4/resource.html",
+    "https://hl7.org/fhir/R4/elementdefinition-definitions.html",
+    "https://hl7.org/fhir/R4/datatypes.html",
+    "https://hl7.org/fhir/R4/references.html",
+    "https://hl7.org/fhir/R4/appointment.html",
+    "https://hl7.org/fhir/R4/valueset-encounter-participant-type.html",
+    "https://hl7.org/fhir/R4/terminologies.html",
+    "https://hl7.org/fhir/R4/patient.html",
+    "https://hl7.org/fhir/R4/practitioner.html",
+    "https://hl7.org/fhir/R4/practitionerrole.html",
+    "https://hl7.org/fhir/R4/relatedperson.html",
+    "https://hl7.org/fhir/R4/device.html",
+    "https://hl7.org/fhir/R4/healthcareservice.html",
+    "https://hl7.org/fhir/R4/location.html",
+    "https://hl7.org/fhir/R4/valueset-participationstatus.html",
+    "https://hl7.org/fhir/R4/xml.html",
+    "https://hl7.org/fhir/R4/narrative.html",
+    "https://hl7.org/fhir/R4/extensibility.html",
+    "https://hl7.org/fhir/R4/json.html",
+    "https://hl7.org/fhir/R4/rdf.html",
+    "https://hl7.org/fhir/R4/diff.html",
+    "https://hl7.org/fhir/R4/appointmentresponse-version-maps.html",
+    "https://hl7.org/fhir/R4/appointmentresponse-profiles.html",
+    "https://hl7.org/fhir/R4/appointmentresponse.profile.xml.html",
+    "https://hl7.org/fhir/R4/appointmentresponse.profile.json.html",
+    "https://hl7.org/fhir/R4/appointmentresponse.xsd",
+    "https://hl7.org/fhir/R4/appointmentresponse.sch",
+    "https://hl7.org/fhir/R4/appointmentresponse.schema.json.html",
+    "https://hl7.org/fhir/R4/appointmentresponse.shex.html",
+    "https://hl7.org/fhir/R4/appointmentresponse-dependencies.html",
+    "https://hl7.org/fhir/R4/fhirpath.html",
+    "https://hl7.org/fhir/R4/search.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "12.11  Resource AppointmentResponse - Content"
+    },
+    {
+      "level": 2,
+      "text": "12.11.1 Scope and Usage"
+    },
+    {
+      "level": 3,
+      "text": "12.11.1.1 The basic workflow to create an appointment"
+    },
+    {
+      "level": 2,
+      "text": "12.11.2 \nResource Content"
+    },
+    {
+      "level": 3,
+      "text": "12.11.2.1 \nTerminology Bindings"
+    },
+    {
+      "level": 3,
+      "text": "12.11.2.2 Constraints"
+    },
+    {
+      "level": 2,
+      "text": "12.11.3 Notes:"
+    },
+    {
+      "level": 3,
+      "text": "12.11.3.1  Time zones and recurring appointments"
+    },
+    {
+      "level": 2,
+      "text": "12.11.4 Search Parameters"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}
