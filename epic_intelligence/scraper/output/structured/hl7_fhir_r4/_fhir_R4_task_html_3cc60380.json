@@ -1,0 +1,135 @@
+{
+  "url": "https://hl7.org/fhir/R4/task.html",
+  "fileId": "_fhir_R4_task_html_3cc60380",
+  "title": "Task - FHIR v4.0.1The business identifier for this taskThe URL pointing to a *FHIR*-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this TaskThe URL pointing to an *externally* maintained  protocol, guideline, orderset or other definition that is adhered to in whole or in part by this TaskBasedOn refers to a higher-level authorization that triggered the creation of the task.  It references a \"request\" resource such as a ServiceRequest, MedicationRequest, ServiceRequest, CarePlan, etc. which is distinct from the \"request\" resource the task is seeking to fulfill.  This latter resource is referenced by FocusOn.  For example, based on a ServiceRequest (= BasedOn), a task is created to fulfill a procedureRequest ( = FocusOn ) to collect a specimen from a patientAn identifier that links together multiple tasks and other requests that were created in the same contextTask that this particular task is part ofThe current status of the task (this element modifies the meaning of other elements)The current status of the task. (Strength=Required)An explanation as to why this task is held, failed, was refused, etcContains business-specific nuances of the business stateIndicates the \"level\" of actionability associated with the Task, i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task, etcDistinguishes whether the task is a proposal, plan or full order. (Strength=Required)Indicates how quickly the Task should be addressed with respect to other requestsThe task's priority. (Strength=Required)A name or code (or both) briefly describing what the task involvesCodes to identify what the task involves.  These will typically be specific to a particular workflow. (Strength=Example)A free-text description of what is to be performedThe request being actioned or the resource being manipulated by this taskThe entity who benefits from the performance of the service specified in the task (e.g., the patient)The healthcare event  (e.g. a patient and healthcare provider interaction) during which this task was createdIdentifies the time action was first taken against the task (start) and/or the time final action was taken against the task prior to marking it as completed (end)The date and time this task was createdThe date and time of last modification to this taskThe creator of the taskThe kind of participant that should perform the taskThe type(s) of task performers allowed. (Strength=Preferred)Individual organization or Device currently responsible for task executionPrincipal physical location where the this task is performedA description or code indicating why this task needs to be performedA resource reference indicating why this task needs to be performedInsurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be relevant to the TaskFree-text information captured about the task as it progressesLinks to Provenance records for past versions of this Task that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the taskIndicates the number of times the requested action should occurOver what time-period is fulfillment soughtFor requests that are targeted to more than on potential recipient/target, for whom is fulfillment sought?A code or description indicating how the input is intended to be used as part of the task executionThe value of the input parameter as a basic typeThe name of the Output parameterThe value of the Output parameter as a basic typeIf the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actionedAdditional information that may be needed in the execution of the taskOutputs produced by the TaskThe business identifier for this taskThe URL pointing to a *FHIR*-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this TaskThe URL pointing to an *externally* maintained  protocol, guideline, orderset or other definition that is adhered to in whole or in part by this TaskBasedOn refers to a higher-level authorization that triggered the creation of the task.  It references a \"request\" resource such as a ServiceRequest, MedicationRequest, ServiceRequest, CarePlan, etc. which is distinct from the \"request\" resource the task is seeking to fulfill.  This latter resource is referenced by FocusOn.  For example, based on a ServiceRequest (= BasedOn), a task is created to fulfill a procedureRequest ( = FocusOn ) to collect a specimen from a patientAn identifier that links together multiple tasks and other requests that were created in the same contextTask that this particular task is part ofThe current status of the task (this element modifies the meaning of other elements)The current status of the task. (Strength=Required)An explanation as to why this task is held, failed, was refused, etcContains business-specific nuances of the business stateIndicates the \"level\" of actionability associated with the Task, i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task, etcDistinguishes whether the task is a proposal, plan or full order. (Strength=Required)Indicates how quickly the Task should be addressed with respect to other requestsThe task's priority. (Strength=Required)A name or code (or both) briefly describing what the task involvesCodes to identify what the task involves.  These will typically be specific to a particular workflow. (Strength=Example)A free-text description of what is to be performedThe request being actioned or the resource being manipulated by this taskThe entity who benefits from the performance of the service specified in the task (e.g., the patient)The healthcare event  (e.g. a patient and healthcare provider interaction) during which this task was createdIdentifies the time action was first taken against the task (start) and/or the time final action was taken against the task prior to marking it as completed (end)The date and time this task was createdThe date and time of last modification to this taskThe creator of the taskThe kind of participant that should perform the taskThe type(s) of task performers allowed. (Strength=Preferred)Individual organization or Device currently responsible for task executionPrincipal physical location where the this task is performedA description or code indicating why this task needs to be performedA resource reference indicating why this task needs to be performedInsurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be relevant to the TaskFree-text information captured about the task as it progressesLinks to Provenance records for past versions of this Task that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the taskIndicates the number of times the requested action should occurOver what time-period is fulfillment soughtFor requests that are targeted to more than on potential recipient/target, for whom is fulfillment sought?A code or description indicating how the input is intended to be used as part of the task executionThe value of the input parameter as a basic typeThe name of the Output parameterThe value of the Output parameter as a basic typeIf the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actionedAdditional information that may be needed in the execution of the taskOutputs produced by the Task",
+  "description": "",
+  "crawledAt": "2026-05-16T14:44:08.342Z",
+  "depth": 0,
+  "textLength": 65951,
+  "wordCount": 8218,
+  "links": [
+    "https://hl7.org/fhir/R4/workflow-module.html",
+    "https://hl7.org/fhir/R4/task.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/security.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition.html",
+    "https://hl7.org/fhir/R4/requestgroup.html",
+    "https://hl7.org/fhir/R4/procedure.html",
+    "https://hl7.org/fhir/R4/servicerequest.html",
+    "https://hl7.org/fhir/R4/observation.html",
+    "https://hl7.org/fhir/R4/diagnosticreport.html",
+    "https://hl7.org/fhir/R4/imagingstudy.html",
+    "https://hl7.org/fhir/R4/communicationrequest.html",
+    "https://hl7.org/fhir/R4/careplan.html",
+    "https://hl7.org/fhir/R4/paymentreconciliation.html",
+    "https://hl7.org/fhir/R4/formats.html",
+    "https://hl7.org/fhir/R4/task-definitions.html",
+    "https://hl7.org/fhir/R4/conformance-rules.html",
+    "https://hl7.org/fhir/R4/domainresource.html",
+    "https://hl7.org/fhir/R4/resource.html",
+    "https://hl7.org/fhir/R4/datatypes.html",
+    "https://hl7.org/fhir/R4/elementdefinition-definitions.html",
+    "https://hl7.org/fhir/R4/activitydefinition.html",
+    "https://hl7.org/fhir/R4/references.html",
+    "https://hl7.org/fhir/R4/resourcelist.html",
+    "https://hl7.org/fhir/R4/valueset-task-status.html",
+    "https://hl7.org/fhir/R4/terminologies.html",
+    "https://hl7.org/fhir/R4/valueset-task-intent.html",
+    "https://hl7.org/fhir/R4/valueset-request-priority.html",
+    "https://hl7.org/fhir/R4/valueset-task-code.html",
+    "https://hl7.org/fhir/R4/encounter.html",
+    "https://hl7.org/fhir/R4/device.html",
+    "https://hl7.org/fhir/R4/organization.html",
+    "https://hl7.org/fhir/R4/patient.html",
+    "https://hl7.org/fhir/R4/practitioner.html",
+    "https://hl7.org/fhir/R4/practitionerrole.html",
+    "https://hl7.org/fhir/R4/relatedperson.html",
+    "https://hl7.org/fhir/R4/valueset-performer-role.html",
+    "https://hl7.org/fhir/R4/careteam.html",
+    "https://hl7.org/fhir/R4/healthcareservice.html",
+    "https://hl7.org/fhir/R4/location.html",
+    "https://hl7.org/fhir/R4/coverage.html",
+    "https://hl7.org/fhir/R4/claimresponse.html",
+    "https://hl7.org/fhir/R4/provenance.html",
+    "https://hl7.org/fhir/R4/backboneelement.html",
+    "https://hl7.org/fhir/R4/group.html",
+    "https://hl7.org/fhir/R4/xml.html",
+    "https://hl7.org/fhir/R4/narrative.html",
+    "https://hl7.org/fhir/R4/extensibility.html",
+    "https://hl7.org/fhir/R4/json.html",
+    "https://hl7.org/fhir/R4/metadatatypes.html",
+    "https://hl7.org/fhir/R4/dosage.html",
+    "https://hl7.org/fhir/R4/rdf.html",
+    "https://hl7.org/fhir/R4/diff.html",
+    "https://hl7.org/fhir/R4/task-version-maps.html",
+    "https://hl7.org/fhir/R4/task-profiles.html",
+    "https://hl7.org/fhir/R4/task.profile.xml.html",
+    "https://hl7.org/fhir/R4/task.profile.json.html",
+    "https://hl7.org/fhir/R4/task.xsd",
+    "https://hl7.org/fhir/R4/task.sch",
+    "https://hl7.org/fhir/R4/task.schema.json.html",
+    "https://hl7.org/fhir/R4/task.shex.html",
+    "https://hl7.org/fhir/R4/task-dependencies.html",
+    "https://hl7.org/fhir/R4/fhirpath.html",
+    "https://hl7.org/fhir/R4/search.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "12.1  Resource Task - Content"
+    },
+    {
+      "level": 2,
+      "text": "12.1.1 Scope and Usage"
+    },
+    {
+      "level": 2,
+      "text": "12.1.2 Background and Context"
+    },
+    {
+      "level": 3,
+      "text": "12.1.2.1  Using Tasks in a RESTful context"
+    },
+    {
+      "level": 3,
+      "text": "12.1.2.2  Tasks State Machine"
+    },
+    {
+      "level": 2,
+      "text": "12.1.3 Boundaries and Relationships"
+    },
+    {
+      "level": 2,
+      "text": "12.1.4 \nResource Content"
+    },
+    {
+      "level": 3,
+      "text": "12.1.4.1 \nTerminology Bindings"
+    },
+    {
+      "level": 3,
+      "text": "12.1.4.2 Constraints"
+    },
+    {
+      "level": 2,
+      "text": "12.1.5 Task Titles"
+    },
+    {
+      "level": 2,
+      "text": "12.1.6 Task state machine"
+    },
+    {
+      "level": 2,
+      "text": "12.1.7 The Cancelled state"
+    },
+    {
+      "level": 2,
+      "text": "12.1.8 Search Parameters"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}

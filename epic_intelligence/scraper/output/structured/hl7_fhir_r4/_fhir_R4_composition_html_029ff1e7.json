@@ -1,0 +1,139 @@
+{
+  "url": "https://hl7.org/fhir/R4/composition.html",
+  "fileId": "_fhir_R4_composition_html_029ff1e7",
+  "title": "Composition - FHIR v4.0.1A version-independent identifier for the Composition. This identifier stays constant as the composition is changed over timeThe workflow/clinical status of this composition. The status is a marker for the clinical standing of the document (this element modifies the meaning of other elements)The workflow/clinical status of the composition. (Strength=Required)Specifies the particular kind of composition (e.g. History and Physical, Discharge Summary, Progress Note). This usually equates to the purpose of making the compositionType of a composition. (Strength=Preferred)A categorization for the type of the composition - helps for indexing and searching. This may be implied by or derived from the code specified in the Composition TypeHigh-level kind of a clinical document at a macro level. (Strength=Example)Who or what the composition is about. The composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure)Describes the clinical encounter or type of care this documentation is associated withThe composition editing time, when the composition was last logically changed by the authorIdentifies who is responsible for the information in the composition, not necessarily who typed it inOfficial human-readable label for the compositionThe code specifying the level of confidentiality of the CompositionCodes specifying the level of confidentiality of the composition. (Strength=Required)Identifies the organization or group who is responsible for ongoing maintenance of and access to the composition/document informationThe type of attestation the authenticator offersThe way in which a person authenticated a composition. (Strength=Required)When the composition was attested by the partyWho attested the composition in the specified wayThe type of relationship that this composition has with anther composition or documentThe type of relationship between documents. (Strength=Required)The target composition/document of this relationshipThis list of codes represents the main clinical acts, such as a colonoscopy or an appendectomy, being documented. In some cases, the event is inherent in the typeCode, such as a \"History and Physical Report\" in which the procedure being documented is necessarily a \"History and Physical\" actThis list of codes represents the main clinical acts being documented. (Strength=Example)The period of time covered by the documentation. There is no assertion that the documentation is a complete representation for this period, only that it documents events during this timeThe description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomyThe label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contentsA code identifying the kind of content contained within the section. This must be consistent with the section titleClassification of a section of a composition/document. (Strength=Example)Identifies who is responsible for the information in this section, not necessarily who typed it inThe actual focus of the section when it is not the subject of the composition, but instead represents something or someone associated with the subject such as (for a patient subject) a spouse, parent, fetus, or donor. If not focus is specified, the focus is assumed to be focus of the parent section, or, for a section in the Composition itself, the subject of the composition. Sections with a focus SHALL only include resources where the logical subject (patient, subject, focus, etc.) matches the section focus, or the resources have no logical subject (few resources)A human-readable narrative that contains the attested content of the section, used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrativeHow the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deletedThe processing mode that applies to this section. (Strength=Required)Specifies the order applied to the items in the section entriesWhat order applies to the items in the entry. (Strength=Preferred)A reference to the actual resource from which the narrative in the section is derivedIf the section is empty, why the list is empty. An empty section typically has some text explaining the empty reasonIf a section is empty, why it is empty. (Strength=Preferred)A participant who has attested to the accuracy of the composition/documentRelationships that this composition has with other compositions or documents that already existThe clinical service, such as a colonoscopy or an appendectomy, being documentedA nested sub-section within this sectionThe root of the sections that make up the compositionA version-independent identifier for the Composition. This identifier stays constant as the composition is changed over timeThe workflow/clinical status of this composition. The status is a marker for the clinical standing of the document (this element modifies the meaning of other elements)The workflow/clinical status of the composition. (Strength=Required)Specifies the particular kind of composition (e.g. History and Physical, Discharge Summary, Progress Note). This usually equates to the purpose of making the compositionType of a composition. (Strength=Preferred)A categorization for the type of the composition - helps for indexing and searching. This may be implied by or derived from the code specified in the Composition TypeHigh-level kind of a clinical document at a macro level. (Strength=Example)Who or what the composition is about. The composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure)Describes the clinical encounter or type of care this documentation is associated withThe composition editing time, when the composition was last logically changed by the authorIdentifies who is responsible for the information in the composition, not necessarily who typed it inOfficial human-readable label for the compositionThe code specifying the level of confidentiality of the CompositionCodes specifying the level of confidentiality of the composition. (Strength=Required)Identifies the organization or group who is responsible for ongoing maintenance of and access to the composition/document informationThe type of attestation the authenticator offersThe way in which a person authenticated a composition. (Strength=Required)When the composition was attested by the partyWho attested the composition in the specified wayThe type of relationship that this composition has with anther composition or documentThe type of relationship between documents. (Strength=Required)The target composition/document of this relationshipThis list of codes represents the main clinical acts, such as a colonoscopy or an appendectomy, being documented. In some cases, the event is inherent in the typeCode, such as a \"History and Physical Report\" in which the procedure being documented is necessarily a \"History and Physical\" actThis list of codes represents the main clinical acts being documented. (Strength=Example)The period of time covered by the documentation. There is no assertion that the documentation is a complete representation for this period, only that it documents events during this timeThe description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomyThe label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contentsA code identifying the kind of content contained within the section. This must be consistent with the section titleClassification of a section of a composition/document. (Strength=Example)Identifies who is responsible for the information in this section, not necessarily who typed it inThe actual focus of the section when it is not the subject of the composition, but instead represents something or someone associated with the subject such as (for a patient subject) a spouse, parent, fetus, or donor. If not focus is specified, the focus is assumed to be focus of the parent section, or, for a section in the Composition itself, the subject of the composition. Sections with a focus SHALL only include resources where the logical subject (patient, subject, focus, etc.) matches the section focus, or the resources have no logical subject (few resources)A human-readable narrative that contains the attested content of the section, used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrativeHow the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deletedThe processing mode that applies to this section. (Strength=Required)Specifies the order applied to the items in the section entriesWhat order applies to the items in the entry. (Strength=Preferred)A reference to the actual resource from which the narrative in the section is derivedIf the section is empty, why the list is empty. An empty section typically has some text explaining the empty reasonIf a section is empty, why it is empty. (Strength=Preferred)A participant who has attested to the accuracy of the composition/documentRelationships that this composition has with other compositions or documents that already existThe clinical service, such as a colonoscopy or an appendectomy, being documentedA nested sub-section within this sectionThe root of the sections that make up the composition",
+  "description": "",
+  "crawledAt": "2026-05-16T14:44:54.571Z",
+  "depth": 1,
+  "textLength": 57874,
+  "wordCount": 7419,
+  "links": [
+    "https://hl7.org/fhir/R4/foundation-module.html",
+    "https://hl7.org/fhir/R4/composition.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/security.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-device.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-encounter.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-patient.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-practitioner.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-relatedperson.html",
+    "https://hl7.org/fhir/R4/documents.html",
+    "https://hl7.org/fhir/R4/composition-clinicaldocument.html",
+    "https://hl7.org/fhir/R4/comparison-cda.html",
+    "https://hl7.org/fhir/R4/list.html",
+    "https://hl7.org/fhir/R4/group.html",
+    "https://hl7.org/fhir/R4/bundle.html",
+    "https://hl7.org/fhir/R4/composition-definitions.html",
+    "https://hl7.org/fhir/R4/composition-operation-document.html",
+    "https://hl7.org/fhir/R4/resourcelist.html",
+    "https://hl7.org/fhir/R4/valueset-composition-status.html",
+    "https://hl7.org/fhir/R4/composition-mappings.html",
+    "https://hl7.org/fhir/R4/contract.html",
+    "https://hl7.org/fhir/R4/procedure.html",
+    "https://hl7.org/fhir/R4/formats.html",
+    "https://hl7.org/fhir/R4/domainresource.html",
+    "https://hl7.org/fhir/R4/resource.html",
+    "https://hl7.org/fhir/R4/elementdefinition-definitions.html",
+    "https://hl7.org/fhir/R4/datatypes.html",
+    "https://hl7.org/fhir/R4/conformance-rules.html",
+    "https://hl7.org/fhir/R4/terminologies.html",
+    "https://hl7.org/fhir/R4/valueset-doc-typecodes.html",
+    "https://hl7.org/fhir/R4/valueset-document-classcodes.html",
+    "https://hl7.org/fhir/R4/references.html",
+    "https://hl7.org/fhir/R4/encounter.html",
+    "https://hl7.org/fhir/R4/practitioner.html",
+    "https://hl7.org/fhir/R4/practitionerrole.html",
+    "https://hl7.org/fhir/R4/device.html",
+    "https://hl7.org/fhir/R4/patient.html",
+    "https://hl7.org/fhir/R4/relatedperson.html",
+    "https://hl7.org/fhir/R4/organization.html",
+    "https://hl7.org/fhir/R4/v3/ConfidentialityClassification/vs.html",
+    "https://hl7.org/fhir/R4/backboneelement.html",
+    "https://hl7.org/fhir/R4/valueset-composition-attestation-mode.html",
+    "https://hl7.org/fhir/R4/valueset-document-relationship-type.html",
+    "https://hl7.org/fhir/R4/v3/ActCode/vs.html",
+    "https://hl7.org/fhir/R4/valueset-doc-section-codes.html",
+    "https://hl7.org/fhir/R4/narrative.html",
+    "https://hl7.org/fhir/R4/valueset-list-mode.html",
+    "https://hl7.org/fhir/R4/valueset-list-order.html",
+    "https://hl7.org/fhir/R4/valueset-list-empty-reason.html",
+    "https://hl7.org/fhir/R4/xml.html",
+    "https://hl7.org/fhir/R4/extensibility.html",
+    "https://hl7.org/fhir/R4/json.html",
+    "https://hl7.org/fhir/R4/rdf.html",
+    "https://hl7.org/fhir/R4/diff.html",
+    "https://hl7.org/fhir/R4/composition-version-maps.html",
+    "https://hl7.org/fhir/R4/composition-profiles.html",
+    "https://hl7.org/fhir/R4/composition.profile.xml.html",
+    "https://hl7.org/fhir/R4/composition.profile.json.html",
+    "https://hl7.org/fhir/R4/composition.xsd",
+    "https://hl7.org/fhir/R4/composition.sch",
+    "https://hl7.org/fhir/R4/composition.schema.json.html",
+    "https://hl7.org/fhir/R4/composition.shex.html",
+    "https://hl7.org/fhir/R4/composition-dependencies.html",
+    "https://hl7.org/fhir/R4/fhirpath.html",
+    "https://hl7.org/fhir/R4/extension-composition-section-subject.html",
+    "https://hl7.org/fhir/R4/search.html",
+    "https://hl7.org/fhir/R4/searchparameter-registry.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "2.41  Resource Composition - Content"
+    },
+    {
+      "level": 2,
+      "text": "2.41.1 Scope and Usage"
+    },
+    {
+      "level": 2,
+      "text": "2.41.2 Boundaries and Relationships"
+    },
+    {
+      "level": 2,
+      "text": "2.41.3 Background and Context"
+    },
+    {
+      "level": 3,
+      "text": "2.41.3.1 Composition Status Codes"
+    },
+    {
+      "level": 3,
+      "text": "2.41.3.2  The workflow/clinical status of the composition."
+    },
+    {
+      "level": 3,
+      "text": "2.41.3.3 Note for CDA aware readers"
+    },
+    {
+      "level": 2,
+      "text": "2.41.4 \nResource Content"
+    },
+    {
+      "level": 3,
+      "text": "2.41.4.1 \nTerminology Bindings"
+    },
+    {
+      "level": 3,
+      "text": "2.41.4.2 Constraints"
+    },
+    {
+      "level": 2,
+      "text": "2.41.5 \nNotes:"
+    },
+    {
+      "level": 2,
+      "text": "2.41.6 \nCompositions about multiple entities"
+    },
+    {
+      "level": 2,
+      "text": "2.41.7 Search Parameters"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}

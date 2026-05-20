@@ -1,0 +1,1563 @@
+{
+  "url": "https://fhir.epic.com",
+  "fileId": "__2c7b187a",
+  "title": "Home - Epic on FHIR",
+  "description": "",
+  "crawledAt": "2026-05-16T14:42:47.644Z",
+  "depth": 1,
+  "textLength": 14672,
+  "wordCount": 2225,
+  "links": [
+    "https://fhir.epic.com/Specifications?api=10505",
+    "https://fhir.epic.com/Specifications?api=10508",
+    "https://fhir.epic.com/Specifications?api=981",
+    "https://fhir.epic.com/Specifications?api=982",
+    "https://fhir.epic.com/Specifications?api=464",
+    "https://fhir.epic.com/Specifications?api=465",
+    "https://fhir.epic.com/Specifications?api=463",
+    "https://fhir.epic.com/Specifications?api=1",
+    "https://fhir.epic.com/Specifications?api=2",
+    "https://fhir.epic.com/Specifications?api=11363",
+    "https://fhir.epic.com/Specifications?api=11365",
+    "https://fhir.epic.com/Specifications?api=946",
+    "https://fhir.epic.com/Specifications?api=947",
+    "https://fhir.epic.com/Specifications?api=945",
+    "https://fhir.epic.com/Specifications?api=466",
+    "https://fhir.epic.com/Specifications?api=10189",
+    "https://fhir.epic.com/Specifications?api=839",
+    "https://fhir.epic.com/Specifications?api=840",
+    "https://fhir.epic.com/Specifications?api=10468",
+    "https://fhir.epic.com/Specifications?api=10469",
+    "https://fhir.epic.com/Specifications?api=11269",
+    "https://fhir.epic.com/Specifications?api=11270",
+    "https://fhir.epic.com/Specifications?api=10471",
+    "https://fhir.epic.com/Specifications?api=10478",
+    "https://fhir.epic.com/Specifications?api=1044",
+    "https://fhir.epic.com/Specifications?api=10533",
+    "https://fhir.epic.com/Specifications?api=841",
+    "https://fhir.epic.com/Specifications?api=10308",
+    "https://fhir.epic.com/Specifications?api=10551",
+    "https://fhir.epic.com/Specifications?api=10231",
+    "https://fhir.epic.com/Specifications?api=10556",
+    "https://fhir.epic.com/Specifications?api=10233",
+    "https://fhir.epic.com/Specifications?api=10013",
+    "https://fhir.epic.com/Specifications?api=10559",
+    "https://fhir.epic.com/Specifications?api=10183",
+    "https://fhir.epic.com/Specifications?api=10558",
+    "https://fhir.epic.com/Specifications?api=10501",
+    "https://fhir.epic.com/Specifications?api=10557",
+    "https://fhir.epic.com/Specifications?api=3",
+    "https://fhir.epic.com/Specifications?api=10138",
+    "https://fhir.epic.com/Specifications?api=10550",
+    "https://fhir.epic.com/Specifications?api=10137",
+    "https://fhir.epic.com/Specifications?api=10552",
+    "https://fhir.epic.com/Specifications?api=10285",
+    "https://fhir.epic.com/Specifications?api=10553",
+    "https://fhir.epic.com/Specifications?api=10139",
+    "https://fhir.epic.com/Specifications?api=10554",
+    "https://fhir.epic.com/Specifications?api=10290",
+    "https://fhir.epic.com/Specifications?api=10560",
+    "https://fhir.epic.com/Specifications?api=10136",
+    "https://fhir.epic.com/Specifications?api=10561",
+    "https://fhir.epic.com/Specifications?api=10996",
+    "https://fhir.epic.com/Specifications?api=10997",
+    "https://fhir.epic.com/Specifications?api=10438",
+    "https://fhir.epic.com/Specifications?api=10563",
+    "https://fhir.epic.com/Specifications?api=10437",
+    "https://fhir.epic.com/Specifications?api=11398",
+    "https://fhir.epic.com/Specifications?api=983",
+    "https://fhir.epic.com/Specifications?api=10555",
+    "https://fhir.epic.com/Specifications?api=10570",
+    "https://fhir.epic.com/Specifications?api=10230",
+    "https://fhir.epic.com/Specifications?api=10562",
+    "https://fhir.epic.com/Specifications?api=10232",
+    "https://fhir.epic.com/Specifications?api=11002",
+    "https://fhir.epic.com/Specifications?api=10992",
+    "https://fhir.epic.com/Specifications?api=10280",
+    "https://fhir.epic.com/Specifications?api=10281",
+    "https://fhir.epic.com/Specifications?api=11041",
+    "https://fhir.epic.com/Specifications?api=11042",
+    "https://fhir.epic.com/Specifications?api=11040",
+    "https://fhir.epic.com/Specifications?api=11043",
+    "https://fhir.epic.com/Specifications?api=10068",
+    "https://fhir.epic.com/Specifications?api=10069",
+    "https://fhir.epic.com/Specifications?api=10170",
+    "https://fhir.epic.com/Specifications?api=10169",
+    "https://fhir.epic.com/Specifications?api=10171",
+    "https://fhir.epic.com/Specifications?api=10172",
+    "https://fhir.epic.com/Specifications?api=10305",
+    "https://fhir.epic.com/Specifications?api=10309",
+    "https://fhir.epic.com/Specifications?api=10016",
+    "https://fhir.epic.com/Specifications?api=10017",
+    "https://fhir.epic.com/Specifications?api=1066",
+    "https://fhir.epic.com/Specifications?api=1067",
+    "https://fhir.epic.com/Specifications?api=4",
+    "https://fhir.epic.com/Specifications?api=5",
+    "https://fhir.epic.com/Specifications?api=10043",
+    "https://fhir.epic.com/Specifications?api=10044",
+    "https://fhir.epic.com/Specifications?api=10101",
+    "https://fhir.epic.com/Specifications?api=10102",
+    "https://fhir.epic.com/Specifications?api=1064",
+    "https://fhir.epic.com/Specifications?api=1065",
+    "https://fhir.epic.com/Specifications?api=10572",
+    "https://fhir.epic.com/Specifications?api=10573",
+    "https://fhir.epic.com/Specifications?api=10073",
+    "https://fhir.epic.com/Specifications?api=10074",
+    "https://fhir.epic.com/Specifications?api=10045",
+    "https://fhir.epic.com/Specifications?api=10046",
+    "https://fhir.epic.com/Specifications?api=11458",
+    "https://fhir.epic.com/Specifications?api=11457",
+    "https://fhir.epic.com/Specifications?api=10321",
+    "https://fhir.epic.com/Specifications?api=10322",
+    "https://fhir.epic.com/Specifications?api=10022",
+    "https://fhir.epic.com/Specifications?api=10028",
+    "https://fhir.epic.com/Specifications?api=10154",
+    "https://fhir.epic.com/Specifications?api=10155",
+    "https://fhir.epic.com/Specifications?api=1068",
+    "https://fhir.epic.com/Specifications?api=1069",
+    "https://fhir.epic.com/Specifications?api=11367",
+    "https://fhir.epic.com/Specifications?api=11369",
+    "https://fhir.epic.com/Specifications?api=10088",
+    "https://fhir.epic.com/Specifications?api=10089",
+    "https://fhir.epic.com/Specifications?api=10090",
+    "https://fhir.epic.com/Specifications?api=10408",
+    "https://fhir.epic.com/Specifications?api=10537",
+    "https://fhir.epic.com/Specifications?api=10535",
+    "https://fhir.epic.com/Specifications?api=10536",
+    "https://fhir.epic.com/Specifications?api=10319",
+    "https://fhir.epic.com/Specifications?api=10320",
+    "https://fhir.epic.com/Specifications?api=1059",
+    "https://fhir.epic.com/Specifications?api=10047",
+    "https://fhir.epic.com/Specifications?api=10048",
+    "https://fhir.epic.com/Specifications?api=10066",
+    "https://fhir.epic.com/Specifications?api=10067",
+    "https://fhir.epic.com/Specifications?api=950",
+    "https://fhir.epic.com/Specifications?api=952",
+    "https://fhir.epic.com/Specifications?api=1058",
+    "https://fhir.epic.com/Specifications?api=468",
+    "https://fhir.epic.com/Specifications?api=469",
+    "https://fhir.epic.com/Specifications?api=1074",
+    "https://fhir.epic.com/Specifications?api=1075",
+    "https://fhir.epic.com/Specifications?api=984",
+    "https://fhir.epic.com/Specifications?api=985",
+    "https://fhir.epic.com/Specifications?api=10140",
+    "https://fhir.epic.com/Specifications?api=10141",
+    "https://fhir.epic.com/Specifications?api=10302",
+    "https://fhir.epic.com/Specifications?api=10314",
+    "https://fhir.epic.com/Specifications?api=11387",
+    "https://fhir.epic.com/Specifications?api=11389",
+    "https://fhir.epic.com/Specifications?api=11371",
+    "https://fhir.epic.com/Specifications?api=11376",
+    "https://fhir.epic.com/Specifications?api=11374",
+    "https://fhir.epic.com/Specifications?api=11377",
+    "https://fhir.epic.com/Specifications?api=951",
+    "https://fhir.epic.com/Specifications?api=953",
+    "https://fhir.epic.com/Specifications?api=949",
+    "https://fhir.epic.com/Specifications?api=467",
+    "https://fhir.epic.com/Specifications?api=6",
+    "https://fhir.epic.com/Specifications?api=7",
+    "https://fhir.epic.com/Specifications?api=1057",
+    "https://fhir.epic.com/Specifications?api=10187",
+    "https://fhir.epic.com/Specifications?api=10208",
+    "https://fhir.epic.com/Specifications?api=10258",
+    "https://fhir.epic.com/Specifications?api=10259",
+    "https://fhir.epic.com/Specifications?api=10255",
+    "https://fhir.epic.com/Specifications?api=10256",
+    "https://fhir.epic.com/Specifications?api=986",
+    "https://fhir.epic.com/Specifications?api=987",
+    "https://fhir.epic.com/Specifications?api=10260",
+    "https://fhir.epic.com/Specifications?api=10261",
+    "https://fhir.epic.com/Specifications?api=10994",
+    "https://fhir.epic.com/Specifications?api=10995",
+    "https://fhir.epic.com/Specifications?api=11455",
+    "https://fhir.epic.com/Specifications?api=11456",
+    "https://fhir.epic.com/Specifications?api=1076",
+    "https://fhir.epic.com/Specifications?api=1078",
+    "https://fhir.epic.com/Specifications?api=1077",
+    "https://fhir.epic.com/Specifications?api=1079",
+    "https://fhir.epic.com/Specifications?api=10061",
+    "https://fhir.epic.com/Specifications?api=8",
+    "https://fhir.epic.com/Specifications?api=9",
+    "https://fhir.epic.com/Specifications?api=11352",
+    "https://fhir.epic.com/Specifications?api=10254",
+    "https://fhir.epic.com/Specifications?api=10257",
+    "https://fhir.epic.com/Specifications?api=892",
+    "https://fhir.epic.com/Specifications?api=893",
+    "https://fhir.epic.com/Specifications?api=1012",
+    "https://fhir.epic.com/Specifications?api=1013",
+    "https://fhir.epic.com/Specifications?api=10461",
+    "https://fhir.epic.com/Specifications?api=10454",
+    "https://fhir.epic.com/Specifications?api=10462",
+    "https://fhir.epic.com/Specifications?api=10460",
+    "https://fhir.epic.com/Specifications?api=11459",
+    "https://fhir.epic.com/Specifications?api=11460",
+    "https://fhir.epic.com/Specifications?api=10237",
+    "https://fhir.epic.com/Specifications?api=10243",
+    "https://fhir.epic.com/Specifications?api=10236",
+    "https://fhir.epic.com/Specifications?api=10240",
+    "https://fhir.epic.com/Specifications?api=10265",
+    "https://fhir.epic.com/Specifications?api=10266",
+    "https://fhir.epic.com/Specifications?api=10245",
+    "https://fhir.epic.com/Specifications?api=10246",
+    "https://fhir.epic.com/Specifications?api=10247",
+    "https://fhir.epic.com/Specifications?api=10248",
+    "https://fhir.epic.com/Specifications?api=10452",
+    "https://fhir.epic.com/Specifications?api=10449",
+    "https://fhir.epic.com/Specifications?api=10451",
+    "https://fhir.epic.com/Specifications?api=10450",
+    "https://fhir.epic.com/Specifications?api=10439",
+    "https://fhir.epic.com/Specifications?api=10440",
+    "https://fhir.epic.com/Specifications?api=10441",
+    "https://fhir.epic.com/Specifications?api=10442",
+    "https://fhir.epic.com/Specifications?api=11372",
+    "https://fhir.epic.com/Specifications?api=11378",
+    "https://fhir.epic.com/Specifications?api=988",
+    "https://fhir.epic.com/Specifications?api=989",
+    "https://fhir.epic.com/Specifications?api=842",
+    "https://fhir.epic.com/Specifications?api=843",
+    "https://fhir.epic.com/Specifications?api=10",
+    "https://fhir.epic.com/Specifications?api=11",
+    "https://fhir.epic.com/Specifications?api=1047",
+    "https://fhir.epic.com/Specifications?api=1048",
+    "https://fhir.epic.com/Specifications?api=1046",
+    "https://fhir.epic.com/Specifications?api=844",
+    "https://fhir.epic.com/Specifications?api=865",
+    "https://fhir.epic.com/Specifications?api=845",
+    "https://fhir.epic.com/Specifications?api=10317",
+    "https://fhir.epic.com/Specifications?api=10318",
+    "https://fhir.epic.com/Specifications?api=10239",
+    "https://fhir.epic.com/Specifications?api=10244",
+    "https://fhir.epic.com/Specifications?api=10241",
+    "https://fhir.epic.com/Specifications?api=10242",
+    "https://fhir.epic.com/Specifications?api=10049",
+    "https://fhir.epic.com/Specifications?api=10310",
+    "https://fhir.epic.com/Specifications?api=10050",
+    "https://fhir.epic.com/Specifications?api=10051",
+    "https://fhir.epic.com/Specifications?api=10134",
+    "https://fhir.epic.com/Specifications?api=10135",
+    "https://fhir.epic.com/Specifications?api=10502",
+    "https://fhir.epic.com/Specifications?api=10506",
+    "https://fhir.epic.com/Specifications?api=12",
+    "https://fhir.epic.com/Specifications?api=13",
+    "https://fhir.epic.com/Specifications?api=10130",
+    "https://fhir.epic.com/Specifications?api=10131",
+    "https://fhir.epic.com/Specifications?api=10128",
+    "https://fhir.epic.com/Specifications?api=10129",
+    "https://fhir.epic.com/Specifications?api=10286",
+    "https://fhir.epic.com/Specifications?api=10287",
+    "https://fhir.epic.com/Specifications?api=10132",
+    "https://fhir.epic.com/Specifications?api=10133",
+    "https://fhir.epic.com/Specifications?api=10274",
+    "https://fhir.epic.com/Specifications?api=10284",
+    "https://fhir.epic.com/Specifications?api=10503",
+    "https://fhir.epic.com/Specifications?api=10126",
+    "https://fhir.epic.com/Specifications?api=10127",
+    "https://fhir.epic.com/Specifications?api=11009",
+    "https://fhir.epic.com/Specifications?api=10999",
+    "https://fhir.epic.com/Specifications?api=10435",
+    "https://fhir.epic.com/Specifications?api=10436",
+    "https://fhir.epic.com/Specifications?api=10433",
+    "https://fhir.epic.com/Specifications?api=10434",
+    "https://fhir.epic.com/Specifications?api=11399",
+    "https://fhir.epic.com/Specifications?api=10234",
+    "https://fhir.epic.com/Specifications?api=10235",
+    "https://fhir.epic.com/Specifications?api=10238",
+    "https://fhir.epic.com/Specifications?api=10253",
+    "https://fhir.epic.com/Specifications?api=10303",
+    "https://fhir.epic.com/Specifications?api=11006",
+    "https://fhir.epic.com/Specifications?api=11000",
+    "https://fhir.epic.com/Specifications?api=908",
+    "https://fhir.epic.com/Specifications?api=909",
+    "https://fhir.epic.com/Specifications?api=471",
+    "https://fhir.epic.com/Specifications?api=472",
+    "https://fhir.epic.com/Specifications?api=910",
+    "https://fhir.epic.com/Specifications?api=866",
+    "https://fhir.epic.com/Specifications?api=10156",
+    "https://fhir.epic.com/Specifications?api=10157",
+    "https://fhir.epic.com/Specifications?api=1072",
+    "https://fhir.epic.com/Specifications?api=1073",
+    "https://fhir.epic.com/Specifications?api=11039",
+    "https://fhir.epic.com/Specifications?api=11054",
+    "https://fhir.epic.com/Specifications?api=10158",
+    "https://fhir.epic.com/Specifications?api=10159",
+    "https://fhir.epic.com/Specifications?api=337",
+    "https://fhir.epic.com/Specifications?api=10197",
+    "https://fhir.epic.com/Specifications?api=10198",
+    "https://fhir.epic.com/Specifications?api=10205",
+    "https://fhir.epic.com/Specifications?api=10206",
+    "https://fhir.epic.com/Specifications?api=10201",
+    "https://fhir.epic.com/Specifications?api=10202",
+    "https://fhir.epic.com/Specifications?api=10203",
+    "https://fhir.epic.com/Specifications?api=10204",
+    "https://fhir.epic.com/Specifications?api=10196",
+    "https://fhir.epic.com/Specifications?api=10195",
+    "https://fhir.epic.com/Specifications?api=10165",
+    "https://fhir.epic.com/Specifications?api=10166",
+    "https://fhir.epic.com/Specifications?api=10167",
+    "https://fhir.epic.com/Specifications?api=10168",
+    "https://fhir.epic.com/Specifications?api=10311",
+    "https://fhir.epic.com/Specifications?api=10312",
+    "https://fhir.epic.com/Specifications?api=10052",
+    "https://fhir.epic.com/Specifications?api=10053",
+    "https://fhir.epic.com/Specifications?api=10459",
+    "https://fhir.epic.com/Specifications?api=10458",
+    "https://fhir.epic.com/Specifications?api=11411",
+    "https://fhir.epic.com/Specifications?api=10099",
+    "https://fhir.epic.com/Specifications?api=10100",
+    "https://fhir.epic.com/Specifications?api=959",
+    "https://fhir.epic.com/Specifications?api=960",
+    "https://fhir.epic.com/Specifications?api=877",
+    "https://fhir.epic.com/Specifications?api=924",
+    "https://fhir.epic.com/Specifications?api=878",
+    "https://fhir.epic.com/Specifications?api=19",
+    "https://fhir.epic.com/Specifications?api=20",
+    "https://fhir.epic.com/Specifications?api=10315",
+    "https://fhir.epic.com/Specifications?api=10476",
+    "https://fhir.epic.com/Specifications?api=926",
+    "https://fhir.epic.com/Specifications?api=927",
+    "https://fhir.epic.com/Specifications?api=21",
+    "https://fhir.epic.com/Specifications?api=22",
+    "https://fhir.epic.com/Specifications?api=1070",
+    "https://fhir.epic.com/Specifications?api=1071",
+    "https://fhir.epic.com/Specifications?api=10249",
+    "https://fhir.epic.com/Specifications?api=10250",
+    "https://fhir.epic.com/Specifications?api=10251",
+    "https://fhir.epic.com/Specifications?api=10252",
+    "https://fhir.epic.com/Specifications?api=10146",
+    "https://fhir.epic.com/Specifications?api=10147",
+    "https://fhir.epic.com/Specifications?api=10150",
+    "https://fhir.epic.com/Specifications?api=10151",
+    "https://fhir.epic.com/Specifications?api=10148",
+    "https://fhir.epic.com/Specifications?api=10149",
+    "https://fhir.epic.com/Specifications?api=10152",
+    "https://fhir.epic.com/Specifications?api=10153",
+    "https://fhir.epic.com/Specifications?api=10105",
+    "https://fhir.epic.com/Specifications?api=10104",
+    "https://fhir.epic.com/Specifications?api=10520",
+    "https://fhir.epic.com/Specifications?api=10519",
+    "https://fhir.epic.com/Specifications?api=879",
+    "https://fhir.epic.com/Specifications?api=880",
+    "https://fhir.epic.com/Specifications?api=10144",
+    "https://fhir.epic.com/Specifications?api=10145",
+    "https://fhir.epic.com/Specifications?api=823",
+    "https://fhir.epic.com/Specifications?api=928",
+    "https://fhir.epic.com/Specifications?api=10084",
+    "https://fhir.epic.com/Specifications?api=11461",
+    "https://fhir.epic.com/Specifications?api=11462",
+    "https://fhir.epic.com/Specifications?api=10989",
+    "https://fhir.epic.com/Specifications?api=11001",
+    "https://fhir.epic.com/Specifications?api=489",
+    "https://fhir.epic.com/Specifications?api=23",
+    "https://fhir.epic.com/Specifications?api=692",
+    "https://fhir.epic.com/Specifications?api=995",
+    "https://fhir.epic.com/Specifications?api=10079",
+    "https://fhir.epic.com/Specifications?api=11463",
+    "https://fhir.epic.com/Specifications?api=11464",
+    "https://fhir.epic.com/Specifications?api=10466",
+    "https://fhir.epic.com/Specifications?api=10463",
+    "https://fhir.epic.com/Specifications?api=10467",
+    "https://fhir.epic.com/Specifications?api=10464",
+    "https://fhir.epic.com/Specifications?api=10647",
+    "https://fhir.epic.com/Specifications?api=10646",
+    "https://fhir.epic.com/Specifications?api=11417",
+    "https://fhir.epic.com/Specifications?api=11418",
+    "https://fhir.epic.com/Specifications?api=10212",
+    "https://fhir.epic.com/Specifications?api=10217",
+    "https://fhir.epic.com/Specifications?api=10213",
+    "https://fhir.epic.com/Specifications?api=10214",
+    "https://fhir.epic.com/Specifications?api=10095",
+    "https://fhir.epic.com/Specifications?api=10096",
+    "https://fhir.epic.com/Specifications?api=11419",
+    "https://fhir.epic.com/Specifications?api=11420",
+    "https://fhir.epic.com/Specifications?api=11271",
+    "https://fhir.epic.com/Specifications?api=11272",
+    "https://fhir.epic.com/Specifications?api=10031",
+    "https://fhir.epic.com/Specifications?api=10160",
+    "https://fhir.epic.com/Specifications?api=10161",
+    "https://fhir.epic.com/Specifications?api=1060",
+    "https://fhir.epic.com/Specifications?api=1061",
+    "https://fhir.epic.com/Specifications?api=996",
+    "https://fhir.epic.com/Specifications?api=997",
+    "https://fhir.epic.com/Specifications?api=490",
+    "https://fhir.epic.com/Specifications?api=491",
+    "https://fhir.epic.com/Specifications?api=25",
+    "https://fhir.epic.com/Specifications?api=26",
+    "https://fhir.epic.com/Specifications?api=492",
+    "https://fhir.epic.com/Specifications?api=493",
+    "https://fhir.epic.com/Specifications?api=338",
+    "https://fhir.epic.com/Specifications?api=339",
+    "https://fhir.epic.com/Specifications?api=10224",
+    "https://fhir.epic.com/Specifications?api=10227",
+    "https://fhir.epic.com/Specifications?api=10228",
+    "https://fhir.epic.com/Specifications?api=10229",
+    "https://fhir.epic.com/Specifications?api=10122",
+    "https://fhir.epic.com/Specifications?api=10123",
+    "https://fhir.epic.com/Specifications?api=10124",
+    "https://fhir.epic.com/Specifications?api=10125",
+    "https://fhir.epic.com/Specifications?api=10282",
+    "https://fhir.epic.com/Specifications?api=11053",
+    "https://fhir.epic.com/Specifications?api=11052",
+    "https://fhir.epic.com/Specifications?api=964",
+    "https://fhir.epic.com/Specifications?api=969",
+    "https://fhir.epic.com/Specifications?api=853",
+    "https://fhir.epic.com/Specifications?api=854",
+    "https://fhir.epic.com/Specifications?api=11227",
+    "https://fhir.epic.com/Specifications?api=11226",
+    "https://fhir.epic.com/Specifications?api=11224",
+    "https://fhir.epic.com/Specifications?api=11225",
+    "https://fhir.epic.com/Specifications?api=10455",
+    "https://fhir.epic.com/Specifications?api=10456",
+    "https://fhir.epic.com/Specifications?api=10444",
+    "https://fhir.epic.com/Specifications?api=10457",
+    "https://fhir.epic.com/Specifications?api=10304",
+    "https://fhir.epic.com/Specifications?api=10298",
+    "https://fhir.epic.com/Specifications?api=10300",
+    "https://fhir.epic.com/Specifications?api=10301",
+    "https://fhir.epic.com/Specifications?api=998",
+    "https://fhir.epic.com/Specifications?api=999",
+    "https://fhir.epic.com/Specifications?api=494",
+    "https://fhir.epic.com/Specifications?api=495",
+    "https://fhir.epic.com/Specifications?api=10188",
+    "https://fhir.epic.com/Specifications?api=27",
+    "https://fhir.epic.com/Specifications?api=28",
+    "https://fhir.epic.com/Specifications?api=965",
+    "https://fhir.epic.com/Specifications?api=970",
+    "https://fhir.epic.com/Specifications?api=962",
+    "https://fhir.epic.com/Specifications?api=974",
+    "https://fhir.epic.com/Specifications?api=898",
+    "https://fhir.epic.com/Specifications?api=899",
+    "https://fhir.epic.com/Specifications?api=897",
+    "https://fhir.epic.com/Specifications?api=900",
+    "https://fhir.epic.com/Specifications?api=10306",
+    "https://fhir.epic.com/Specifications?api=10307",
+    "https://fhir.epic.com/Specifications?api=10293",
+    "https://fhir.epic.com/Specifications?api=10294",
+    "https://fhir.epic.com/Specifications?api=11465",
+    "https://fhir.epic.com/Specifications?api=11466",
+    "https://fhir.epic.com/Specifications?api=11467",
+    "https://fhir.epic.com/Specifications?api=11468",
+    "https://fhir.epic.com/Specifications?api=11391",
+    "https://fhir.epic.com/Specifications?api=11392",
+    "https://fhir.epic.com/Specifications?api=11381",
+    "https://fhir.epic.com/Specifications?api=11386",
+    "https://fhir.epic.com/Specifications?api=11388",
+    "https://fhir.epic.com/Specifications?api=11469",
+    "https://fhir.epic.com/Specifications?api=11470",
+    "https://fhir.epic.com/Specifications?api=11375",
+    "https://fhir.epic.com/Specifications?api=11384",
+    "https://fhir.epic.com/Specifications?api=11379",
+    "https://fhir.epic.com/Specifications?api=11383",
+    "https://fhir.epic.com/Specifications?api=11421",
+    "https://fhir.epic.com/Specifications?api=11422",
+    "https://fhir.epic.com/Specifications?api=10070",
+    "https://fhir.epic.com/Specifications?api=10071",
+    "https://fhir.epic.com/Specifications?api=11330",
+    "https://fhir.epic.com/Specifications?api=11328",
+    "https://fhir.epic.com/Specifications?api=11105",
+    "https://fhir.epic.com/Specifications?api=11104",
+    "https://fhir.epic.com/Specifications?api=10120",
+    "https://fhir.epic.com/Specifications?api=10121",
+    "https://fhir.epic.com/Specifications?api=967",
+    "https://fhir.epic.com/Specifications?api=972",
+    "https://fhir.epic.com/Specifications?api=855",
+    "https://fhir.epic.com/Specifications?api=856",
+    "https://fhir.epic.com/Specifications?api=10223",
+    "https://fhir.epic.com/Specifications?api=447",
+    "https://fhir.epic.com/Specifications?api=448",
+    "https://fhir.epic.com/Specifications?api=10289",
+    "https://fhir.epic.com/Specifications?api=10297",
+    "https://fhir.epic.com/Specifications?api=968",
+    "https://fhir.epic.com/Specifications?api=973",
+    "https://fhir.epic.com/Specifications?api=963",
+    "https://fhir.epic.com/Specifications?api=497",
+    "https://fhir.epic.com/Specifications?api=498",
+    "https://fhir.epic.com/Specifications?api=496",
+    "https://fhir.epic.com/Specifications?api=10484",
+    "https://fhir.epic.com/Specifications?api=449",
+    "https://fhir.epic.com/Specifications?api=450",
+    "https://fhir.epic.com/Specifications?api=857",
+    "https://fhir.epic.com/Specifications?api=929",
+    "https://fhir.epic.com/Specifications?api=10083",
+    "https://fhir.epic.com/Specifications?api=11439",
+    "https://fhir.epic.com/Specifications?api=11441",
+    "https://fhir.epic.com/Specifications?api=931",
+    "https://fhir.epic.com/Specifications?api=932",
+    "https://fhir.epic.com/Specifications?api=930",
+    "https://fhir.epic.com/Specifications?api=10423",
+    "https://fhir.epic.com/Specifications?api=825",
+    "https://fhir.epic.com/Specifications?api=883",
+    "https://fhir.epic.com/Specifications?api=824",
+    "https://fhir.epic.com/Specifications?api=29",
+    "https://fhir.epic.com/Specifications?api=30",
+    "https://fhir.epic.com/Specifications?api=11219",
+    "https://fhir.epic.com/Specifications?api=499",
+    "https://fhir.epic.com/Specifications?api=858",
+    "https://fhir.epic.com/Specifications?api=31",
+    "https://fhir.epic.com/Specifications?api=826",
+    "https://fhir.epic.com/Specifications?api=935",
+    "https://fhir.epic.com/Specifications?api=936",
+    "https://fhir.epic.com/Specifications?api=11471",
+    "https://fhir.epic.com/Specifications?api=11472",
+    "https://fhir.epic.com/Specifications?api=859",
+    "https://fhir.epic.com/Specifications?api=885",
+    "https://fhir.epic.com/Specifications?api=937",
+    "https://fhir.epic.com/Specifications?api=938",
+    "https://fhir.epic.com/Specifications?api=11373",
+    "https://fhir.epic.com/Specifications?api=11385",
+    "https://fhir.epic.com/Specifications?api=10470",
+    "https://fhir.epic.com/Specifications?api=10479",
+    "https://fhir.epic.com/Specifications?api=10477",
+    "https://fhir.epic.com/Specifications?api=10480",
+    "https://fhir.epic.com/Specifications?api=975",
+    "https://fhir.epic.com/Specifications?api=976",
+    "https://fhir.epic.com/Specifications?api=939",
+    "https://fhir.epic.com/Specifications?api=940",
+    "https://fhir.epic.com/Specifications?api=33",
+    "https://fhir.epic.com/Specifications?api=34",
+    "https://fhir.epic.com/Specifications?api=11368",
+    "https://fhir.epic.com/Specifications?api=11370",
+    "https://fhir.epic.com/Specifications?api=10029",
+    "https://fhir.epic.com/Specifications?api=10030",
+    "https://fhir.epic.com/Specifications?api=10398",
+    "https://fhir.epic.com/Specifications?api=10399",
+    "https://fhir.epic.com/Specifications?api=11049",
+    "https://fhir.epic.com/Specifications?api=11050",
+    "https://fhir.epic.com/Specifications?api=11048",
+    "https://fhir.epic.com/Specifications?api=11051",
+    "https://fhir.epic.com/Specifications?api=10474",
+    "https://fhir.epic.com/Specifications?api=10472",
+    "https://fhir.epic.com/Specifications?api=10475",
+    "https://fhir.epic.com/Specifications?api=10473",
+    "https://fhir.epic.com/Specifications?api=11055",
+    "https://fhir.epic.com/Specifications?api=11038",
+    "https://fhir.epic.com/Specifications?api=10041",
+    "https://fhir.epic.com/Specifications?api=10042",
+    "https://fhir.epic.com/Specifications?api=10163",
+    "https://fhir.epic.com/Specifications?api=10644",
+    "https://fhir.epic.com/Specifications?api=10180",
+    "https://fhir.epic.com/Specifications?api=10025",
+    "https://fhir.epic.com/Specifications?api=10081",
+    "https://fhir.epic.com/Specifications?api=10226",
+    "https://fhir.epic.com/Specifications?api=11473",
+    "https://fhir.epic.com/Specifications?api=11474",
+    "https://fhir.epic.com/Specifications?api=10024",
+    "https://fhir.epic.com/Specifications?api=10082",
+    "https://fhir.epic.com/Specifications?api=10023",
+    "https://fhir.epic.com/Specifications?api=11394",
+    "https://fhir.epic.com/Specifications?api=11438",
+    "https://fhir.epic.com/Specifications?api=11440",
+    "https://fhir.epic.com/Specifications?api=11008",
+    "https://fhir.epic.com/Specifications?api=977",
+    "https://fhir.epic.com/Specifications?api=11007",
+    "https://fhir.epic.com/Specifications?api=10020",
+    "https://fhir.epic.com/Specifications?api=10080",
+    "https://fhir.epic.com/Specifications?api=10077",
+    "https://fhir.epic.com/Specifications?api=10078",
+    "https://fhir.epic.com/Specifications?api=1002",
+    "https://fhir.epic.com/Specifications?api=1003",
+    "https://fhir.epic.com/Specifications?api=10142",
+    "https://fhir.epic.com/Specifications?api=10143",
+    "https://fhir.epic.com/Specifications?api=500",
+    "https://fhir.epic.com/Specifications?api=10091",
+    "https://fhir.epic.com/Specifications?api=10092",
+    "https://fhir.epic.com/Specifications?api=10018",
+    "https://fhir.epic.com/Specifications?api=10019",
+    "https://fhir.epic.com/Specifications?api=10093",
+    "https://fhir.epic.com/Specifications?api=10094",
+    "https://fhir.epic.com/Specifications?api=11475",
+    "https://fhir.epic.com/Specifications?api=11476",
+    "https://fhir.epic.com/Specifications?api=10276",
+    "https://fhir.epic.com/Specifications?api=10277",
+    "https://fhir.epic.com/Specifications?api=11265",
+    "https://fhir.epic.com/Specifications?api=11266",
+    "https://fhir.epic.com/Specifications?api=11267",
+    "https://fhir.epic.com/Specifications?api=11045",
+    "https://fhir.epic.com/Specifications?api=11046",
+    "https://fhir.epic.com/Specifications?api=11044",
+    "https://fhir.epic.com/Specifications?api=11047",
+    "https://fhir.epic.com/Specifications?api=10164",
+    "https://fhir.epic.com/Specifications?api=10032",
+    "https://fhir.epic.com/Specifications?api=10162",
+    "https://fhir.epic.com/Specifications?api=1062",
+    "https://fhir.epic.com/Specifications?api=10643",
+    "https://fhir.epic.com/Specifications?api=1063",
+    "https://fhir.epic.com/Specifications?api=886",
+    "https://fhir.epic.com/Specifications?api=887",
+    "https://fhir.epic.com/Specifications?api=1053",
+    "https://fhir.epic.com/Specifications?api=1054",
+    "https://fhir.epic.com/Specifications?api=862",
+    "https://fhir.epic.com/Specifications?api=10207",
+    "https://fhir.epic.com/Specifications?api=10210",
+    "https://fhir.epic.com/Specifications?api=11366",
+    "https://fhir.epic.com/Specifications?api=10014",
+    "https://fhir.epic.com/Specifications?api=10015",
+    "https://fhir.epic.com/Specifications?api=11364",
+    "https://fhir.epic.com/Specifications?api=10075",
+    "https://fhir.epic.com/Specifications?api=10076",
+    "https://fhir.epic.com/Specifications?api=11404",
+    "https://fhir.epic.com/Specifications?api=11403",
+    "https://fhir.epic.com/Specifications?api=10085",
+    "https://fhir.epic.com/Specifications?api=10086",
+    "https://fhir.epic.com/Specifications?api=10087",
+    "https://fhir.epic.com/Specifications?api=10292",
+    "https://fhir.epic.com/Specifications?api=10296",
+    "https://fhir.epic.com/Specifications?api=1038",
+    "https://fhir.epic.com/FAQ",
+    "https://fhir.epic.com/Resources/Terms"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": ""
+    },
+    {
+      "level": 2,
+      "text": "Sign Up to Access"
+    },
+    {
+      "level": 3,
+      "text": "Testing Sandbox"
+    },
+    {
+      "level": 3,
+      "text": "Client Registration"
+    },
+    {
+      "level": 3,
+      "text": "Documentation"
+    },
+    {
+      "level": 2,
+      "text": "Summary of Resources"
+    },
+    {
+      "level": 3,
+      "text": "Account (Premium Billing)"
+    },
+    {
+      "level": 3,
+      "text": "AdverseEvent"
+    },
+    {
+      "level": 3,
+      "text": "AllergyIntolerance"
+    },
+    {
+      "level": 3,
+      "text": "AllergyIntolerance (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "AllergyIntolerance (Patient Chart)"
+    },
+    {
+      "level": 3,
+      "text": "Appointment"
+    },
+    {
+      "level": 3,
+      "text": "Appointment (Appointments)"
+    },
+    {
+      "level": 3,
+      "text": "Appointment (Prior Auth)"
+    },
+    {
+      "level": 3,
+      "text": "Appointment (Scheduled Surgeries)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (Clinical Notes)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (Clinical References)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (Correspondences)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (Document Information)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (External CDAs)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (Generated CDAs)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (Handoff)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (HIS)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (IRF-PAI)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (Labs)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (Minimum Data Set)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (OASIS)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (Outside Record Clinical Notes)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (Patient-Entered Questionnaires)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (Prior Auth Supporting Info)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (Provider Photo)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (Radiology Results)"
+    },
+    {
+      "level": 3,
+      "text": "Binary (Study)"
+    },
+    {
+      "level": 3,
+      "text": "BodyStructure (Organ)"
+    },
+    {
+      "level": 3,
+      "text": "BodyStructure (Radiotherapy Volume)"
+    },
+    {
+      "level": 3,
+      "text": "BodyStructure (Tooth)"
+    },
+    {
+      "level": 3,
+      "text": "BulkData"
+    },
+    {
+      "level": 3,
+      "text": "CarePlan (Care Path)"
+    },
+    {
+      "level": 3,
+      "text": "CarePlan (Dental CarePlan)"
+    },
+    {
+      "level": 3,
+      "text": "CarePlan (Encounter)"
+    },
+    {
+      "level": 3,
+      "text": "CarePlan (Encounter-Level, Longitudinal)"
+    },
+    {
+      "level": 3,
+      "text": "CarePlan (Inpatient CarePlan)"
+    },
+    {
+      "level": 3,
+      "text": "CarePlan (Inpatient Pathway)"
+    },
+    {
+      "level": 3,
+      "text": "CarePlan (Longitudinal Care Plan)"
+    },
+    {
+      "level": 3,
+      "text": "CarePlan (Longitudinal)"
+    },
+    {
+      "level": 3,
+      "text": "CarePlan (Oncology)"
+    },
+    {
+      "level": 3,
+      "text": "CarePlan (Outpatient CarePlan)"
+    },
+    {
+      "level": 3,
+      "text": "CarePlan (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "CarePlan (Patient Education)"
+    },
+    {
+      "level": 3,
+      "text": "CarePlan (Questionnaires Due)"
+    },
+    {
+      "level": 3,
+      "text": "CareTeam (Episode Care Team)"
+    },
+    {
+      "level": 3,
+      "text": "CareTeam (Longitudinal Care Team)"
+    },
+    {
+      "level": 3,
+      "text": "CareTeam (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "Communication (Community Resource Communication)"
+    },
+    {
+      "level": 3,
+      "text": "Communication (Customer Relationship Management)"
+    },
+    {
+      "level": 3,
+      "text": "Communication (Non-Patient Customer Relationship Management)"
+    },
+    {
+      "level": 3,
+      "text": "Communication (Patient Education)"
+    },
+    {
+      "level": 3,
+      "text": "Condition"
+    },
+    {
+      "level": 3,
+      "text": "Condition (Care Plan Problem)"
+    },
+    {
+      "level": 3,
+      "text": "Condition (Dental Finding)"
+    },
+    {
+      "level": 3,
+      "text": "Condition (Encounter Diagnosis)"
+    },
+    {
+      "level": 3,
+      "text": "Condition (Encounter Diagnosis, Problems)"
+    },
+    {
+      "level": 3,
+      "text": "Condition (Genomics)"
+    },
+    {
+      "level": 3,
+      "text": "Condition (Health Concerns)"
+    },
+    {
+      "level": 3,
+      "text": "Condition (Infection)"
+    },
+    {
+      "level": 3,
+      "text": "Condition (Medical History)"
+    },
+    {
+      "level": 3,
+      "text": "Condition (Outside Record Encounter Diagnosis)"
+    },
+    {
+      "level": 3,
+      "text": "Condition (Outside Record Health Concern)"
+    },
+    {
+      "level": 3,
+      "text": "Condition (Outside Record Problems)"
+    },
+    {
+      "level": 3,
+      "text": "Condition (Problems)"
+    },
+    {
+      "level": 3,
+      "text": "Condition (Reason for Visit)"
+    },
+    {
+      "level": 3,
+      "text": "Consent (Code Status)"
+    },
+    {
+      "level": 3,
+      "text": "Consent (Document)"
+    },
+    {
+      "level": 3,
+      "text": "Contract (Healthcare Services Reimbursement)"
+    },
+    {
+      "level": 3,
+      "text": "Coverage (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "Coverage (Patient Insurance Information)"
+    },
+    {
+      "level": 3,
+      "text": "COVID SMART Scheduling Links"
+    },
+    {
+      "level": 3,
+      "text": "Device"
+    },
+    {
+      "level": 3,
+      "text": "Device (Auxiliary Function Notification)"
+    },
+    {
+      "level": 3,
+      "text": "Device (External Devices)"
+    },
+    {
+      "level": 3,
+      "text": "Device (Implants and External Devices)"
+    },
+    {
+      "level": 3,
+      "text": "Device (Implants)"
+    },
+    {
+      "level": 3,
+      "text": "Device (Lines, Drains, Airways)"
+    },
+    {
+      "level": 3,
+      "text": "Device (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "DeviceRequest"
+    },
+    {
+      "level": 3,
+      "text": "DeviceUseStatement (External Devices)"
+    },
+    {
+      "level": 3,
+      "text": "DeviceUseStatement (Implants and External Devices)"
+    },
+    {
+      "level": 3,
+      "text": "DeviceUseStatement (Implants)"
+    },
+    {
+      "level": 3,
+      "text": "DeviceUseStatement (Lines, Drains, Airways)"
+    },
+    {
+      "level": 3,
+      "text": "DiagnosticReport (Care Plan Goal)"
+    },
+    {
+      "level": 3,
+      "text": "DiagnosticReport (Outside Record Results)"
+    },
+    {
+      "level": 3,
+      "text": "DiagnosticReport (Results)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (Clinical Notes)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (Clinical References)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (Correspondences)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (Document Information)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (External CDAs)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (Generated CDAs)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (Handoff)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (HIS)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (IRF-PAI)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (Labs)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (Minimum Data Set)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (Non-Patient Document Information)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (OASIS)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (Outside Record - Clinical Notes)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (Patient-Entered Questionnaires)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (Prior Auth Supporting Info)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference (Radiology Results)"
+    },
+    {
+      "level": 3,
+      "text": "DocumentReference.Create (Non-Patient Document Information)"
+    },
+    {
+      "level": 3,
+      "text": "Encounter (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "Encounter (Patient Chart)"
+    },
+    {
+      "level": 3,
+      "text": "Endpoint"
+    },
+    {
+      "level": 3,
+      "text": "EpisodeOfCare"
+    },
+    {
+      "level": 3,
+      "text": "ExplanationOfBenefit (Claim)"
+    },
+    {
+      "level": 3,
+      "text": "ExplanationOfBenefit (Prior Auth)"
+    },
+    {
+      "level": 3,
+      "text": "FamilyMemberHistory"
+    },
+    {
+      "level": 3,
+      "text": "Flag (Health Concerns)"
+    },
+    {
+      "level": 3,
+      "text": "Flag (Infection)"
+    },
+    {
+      "level": 3,
+      "text": "Flag (Isolation)"
+    },
+    {
+      "level": 3,
+      "text": "Flag (Patient FYI)"
+    },
+    {
+      "level": 3,
+      "text": "Goal (Care Path)"
+    },
+    {
+      "level": 3,
+      "text": "Goal (Care Plan Goal)"
+    },
+    {
+      "level": 3,
+      "text": "Goal (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "Goal (Pathway Step)"
+    },
+    {
+      "level": 3,
+      "text": "Goal (Patient)"
+    },
+    {
+      "level": 3,
+      "text": "Group (Employer Group)"
+    },
+    {
+      "level": 3,
+      "text": "Immunization"
+    },
+    {
+      "level": 3,
+      "text": "Immunization.Read (Patient Chart) (R4)"
+    },
+    {
+      "level": 3,
+      "text": "Immunization.Search (Patient Chart) (R4)"
+    },
+    {
+      "level": 3,
+      "text": "ImmunizationRecommendation"
+    },
+    {
+      "level": 3,
+      "text": "List (Allergies)"
+    },
+    {
+      "level": 3,
+      "text": "List (Family History)"
+    },
+    {
+      "level": 3,
+      "text": "List (Hospital Problem)"
+    },
+    {
+      "level": 3,
+      "text": "List (Immunization)"
+    },
+    {
+      "level": 3,
+      "text": "List (Medication List)"
+    },
+    {
+      "level": 3,
+      "text": "List (Patient List)"
+    },
+    {
+      "level": 3,
+      "text": "List (Problem List)"
+    },
+    {
+      "level": 3,
+      "text": "Location"
+    },
+    {
+      "level": 3,
+      "text": "Location (Organizational Directory)"
+    },
+    {
+      "level": 3,
+      "text": "Location (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "Media (Study)"
+    },
+    {
+      "level": 3,
+      "text": "Medication"
+    },
+    {
+      "level": 3,
+      "text": "Medication (Organization Med List)"
+    },
+    {
+      "level": 3,
+      "text": "Medication (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "MedicationAdministration (LDAs)"
+    },
+    {
+      "level": 3,
+      "text": "MedicationDispense (Fill Status)"
+    },
+    {
+      "level": 3,
+      "text": "MedicationDispense (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "MedicationDispense (Verified Orders)"
+    },
+    {
+      "level": 3,
+      "text": "MedicationRequest (Order Template Medication)"
+    },
+    {
+      "level": 3,
+      "text": "MedicationRequest (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "MedicationRequest (Prior Auth)"
+    },
+    {
+      "level": 3,
+      "text": "MedicationRequest (Unsigned Medication Order)"
+    },
+    {
+      "level": 3,
+      "text": "MedicationRequest / MedicationOrder"
+    },
+    {
+      "level": 3,
+      "text": "MedicationStatement"
+    },
+    {
+      "level": 3,
+      "text": "NutritionOrder"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Activities of Daily Living)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Assessments)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Core Characteristics)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (DICOM Image Characteristics)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Family Situation)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Genomics)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Labor and Delivery)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Labs)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Lines, Drains, Airways)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Newborn Delivery)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Obstetrics and Gynecology)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Outside Record Activities of Daily Living)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Outside Record Occupation)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Outside Record Pregnancy Status)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Outside Record Results)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Outside Record Screening Assessment)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Outside Record SDOH Assessment)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Outside Record Sexual Orientation)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Outside Record Smoking Status)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Outside Record Vital Signs)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Periodontal)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Phenotype)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (SDOH Assessments)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (SmartData Elements)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Social History)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Study Finding)"
+    },
+    {
+      "level": 3,
+      "text": "Observation (Vital Signs)"
+    },
+    {
+      "level": 3,
+      "text": "Organization"
+    },
+    {
+      "level": 3,
+      "text": "Organization (Organizational Directory)"
+    },
+    {
+      "level": 3,
+      "text": "Organization (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "Patient (Demographics)"
+    },
+    {
+      "level": 3,
+      "text": "Patient (International Patient Summary)"
+    },
+    {
+      "level": 3,
+      "text": "Practitioner"
+    },
+    {
+      "level": 3,
+      "text": "Practitioner (Organizational Directory)"
+    },
+    {
+      "level": 3,
+      "text": "Practitioner (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "PractitionerRole"
+    },
+    {
+      "level": 3,
+      "text": "PractitionerRole (Organizational Directory)"
+    },
+    {
+      "level": 3,
+      "text": "PractitionerRole (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "Procedure (Nursing Intervention)"
+    },
+    {
+      "level": 3,
+      "text": "Procedure (Orders)"
+    },
+    {
+      "level": 3,
+      "text": "Procedure (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "Procedure (Patient-Reported Surgical History)"
+    },
+    {
+      "level": 3,
+      "text": "Procedure (Radiotherapy Summary)"
+    },
+    {
+      "level": 3,
+      "text": "Procedure (Restricting Intervention)"
+    },
+    {
+      "level": 3,
+      "text": "Procedure (SDOH Intervention)"
+    },
+    {
+      "level": 3,
+      "text": "Procedure (Surgeries)"
+    },
+    {
+      "level": 3,
+      "text": "ProcedureRequest (Unsigned Procedure Order)"
+    },
+    {
+      "level": 3,
+      "text": "Provenance"
+    },
+    {
+      "level": 3,
+      "text": "Questionnaire (Patient-Entered Questionnaires)"
+    },
+    {
+      "level": 3,
+      "text": "QuestionnaireResponse (Code Status Questionnaire)"
+    },
+    {
+      "level": 3,
+      "text": "QuestionnaireResponse (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "QuestionnaireResponse (Patient-Entered Questionnaires)"
+    },
+    {
+      "level": 3,
+      "text": "QuestionnaireResponse (Prior Auth)"
+    },
+    {
+      "level": 3,
+      "text": "Related Person (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "RelatedPerson (Friends and Family)"
+    },
+    {
+      "level": 3,
+      "text": "RelatedPerson (Proxy)"
+    },
+    {
+      "level": 3,
+      "text": "RequestGroup (Dental Visit)"
+    },
+    {
+      "level": 3,
+      "text": "RequestGroup (Oncology Plan Day)"
+    },
+    {
+      "level": 3,
+      "text": "ResearchStudy"
+    },
+    {
+      "level": 3,
+      "text": "ResearchSubject"
+    },
+    {
+      "level": 3,
+      "text": "Schedule"
+    },
+    {
+      "level": 3,
+      "text": "ServiceRequest (Community Resource ServiceRequest)"
+    },
+    {
+      "level": 3,
+      "text": "ServiceRequest (Dental Procedure)"
+    },
+    {
+      "level": 3,
+      "text": "ServiceRequest (Order Template Procedure)"
+    },
+    {
+      "level": 3,
+      "text": "ServiceRequest (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "ServiceRequest (Pregnancy Plans)"
+    },
+    {
+      "level": 3,
+      "text": "ServiceRequest (Prior Auth)"
+    },
+    {
+      "level": 3,
+      "text": "ServiceRequest (Radiotherapy Summary)"
+    },
+    {
+      "level": 3,
+      "text": "ServiceRequest (Referral)"
+    },
+    {
+      "level": 3,
+      "text": "ServiceRequest (Unsigned Procedure Order)"
+    },
+    {
+      "level": 3,
+      "text": "ServiceRequest / ProcedureRequest"
+    },
+    {
+      "level": 3,
+      "text": "ServiceRequest / ProcedureRequest (Orders)"
+    },
+    {
+      "level": 3,
+      "text": "Slot"
+    },
+    {
+      "level": 3,
+      "text": "Specimen"
+    },
+    {
+      "level": 3,
+      "text": "Specimen (Outside Record)"
+    },
+    {
+      "level": 3,
+      "text": "Specimen (Patient Chart)"
+    },
+    {
+      "level": 3,
+      "text": "Specimen (R4)"
+    },
+    {
+      "level": 3,
+      "text": "Substance"
+    },
+    {
+      "level": 3,
+      "text": "Task (Auxiliary Function Notification)"
+    },
+    {
+      "level": 3,
+      "text": "Task (Community Resource)"
+    },
+    {
+      "level": 3,
+      "text": "Task (Episode Checklist)"
+    },
+    {
+      "level": 3,
+      "text": "ValueSet (Supported Codes)"
+    }
+  ],
+  "siteName": "Epic on FHIR"
+}

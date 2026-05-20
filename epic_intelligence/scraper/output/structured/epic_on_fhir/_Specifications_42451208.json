@@ -1,0 +1,84 @@
+{
+  "url": "https://fhir.epic.com/Specifications",
+  "fileId": "_Specifications_42451208",
+  "title": "Specifications - Epic on FHIR",
+  "description": "",
+  "crawledAt": "2026-05-16T14:41:24.218Z",
+  "depth": 0,
+  "textLength": 11516,
+  "wordCount": 1570,
+  "links": [
+    "https://fhir.epic.com/Documentation?docId=usercontext",
+    "https://fhir.epic.com/Documentation?docId=patientfacingapps",
+    "https://fhir.epic.com/Documentation?docId=searchparameters",
+    "https://fhir.epic.com/FAQ",
+    "https://fhir.epic.com/Resources/Terms"
+  ],
+  "headings": [
+    {
+      "level": 3,
+      "text": "We couldn't find any APIs that match your search criteria."
+    },
+    {
+      "level": 3,
+      "text": "Select an API to get started."
+    },
+    {
+      "level": 3,
+      "text": ""
+    },
+    {
+      "level": 3,
+      "text": "Description"
+    },
+    {
+      "level": 3,
+      "text": "Native Request Elements"
+    },
+    {
+      "level": 3,
+      "text": "Post-filter Request Elements"
+    },
+    {
+      "level": 3,
+      "text": "Post-filter Request Elements"
+    },
+    {
+      "level": 3,
+      "text": "Native Request Elements"
+    },
+    {
+      "level": 3,
+      "text": "Types:"
+    },
+    {
+      "level": 3,
+      "text": "Types:"
+    },
+    {
+      "level": 3,
+      "text": "Remarks:"
+    },
+    {
+      "level": 3,
+      "text": "Errors"
+    },
+    {
+      "level": 3,
+      "text": "Faults:"
+    },
+    {
+      "level": 3,
+      "text": "Change Log:"
+    },
+    {
+      "level": 3,
+      "text": "Product Information"
+    },
+    {
+      "level": 2,
+      "text": "That API was not found. It may have moved or you may not have access to it."
+    }
+  ],
+  "siteName": "Epic on FHIR"
+}
