@@ -4,6 +4,21 @@ A queryable knowledge base over Epic developer documentation, used by
 the OPAL voice assistant to answer clinician questions about Epic
 behavior with verifiable citations back to the source page and section.
 
+> **End-user context:** This module is the backbone of every LYNA
+> clinical-staff journey. See [`INTELLIGENCE_LAYER.md`](../INTELLIGENCE_LAYER.md)
+> for the ten user stories that exercise it — bedside med lookup
+> (§4.1), float-nurse onboarding (§4.2), charge-nurse handoff in the
+> resource-offline window (§4.3), coming-on-shift sign-on (§4.4),
+> new-grad policy lookup (§4.5), surfacing a hospital AI tool the
+> nurse didn't know existed (§4.6), cardiac step-down rapid response
+> (§4.7), isolation-room broadcast (§4.8), a clean handoff to the
+> phone for a pressure-injury photo (§4.9), and an ad-hoc bedside
+> interpreter session at 03:00 (§4.10). Every story is anchored to
+> the I-Corps customer-discovery research (H1–H18). The query router,
+> citation strategy, FHIR fan-out, and per-site AI registry described
+> below are what make those stories work. UI specifications for each
+> journey live in `hardware/opalDevice/docs/ux/`.
+
 ## What this answers
 
 > "How does SMART on FHIR pass patient context at launch?"

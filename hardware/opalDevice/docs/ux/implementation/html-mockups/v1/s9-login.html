@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LYNA · S9 Login / Shift Start (3 steps)</title>
+<link rel="stylesheet" href="lyna.css">
+<style>
+  body.lyna-phone-page { flex-direction: row; flex-wrap: wrap; align-items: flex-start; }
+  .welcome-title {
+    font-size: 24px; font-weight: 700; color: var(--lyna-text);
+    text-align: center; margin: var(--s-7) 0 var(--s-4);
+  }
+  .badge-icon {
+    font-size: 64px; text-align: center; margin: var(--s-5) 0 var(--s-2);
+  }
+  .badge-tap-text {
+    text-align: center; font-size: 16px; color: var(--lyna-text-2); margin-bottom: var(--s-4);
+  }
+  .or-divider {
+    text-align: center; font-size: 13px; color: var(--lyna-text-3);
+    margin: var(--s-3) 0; position: relative;
+  }
+  .or-divider::before, .or-divider::after {
+    content: ''; position: absolute; top: 50%; width: 30%; height: 1px; background: var(--lyna-border);
+  }
+  .or-divider::before { left: var(--s-4); }
+  .or-divider::after  { right: var(--s-4); }
+  .pin-input {
+    margin: 0 var(--s-4); padding: 12px var(--s-3);
+    height: 48px; border: 1px solid var(--lyna-border-2);
+    border-radius: var(--r-2); font-size: 16px; color: var(--lyna-text-3);
+    text-align: center;
+  }
+  .vp-greeting {
+    font-size: 20px; font-weight: 600; text-align: center;
+    color: var(--lyna-text); margin: var(--s-7) 0 var(--s-3);
+  }
+  .vp-prompt {
+    font-size: 14px; color: var(--lyna-text-3); text-align: center; margin-bottom: var(--s-3);
+  }
+  .vp-sentence {
+    background: var(--lyna-surface-2); border-radius: var(--r-3);
+    padding: var(--s-3); margin: 0 var(--s-4) var(--s-4);
+    font-size: 16px; color: var(--lyna-text); line-height: 1.5; text-align: center;
+  }
+  .vp-record {
+    width: 96px; height: 96px; border-radius: 50%;
+    background: var(--lyna-normal); color: white;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 8px 24px rgba(37,99,235,0.32);
+  }
+  .vp-record .ico { font-size: 32px; }
+  .vp-record .lbl { font-size: 12px; font-weight: 600; }
+  .pa-title {
+    font-size: 22px; font-weight: 600; text-align: center;
+    color: var(--lyna-text); margin: var(--s-7) 0 var(--s-3);
+  }
+  .pa-card {
+    background: var(--lyna-surface); border-radius: var(--r-3);
+    padding: var(--s-3); margin: 0 var(--s-4) var(--s-4);
+  }
+  .pa-card .label { font-size: 13px; font-weight: 600; color: var(--lyna-text-3); margin-bottom: var(--s-2); }
+  .pa-card .item { font-size: 16px; color: var(--lyna-text); padding: var(--s-1) 0; }
+  .mode-radio {
+    margin: 0 var(--s-4) var(--s-2); padding: var(--s-3);
+    border: 1px solid var(--lyna-border); border-radius: var(--r-2);
+    display: flex; align-items: center; gap: var(--s-2);
+    font-size: 15px; color: var(--lyna-text);
+  }
+  .mode-radio.selected {
+    background: var(--lyna-normal-tint); border-color: var(--lyna-normal); color: var(--lyna-normal); font-weight: 600;
+  }
+  .mode-radio .dot {
+    width: 18px; height: 18px; border-radius: 50%;
+    border: 2px solid var(--lyna-border-2);
+  }
+  .mode-radio.selected .dot {
+    background: var(--lyna-normal); border-color: var(--lyna-normal);
+  }
+  .ready-btn {
+    height: 48px; border-radius: var(--r-3);
+    background: var(--lyna-normal); color: white;
+    font-size: 16px; font-weight: 600; border: none;
+    margin: var(--s-4) var(--s-4); width: calc(100% - 32px); display: block;
+  }
+</style>
+</head>
+<body class="lyna-phone-page">
+
+  <!-- Step 1: Badge tap / PIN -->
+  <div>
+    <div class="lyna-phone">
+      <div class="lyna-status-bar"><span class="lyna-time">6:55</span><span class="lyna-status-right">5G ▣ 100%</span></div>
+      <div class="lyna-app-content">
+        <div class="welcome-title">Welcome to LYNA</div>
+        <div class="badge-icon">👤</div>
+        <div class="badge-tap-text">Tap your badge to sign in</div>
+        <div class="or-divider">or</div>
+        <div class="pin-input">Enter PIN</div>
+        <div class="lyna-spacer"></div>
+      </div>
+      <div class="lyna-home-indicator"></div>
+    </div>
+    <div class="lyna-phone-frame-caption">S9.A — Step 1: Badge tap / PIN</div>
+  </div>
+
+  <!-- Step 2: Voiceprint check -->
+  <div>
+    <div class="lyna-phone">
+      <div class="lyna-status-bar"><span class="lyna-time">6:56</span><span class="lyna-status-right">5G ▣ 100%</span></div>
+      <div class="lyna-app-content">
+        <div class="vp-greeting">Hello, Sarah</div>
+        <div class="vp-prompt">Quick voice check — tap and read this aloud:</div>
+        <div class="vp-sentence">
+          "The quick brown fox jumps over the lazy dog at four-South this morning."
+        </div>
+        <div class="lyna-spacer"></div>
+        <div class="vp-record">
+          <div class="ico">🎤</div>
+          <div class="lbl">RECORD</div>
+        </div>
+        <div class="lyna-spacer"></div>
+      </div>
+      <div class="lyna-home-indicator"></div>
+    </div>
+    <div class="lyna-phone-frame-caption">S9.B — Step 2: Voiceprint verification</div>
+  </div>
+
+  <!-- Step 3: Patient assignment -->
+  <div>
+    <div class="lyna-phone">
+      <div class="lyna-status-bar"><span class="lyna-time">6:58</span><span class="lyna-status-right">5G ▣ 100%</span></div>
+      <div class="lyna-app-content">
+        <div class="pa-title">You're on 4-South tonight</div>
+        <div class="pa-card">
+          <div class="label">Your patients:</div>
+          <div class="item">── Bed 4 · Cruz, J.</div>
+          <div class="item">── Bed 7 · Garcia, M.</div>
+          <div class="item">── Bed 12 · Whitfield, A.</div>
+          <div class="item">── Bed 19 · Chen, K.</div>
+        </div>
+
+        <div class="lyna-section-header" style="padding-top:0">Mode at shift start</div>
+        <div class="mode-radio selected">
+          <div class="dot"></div>
+          <span>NORMAL</span>
+        </div>
+        <div class="mode-radio">
+          <div class="dot"></div>
+          <span>BROADCAST (pre-set)</span>
+        </div>
+        <div class="lyna-spacer"></div>
+        <button class="ready-btn">Ready</button>
+      </div>
+      <div class="lyna-home-indicator"></div>
+    </div>
+    <div class="lyna-phone-frame-caption">S9.C — Step 3: Patient assignment confirmation</div>
+  </div>
+
+</body>
+</html>

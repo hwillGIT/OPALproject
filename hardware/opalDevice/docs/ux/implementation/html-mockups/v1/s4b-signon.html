@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LYNA · S4.B Sign-on Brain Sheet (Jamal §4.4)</title>
+<link rel="stylesheet" href="lyna.css">
+<style>
+  .priority-card {
+    background: var(--lyna-warning-tint); border-radius: var(--r-3);
+    margin: var(--s-4); border-left: 4px solid var(--lyna-warning);
+    overflow: hidden;
+  }
+  .priority-card .ph {
+    background: var(--lyna-warning-tint); padding: var(--s-2) var(--s-3);
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.6px; color: var(--lyna-warning-deep);
+    border-bottom: 1px solid rgba(245,158,11,0.25);
+  }
+  .priority-card .pl { padding: var(--s-3); list-style: none; }
+  .priority-card .pl li {
+    display: flex; align-items: flex-start; gap: var(--s-2);
+    font-size: 15px; color: var(--lyna-text); padding: var(--s-2) 0;
+    line-height: 1.4;
+  }
+  .priority-card .check {
+    width: 18px; height: 18px; border: 2px solid var(--lyna-warning-deep);
+    border-radius: 3px; flex-shrink: 0; margin-top: 2px;
+  }
+  .pcard {
+    margin: 0 var(--s-4) var(--s-3); background: white;
+    border: 1px solid var(--lyna-border); border-radius: var(--r-3);
+    padding: var(--s-3);
+  }
+  .pcard h3 {
+    font-size: 16px; font-weight: 600; color: var(--lyna-text); margin-bottom: 2px;
+  }
+  .pcard .pcontext {
+    font-size: 13px; color: var(--lyna-text-3); margin-bottom: var(--s-2);
+  }
+  .pcard .pwarn {
+    font-size: 14px; color: var(--lyna-critical);
+    font-weight: 600; margin: var(--s-2) 0;
+  }
+  .pcard .pbody {
+    font-size: 14px; color: var(--lyna-text-2); line-height: 1.5; margin-bottom: var(--s-2);
+  }
+  .pcard .ptap {
+    font-size: 13px; color: var(--lyna-normal); font-weight: 500;
+    border-top: 1px solid var(--lyna-border); padding-top: var(--s-2); margin-top: var(--s-2);
+  }
+</style>
+</head>
+<body class="lyna-phone-page">
+  <div class="lyna-phone">
+    <div class="lyna-status-bar"><span class="lyna-time">7:05</span><span class="lyna-status-right">5G ▣ 92%</span></div>
+    <div class="lyna-app-content">
+      <div class="lyna-nav"><button>◀ Back</button><button>↻ Refresh</button></div>
+
+      <div class="lyna-brainsheet-header">
+        <h2>Jamal's 4 patients · 4-South</h2>
+        <div class="lyna-as-of">Sign-on at 07:05</div>
+      </div>
+
+      <div class="priority-card">
+        <div class="ph">⚡ Next 30 minutes</div>
+        <ul class="pl">
+          <li><span class="check"></span><span><strong>1.</strong> Verify oxycodone for bed 4 before 09:00</span></li>
+          <li><span class="check"></span><span><strong>2.</strong> Confirm bed 7's prep status with GI</span></li>
+          <li><span class="check"></span><span><strong>3.</strong> Bed 12 family meeting prep (10 AM)</span></li>
+        </ul>
+      </div>
+
+      <div class="pcard">
+        <h3>Bed 4 · Cruz, J. (67M)</h3>
+        <div class="pcontext">Day 3 post-CABG</div>
+        <div class="pwarn">⚠ Pain not controlled</div>
+        <div class="pbody">
+          PRN 4× overnight per Sarah's handoff. New order: oxycodone 5mg q6h (pending pharmacy).
+          Watch: resp rate, oversedation.
+        </div>
+        <a class="ptap">▸ Tap for full view</a>
+      </div>
+
+      <div class="pcard">
+        <h3>Bed 7 · Garcia, M. (54F)</h3>
+        <div class="pcontext">NPO since midnight · Colonoscopy 08:00</div>
+        <div class="pwarn">⚠ Prep incomplete (GI team aware)</div>
+        <a class="ptap">▸ Tap for full view</a>
+      </div>
+
+      <div class="pcard">
+        <h3>Bed 12 · Whitfield, A. (81F)</h3>
+        <div class="pcontext">ESRD on HD</div>
+        <div class="pbody">
+          Dialysis today 13:00 · K+ 5.1 yesterday · Family meeting 10 AM.
+        </div>
+        <a class="ptap">▸ Tap for full view</a>
+      </div>
+
+      <div class="pcard">
+        <h3>Bed 19 · Chen, K. (72M)</h3>
+        <div class="pcontext">Cardiac cath 09:30</div>
+        <div class="pbody">✓ Consent · ✓ NPO · No overnight events</div>
+        <a class="ptap">▸ Tap for full view</a>
+      </div>
+    </div>
+    <div class="lyna-home-indicator"></div>
+  </div>
+  <div class="lyna-phone-frame-caption">S4.B — Sign-on Brain Sheet (Jamal § 4.4 start-of-shift)</div>
+</body>
+</html>

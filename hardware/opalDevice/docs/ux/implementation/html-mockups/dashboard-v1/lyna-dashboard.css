@@ -1,0 +1,572 @@
+/* LYNA Manager Dashboard — shared CSS for v1 web prototype
+ * Mirrors manager-dashboard-screen-designs.md
+ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --lyna-normal: #2563EB;
+  --lyna-normal-tint: #EFF6FF;
+  --lyna-normal-deep: #1E40AF;
+  --lyna-broadcast: #F97316;
+  --lyna-broadcast-tint: #FFF7ED;
+  --lyna-interpreter: #9333EA;
+  --lyna-interpreter-tint: #FAF5FF;
+  --lyna-critical: #DC2626;
+  --lyna-critical-tint: #FEE2E2;
+  --lyna-critical-deep: #991B1B;
+  --lyna-success: #10B981;
+  --lyna-success-tint: #D1FAE5;
+  --lyna-warning: #F59E0B;
+  --lyna-warning-tint: #FEF3C7;
+  --lyna-warning-deep: #92400E;
+  --lyna-text: #111827;
+  --lyna-text-2: #374151;
+  --lyna-text-3: #6B7280;
+  --lyna-bg: #FFFFFF;
+  --lyna-bg-page: #F3F4F6;
+  --lyna-surface: #F9FAFB;
+  --lyna-surface-2: #F3F4F6;
+  --lyna-border: #E5E7EB;
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: var(--lyna-bg-page);
+  color: var(--lyna-text);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+a { color: var(--lyna-normal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ============== Layout: top bar + nav + main ============== */
+
+.dashboard {
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  min-height: 100vh;
+}
+
+.topbar {
+  background: var(--lyna-bg);
+  border-bottom: 1px solid var(--lyna-border);
+  padding: 12px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-row: 1;
+  grid-column: 1 / -1;
+}
+.topbar-left, .topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.topbar .logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.topbar .scope {
+  color: var(--lyna-text-2);
+  font-size: 15px;
+}
+.topbar .user-name {
+  font-weight: 500;
+  font-size: 15px;
+}
+.topbar .role-chip {
+  background: var(--lyna-surface-2);
+  color: var(--lyna-text-3);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.topbar .icon-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lyna-text-3);
+  font-size: 16px;
+}
+
+.body-row {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-row: 2;
+}
+
+.leftnav {
+  background: var(--lyna-surface);
+  border-right: 1px solid var(--lyna-border);
+  padding: 24px 0;
+}
+.leftnav a {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 24px;
+  font-size: 14px;
+  color: var(--lyna-text-2);
+  border-left: 4px solid transparent;
+  font-weight: 500;
+}
+.leftnav a:hover {
+  background: var(--lyna-surface-2);
+  text-decoration: none;
+}
+.leftnav a.active {
+  background: var(--lyna-normal-tint);
+  color: var(--lyna-normal);
+  font-weight: 600;
+  border-left: 4px solid var(--lyna-normal);
+}
+.leftnav .divider {
+  height: 1px;
+  background: var(--lyna-border);
+  margin: 16px 0;
+}
+.leftnav .group-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--lyna-text-3);
+  padding: 8px 24px 4px;
+}
+
+main.content {
+  padding: 24px 32px 40px;
+  overflow-y: auto;
+}
+
+/* ============== Page header ============== */
+
+.page-header h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--lyna-text);
+  margin-bottom: 6px;
+}
+.page-header .subtitle {
+  color: var(--lyna-text-3);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+/* ============== KPI strip ============== */
+
+.kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 16px 0 24px;
+}
+.kpi-card {
+  background: var(--lyna-bg);
+  border: 1px solid var(--lyna-border);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.kpi-card .kpi-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--lyna-text-3);
+}
+.kpi-card .kpi-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--lyna-text);
+  line-height: 1.1;
+  margin-top: 4px;
+}
+.kpi-card .kpi-delta {
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.kpi-card .kpi-delta.up    { color: var(--lyna-success); }
+.kpi-card .kpi-delta.down  { color: var(--lyna-critical); }
+.kpi-card .kpi-delta.flat  { color: var(--lyna-text-3); }
+.kpi-card .kpi-sub {
+  font-size: 13px;
+  color: var(--lyna-text-3);
+}
+
+/* ============== Filter pills ============== */
+
+.filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.filter-pill {
+  height: 36px;
+  padding: 0 16px;
+  background: var(--lyna-surface-2);
+  border: 1px solid var(--lyna-border);
+  border-radius: 18px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--lyna-text-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.filter-pill.active {
+  background: var(--lyna-normal-tint);
+  border-color: var(--lyna-normal);
+  color: var(--lyna-normal-deep);
+}
+
+/* ============== Cards (sectioned) ============== */
+
+.card {
+  background: var(--lyna-bg);
+  border: 1px solid var(--lyna-border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--lyna-text);
+  margin-bottom: 16px;
+}
+
+/* ============== Sparkline / trend bar ============== */
+
+.sparkline {
+  display: flex;
+  align-items: flex-end;
+  height: 48px;
+  gap: 2px;
+}
+.sparkline .bar {
+  flex: 1;
+  background: var(--lyna-normal);
+  opacity: 0.85;
+  border-radius: 2px 2px 0 0;
+  min-height: 4px;
+}
+.sparkline.orange .bar { background: var(--lyna-broadcast); }
+.sparkline.purple .bar { background: var(--lyna-interpreter); }
+
+/* ============== Trend chips ============== */
+
+.trend {
+  font-family: 'SF Mono', Monaco, Consolas, monospace;
+  font-weight: 700;
+  font-size: 14px;
+}
+.trend.up    { color: var(--lyna-success); }
+.trend.flat  { color: var(--lyna-text-3); }
+.trend.down  { color: var(--lyna-warning); }
+.trend.crash { color: var(--lyna-critical); }
+
+/* ============== Status pills (table rows) ============== */
+
+.status-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.status-pill.power     { background: var(--lyna-success-tint); color: #047857; }
+.status-pill.active    { background: var(--lyna-surface-2); color: var(--lyna-text-2); }
+.status-pill.watching  { background: var(--lyna-warning-tint); color: var(--lyna-warning-deep); }
+.status-pill.inactive  { background: var(--lyna-critical-tint); color: var(--lyna-critical-deep); }
+.status-pill.healthy   { background: var(--lyna-success-tint); color: #047857; }
+.status-pill.issues    { background: var(--lyna-warning-tint); color: var(--lyna-warning-deep); }
+.status-pill.notraffic { background: var(--lyna-warning-tint); color: var(--lyna-warning-deep); }
+.status-pill.lowcov    { background: var(--lyna-critical-tint); color: var(--lyna-critical-deep); }
+
+/* ============== Heatmap ============== */
+
+.heatmap {
+  display: grid;
+  grid-template-columns: 120px repeat(12, 32px);
+  gap: 4px;
+  align-items: center;
+}
+.heatmap .hm-row-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--lyna-text-2);
+  text-align: right;
+  padding-right: 8px;
+}
+.heatmap .hm-cell {
+  height: 24px;
+  border-radius: 4px;
+  background: var(--lyna-surface);
+}
+.heatmap .hm-cell.low    { background: #DBEAFE; }
+.heatmap .hm-cell.med    { background: #93C5FD; }
+.heatmap .hm-cell.high   { background: #3B82F6; }
+.heatmap .hm-cell.peak   { background: var(--lyna-normal-deep); }
+
+.heatmap-legend {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--lyna-text-3);
+}
+.heatmap-legend .swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+/* ============== Per-row tables (nurses, tools, audits) ============== */
+
+table.lyna-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table.lyna-table th {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--lyna-text-3);
+  text-align: left;
+  padding: 12px 8px;
+  background: var(--lyna-surface);
+  border-bottom: 1px solid var(--lyna-border);
+}
+table.lyna-table td {
+  font-size: 14px;
+  color: var(--lyna-text);
+  padding: 16px 8px;
+  border-bottom: 1px solid var(--lyna-surface-2);
+}
+table.lyna-table tr:hover td {
+  background: var(--lyna-surface);
+}
+
+/* ============== Buttons ============== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid var(--lyna-border);
+  background: var(--lyna-bg);
+  color: var(--lyna-text);
+}
+.btn.primary {
+  background: var(--lyna-normal);
+  color: white;
+  border-color: var(--lyna-normal);
+}
+.btn.success {
+  background: var(--lyna-success);
+  color: white;
+  border-color: var(--lyna-success);
+}
+.btn.large { height: 48px; padding: 0 24px; font-size: 16px; }
+
+/* ============== AI-tool card (D2 main pattern) ============== */
+
+.ai-tool-card {
+  background: var(--lyna-bg);
+  border: 1px solid var(--lyna-border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.ai-tool-card .header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.ai-tool-card .tool-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--lyna-text);
+}
+.ai-tool-card .tool-sub {
+  font-size: 13px;
+  color: var(--lyna-text-3);
+}
+.ai-tool-card .metric-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 16px 0;
+  margin: 16px 0;
+  border-top: 1px solid var(--lyna-border);
+}
+.ai-tool-card .metric-strip .metric-cell .metric-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--lyna-text-3);
+  margin-bottom: 4px;
+}
+.ai-tool-card .metric-strip .metric-cell .metric-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--lyna-text);
+}
+.ai-tool-card .callout {
+  background: var(--lyna-warning-tint);
+  border-left: 3px solid var(--lyna-warning);
+  padding: 12px;
+  border-radius: 0 8px 8px 0;
+  margin: 12px 0;
+  font-size: 14px;
+  color: var(--lyna-warning-deep);
+  line-height: 1.5;
+}
+.ai-tool-card .callout.critical {
+  background: var(--lyna-critical-tint);
+  border-left-color: var(--lyna-critical);
+  color: var(--lyna-critical-deep);
+}
+.ai-tool-card .drill {
+  font-size: 14px;
+  color: var(--lyna-normal);
+  font-weight: 500;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+/* ============== Distribution histogram (D4 / D6) ============== */
+
+.histogram {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 200px;
+  border-bottom: 1px solid var(--lyna-border);
+  margin-bottom: 8px;
+  position: relative;
+}
+.histogram .h-bar {
+  flex: 1;
+  background: var(--lyna-normal);
+  opacity: 0.8;
+  border-radius: 2px 2px 0 0;
+}
+.histogram .threshold {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 2px solid var(--lyna-critical);
+}
+.histogram-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--lyna-text-3);
+}
+
+/* ============== D10 Buyer ROI headline ============== */
+
+.roi-headline {
+  background: linear-gradient(to bottom, var(--lyna-normal-tint), #DBEAFE);
+  border: 1.5px solid var(--lyna-normal);
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+.roi-headline .label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--lyna-normal-deep);
+}
+.roi-headline .headline {
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--lyna-normal-deep);
+  margin: 8px 0 16px;
+  line-height: 1.2;
+}
+.roi-headline ul {
+  list-style: none;
+  font-size: 16px;
+  color: var(--lyna-text);
+}
+.roi-headline ul li { margin: 8px 0; }
+.roi-headline .trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(37,99,235,0.25);
+}
+.roi-headline .trio .item .item-label {
+  font-size: 12px;
+  color: var(--lyna-text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.roi-headline .trio .item .item-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--lyna-normal-deep);
+  margin-top: 4px;
+}
+
+.export-footer {
+  position: sticky;
+  bottom: 0;
+  background: white;
+  border-top: 1px solid var(--lyna-border);
+  padding: 12px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ============== Misc ============== */
+
+.divider { height: 1px; background: var(--lyna-border); margin: 16px 0; }
+.muted   { color: var(--lyna-text-3); }
+.warn    { color: var(--lyna-warning-deep); }
+.danger  { color: var(--lyna-critical); }
+.success { color: var(--lyna-success); }

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LYNA Dashboard · D7 Critical Alerts Audit</title>
+<link rel="stylesheet" href="lyna-dashboard.css">
+<style>
+  .event-card {
+    padding: 16px; border-bottom: 1px solid var(--lyna-surface-2);
+  }
+  .event-card:last-child { border-bottom: none; }
+  .event-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 8px;
+  }
+  .event-header .lhs { font-size: 13px; color: var(--lyna-text-3); }
+  .event-header .lhs .when { font-weight: 600; color: var(--lyna-text-2); }
+  .event-type-chip {
+    padding: 4px 12px; font-size: 12px; font-weight: 700;
+    border-radius: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .event-type-chip.rr { background: var(--lyna-critical-tint); color: var(--lyna-critical-deep); }
+  .event-type-chip.cb { background: #FECACA; color: #7F1D1D; }
+  .event-type-chip.fall { background: var(--lyna-warning-tint); color: var(--lyna-warning-deep); }
+  .event-summary { font-size: 16px; color: var(--lyna-text); margin-bottom: 8px; font-weight: 500; }
+  .event-paged, .event-protocol, .event-timing { font-size: 13px; color: var(--lyna-text-2); margin-bottom: 4px; }
+  .event-actions { margin-top: 12px; display: flex; gap: 16px; }
+</style>
+</head>
+<body>
+<div class="dashboard">
+  <header class="topbar">
+    <div class="topbar-left"><div class="logo">LYNA</div><div class="scope">Mt. Sinai · All units</div></div>
+    <div class="topbar-right"><span class="user-name">Patricia Owens</span><span class="role-chip">Quality</span><button class="icon-btn">⚙</button></div>
+  </header>
+  <div class="body-row">
+    <nav class="leftnav">
+      <a href="d1-adoption.html">Overview</a>
+      <a href="d2-ai-tools.html">AI tool routing</a>
+      <a href="d3-top-queries.html">Top queries</a>
+      <a href="d4-response-times.html">Response times</a>
+      <a href="d5-abandonment.html">Abandonment alerts</a>
+      <a href="d6-broadcast-coverage.html">Broadcast coverage</a>
+      <a href="d7-critical-audit.html" class="active">Critical alerts audit</a>
+      <a href="d8-interpreter-sessions.html">Interpreter sessions</a>
+      <a href="d9-per-tool.html">Per-tool detail</a>
+      <a href="d10-roi.html">Buyer ROI</a>
+      <div class="divider"></div><a>Settings</a>
+    </nav>
+
+    <main class="content">
+      <div class="page-header">
+        <h1>Critical alerts audit</h1>
+        <div class="subtitle">Read-only audit of every rapid response, code blue, or fall activation. Each event has an exportable PDF for the standard post-event review packet.</div>
+      </div>
+      <div class="filters">
+        <button class="filter-pill">Unit ▼</button>
+        <button class="filter-pill">Alert type ▼</button>
+        <button class="filter-pill active">30 days ▼</button>
+      </div>
+
+      <div class="card">
+        <h2>Event log</h2>
+
+        <div class="event-card">
+          <div class="event-header">
+            <div class="lhs"><span class="when">05-20 · 04:35</span> · 4-East / Bed 6 · Activator: <strong>Sofia C.</strong></div>
+            <span class="event-type-chip rr">Rapid Resp</span>
+          </div>
+          <div class="event-summary">ST changes, post-CABG day 2; HR 130, chest pain, diaphoretic</div>
+          <div class="event-paged">Paged: <strong>RRT ✓ · cardiology ✓ · charge ✓</strong></div>
+          <div class="event-protocol">Protocol: <strong>NU-CARD-014 (ACS)</strong> — surfaced ✓</div>
+          <div class="event-timing">ACKed in <strong>6s</strong> · ended 04:52</div>
+          <div class="event-actions"><a href="#">Open full event →</a><a href="#">Export PDF →</a></div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-header">
+            <div class="lhs"><span class="when">05-19 · 14:22</span> · 5-North / Bed 18 · Activator: <strong>Maria L.</strong></div>
+            <span class="event-type-chip cb">Code Blue</span>
+          </div>
+          <div class="event-summary">Cardiac arrest, witnessed; CPR started immediately</div>
+          <div class="event-paged">Paged: <strong>code team ✓ · attending ✓</strong></div>
+          <div class="event-protocol">Protocol: <strong>NU-CARD-002 (ACLS)</strong> — surfaced ✓</div>
+          <div class="event-timing">ACKed in <strong>4s</strong> · ended 14:38 (ROSC; transferred to CCU)</div>
+          <div class="event-actions"><a href="#">Open full event →</a><a href="#">Export PDF →</a></div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-header">
+            <div class="lhs"><span class="when">05-17 · 23:14</span> · 4-South / Bed 22 · Activator: <strong>Linh T.</strong></div>
+            <span class="event-type-chip fall">Fall</span>
+          </div>
+          <div class="event-summary">Witnessed fall from bed, head strike; neuro intact</div>
+          <div class="event-paged">Paged: <strong>charge nurse ✓</strong></div>
+          <div class="event-protocol">Protocol: <strong>NU-FALL-001</strong> — surfaced ✓ · IR filed within 30 min ✓</div>
+          <div class="event-actions"><a href="#">Open full event →</a><a href="#">Export PDF →</a></div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-header">
+            <div class="lhs"><span class="when">05-12 · 09:48</span> · 4-East / Bed 11 · Activator: <strong>Robert K.</strong></div>
+            <span class="event-type-chip rr">Rapid Resp</span>
+          </div>
+          <div class="event-summary">Hypotension 78/45, somnolent post-pain medication</div>
+          <div class="event-paged">Paged: <strong>RRT ✓ · attending ✓</strong></div>
+          <div class="event-protocol">Protocol: <strong>NU-HYP-008</strong> — surfaced ✓ · Naloxone discussed</div>
+          <div class="event-timing">ACKed in <strong>7s</strong> · ended 10:14</div>
+          <div class="event-actions"><a href="#">Open full event →</a><a href="#">Export PDF →</a></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Aggregate (this month)</h2>
+        <p style="font-size:15px;line-height:1.8">
+          14 activations — <strong>12 RR · 1 Code Blue · 1 Fall</strong><br>
+          Median time-to-ACK: <strong class="success">5.2s ✓</strong> (target ≤10s)<br>
+          Median time-to-RRT-arrive: <strong class="success">87s ✓</strong> (target ≤120s)<br>
+          All events have protocol surfaced: <strong class="success">✓</strong><br>
+          All events have post-event PDF available: <strong class="success">✓</strong>
+        </p>
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>

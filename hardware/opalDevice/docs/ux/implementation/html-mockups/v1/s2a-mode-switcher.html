@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LYNA · S2.A Mode Switcher</title>
+<link rel="stylesheet" href="lyna.css">
+<style>
+  .modal-backdrop { background: rgba(0,0,0,0.4); flex: 1; }
+  .mode-sheet {
+    background: white; border-radius: 24px 24px 0 0;
+    padding: var(--s-2) 0 var(--s-5); margin-top: auto;
+    box-shadow: 0 -8px 32px rgba(0,0,0,0.15);
+  }
+  .sheet-handle {
+    width: 36px; height: 4px; background: var(--lyna-border-2);
+    border-radius: 2px; margin: var(--s-2) auto var(--s-3);
+  }
+  .sheet-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: var(--s-2) var(--s-4) var(--s-4);
+  }
+  .sheet-title { font-size: 18px; font-weight: 600; color: var(--lyna-text); }
+  .mode-option {
+    margin: 0 var(--s-4) var(--s-3); padding: var(--s-4);
+    border-radius: var(--r-3); border: 1px solid var(--lyna-border);
+    background: white; cursor: pointer; min-height: 100px;
+  }
+  .mode-option.selected.normal {
+    background: var(--lyna-normal-tint); border: 2px solid var(--lyna-normal);
+  }
+  .mode-option.broadcast { color: var(--lyna-text); }
+  .mode-option.interpreter { color: var(--lyna-text); }
+  .mode-option-header {
+    display: flex; align-items: center; gap: var(--s-2); margin-bottom: var(--s-2);
+  }
+  .mode-dot {
+    width: 18px; height: 18px; border-radius: 50%;
+    border: 2px solid var(--lyna-border-2); flex-shrink: 0;
+  }
+  .mode-option.selected.normal .mode-dot {
+    background: var(--lyna-normal); border-color: var(--lyna-normal);
+  }
+  .mode-name { font-size: 16px; font-weight: 600; color: var(--lyna-text); }
+  .mode-option.selected.normal .mode-name { color: var(--lyna-normal); }
+  .mode-desc { font-size: 14px; color: var(--lyna-text-3); line-height: 1.4; margin-left: 26px; }
+  .mode-selector {
+    margin-left: 26px; margin-top: var(--s-3); padding: var(--s-2) var(--s-3);
+    background: var(--lyna-surface); border-radius: var(--r-2);
+    font-size: 14px; color: var(--lyna-text-3);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .mode-confirm-btn {
+    display: block; margin: var(--s-4) var(--s-4) 0;
+    height: 48px; border-radius: var(--r-3);
+    background: var(--lyna-normal); color: white; font-size: 16px; font-weight: 600;
+    border: none; cursor: pointer; width: calc(100% - 32px);
+  }
+</style>
+</head>
+<body class="lyna-phone-page">
+  <div class="lyna-phone">
+    <div class="lyna-status-bar"><span class="lyna-time">9:41</span><span class="lyna-status-right">5G ▣ 87%</span></div>
+    <div class="lyna-app-content modal-backdrop" style="display:flex;flex-direction:column">
+      <div class="lyna-spacer"></div>
+      <div class="mode-sheet">
+        <div class="sheet-handle"></div>
+        <div class="sheet-header">
+          <button style="color:var(--lyna-normal);font-size:16px">✕ Close</button>
+          <div class="sheet-title">Select mode</div>
+        </div>
+
+        <div class="mode-option selected normal">
+          <div class="mode-option-header">
+            <div class="mode-dot"></div>
+            <div class="mode-name">NORMAL</div>
+          </div>
+          <div class="mode-desc">Single-recipient queries and answers</div>
+        </div>
+
+        <div class="mode-option broadcast">
+          <div class="mode-option-header">
+            <div class="mode-dot"></div>
+            <div class="mode-name">BROADCAST</div>
+          </div>
+          <div class="mode-desc">Help requests to the whole unit</div>
+          <div class="mode-selector"><span>Group: All Nurses</span><span>▼</span></div>
+        </div>
+
+        <div class="mode-option interpreter">
+          <div class="mode-option-header">
+            <div class="mode-dot"></div>
+            <div class="mode-name">INTERPRETER</div>
+          </div>
+          <div class="mode-desc">Bidirectional ad-hoc translation</div>
+          <div class="mode-selector"><span>Language: Spanish</span><span>▼</span></div>
+        </div>
+
+        <button class="mode-confirm-btn">Confirm</button>
+      </div>
+    </div>
+    <div class="lyna-home-indicator"></div>
+  </div>
+  <div class="lyna-phone-frame-caption">S2.A — Mode switcher (bottom sheet, NORMAL selected)</div>
+</body>
+</html>

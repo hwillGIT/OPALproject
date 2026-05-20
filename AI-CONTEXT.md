@@ -1,6 +1,26 @@
 PROJECT: OPAL Project - SAFe PM System
 ROOT: G:\Projects\OPALproject\ProjectWork
 
+PRIMARY USER-FACING REFERENCE:
+- INTELLIGENCE_LAYER.md (repo root) — plain-English guide to the
+  OPAL Intelligence Layer + the 10 LYNA clinical-staff user stories
+  (Sarah/bedside med, Linh/float-nurse onboarding, Marcus/charge
+  handoff in resource-offline window, Jamal/coming-on-shift,
+  Tanya/new-grad policy lookup, Robert/AI-awareness-gap routing,
+  Sofia/cardiac-step-down rapid response, Priya/isolation-room
+  broadcast, Aisha/phone-camera handoff, Maya/bedside interpreter
+  session). Every story is anchored to the I-Corps customer-
+  discovery research (H1–H18, BMC V2 themes, Interview #1 and #2
+  transcripts). Uses Epic as the reference EHR throughout. Start
+  here for anyone new.
+
+UI / UX SPECIFICATIONS (v1 iPhone-app focus):
+- hardware/opalDevice/docs/ux/opal-interaction-flows.md — per-journey
+  v1 screen flows + reusable surface inventory (~10 surfaces).
+- hardware/opalDevice/docs/ux/manager-dashboard.md — web dashboard
+  spec for unit managers, CNOs, and clinical informatics (anchors:
+  H13 abandonment visibility, H6 AI-tool routing, H17/H18 utilization).
+
 SYSTEM CONFIGURATION:
 - Framework: SAFe 6.0
 - Location: .github/spec-kit/

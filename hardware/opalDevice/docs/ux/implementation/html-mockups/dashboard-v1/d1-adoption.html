@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LYNA Dashboard · D1 Adoption Overview</title>
+<link rel="stylesheet" href="lyna-dashboard.css">
+</head>
+<body>
+<div class="dashboard">
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="logo">LYNA</div>
+      <div class="scope">Mt. Sinai · 4-South</div>
+    </div>
+    <div class="topbar-right">
+      <span class="user-name">Marcus Wells</span>
+      <span class="role-chip">Mgr</span>
+      <button class="icon-btn" aria-label="Settings">⚙</button>
+    </div>
+  </header>
+
+  <div class="body-row">
+
+    <nav class="leftnav">
+      <a href="d1-adoption.html" class="active">Overview</a>
+      <a href="d2-ai-tools.html">AI tool routing</a>
+      <a>Top queries</a>
+      <a>Response times</a>
+      <a>Abandonment alerts</a>
+      <a>Broadcast coverage</a>
+      <a>Critical alerts audit</a>
+      <a>Interpreter sessions</a>
+      <a>Per-tool detail</a>
+      <a href="d10-roi.html">Buyer ROI</a>
+      <div class="divider"></div>
+      <a>Settings</a>
+    </nav>
+
+    <main class="content">
+      <div class="page-header">
+        <h1>Adoption overview</h1>
+        <div class="subtitle">Are nurses actually using LYNA on my unit?</div>
+      </div>
+
+      <div class="kpi-strip">
+        <div class="kpi-card">
+          <div class="kpi-label">Active today</div>
+          <div class="kpi-value">34</div>
+          <div class="kpi-delta up">▲ 4</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Queries today</div>
+          <div class="kpi-value">287</div>
+          <div class="kpi-delta up">▲ 23</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Queries / nurse / shift</div>
+          <div class="kpi-value">8.4</div>
+          <div class="kpi-delta up">▲ 1.2</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Time saved vs baseline</div>
+          <div class="kpi-value">~24 min</div>
+          <div class="kpi-sub">per RN per shift (median)</div>
+        </div>
+      </div>
+
+      <div class="filters">
+        <button class="filter-pill">Unit ▼</button>
+        <button class="filter-pill">Shift ▼</button>
+        <button class="filter-pill active">7 days ▼</button>
+        <button class="filter-pill">Role: All ▼</button>
+      </div>
+
+      <div class="card">
+        <h2>Trend (queries per day, last 90d)</h2>
+        <div class="sparkline" style="height:120px">
+          <!-- 90 bars sampled -->
+          <div class="bar" style="height:32%"></div>
+          <div class="bar" style="height:40%"></div>
+          <div class="bar" style="height:38%"></div>
+          <div class="bar" style="height:36%"></div>
+          <div class="bar" style="height:44%"></div>
+          <div class="bar" style="height:48%"></div>
+          <div class="bar" style="height:52%"></div>
+          <div class="bar" style="height:58%"></div>
+          <div class="bar" style="height:60%"></div>
+          <div class="bar" style="height:62%"></div>
+          <div class="bar" style="height:55%"></div>
+          <div class="bar" style="height:48%"></div>
+          <div class="bar" style="height:45%"></div>
+          <div class="bar" style="height:52%"></div>
+          <div class="bar" style="height:62%"></div>
+          <div class="bar" style="height:70%"></div>
+          <div class="bar" style="height:75%"></div>
+          <div class="bar" style="height:72%"></div>
+          <div class="bar" style="height:68%"></div>
+          <div class="bar" style="height:65%"></div>
+          <div class="bar" style="height:70%"></div>
+          <div class="bar" style="height:78%"></div>
+          <div class="bar" style="height:82%"></div>
+          <div class="bar" style="height:80%"></div>
+          <div class="bar" style="height:75%"></div>
+          <div class="bar" style="height:70%"></div>
+          <div class="bar" style="height:74%"></div>
+          <div class="bar" style="height:78%"></div>
+          <div class="bar" style="height:82%"></div>
+          <div class="bar" style="height:88%"></div>
+          <div class="bar" style="height:90%"></div>
+          <div class="bar" style="height:85%"></div>
+          <div class="bar" style="height:82%"></div>
+          <div class="bar" style="height:78%"></div>
+          <div class="bar" style="height:82%"></div>
+          <div class="bar" style="height:88%"></div>
+          <div class="bar" style="height:92%"></div>
+          <div class="bar" style="height:95%"></div>
+          <div class="bar" style="height:90%"></div>
+          <div class="bar" style="height:92%"></div>
+        </div>
+        <div class="histogram-axis" style="margin-top:4px">
+          <span>Feb 20</span><span>Mar 20</span><span>Apr 20</span><span>May 20</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Per-unit activity heatmap (hour of day)</h2>
+        <div class="heatmap">
+          <span class="hm-row-label">Hour</span>
+          <span class="muted" style="font-size:11px;">00</span>
+          <span class="muted" style="font-size:11px;">02</span>
+          <span class="muted" style="font-size:11px;">04</span>
+          <span class="muted" style="font-size:11px;">06</span>
+          <span class="muted" style="font-size:11px;">08</span>
+          <span class="muted" style="font-size:11px;">10</span>
+          <span class="muted" style="font-size:11px;">12</span>
+          <span class="muted" style="font-size:11px;">14</span>
+          <span class="muted" style="font-size:11px;">16</span>
+          <span class="muted" style="font-size:11px;">18</span>
+          <span class="muted" style="font-size:11px;">20</span>
+          <span class="muted" style="font-size:11px;">22</span>
+
+          <span class="hm-row-label">4-South</span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell low"></span>
+          <span class="hm-cell med"></span>
+          <span class="hm-cell peak"></span>
+          <span class="hm-cell high"></span>
+          <span class="hm-cell med"></span>
+          <span class="hm-cell peak"></span>
+          <span class="hm-cell high"></span>
+          <span class="hm-cell low"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+
+          <span class="hm-row-label">4-East</span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell low"></span>
+          <span class="hm-cell med"></span>
+          <span class="hm-cell peak"></span>
+          <span class="hm-cell peak"></span>
+          <span class="hm-cell peak"></span>
+          <span class="hm-cell high"></span>
+          <span class="hm-cell low"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+
+          <span class="hm-row-label">5-North</span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell low"></span>
+          <span class="hm-cell med"></span>
+          <span class="hm-cell peak"></span>
+          <span class="hm-cell peak"></span>
+          <span class="hm-cell peak"></span>
+          <span class="hm-cell peak"></span>
+          <span class="hm-cell high"></span>
+          <span class="hm-cell low"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+
+          <span class="hm-row-label">6-South</span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell low"></span>
+          <span class="hm-cell med"></span>
+          <span class="hm-cell peak"></span>
+          <span class="hm-cell high"></span>
+          <span class="hm-cell med"></span>
+          <span class="hm-cell low"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+
+          <span class="hm-row-label">Tower-3</span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell low"></span>
+          <span class="hm-cell med"></span>
+          <span class="hm-cell peak"></span>
+          <span class="hm-cell high"></span>
+          <span class="hm-cell low"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+          <span class="hm-cell"></span>
+        </div>
+        <div class="heatmap-legend">
+          <span><span class="swatch" style="background:var(--lyna-surface)"></span>none</span>
+          <span><span class="swatch" style="background:#DBEAFE"></span>low (1–3)</span>
+          <span><span class="swatch" style="background:#93C5FD"></span>medium (4–10)</span>
+          <span><span class="swatch" style="background:#3B82F6"></span>high (11–25)</span>
+          <span><span class="swatch" style="background:var(--lyna-normal-deep)"></span>peak (>25)</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Per-nurse activity (4-South, last 7 days)</h2>
+        <table class="lyna-table">
+          <thead>
+            <tr><th>Nurse</th><th>Role</th><th>Last 7d</th><th>Trend</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Sarah M.</td><td>RN</td><td>84</td><td><span class="trend up">▲▲▲</span></td><td><span class="status-pill power">Power user</span></td></tr>
+            <tr><td>Linh T.</td><td>RN</td><td>62</td><td><span class="trend up">▲▲</span></td><td><span class="status-pill active">Active</span></td></tr>
+            <tr><td>Tanya R.</td><td>RN</td><td>41</td><td><span class="trend flat">─</span></td><td><span class="status-pill active">Active</span></td></tr>
+            <tr><td>Robert K.</td><td>RN</td><td>38</td><td><span class="trend up">▲</span></td><td><span class="status-pill active">Active</span></td></tr>
+            <tr><td>Marcus W.</td><td>Charge</td><td>34</td><td><span class="trend up">▲</span></td><td><span class="status-pill active">Active</span></td></tr>
+            <tr><td>Maya T.</td><td>RN</td><td>22</td><td><span class="trend down">▼▼</span></td><td><span class="status-pill watching">Watching</span></td></tr>
+            <tr><td>Devon P.</td><td>PCA</td><td>12</td><td><span class="trend down">▼</span></td><td><span class="status-pill watching">Watching</span></td></tr>
+            <tr><td>Yvonne L.</td><td>Secretary</td><td>3</td><td><span class="trend crash">▼▼▼</span></td><td><span class="status-pill inactive">Inactive</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>

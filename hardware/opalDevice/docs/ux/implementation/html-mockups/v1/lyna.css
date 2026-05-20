@@ -1,0 +1,828 @@
+/* LYNA v1 — shared design system for iPhone-app HTML mockups
+ * Mirrors design-tokens.json and opal-screen-designs-v1.md
+ */
+
+/* ====================== Reset + base ====================== */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #1f2937;
+  color: #111827;
+  line-height: 1.4;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ====================== LYNA design tokens ====================== */
+
+:root {
+  /* Mode primary colors */
+  --lyna-normal:     #2563EB;
+  --lyna-normal-tint:#EFF6FF;
+  --lyna-broadcast:  #F97316;
+  --lyna-broadcast-tint:#FFF7ED;
+  --lyna-interpreter:#9333EA;
+  --lyna-interpreter-tint:#FAF5FF;
+  --lyna-critical:   #DC2626;
+  --lyna-critical-tint:#FEE2E2;
+  --lyna-critical-deep:#991B1B;
+
+  /* Semantic */
+  --lyna-success:    #10B981;
+  --lyna-success-tint:#D1FAE5;
+  --lyna-warning:    #F59E0B;
+  --lyna-warning-tint:#FEF3C7;
+  --lyna-warning-deep:#92400E;
+  --lyna-info:       #3B82F6;
+
+  /* Neutrals */
+  --lyna-text:       #111827;
+  --lyna-text-2:     #374151;
+  --lyna-text-3:     #6B7280;
+  --lyna-bg:         #FFFFFF;
+  --lyna-surface:    #F9FAFB;
+  --lyna-surface-2:  #F3F4F6;
+  --lyna-border:     #E5E7EB;
+  --lyna-border-2:   #D1D5DB;
+
+  /* Spacing baseline 8pt */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+
+  /* Radii */
+  --r-1: 4px;
+  --r-2: 8px;
+  --r-3: 12px;
+  --r-4: 16px;
+  --r-pill: 999px;
+
+  /* Shadows */
+  --shadow-talk: 0 8px 24px rgba(37, 99, 235, 0.32);
+  --shadow-card: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-modal:0 8px 32px rgba(0,0,0,0.16);
+  --shadow-ack:  0 8px 24px rgba(220, 38, 38, 0.25);
+}
+
+/* ====================== Phone frame ====================== */
+
+body.lyna-phone-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--s-6);
+  flex-direction: column;
+  gap: var(--s-5);
+}
+
+.lyna-phone {
+  width: 390px;
+  height: 844px;
+  background: var(--lyna-bg);
+  border-radius: 48px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45), 0 0 0 12px #111;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.lyna-phone-frame-caption {
+  color: #9CA3AF;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* iOS status bar */
+.lyna-status-bar {
+  height: 47px;
+  background: var(--lyna-bg);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 28px 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--lyna-text);
+  position: relative;
+}
+.lyna-status-bar::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  transform: translateX(-50%);
+  width: 125px;
+  height: 30px;
+  background: #000;
+  border-radius: 999px;
+}
+.lyna-status-bar .lyna-time {
+  position: relative;
+  z-index: 1;
+}
+.lyna-status-bar .lyna-status-right {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* Home indicator */
+.lyna-home-indicator {
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lyna-home-indicator::before {
+  content: '';
+  width: 134px;
+  height: 5px;
+  background: #111827;
+  border-radius: 3px;
+}
+
+/* ====================== App chrome ====================== */
+
+.lyna-app-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.lyna-app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--s-3) var(--s-4);
+  height: 56px;
+  flex-shrink: 0;
+}
+.lyna-app-header .lyna-logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--lyna-text);
+}
+.lyna-app-header .lyna-settings {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lyna-text-3);
+  font-size: 20px;
+}
+
+.lyna-identity {
+  padding: 0 var(--s-4) var(--s-3);
+}
+.lyna-identity .lyna-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--lyna-text);
+}
+.lyna-identity .lyna-meta {
+  font-size: 13px;
+  color: var(--lyna-text-3);
+  margin-top: 2px;
+}
+
+/* Nav header for sub-screens */
+.lyna-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--s-3) var(--s-4);
+  height: 44px;
+  font-size: 16px;
+  color: var(--lyna-normal);
+  flex-shrink: 0;
+}
+.lyna-nav button {
+  color: var(--lyna-normal);
+  font-size: 16px;
+  font-weight: 400;
+  background: none;
+}
+
+/* ====================== Mode pill ====================== */
+
+.lyna-mode-pill {
+  margin: 0 var(--s-4);
+  height: 44px;
+  border-radius: var(--r-pill);
+  border: 1.5px solid var(--lyna-normal);
+  background: var(--lyna-normal-tint);
+  color: var(--lyna-normal);
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  cursor: pointer;
+}
+.lyna-mode-pill.broadcast {
+  border-color: var(--lyna-broadcast);
+  background: var(--lyna-broadcast-tint);
+  color: var(--lyna-broadcast);
+}
+.lyna-mode-pill.interpreter {
+  border-color: var(--lyna-interpreter);
+  background: var(--lyna-interpreter-tint);
+  color: var(--lyna-interpreter);
+}
+
+/* ====================== Section header ====================== */
+
+.lyna-section-header {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--lyna-text-3);
+  padding: var(--s-4) var(--s-4) var(--s-2);
+}
+
+/* ====================== Recent / list rows ====================== */
+
+.lyna-list {
+  background: var(--lyna-bg);
+  border-top: 1px solid var(--lyna-border);
+  border-bottom: 1px solid var(--lyna-border);
+  margin: var(--s-2) 0;
+}
+.lyna-list .lyna-row {
+  padding: var(--s-3) var(--s-4);
+  font-size: 16px;
+  color: var(--lyna-text);
+  border-bottom: 1px solid var(--lyna-border);
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  min-height: 44px;
+}
+.lyna-list .lyna-row:last-child { border-bottom: none; }
+
+/* ====================== Quick action tiles ====================== */
+
+.lyna-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-3);
+  padding: 0 var(--s-4);
+}
+.lyna-tile {
+  background: var(--lyna-surface);
+  border-radius: var(--r-3);
+  height: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-1);
+  color: var(--lyna-text);
+}
+.lyna-tile .lyna-tile-icon { font-size: 28px; }
+.lyna-tile .lyna-tile-label { font-size: 13px; }
+
+/* ====================== TALK button ====================== */
+
+.lyna-talk-area {
+  margin-top: auto;
+  padding: 0 var(--s-4) var(--s-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-2);
+}
+.lyna-talk-btn {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--lyna-normal);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: var(--shadow-talk);
+}
+.lyna-talk-btn .lyna-talk-icon { font-size: 36px; }
+.lyna-talk-btn .lyna-talk-label {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.lyna-talk-caption {
+  font-size: 13px;
+  color: var(--lyna-text-3);
+}
+
+/* ====================== Response card ====================== */
+
+.lyna-card {
+  background: var(--lyna-bg);
+  border-radius: var(--r-3);
+  border: 1px solid var(--lyna-border);
+  padding: var(--s-4);
+  margin: 0 var(--s-4) var(--s-3);
+  box-shadow: var(--shadow-card);
+}
+
+.lyna-quote {
+  background: var(--lyna-surface-2);
+  border-left: 3px solid var(--lyna-text-3);
+  padding: var(--s-3);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--lyna-text-3);
+  border-radius: 0 var(--r-2) var(--r-2) 0;
+  margin-bottom: var(--s-3);
+}
+
+.lyna-patient-header {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--lyna-text);
+  margin-bottom: var(--s-3);
+}
+
+.lyna-field-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--lyna-text-3);
+  margin: var(--s-3) 0 var(--s-1);
+}
+.lyna-field-value-bold {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--lyna-text);
+}
+.lyna-field-value-detail {
+  font-size: 16px;
+  color: var(--lyna-text-3);
+  margin-top: var(--s-1);
+}
+
+/* AI-source pills */
+.lyna-ai-pill {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  height: 36px;
+  padding: 0 var(--s-3);
+  border-radius: var(--r-pill);
+  background: var(--lyna-surface-2);
+  border: 1px solid var(--lyna-border);
+  color: var(--lyna-text-2);
+  font-size: 14px;
+  font-weight: 500;
+  margin: var(--s-3) 0;
+}
+.lyna-ai-pill.hospital-ai {
+  background: var(--lyna-warning-tint);
+  border: 1.5px solid var(--lyna-warning);
+  color: var(--lyna-warning-deep);
+  height: auto;
+  min-height: 56px;
+  padding: var(--s-2) var(--s-3);
+  border-radius: var(--r-3);
+  align-items: flex-start;
+  line-height: 1.35;
+}
+.lyna-ai-pill.hospital-ai .lyna-pill-icon { font-size: 18px; }
+
+.lyna-warning-row {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--lyna-critical);
+  margin: var(--s-3) 0;
+}
+
+.lyna-citation {
+  font-size: 12px;
+  color: var(--lyna-text-3);
+  line-height: 1.4;
+  margin-top: var(--s-3);
+}
+
+.lyna-btn {
+  display: block;
+  width: 100%;
+  height: 48px;
+  border-radius: var(--r-3);
+  border: 1.5px solid var(--lyna-normal);
+  background: white;
+  color: var(--lyna-normal);
+  font-size: 16px;
+  font-weight: 600;
+}
+.lyna-btn.primary {
+  background: var(--lyna-normal);
+  color: white;
+  border: none;
+}
+.lyna-btn.critical {
+  background: var(--lyna-critical);
+  color: white;
+  border: none;
+}
+.lyna-btn.success {
+  background: var(--lyna-success);
+  color: white;
+  border: none;
+}
+
+.lyna-card-actions {
+  margin-top: var(--s-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+/* ====================== Brain sheet ====================== */
+
+.lyna-brainsheet-header {
+  padding: var(--s-3) var(--s-4) var(--s-2);
+  background: var(--lyna-bg);
+  border-bottom: 1px solid var(--lyna-border);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.lyna-brainsheet-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--lyna-text);
+}
+.lyna-brainsheet-header .lyna-as-of {
+  font-size: 13px;
+  color: var(--lyna-text-3);
+  margin-top: 2px;
+}
+.lyna-kpi-strip {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--lyna-text);
+  margin-top: var(--s-2);
+}
+
+.lyna-section {
+  margin: var(--s-4) var(--s-4) 0;
+  border-radius: var(--r-3);
+  background: var(--lyna-bg);
+  border: 1px solid var(--lyna-border);
+  overflow: hidden;
+}
+.lyna-section-bar {
+  height: 36px;
+  padding: 0 var(--s-3);
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.lyna-section.critical .lyna-section-bar {
+  background: var(--lyna-critical-tint);
+  color: var(--lyna-critical-deep);
+}
+.lyna-section.warning .lyna-section-bar {
+  background: var(--lyna-warning-tint);
+  color: var(--lyna-warning-deep);
+}
+.lyna-section.info .lyna-section-bar {
+  background: #DBEAFE;
+  color: #1E40AF;
+}
+.lyna-section.purple .lyna-section-bar {
+  background: #F3E8FF;
+  color: #6B21A8;
+}
+
+.lyna-patient-row {
+  padding: var(--s-3);
+  border-bottom: 1px solid var(--lyna-border);
+}
+.lyna-patient-row:last-child { border-bottom: none; }
+
+.lyna-patient-row .lyna-patient-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--lyna-text);
+  margin-bottom: 4px;
+}
+.lyna-patient-row .lyna-patient-body {
+  font-size: 14px;
+  color: var(--lyna-text-2);
+  line-height: 1.45;
+}
+.lyna-patient-row .lyna-patient-warning {
+  color: var(--lyna-critical);
+  font-weight: 500;
+}
+.lyna-patient-row .lyna-tap-link {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--lyna-normal);
+  margin-top: var(--s-2);
+  font-weight: 500;
+}
+
+.lyna-priority-list {
+  padding: var(--s-3);
+}
+.lyna-priority-list li {
+  list-style: none;
+  font-size: 14px;
+  padding: var(--s-2) 0;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  color: var(--lyna-text);
+}
+
+/* ====================== Critical alert ====================== */
+
+body.lyna-critical-alert .lyna-app-content {
+  background: var(--lyna-critical-tint);
+  align-items: center;
+  justify-content: center;
+  padding: var(--s-5);
+  text-align: center;
+  gap: var(--s-3);
+}
+.lyna-alert-border {
+  position: absolute;
+  inset: 47px 0 34px 0;
+  border: 6px solid var(--lyna-critical);
+  border-radius: var(--r-3);
+  pointer-events: none;
+  animation: pulseborder 1.2s ease-in-out infinite;
+}
+@keyframes pulseborder {
+  0%, 100% { opacity: 0.4; }
+  50%      { opacity: 1; }
+}
+.lyna-alert-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--lyna-critical);
+}
+.lyna-alert-location {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--lyna-text);
+}
+.lyna-alert-patient {
+  font-size: 18px;
+  color: var(--lyna-text-2);
+  margin-top: -8px;
+}
+.lyna-alert-clinical {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--lyna-text);
+  background: white;
+  padding: var(--s-3);
+  border-radius: var(--r-3);
+  line-height: 1.5;
+  margin: var(--s-2) 0;
+}
+.lyna-alert-context {
+  font-size: 14px;
+  color: var(--lyna-text-2);
+  line-height: 1.6;
+}
+.lyna-ack-btn {
+  width: 280px;
+  height: 88px;
+  border-radius: var(--r-4);
+  background: var(--lyna-critical);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow-ack);
+  margin-top: var(--s-3);
+}
+.lyna-alert-secondary-btn {
+  padding: var(--s-2) var(--s-4);
+  font-size: 16px;
+  color: var(--lyna-critical);
+  border: 1.5px solid var(--lyna-critical);
+  border-radius: var(--r-3);
+  height: 44px;
+}
+.lyna-alert-actions {
+  display: flex;
+  gap: var(--s-3);
+}
+.lyna-alert-timestamp {
+  font-size: 12px;
+  color: var(--lyna-text-3);
+}
+
+/* ====================== Broadcast (S6a) ====================== */
+
+.lyna-broadcast-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--lyna-broadcast);
+  padding: 0 var(--s-4);
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.lyna-broadcast-echo {
+  background: var(--lyna-broadcast-tint);
+  border-left: 3px solid var(--lyna-broadcast);
+  padding: var(--s-3);
+  font-size: 16px;
+  color: var(--lyna-text);
+  margin: var(--s-3) var(--s-4);
+  border-radius: 0 var(--r-2) var(--r-2) 0;
+}
+
+.lyna-roster {
+  background: var(--lyna-surface);
+  border: 1px solid var(--lyna-border);
+  border-radius: var(--r-3);
+  margin: 0 var(--s-4);
+  padding: var(--s-3);
+}
+.lyna-roster .lyna-roster-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--lyna-text);
+  margin-bottom: var(--s-2);
+  padding-bottom: var(--s-2);
+  border-bottom: 1px solid var(--lyna-border);
+}
+.lyna-roster .lyna-roster-row {
+  font-size: 16px;
+  color: var(--lyna-text);
+  padding: var(--s-2) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.lyna-roster .lyna-roster-row .lyna-status-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid var(--lyna-text-3);
+  background: transparent;
+  flex-shrink: 0;
+}
+.lyna-roster .lyna-roster-row.acked .lyna-status-dot {
+  background: var(--lyna-success);
+  border-color: var(--lyna-success);
+}
+.lyna-roster .lyna-roster-row.acked {
+  color: var(--lyna-success);
+  font-weight: 600;
+}
+
+.lyna-broadcast-covered {
+  background: var(--lyna-success-tint);
+  border-left: 3px solid var(--lyna-success);
+  padding: var(--s-3);
+  margin: var(--s-3) var(--s-4);
+  border-radius: 0 var(--r-2) var(--r-2) 0;
+  color: var(--lyna-text);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ====================== Interpreter session (S7.B) ====================== */
+
+.lyna-interpreter-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--lyna-interpreter);
+  padding: 0 var(--s-4) var(--s-1);
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+.lyna-interpreter-sub {
+  font-size: 13px;
+  color: var(--lyna-text-3);
+  padding: 0 var(--s-4);
+}
+.lyna-interpreter-audio {
+  font-size: 13px;
+  color: var(--lyna-text-2);
+  font-weight: 500;
+  padding: var(--s-3) var(--s-4);
+}
+
+.lyna-transcript {
+  background: var(--lyna-surface);
+  border: 1px solid var(--lyna-border);
+  border-radius: var(--r-3);
+  margin: 0 var(--s-4);
+  padding: var(--s-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+.lyna-turn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+}
+.lyna-turn-header {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--lyna-text);
+}
+.lyna-turn-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid var(--lyna-text-3);
+}
+.lyna-turn.active .lyna-turn-dot {
+  background: var(--lyna-success);
+  border-color: var(--lyna-success);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50%      { opacity: 1; }
+}
+.lyna-turn-text {
+  font-size: 16px;
+  color: var(--lyna-text);
+  padding-left: 18px;
+}
+.lyna-turn-translation {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--lyna-text-3);
+  padding-left: 36px;
+  margin-top: 2px;
+}
+.lyna-turn-translation::before { content: '↳  '; }
+
+.lyna-interpreter-footer {
+  font-size: 13px;
+  color: var(--lyna-text-3);
+  padding: var(--s-3) var(--s-4) 0;
+}
+
+.lyna-interpreter-queue-btn {
+  display: block;
+  height: 48px;
+  border-radius: var(--r-3);
+  border: 1.5px solid var(--lyna-interpreter);
+  background: white;
+  color: var(--lyna-interpreter);
+  font-size: 16px;
+  font-weight: 500;
+  margin: var(--s-3) var(--s-4);
+}
+
+/* ====================== Utility ====================== */
+
+.lyna-spacer  { flex: 1; }
+.lyna-pad     { padding: var(--s-4); }
+.lyna-px-4    { padding-left: var(--s-4); padding-right: var(--s-4); }
+.lyna-divider { height: 1px; background: var(--lyna-border); }

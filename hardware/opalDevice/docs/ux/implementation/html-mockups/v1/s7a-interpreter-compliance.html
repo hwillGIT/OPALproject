@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LYNA · S7.A Interpreter Compliance</title>
+<link rel="stylesheet" href="lyna.css">
+<style>
+  .modal-backdrop { background: rgba(0,0,0,0.5); flex: 1; padding: var(--s-5); display: flex; align-items: center; justify-content: center; }
+  .compliance-card {
+    background: white; border-radius: var(--r-4);
+    padding: var(--s-5);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    max-width: 320px;
+  }
+  .cc-title {
+    font-size: 20px; font-weight: 600; color: var(--lyna-text);
+    margin-bottom: var(--s-3);
+  }
+  .cc-body {
+    font-size: 15px; color: var(--lyna-text-2); line-height: 1.5;
+    margin-bottom: var(--s-3);
+  }
+  .cc-emphasis {
+    font-size: 15px; color: var(--lyna-text); font-weight: 500; line-height: 1.5;
+    margin-bottom: var(--s-3);
+    padding: var(--s-3);
+    background: var(--lyna-interpreter-tint);
+    border-left: 3px solid var(--lyna-interpreter);
+    border-radius: 0 var(--r-2) var(--r-2) 0;
+  }
+  .cc-tip {
+    font-size: 13px; color: var(--lyna-text-3); line-height: 1.5;
+    margin-bottom: var(--s-4);
+  }
+  .cc-confirm-btn {
+    display: block; width: 100%;
+    height: 48px; border-radius: var(--r-3);
+    background: var(--lyna-interpreter); color: white;
+    font-size: 16px; font-weight: 600; border: none;
+  }
+</style>
+</head>
+<body class="lyna-phone-page">
+  <div class="lyna-phone">
+    <div class="lyna-status-bar"><span class="lyna-time">3:00</span><span class="lyna-status-right">5G ▣ 62%</span></div>
+    <div class="lyna-app-content modal-backdrop">
+      <div class="compliance-card">
+        <div class="cc-title">🌐 Interpreter mode</div>
+        <div class="cc-body">
+          I'll machine-translate between English and Spanish.
+        </div>
+        <div class="cc-body">
+          Use this for ad-hoc bedside clarification only.
+        </div>
+        <div class="cc-emphasis">
+          For consent, discharge teaching, or clinical decisions, you need a certified interpreter.
+        </div>
+        <div class="cc-tip">
+          ▸ Say "queue interpreter" at any time and I'll route you to the hospital interpreter service.
+        </div>
+        <button class="cc-confirm-btn">Got it</button>
+      </div>
+    </div>
+    <div class="lyna-home-indicator"></div>
+  </div>
+  <div class="lyna-phone-frame-caption">S7.A — Interpreter compliance modal (shown once per session)</div>
+</body>
+</html>

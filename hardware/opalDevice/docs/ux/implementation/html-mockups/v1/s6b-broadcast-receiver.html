@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LYNA · S6b Broadcast Receiver Banner</title>
+<link rel="stylesheet" href="lyna.css">
+<style>
+  .receiver-banner {
+    background: var(--lyna-broadcast-tint);
+    border-bottom: 1px solid var(--lyna-broadcast);
+    padding: var(--s-3) var(--s-4);
+  }
+  .receiver-banner .rtitle {
+    font-size: 14px; font-weight: 600; color: var(--lyna-text);
+    margin-bottom: 2px;
+  }
+  .receiver-banner .rbody {
+    font-size: 13px; color: var(--lyna-text-2); margin-bottom: var(--s-2);
+  }
+  .receiver-banner .rbuttons {
+    display: flex; gap: var(--s-2);
+  }
+  .receiver-banner .rbuttons button {
+    flex: 1; height: 44px; border-radius: var(--r-2); font-weight: 600;
+  }
+  .receiver-banner .rbuttons .ack {
+    background: var(--lyna-broadcast); color: white;
+    border: none;
+  }
+  .receiver-banner .rbuttons .pass {
+    background: white; color: var(--lyna-text-3);
+    border: 1px solid var(--lyna-border-2);
+  }
+</style>
+</head>
+<body class="lyna-phone-page">
+  <div class="lyna-phone">
+    <div class="lyna-status-bar"><span class="lyna-time">9:20</span><span class="lyna-status-right">5G ▣ 87%</span></div>
+    <div class="lyna-app-content">
+
+      <!-- Receiver banner (non-modal, at top) -->
+      <div class="receiver-banner">
+        <div class="rtitle">📢 Priya · 305 (iso)</div>
+        <div class="rbody">Needs 10mL saline flush</div>
+        <div class="rbuttons">
+          <button class="ack">Acknowledge</button>
+          <button class="pass">Pass</button>
+        </div>
+      </div>
+
+      <!-- The underlying home screen continues below -->
+      <div class="lyna-app-header">
+        <div class="lyna-logo">LYNA</div>
+        <button class="lyna-settings">⚙</button>
+      </div>
+      <div class="lyna-identity">
+        <div class="lyna-name">Devon P.</div>
+        <div class="lyna-meta">4-South · Day Shift · PCA</div>
+      </div>
+      <button class="lyna-mode-pill">Mode: NORMAL <span>▼</span></button>
+      <div class="lyna-section-header">Recent</div>
+      <div class="lyna-list">
+        <div class="lyna-row">Vitals due for bed 18</div>
+        <div class="lyna-row">Glucose check bed 7</div>
+      </div>
+      <div class="lyna-spacer"></div>
+      <div class="lyna-talk-area">
+        <button class="lyna-talk-btn">
+          <div class="lyna-talk-icon">🎤</div>
+          <div class="lyna-talk-label">TALK</div>
+        </button>
+        <div class="lyna-talk-caption">"Hey LYNA" — always listening</div>
+      </div>
+    </div>
+    <div class="lyna-home-indicator"></div>
+  </div>
+  <div class="lyna-phone-frame-caption">S6b — Receiver banner on Devon's home screen (first-tap-wins ack)</div>
+</body>
+</html>

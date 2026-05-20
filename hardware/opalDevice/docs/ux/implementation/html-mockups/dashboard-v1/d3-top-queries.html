@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LYNA Dashboard · D3 Top Queries</title>
+<link rel="stylesheet" href="lyna-dashboard.css">
+<style>
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .query-row {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding: 12px 8px; border-bottom: 1px solid var(--lyna-surface-2);
+    font-size: 14px;
+  }
+  .query-row .num { color: var(--lyna-text-3); font-weight: 600; margin-right: 12px; }
+  .query-row .body { flex: 1; }
+  .query-row .body .text { color: var(--lyna-text); font-weight: 500; margin-bottom: 2px; }
+  .query-row .body .meta { color: var(--lyna-text-3); font-size: 12px; }
+  .query-row .actions { display: flex; gap: 8px; flex-shrink: 0; }
+  .query-row .actions a { font-size: 12px; }
+  .card.unanswered .card-header-bar {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--lyna-warning-tint);
+    color: var(--lyna-warning-deep);
+    padding: 12px 16px; margin: -24px -24px 16px;
+    border-radius: 12px 12px 0 0;
+    font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .card.answered .card-header-bar {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--lyna-success-tint);
+    color: #047857;
+    padding: 12px 16px; margin: -24px -24px 16px;
+    border-radius: 12px 12px 0 0;
+    font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .urgent-tag {
+    background: var(--lyna-critical-tint); color: var(--lyna-critical-deep);
+    padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 700;
+    display: inline-block; margin-left: 4px;
+  }
+</style>
+</head>
+<body>
+<div class="dashboard">
+  <header class="topbar">
+    <div class="topbar-left"><div class="logo">LYNA</div><div class="scope">Mt. Sinai · All units</div></div>
+    <div class="topbar-right"><span class="user-name">Lisa Kim</span><span class="role-chip">NI</span><button class="icon-btn">⚙</button></div>
+  </header>
+  <div class="body-row">
+    <nav class="leftnav">
+      <a href="d1-adoption.html">Overview</a>
+      <a href="d2-ai-tools.html">AI tool routing</a>
+      <a href="d3-top-queries.html" class="active">Top queries</a>
+      <a href="d4-response-times.html">Response times</a>
+      <a href="d5-abandonment.html">Abandonment alerts</a>
+      <a href="d6-broadcast-coverage.html">Broadcast coverage</a>
+      <a href="d7-critical-audit.html">Critical alerts audit</a>
+      <a href="d8-interpreter-sessions.html">Interpreter sessions</a>
+      <a href="d9-per-tool.html">Per-tool detail</a>
+      <a href="d10-roi.html">Buyer ROI</a>
+      <div class="divider"></div>
+      <a>Settings</a>
+    </nav>
+    <main class="content">
+      <div class="page-header">
+        <h1>Top queries</h1>
+        <div class="subtitle">What are nurses asking — and what aren't we answering?</div>
+      </div>
+      <div class="filters">
+        <button class="filter-pill">Unit ▼</button>
+        <button class="filter-pill">Shift ▼</button>
+        <button class="filter-pill active">7 days ▼</button>
+        <button class="filter-pill">Role ▼</button>
+        <button class="filter-pill">Answered: All ▼</button>
+      </div>
+
+      <div class="two-col">
+        <div class="card answered">
+          <div class="card-header-bar">✓ Most asked (answered)</div>
+          <div class="query-row"><span class="num">1.</span><div class="body"><div class="text">"Last pain med for bed N"</div><div class="meta">142× · ↗ 4-South, 4-East</div></div><div class="actions"><a href="#">View samples</a></div></div>
+          <div class="query-row"><span class="num">2.</span><div class="body"><div class="text">"Door code med room"</div><div class="meta">98× · ↗ all units</div></div><div class="actions"><a href="#">View samples</a></div></div>
+          <div class="query-row"><span class="num">3.</span><div class="body"><div class="text">"Policy for med refusal"</div><div class="meta">67× · ↗ Tanya, Linh, +5</div></div><div class="actions"><a href="#">View samples</a></div></div>
+          <div class="query-row"><span class="num">4.</span><div class="body"><div class="text">"Charge nurse tonight"</div><div class="meta">52×</div></div><div class="actions"><a href="#">View</a></div></div>
+          <div class="query-row"><span class="num">5.</span><div class="body"><div class="text">"Drug interaction check"</div><div class="meta">48×</div></div><div class="actions"><a href="#">View</a></div></div>
+          <div class="query-row"><span class="num">6.</span><div class="body"><div class="text">"Sign-on summary"</div><div class="meta">41× · charge nurses</div></div><div class="actions"><a href="#">View</a></div></div>
+          <div class="query-row"><span class="num">7.</span><div class="body"><div class="text">"Sterile dressing location"</div><div class="meta">37× · float pool</div></div><div class="actions"><a href="#">View</a></div></div>
+          <div style="text-align:center;margin-top:16px"><a href="#">Show all 50 →</a></div>
+        </div>
+
+        <div class="card unanswered">
+          <div class="card-header-bar">⚠ Unanswered (knowledge gaps)</div>
+          <div class="query-row"><span class="num">1.</span><div class="body"><div class="text">"Where's the suction cart on 4-South?"</div><div class="meta">14× · 4-South night</div></div><div class="actions"><a href="#">Add to KB</a></div></div>
+          <div class="query-row"><span class="num">2.</span><div class="body"><div class="text">"Pyxis override code"</div><div class="meta">9× · 4-South, 5-North</div></div><div class="actions"><a href="#">Add to KB</a><a href="#" class="danger">Flag?</a></div></div>
+          <div class="query-row"><span class="num">3.</span><div class="body"><div class="text">"Sterile dressing supply on 6-East"</div><div class="meta">7× · 6-East floats</div></div><div class="actions"><a href="#">Add to KB</a></div></div>
+          <div class="query-row"><span class="num">4.</span><div class="body"><div class="text">"Vincristine extrav protocol"<span class="urgent-tag">URGENT</span></div><div class="meta">5× · 5-North oncology</div></div><div class="actions"><a href="#">Add to KB</a></div></div>
+          <div class="query-row"><span class="num">5.</span><div class="body"><div class="text">"Cooler temp for blood products"</div><div class="meta">4× · OR, ED</div></div><div class="actions"><a href="#">Add to KB</a></div></div>
+          <div class="query-row"><span class="num">6.</span><div class="body"><div class="text">"On-call CRNA tonight"</div><div class="meta">3× · L&D</div></div><div class="actions"><a href="#">Add to KB</a></div></div>
+          <div style="text-align:center;margin-top:16px"><button class="btn primary">Export gaps to NI →</button></div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>
