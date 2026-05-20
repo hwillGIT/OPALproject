@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LYNA Dashboard · D2 AI Tool Routing</title>
+<link rel="stylesheet" href="lyna-dashboard.css">
+</head>
+<body>
+<div class="dashboard">
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="logo">LYNA</div>
+      <div class="scope">Mt. Sinai · All units</div>
+    </div>
+    <div class="topbar-right">
+      <span class="user-name">Dr. Ramirez</span>
+      <span class="role-chip">CCIO</span>
+      <button class="icon-btn" aria-label="Settings">⚙</button>
+    </div>
+  </header>
+
+  <div class="body-row">
+
+    <nav class="leftnav">
+      <a href="d1-adoption.html">Overview</a>
+      <a href="d2-ai-tools.html" class="active">AI tool routing</a>
+      <a>Top queries</a>
+      <a>Response times</a>
+      <a>Abandonment alerts</a>
+      <a>Broadcast coverage</a>
+      <a>Critical alerts audit</a>
+      <a>Interpreter sessions</a>
+      <a>Per-tool detail</a>
+      <a href="d10-roi.html">Buyer ROI</a>
+      <div class="divider"></div>
+      <a>Settings</a>
+    </nav>
+
+    <main class="content">
+      <div class="page-header">
+        <h1>AI tool routing</h1>
+        <div class="subtitle">Which hospital AI tools are LYNA's nurses routing through — and which ones nobody knew were there?</div>
+      </div>
+
+      <div class="filters">
+        <button class="filter-pill">Unit ▼</button>
+        <button class="filter-pill active">30 days ▼</button>
+        <button class="filter-pill">Tool category ▼</button>
+      </div>
+
+      <!-- Card 1: Healthy tool with traffic -->
+      <div class="ai-tool-card">
+        <div class="header">
+          <div>
+            <div class="tool-name">Nursing Reference AI</div>
+            <div class="tool-sub">Registry ID: NU-AI-014 · Vendor: [vendor name] · Integration: Epic + phone app</div>
+          </div>
+          <span class="status-pill issues">⚠ 2 issues this week</span>
+        </div>
+        <div class="metric-strip">
+          <div class="metric-cell"><div class="metric-label">Routed today</div><div class="metric-value">24</div></div>
+          <div class="metric-cell"><div class="metric-label">7 days</div><div class="metric-value">142</div></div>
+          <div class="metric-cell"><div class="metric-label">30 days</div><div class="metric-value">587</div></div>
+          <div class="metric-cell"><div class="metric-label">Coverage</div><div class="metric-value success">84% ✓</div></div>
+          <div class="metric-cell"><div class="metric-label">First-time exposures</div><div class="metric-value">12 nurses</div></div>
+        </div>
+        <div class="sparkline">
+          <div class="bar" style="height:55%"></div>
+          <div class="bar" style="height:60%"></div>
+          <div class="bar" style="height:58%"></div>
+          <div class="bar" style="height:65%"></div>
+          <div class="bar" style="height:62%"></div>
+          <div class="bar" style="height:58%"></div>
+          <div class="bar" style="height:55%"></div>
+          <div class="bar" style="height:72%"></div>
+          <div class="bar" style="height:80%"></div>
+          <div class="bar" style="height:82%"></div>
+          <div class="bar" style="height:78%"></div>
+          <div class="bar" style="height:75%"></div>
+          <div class="bar" style="height:82%"></div>
+          <div class="bar" style="height:90%"></div>
+          <div class="bar" style="height:88%"></div>
+          <div class="bar" style="height:82%"></div>
+          <div class="bar" style="height:78%"></div>
+          <div class="bar" style="height:75%"></div>
+          <div class="bar" style="height:88%"></div>
+          <div class="bar" style="height:92%"></div>
+          <div class="bar" style="height:90%"></div>
+          <div class="bar" style="height:88%"></div>
+          <div class="bar" style="height:82%"></div>
+          <div class="bar" style="height:85%"></div>
+          <div class="bar" style="height:90%"></div>
+          <div class="bar" style="height:92%"></div>
+          <div class="bar" style="height:88%"></div>
+          <div class="bar" style="height:90%"></div>
+          <div class="bar" style="height:95%"></div>
+          <div class="bar" style="height:80%"></div>
+        </div>
+        <a class="drill" href="#">Drill into detail →</a>
+      </div>
+
+      <!-- Card 2: Healthy tool -->
+      <div class="ai-tool-card">
+        <div class="header">
+          <div>
+            <div class="tool-name">Clinical Imaging AI</div>
+            <div class="tool-sub">Registry ID: NU-AI-008 · Integration: Epic Haiku</div>
+          </div>
+          <span class="status-pill healthy">✓ Healthy</span>
+        </div>
+        <div class="metric-strip">
+          <div class="metric-cell"><div class="metric-label">Routed today</div><div class="metric-value">8</div></div>
+          <div class="metric-cell"><div class="metric-label">7 days</div><div class="metric-value">47</div></div>
+          <div class="metric-cell"><div class="metric-label">30 days</div><div class="metric-value">198</div></div>
+          <div class="metric-cell"><div class="metric-label">Coverage</div><div class="metric-value success">92% ✓</div></div>
+          <div class="metric-cell"><div class="metric-label">First-time exposures</div><div class="metric-value">4 nurses</div></div>
+        </div>
+        <div class="sparkline">
+          <div class="bar" style="height:32%"></div>
+          <div class="bar" style="height:38%"></div>
+          <div class="bar" style="height:35%"></div>
+          <div class="bar" style="height:42%"></div>
+          <div class="bar" style="height:48%"></div>
+          <div class="bar" style="height:45%"></div>
+          <div class="bar" style="height:50%"></div>
+          <div class="bar" style="height:52%"></div>
+          <div class="bar" style="height:55%"></div>
+          <div class="bar" style="height:58%"></div>
+          <div class="bar" style="height:60%"></div>
+          <div class="bar" style="height:55%"></div>
+          <div class="bar" style="height:52%"></div>
+          <div class="bar" style="height:62%"></div>
+          <div class="bar" style="height:65%"></div>
+          <div class="bar" style="height:68%"></div>
+          <div class="bar" style="height:55%"></div>
+          <div class="bar" style="height:58%"></div>
+          <div class="bar" style="height:60%"></div>
+          <div class="bar" style="height:62%"></div>
+          <div class="bar" style="height:65%"></div>
+          <div class="bar" style="height:60%"></div>
+          <div class="bar" style="height:55%"></div>
+          <div class="bar" style="height:58%"></div>
+          <div class="bar" style="height:62%"></div>
+          <div class="bar" style="height:68%"></div>
+          <div class="bar" style="height:70%"></div>
+          <div class="bar" style="height:65%"></div>
+          <div class="bar" style="height:60%"></div>
+          <div class="bar" style="height:55%"></div>
+        </div>
+        <a class="drill" href="#">Drill into detail →</a>
+      </div>
+
+      <!-- Card 3: No traffic -->
+      <div class="ai-tool-card">
+        <div class="header">
+          <div>
+            <div class="tool-name">Sepsis Predict AI</div>
+            <div class="tool-sub">Registry ID: NU-AI-022 · Integration: Epic CDS Hooks</div>
+          </div>
+          <span class="status-pill notraffic">🟡 No traffic 14d</span>
+        </div>
+        <div class="metric-strip">
+          <div class="metric-cell"><div class="metric-label">Routed today</div><div class="metric-value">0</div></div>
+          <div class="metric-cell"><div class="metric-label">7 days</div><div class="metric-value">0</div></div>
+          <div class="metric-cell"><div class="metric-label">30 days</div><div class="metric-value">0</div></div>
+          <div class="metric-cell"><div class="metric-label">Coverage</div><div class="metric-value warn">0%</div></div>
+          <div class="metric-cell"><div class="metric-label">First-time exposures</div><div class="metric-value">0</div></div>
+        </div>
+        <div class="callout">
+          ⚠ No queries routed through this tool in 14 days. Possible causes: tool not
+          surfaced for any intent the router matches; or hospital just deployed it.
+        </div>
+        <a class="drill" href="#">Investigate →</a> &nbsp;
+        <a class="drill" href="#">Drill into detail →</a>
+      </div>
+
+      <!-- Card 4: Coverage low -->
+      <div class="ai-tool-card">
+        <div class="header">
+          <div>
+            <div class="tool-name">Cardiac Decision Support</div>
+            <div class="tool-sub">Registry ID: NU-AI-031 · Integration: Epic + intranet</div>
+          </div>
+          <span class="status-pill lowcov">🔴 Coverage 41% (low)</span>
+        </div>
+        <div class="metric-strip">
+          <div class="metric-cell"><div class="metric-label">Routed today</div><div class="metric-value">3</div></div>
+          <div class="metric-cell"><div class="metric-label">7 days</div><div class="metric-value">19</div></div>
+          <div class="metric-cell"><div class="metric-label">30 days</div><div class="metric-value">78</div></div>
+          <div class="metric-cell"><div class="metric-label">Coverage</div><div class="metric-value danger">41% ⚠</div></div>
+          <div class="metric-cell"><div class="metric-label">First-time exposures</div><div class="metric-value">2 nurses</div></div>
+        </div>
+        <div class="callout critical">
+          ⚠ Only 41% of queries this tool should answer were routed through it. Falling back to LYNA native. Possible causes: registry entry too narrow; intent classifier missing edge cases; API errors.
+        </div>
+        <a class="drill" href="#">Investigate →</a>
+      </div>
+
+      <div style="margin-top:24px">
+        <span class="muted">Sort: </span>
+        <button class="filter-pill active">Volume ▼</button>
+        <button class="filter-pill">Coverage</button>
+        <button class="filter-pill">First-time exposures</button>
+        <button class="filter-pill">Issues</button>
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>

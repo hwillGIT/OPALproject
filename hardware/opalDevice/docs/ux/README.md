@@ -65,6 +65,20 @@ assumes v3 will eventually provide (ACK button, broadcast button,
 RFID, bone-conduction audio, paired patient earpiece). The eventual
 v3 design pass (post-v1 pilot) starts from this inventory.
 
+### **[claude-design-briefs.md](claude-design-briefs.md)**
+Paste-ready briefs for **Claude Design** (claude.ai/design),
+condensed from the wireframes + screen specs. One brief per v1
+surface (S1.A–S10) + one per dashboard view (D1–D10) + three
+composite journey flows. Each brief includes the LYNA design
+system block, sample copy, and concrete component layout.
+
+### **[implementation/html-mockups/index.html](implementation/html-mockups/index.html)** — INTERACTIVE PROTOTYPE
+First-pass HTML/CSS mocks for the v1 iPhone surfaces (6 screens
+covering the highest-impact moments — S1.A, S3.B, S4.A, S5.A,
+S6a, S7.B) and 3 dashboard views (D1, D2, D10). Open in any
+browser to demo the design. Shared CSS uses the LYNA design
+tokens directly. Remaining surfaces follow the same pattern.
+
 ---
 
 ## v3 reference material (dedicated LYNA badge — deferred design pass)

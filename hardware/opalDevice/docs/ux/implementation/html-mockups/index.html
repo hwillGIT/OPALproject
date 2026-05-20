@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LYNA — HTML Mockups Index</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+    background: #F3F4F6;
+    color: #111827;
+    -webkit-font-smoothing: antialiased;
+  }
+  header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #E5E7EB;
+    padding: 24px 48px;
+  }
+  header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  header p {
+    color: #6B7280;
+    margin-top: 4px;
+    font-size: 15px;
+    max-width: 800px;
+  }
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 48px 64px;
+  }
+  .section {
+    margin-bottom: 48px;
+  }
+  .section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .section .desc {
+    color: #6B7280;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 700px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .tile {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: #111827;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    display: block;
+  }
+  .tile:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-color: #2563EB;
+  }
+  .tile .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #2563EB;
+    background: #EFF6FF;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  .tile.broadcast .tag { background: #FFF7ED; color: #F97316; }
+  .tile.interpreter .tag { background: #FAF5FF; color: #9333EA; }
+  .tile.critical .tag { background: #FEE2E2; color: #DC2626; }
+  .tile .name {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .tile .desc-row {
+    color: #6B7280;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .badge-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .badge {
+    font-size: 12px;
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #374151;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>LYNA — HTML Mockups</h1>
+  <p>
+    Working prototypes against the design specs in this directory's parent.
+    v1 iPhone-app surfaces and Manager Dashboard views, rendered against the
+    LYNA design tokens. Click any tile to open the mock in a new tab.
+  </p>
+  <div class="badge-row" style="margin-top:16px">
+    <span class="badge">Form factor: v1 iPhone</span>
+    <span class="badge">Companion to: opal-interaction-flows.md</span>
+    <span class="badge">Status: First-pass prototype</span>
+  </div>
+</header>
+
+<main>
+
+  <section class="section">
+    <h2>v1 iPhone surfaces</h2>
+    <p class="desc">
+      Six representative surfaces covering the highest-impact moments of the
+      ten LYNA clinical-staff journeys. Each renders inside an iPhone 14
+      frame (390 × 844 pt).
+    </p>
+    <div class="grid">
+
+      <a class="tile" href="v1/s1a-home.html" target="_blank">
+        <span class="tag">S1.A · NORMAL</span>
+        <div class="name">Home — Sarah, 4-South Night Shift</div>
+        <div class="desc-row">Foundation surface. Identity, mode pill, recent queries, quick actions, large TALK button.</div>
+      </a>
+
+      <a class="tile" href="v1/s3b-ai-pill.html" target="_blank">
+        <span class="tag">S3.B · AI ROUTING</span>
+        <div class="name">Response Card — Robert §4.6</div>
+        <div class="desc-row">Hospital AI-source pill dramatizes the H6 awareness gap. Names the integrated reference AI; cites multi-source provenance.</div>
+      </a>
+
+      <a class="tile" href="v1/s4a-brain-sheet.html" target="_blank">
+        <span class="tag">S4.A · BRAIN SHEET</span>
+        <div class="name">Unit Brain Sheet — Marcus §4.3</div>
+        <div class="desc-row">28-patient handoff in one scroll. Color-coded sections (issues / NPO / discharges / admits). Replaces 20 minutes of paper-and-chart-scanning.</div>
+      </a>
+
+      <a class="tile critical" href="v1/s5a-critical-alert.html" target="_blank">
+        <span class="tag">S5.A · CRITICAL ALERT</span>
+        <div class="name">Rapid Response — Sofia §4.7</div>
+        <div class="desc-row">Full-screen takeover, pulsing red border, large ACK button. Cardiac step-down (4-East), not ICU — per BMC V2 beachhead.</div>
+      </a>
+
+      <a class="tile broadcast" href="v1/s6a-broadcast.html" target="_blank">
+        <span class="tag">S6a · BROADCAST</span>
+        <div class="name">Isolation Broadcast — Priya §4.8</div>
+        <div class="desc-row">Sender's ack tracker after broadcasting from an isolation room. First-acknowledge-wins; logged for unit responsiveness metrics.</div>
+      </a>
+
+      <a class="tile interpreter" href="v1/s7b-interpreter.html" target="_blank">
+        <span class="tag">S7.B · INTERPRETER</span>
+        <div class="name">Bidirectional Session — Maya §4.10</div>
+        <div class="desc-row">Active-speaker indicator, bilingual transcript, "queue certified interpreter" affordance. Title VI compliant scope.</div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Manager dashboard views</h2>
+    <p class="desc">
+      Three representative views from the 10-view dashboard spec. Built for
+      desktop / large-tablet at 1440 × 900 minimum.
+    </p>
+    <div class="grid">
+
+      <a class="tile" href="dashboard-v1/d1-adoption.html" target="_blank">
+        <span class="tag">D1 · ADOPTION</span>
+        <div class="name">Adoption Overview — Marcus, 4-South Mgr</div>
+        <div class="desc-row">"Are nurses actually using LYNA?" KPI strip, 90-day trend, per-unit hour-of-day heatmap, per-nurse table with abandonment-watch chips.</div>
+      </a>
+
+      <a class="tile" href="dashboard-v1/d2-ai-tools.html" target="_blank">
+        <span class="tag">D2 · AI TOOL ROUTING</span>
+        <div class="name">AI Tool Routing — Dr. Ramirez, CCIO</div>
+        <div class="desc-row">Most strategically important view for vendor renewals. Per-tool card, coverage, first-time exposures, sparkline trends, "no traffic" + "coverage low" warnings.</div>
+      </a>
+
+      <a class="tile" href="dashboard-v1/d10-roi.html" target="_blank">
+        <span class="tag">D10 · BUYER ROI</span>
+        <div class="name">Buyer-facing ROI — CCIO budget packet</div>
+        <div class="desc-row">Headline card with time-saved estimate; sensitivity bounds; calculation breakdown anchored to I-Corps benchmarks; PDF export footer.</div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>What's not yet built (open follow-ups)</h2>
+    <p class="desc">
+      First pass covers the highest-impact surfaces. Remaining surfaces and
+      dashboard views can be filled in with the same shared CSS — each ~150
+      lines of HTML against the existing tokens.
+    </p>
+    <div class="grid">
+      <div class="tile" style="border-style:dashed;cursor:default">
+        <span class="tag" style="background:#F3F4F6;color:#6B7280">v1 PENDING</span>
+        <div class="name">S1.B/C/D, S2.A, S3.A/C, S4.B, S5.B/C, S6b, S7.A, S8, S9, S10</div>
+        <div class="desc-row">Voice surface states, mode-switcher modal, simpler response cards, brain-sheet variant, post-ACK banner, broadcast receiver banner, interpreter compliance modal, camera handoff banner, login flow, settings.</div>
+      </div>
+      <div class="tile" style="border-style:dashed;cursor:default">
+        <span class="tag" style="background:#F3F4F6;color:#6B7280">DASHBOARD PENDING</span>
+        <div class="name">D3, D4, D5, D6, D7, D8, D9</div>
+        <div class="desc-row">Top queries (with "Add to KB" affordance), response times distribution, abandonment alerts, broadcast/help coverage, critical alerts audit, interpreter sessions, per-AI-tool detail drill-down.</div>
+      </div>
+      <div class="tile" style="border-style:dashed;cursor:default">
+        <span class="tag" style="background:#F3F4F6;color:#6B7280">V3 PENDING</span>
+        <div class="name">v3 Dedicated LYNA Badge</div>
+        <div class="desc-row">Deferred design pass — see <code>v3-design-alignment.md</code>. Existing v3-era HTML mocks remain in this directory (<code>device-home.html</code>, <code>dashboard-overview.html</code>).</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

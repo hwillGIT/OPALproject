@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LYNA Dashboard · D10 Buyer ROI</title>
+<link rel="stylesheet" href="lyna-dashboard.css">
+</head>
+<body>
+<div class="dashboard">
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="logo">LYNA</div>
+      <div class="scope">Mt. Sinai · 4-South pilot</div>
+    </div>
+    <div class="topbar-right">
+      <span class="user-name">Dr. Ramirez</span>
+      <span class="role-chip">CCIO</span>
+      <button class="icon-btn" aria-label="Settings">⚙</button>
+    </div>
+  </header>
+
+  <div class="body-row">
+
+    <nav class="leftnav">
+      <a href="d1-adoption.html">Overview</a>
+      <a href="d2-ai-tools.html">AI tool routing</a>
+      <a>Top queries</a>
+      <a>Response times</a>
+      <a>Abandonment alerts</a>
+      <a>Broadcast coverage</a>
+      <a>Critical alerts audit</a>
+      <a>Interpreter sessions</a>
+      <a>Per-tool detail</a>
+      <a href="d10-roi.html" class="active">Buyer ROI</a>
+      <div class="divider"></div>
+      <a>Settings</a>
+    </nav>
+
+    <main class="content">
+      <div class="page-header">
+        <h1>Buyer-facing ROI</h1>
+        <div class="subtitle">What is LYNA saving us in nurse-time per shift? — The artifact that goes into the CCIO budget packet.</div>
+      </div>
+
+      <div class="filters">
+        <button class="filter-pill">Unit ▼</button>
+        <button class="filter-pill">$60/hr (RN fully loaded) ▼</button>
+        <button class="filter-pill active">30 days ▼</button>
+      </div>
+
+      <div class="roi-headline">
+        <div class="label">Estimated time saved</div>
+        <div class="headline">~24 minutes per RN per shift (median)</div>
+        <ul>
+          <li>~46,800 RN-hours saved annually (across 4-South deployment of 38 RNs over 365 days)</li>
+          <li>~$2,808,000 estimated annual value (at $60/hr fully loaded RN rate)</li>
+        </ul>
+        <div class="trio">
+          <div class="item">
+            <div class="item-label">LYNA annual cost (this unit)</div>
+            <div class="item-value">$84,000</div>
+          </div>
+          <div class="item">
+            <div class="item-label">Net annual benefit</div>
+            <div class="item-value">$2,724,000</div>
+          </div>
+          <div class="item">
+            <div class="item-label">ROI</div>
+            <div class="item-value">~3,243%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Sensitivity bounds</h2>
+        <table class="lyna-table">
+          <thead>
+            <tr><th></th><th>Conservative</th><th>Base</th><th>Aggressive</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Time saved per shift</td><td>12 min</td><td>24 min</td><td>36 min</td></tr>
+            <tr><td>Annual value</td><td>$1,404,000</td><td>$2,808,000</td><td>$4,212,000</td></tr>
+            <tr><td>ROI</td><td>1,571%</td><td>3,243%</td><td>4,914%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2>Calculation breakdown</h2>
+        <p class="muted" style="margin-bottom:12px">Source: I-Corps benchmarks anchored to H1–H18 + measured LYNA query volume.</p>
+
+        <div style="font-weight:600;color:var(--lyna-text);margin-bottom:8px">Per-query time saved (by query type):</div>
+        <ul style="list-style:none;padding-left:0;line-height:1.8">
+          <li>▸ Workstation bypass: <strong>2.5 min</strong> (vs walk + log in)</li>
+          <li>▸ Senior-nurse bypass: <strong>5.0 min</strong> (Interview #1 ref)</li>
+          <li>▸ Policy-Tech bypass: <strong>5.0 min</strong> (Interview #2 ref)</li>
+          <li>▸ Pharmacist page: <strong>40 min</strong> (Robert §4.6)</li>
+          <li>▸ Charge handoff: <strong>15 min</strong> (Marcus §4.3)</li>
+          <li>▸ Sign-on: <strong>20 min</strong> (Jamal §4.4)</li>
+          <li>▸ Interpreter wait: <strong>9 min</strong> (Maya §4.10 baseline)</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <p>
+          Weighted by query mix: <strong>~3.1 min average per query</strong><br>
+          Queries per RN per shift: <strong>~8.4</strong> (D1 metric)<br>
+          → <strong>Time saved per shift: ~24 min</strong>
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Per-unit breakdown</h2>
+        <table class="lyna-table">
+          <thead>
+            <tr><th>Unit</th><th>Queries / week</th><th>Time saved / week</th><th>Annual value</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>4-South</td><td>1,994</td><td>~103 RN-hours</td><td>$2,808,000</td></tr>
+            <tr><td>4-East</td><td>1,712</td><td>~88 RN-hours</td><td>$2,413,000</td></tr>
+            <tr><td>5-North</td><td>1,387</td><td>~71 RN-hours</td><td>$1,952,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="export-footer">
+        <button class="btn primary large">Export to PDF for CCIO budget packet ↗</button>
+      </div>
+
+      <p class="muted" style="margin-top:16px;font-style:italic">
+        Estimates anchored to I-Corps research
+        (<code>hypothesis-map.md</code> H1–H18; <code>interviews-index.md</code> BMC V2;
+        <code>bots/shared/reports/lyna-strategic-analysis.md</code>).
+      </p>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>
