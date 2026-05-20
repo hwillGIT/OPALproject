@@ -17,6 +17,7 @@ import { createWebSocketManager } from 'bots-shared/websocket.js';
 import * as mm from 'bots-shared/mattermost.js';
 import * as llm from 'bots-shared/llm.js';
 import institutionalMemory from 'bots-shared/institutional-memory';
+import { parseEmits, MEMORY_EMIT_PREAMBLE } from 'bots-shared/memory-emit/index.js';
 import personaRouter from './persona-router.js';
 import observationMode from './observation-mode.js';
 import dailyDigest from './daily-digest.js';
@@ -258,15 +259,24 @@ async function _handlePost(post, botUserId, eventData) {
       }
     );
 
-    const responseText = result.text;
-    if (!responseText) {
+    const rawResponseText = result.text;
+    if (!rawResponseText) {
       log('warn', 'Empty response from LLM');
       return;
     }
 
+    // The persona may have appended a fenced `memory-emit` YAML block
+    // (see bots/shared/memory-emit/preamble.js). Strip it for the
+    // user-visible post; emit its contents to institutional memory
+    // below. cleanText is what humans see; rawResponseText is kept
+    // for history so the persona's own memory of what it said remains
+    // intact.
+    const parsed = parseEmits(rawResponseText);
+    const visibleResponse = parsed.cleanText || rawResponseText;
+
     // Prefix with persona indicator
     const prefix = `**${persona.name}** *(${persona.label})*\n\n`;
-    const fullResponse = prefix + responseText;
+    const fullResponse = prefix + visibleResponse;
 
     // Post response (truncate if needed)
     const trimmed = fullResponse.length > MAX_RESPONSE_LENGTH
@@ -275,11 +285,11 @@ async function _handlePost(post, botUserId, eventData) {
 
     await mm.postMessage(channelId, trimmed, post.root_id || post.id);
 
-    // Add to history
-    addToHistory(channelId, 'assistant', responseText);
+    // Add to history (raw — the persona's own memory of its turn)
+    addToHistory(channelId, 'assistant', rawResponseText);
 
-    // Emit event to institutional memory
-    await emitEventFromResponse(persona, strippedText, responseText, channelId, post.id);
+    // Emit only what the persona deliberately authored
+    await emitParsedToMemory(persona, parsed, strippedText, channelId, post.id);
 
     log('info', 'Response posted', {
       persona: persona.key,
@@ -301,6 +311,12 @@ async function _handlePost(post, botUserId, eventData) {
 // ── Build System Prompt ──
 function buildFullSystemPrompt(persona, channelId) {
   const parts = [];
+
+  // Memory-emit protocol — teaches the persona when and how to
+  // author fenced YAML emit blocks. MUST come before persona
+  // identity so the model treats the protocol as a discipline
+  // rather than an afterthought.
+  parts.push(MEMORY_EMIT_PREAMBLE);
 
   // Persona identity
   const personaPrompt = personaRouter.buildSystemPrompt(persona.key);
@@ -451,55 +467,68 @@ IMPORTANT: These are the team members. When referring to teammates, ALWAYS use t
 }
 
 // ── Emit Institutional Memory Events ──
-async function emitEventFromResponse(persona, question, response, channelId, postId) {
-  // Determine event type based on response content
-  const lower = response.toLowerCase();
-  let eventType = 'INSIGHT'; // Default
+// The persona — not an external classifier — decides what is worth
+// recording. parseEmits() pulled any fenced `memory-emit` YAML blocks
+// out of the response; we just translate each parsed entry into an
+// institutional-memory event and preserve malformed attempts as
+// CONTEXT_CHANGE. Zero blocks ⇒ zero events. No keyword heuristics.
+async function emitParsedToMemory(persona, parsed, question, channelId, postId) {
+  const allowed = new Set(persona.emits || []);
+  const baseSource = { channelId, postId };
+  const baseTags = [persona.key, persona.domains?.[0]].filter(Boolean);
 
-  if (lower.includes('recommend') || lower.includes('decision') || lower.includes('we should')) {
-    eventType = 'INSIGHT'; // Insights by default, DECISION requires approval
-  }
-  if (lower.includes('action item') || lower.includes('next step') || lower.includes('todo')) {
-    eventType = 'ACTION';
-  }
-  if (lower.includes('predict') || lower.includes('forecast') || lower.includes('expect')) {
-    eventType = 'PREDICTION';
+  for (const emit of parsed.emits) {
+    let eventType = emit.type;
+    const metadata = {};
+    if (emit.confidence !== null && emit.confidence !== undefined) {
+      metadata.confidence = emit.confidence;
+    }
+    if (allowed.size > 0 && !allowed.has(eventType)) {
+      // Vocabulary check — preserve persona's intent as CONTEXT_CHANGE
+      metadata.original_type = eventType;
+      metadata.demotion_reason =
+        `persona ${persona.key} emitted ${emit.type} but role allows ${[...allowed].join(',')}`;
+      eventType = 'CONTEXT_CHANGE';
+    }
+    if (eventType === 'ACTION') {
+      if (!('status' in metadata)) metadata.status = 'open';
+      if (!('owner' in metadata)) metadata.owner = persona.key;
+    }
+    try {
+      await institutionalMemory.emit({
+        agent: persona.key,
+        type: eventType,
+        domain: persona.domains?.[0],
+        title: emit.title.slice(0, 200),
+        content: (emit.content || question || '').slice(0, 8000),
+        tags: [...new Set([...baseTags, ...emit.tags])],
+        related: emit.related,
+        metadata,
+        source: baseSource,
+      });
+    } catch (error) {
+      log('error', 'Failed to emit persona-authored event', {
+        error: error.message, type: emit.type, persona: persona.key,
+      });
+    }
   }
 
-  // Only emit if it seems substantive (not a casual response)
-  if (response.length < 200) return;
-
-  // Check event type is in persona's allowed emits
-  if (!persona.emits.includes(eventType)) {
-    eventType = persona.emits[0]; // Fallback to first allowed type
+  for (const m of parsed.malformed) {
+    try {
+      await institutionalMemory.emit({
+        agent: persona.key,
+        type: 'CONTEXT_CHANGE',
+        domain: persona.domains?.[0],
+        title: `malformed memory-emit from ${persona.key}`,
+        content: `reason: ${m.reason}\n\nraw block:\n${m.raw}`.slice(0, 8000),
+        tags: [...new Set([...baseTags, 'malformed-emit'])],
+        metadata: { malformed_emit: true, reason: m.reason },
+        source: baseSource,
+      });
+    } catch (error) {
+      log('error', 'Failed to record malformed emit', { error: error.message });
+    }
   }
-
-  try {
-    await institutionalMemory.emit({
-      agent: persona.key,
-      type: eventType,
-      domain: persona.domains[0],
-      title: question.slice(0, 120),
-      content: response.slice(0, 2000),
-      tags: extractTags(question + ' ' + response),
-      source: { channelId, postId },
-    });
-  } catch (error) {
-    log('error', 'Failed to emit event', { error: error.message });
-  }
-}
-
-// ── Extract Tags ──
-function extractTags(text) {
-  const lower = text.toLowerCase();
-  const tagPatterns = [
-    'pricing', 'strategy', 'product', 'marketing', 'sales', 'finance',
-    'compliance', 'regulatory', 'esp32', 'opal', 'lyna', 'hardware',
-    'firmware', 'manufacturing', 'fundraising', 'investor', 'crowdfunding',
-    'competitive', 'roadmap', 'mvp', 'beta', 'launch', 'partnership',
-    'distribution', 'bom', 'supply chain', 'fcc', 'ce', 'certification',
-  ];
-  return tagPatterns.filter(t => lower.includes(t)).slice(0, 10);
 }
 
 // ── Conversation History ──
