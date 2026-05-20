@@ -305,12 +305,85 @@ store records the full transition either way, so every Tier-2
 decision is reconstructable from the JSONL audit log alone — no
 separate verdict store needed.
 
+## Neo4j projection of memory events (E-2)
+
+Every typed event also lands as a graph node + relationships in Neo4j,
+giving operators cross-persona / cross-workflow traversal queries that
+SQLite + ChromaDB don't naturally support.
+
+### Schema (kept deliberately small)
+
+| Node label | Identity | Purpose |
+|---|---|---|
+| `:Event` | `.id` (event id) | Primary record per typed event |
+| `:Actor` | `.key` | Distinct persona / platform identifier |
+| `:Workflow` | `.id` | Distinct workflow id |
+| `:Phase` | `.key = "<workflow>:<phase>"` | Distinct workflow phase |
+| `:Tag` | `.name` | Distinct tag value |
+
+| Relationship | Direction | Source |
+|---|---|---|
+| `:BY` | `Event -> Actor` | Every event |
+| `:IN_WORKFLOW` | `Event -> Workflow` | Events with a workflow |
+| `:IN_PHASE` | `Event -> Phase` | Events with workflow + phase |
+| `:TAGGED` | `Event -> Tag` | One per tag |
+| `:RELATED_TO` | `Event -> Event` | From event.related |
+| `:VERIFIES` | `Event -> Event` | OUTCOME's metadata.verifies |
+| `:SUPERSEDES` | `Event -> Event` | metadata.supersedes when set |
+
+All upserts use `MERGE` so re-running against the same event is
+idempotent. Constraints + indexes are created once at projector init
+via `IF NOT EXISTS`.
+
+### Modules
+
+| File | Role |
+|---|---|
+| `memory_system/events/neo4j_projection.py` | Pure `build_event_upsert(event) -> [CypherStatement]` + live `Neo4jProjector` class that opens the driver lazily and runs the statements |
+
+### CLI
+
+```bash
+# Project every accepted event into Neo4j as well as the JSONL log
+python -m memory_system.events.cli write \
+    --type DECISION --actor strategist \
+    --title "..." --content "..." \
+    --neo4j-project
+
+# Replay the entire JSONL log into Neo4j (idempotent)
+python -m memory_system.events.cli neo4j-rebuild
+```
+
+Env vars (mirror the pattern from `save_session.py`):
+`NEO4J_URI`, `NEO4J_USERNAME`, `NEO4J_PASSWORD`, `NEO4J_DATABASE`
+(legacy `KNOWLEDGE_GRAPH_*` aliases also accepted).
+
+### Best-effort + source-of-truth contract
+
+The JSONL log is always the source of truth. A Neo4j outage:
+- Logs to stderr but never blocks an event write
+- Is recoverable via `neo4j-rebuild` once the DB comes back
+- Doesn't affect the ChromaDB projection or the scope auto-detect hook
+
+### Example queries it enables
+
+```cypher
+// All DECISIONs Athena made in the past 30 days
+MATCH (e:Event {type: 'DECISION'})-[:BY]->(:Actor {key: 'strategist'})
+WHERE e.timestamp > '2026-04-16'
+RETURN e.title, e.timestamp ORDER BY e.timestamp DESC
+
+// What workflows touched tag 'aurora'?
+MATCH (:Tag {name: 'aurora'})<-[:TAGGED]-(:Event)-[:IN_WORKFLOW]->(w:Workflow)
+RETURN DISTINCT w.id
+
+// Chain of OUTCOMEs verifying earlier PREDICTIONs
+MATCH (o:Event {type: 'OUTCOME'})-[:VERIFIES]->(p:Event {type: 'PREDICTION'})
+RETURN p.title AS prediction, o.title AS outcome, p.timestamp, o.timestamp
+```
+
 ## Open follow-ups (out of scope)
 
-- **Neo4j projection** — emit memory events as graph nodes/edges for
-  cross-persona traversal queries (OPAL already has Neo4j wired in
-  via `save_session.py` / `recall_context.py`; the new typed-events
-  layer doesn't push to Neo4j yet).
 - **Workflow orchestrator integration** — make the bot platform
   automatically append events as workflows execute, instead of
   relying on the operator to do it by hand.
@@ -322,6 +395,9 @@ separate verdict store needed.
   single LLM call. A proposer + critic + judge architecture could
   surface more nuanced disagreements at the cost of additional
   latency + tokens.
+- **Graph-aware briefings** — use the Neo4j projection to surface
+  "what depends on this scope" or "who was last to act on this
+  workflow" in the session-start briefing.
 
 ## Test coverage
 
