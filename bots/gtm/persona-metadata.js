@@ -221,6 +221,141 @@ export const PERSONAS = {
     commands: ['!fda', '!510k', '!regina', '!regulatory-affairs', '!samd'],
     mentionPatterns: ['fda', '510k', 'de novo', 'regina', 'samd', 'clearance', 'submission', 'mdr'],
   },
+
+  // === HARDWARE & DESIGN (PR 3) ===
+
+  'hardware-lead': {
+    key: 'hardware-lead',
+    personaFile: 'gtm/hardware-lead',
+    name: 'Diego',
+    label: 'Hardware Lead',
+    tier: 'core-team',
+    department: 'Hardware & Design',
+    domains: ['hardware', 'firmware'],
+    emits: ['INSIGHT', 'DECISION', 'ARTIFACT', 'GAP'],
+    commands: ['!hardware', '!firmware', '!diego', '!esp32'],
+    mentionPatterns: ['hardware', 'firmware', 'diego', 'esp32', 'pcb', 'i2c', 'ota', 'codec'],
+  },
+  'industrial-designer': {
+    key: 'industrial-designer',
+    personaFile: 'gtm/industrial-designer',
+    name: 'Yuki',
+    label: 'Industrial Designer',
+    tier: 'core-team',
+    department: 'Hardware & Design',
+    domains: ['industrial-design'],
+    emits: ['INSIGHT', 'DECISION', 'ARTIFACT', 'GAP'],
+    commands: ['!id', '!industrial-design', '!yuki', '!form-factor'],
+    mentionPatterns: ['industrial design', 'form factor', 'ergonomic', 'wearable design', 'yuki', 'enclosure'],
+  },
+  'ui-ux-expert': {
+    key: 'ui-ux-expert',
+    personaFile: 'gtm/ui-ux-expert',
+    name: 'Sasha',
+    label: 'UI/UX Expert',
+    tier: 'core-team',
+    department: 'Hardware & Design',
+    domains: ['ux', 'ui', 'design-system'],
+    emits: ['INSIGHT', 'DECISION', 'ARTIFACT', 'GAP'],
+    commands: ['!ux', '!ui', '!sasha', '!design'],
+    mentionPatterns: ['ux', 'ui', 'sasha', 'dashboard', 'screen', 'design system', 'figma', 'wireframe', 'accessibility'],
+  },
+  'reliability-engineer': {
+    key: 'reliability-engineer',
+    personaFile: 'gtm/reliability-engineer',
+    name: 'Bjorn',
+    label: 'Reliability Engineer',
+    tier: 'core-team',
+    department: 'Hardware & Design',
+    domains: ['reliability', 'safety'],
+    emits: ['INSIGHT', 'GAP', 'ACTION', 'DECISION'],
+    commands: ['!reliability', '!fmea', '!bjorn', '!safety'],
+    mentionPatterns: ['reliability', 'fmea', 'bjorn', 'failure mode', 'incident', 'post-mortem', 'sla', 'mtbf'],
+  },
+
+  // === HEALTHCARE & CLINICAL (PR 3) ===
+
+  'clinical-ops': {
+    key: 'clinical-ops',
+    personaFile: 'gtm/clinical-ops',
+    name: 'Imani',
+    label: 'Clinical Operations / Pilot Manager',
+    tier: 'core-team',
+    department: 'Healthcare & Clinical',
+    domains: ['clinical-ops', 'pilots', 'deployment'],
+    emits: ['INSIGHT', 'ACTION', 'OUTCOME', 'CONTEXT_CHANGE'],
+    commands: ['!pilot', '!clinical-ops', '!imani', '!deployment'],
+    mentionPatterns: ['pilot', 'clinical ops', 'imani', 'deployment', 'site', 'champion', 'irb', 'baa'],
+  },
+
+  // === BOARD OF ADVISORS (PR 3) ===
+
+  'cmo-advisor': {
+    key: 'cmo-advisor',
+    personaFile: 'gtm/cmo-advisor',
+    name: 'Dr. Devon',
+    label: 'CMO Advisor',
+    tier: 'board-of-advisors',
+    department: null,
+    domains: ['clinical-executive'],
+    emits: ['INSIGHT', 'GAP', 'DECISION'],
+    commands: ['!cmo', '!devon', '!exec-clinical'],
+    mentionPatterns: ['cmo', 'devon', 'chief medical', 'medical leadership', 'executive sponsor', 'hcahps', 'value based care'],
+  },
+  'ip-counsel': {
+    key: 'ip-counsel',
+    personaFile: 'gtm/ip-counsel',
+    name: 'Adriana',
+    label: 'IP Counsel',
+    tier: 'board-of-advisors',
+    department: null,
+    domains: ['ip', 'patent', 'legal'],
+    emits: ['INSIGHT', 'GAP', 'DECISION', 'CONTEXT_CHANGE'],
+    commands: ['!ip', '!patent', '!adriana', '!claim'],
+    mentionPatterns: ['patent', 'ip', 'adriana', 'claim', 'prior art', 'uspto', 'freedom to operate', 'fto', 'defensive publication'],
+  },
+
+  // === GO-TO-MARKET & PARTNERSHIPS (PR 3) ===
+
+  'partnership-lead': {
+    key: 'partnership-lead',
+    personaFile: 'gtm/partnership-lead',
+    name: 'Wei',
+    label: 'Partnership Lead',
+    tier: 'core-team',
+    department: 'Go-to-Market & Partnerships',
+    domains: ['partnerships', 'channels'],
+    emits: ['ACTION', 'DECISION', 'PREDICTION', 'ARTIFACT'],
+    commands: ['!partnership', '!wei', '!alliance', '!app-orchard'],
+    mentionPatterns: ['partnership', 'wei', 'app orchard', 'alliance', 'oem', 'channel', 'integration partner'],
+  },
+
+  // === FINANCE & OPERATIONS (PR 3) ===
+
+  cfo: {
+    key: 'cfo',
+    personaFile: 'gtm/cfo',
+    name: 'Naomi',
+    label: 'CFO',
+    tier: 'core-team',
+    department: 'Finance & Operations',
+    domains: ['finance', 'capital', 'fundraising'],
+    emits: ['INSIGHT', 'DECISION', 'PREDICTION', 'ARTIFACT'],
+    commands: ['!cfo', '!naomi', '!runway', '!term-sheet'],
+    mentionPatterns: ['cfo', 'naomi', 'runway', 'term sheet', 'cap table', 'dilution', 'liquidation preference', 'series a', 'fundraise'],
+  },
+  'manufacturing-ops': {
+    key: 'manufacturing-ops',
+    personaFile: 'gtm/manufacturing-ops',
+    name: 'Ramon',
+    label: 'Manufacturing Operations',
+    tier: 'core-team',
+    department: 'Finance & Operations',
+    domains: ['manufacturing', 'supply-chain'],
+    emits: ['INSIGHT', 'ACTION', 'DECISION', 'ARTIFACT'],
+    commands: ['!manufacturing', '!ramon', '!supplier', '!bom', '!dfm'],
+    mentionPatterns: ['manufacturing', 'ramon', 'supplier', 'bom', 'dfm', 'tooling', 'yield', 'moq', 'lead time'],
+  },
 };
 
 /**

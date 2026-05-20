@@ -28,9 +28,9 @@ prematurely.
 | Tension | Type | Produces |
 |---|---|---|
 | **Dr. Claire ↔ Helena** | Bedside reality vs. EPIC integration plumbing | Workflow that survives contact with real clinicians |
-| **CMO Advisor ↔ Rex** | Executive-buyer skepticism vs. sales conviction | Pitch that withstands a CMO grilling |
+| **Dr. Devon ↔ Rex** | Executive-buyer skepticism vs. sales conviction | Pitch that withstands a CMO grilling |
 | **Vera ↔ Maya** | Industry trends vs. tactical campaigns | Growth strategy aligned with where the market is moving |
-| **IP Counsel ↔ Marcus** | Defensible-claim language vs. shipping architecture | Architecture descriptions that hold up at the USPTO |
+| **Adriana ↔ Marcus** | Defensible-claim language vs. shipping architecture | Architecture descriptions that hold up at the USPTO |
 
 ## Strategy crosses (within Core Team)
 
@@ -44,29 +44,29 @@ prematurely.
 
 | Tension | Type | Produces |
 |---|---|---|
-| **Marcus ↔ Hardware Lead** | Cloud/server architecture vs. firmware constraints | Boundary contracts that respect both worlds |
-| **Tensor ↔ Hardware Lead** | Model size/latency targets vs. on-device compute budget | ML approach that actually fits the device |
-| **Cyrus ↔ Hardware Lead** | Security ideal vs. firmware/OTA constraints | Threat model achievable on the actual device |
+| **Marcus ↔ Diego** | Cloud/server architecture vs. firmware constraints | Boundary contracts that respect both worlds |
+| **Tensor ↔ Diego** | Model size/latency targets vs. on-device compute budget | ML approach that actually fits the device |
+| **Cyrus ↔ Diego** | Security ideal vs. firmware/OTA constraints | Threat model achievable on the actual device |
 | **Nimbus ↔ Cyrus** | Operational simplicity vs. security posture | Cloud architecture defensible at audit |
 
 ## Hardware & Design internal
 
 | Tension | Type | Produces |
 |---|---|---|
-| **Industrial Designer ↔ Hardware Lead** | Form factor wishes vs. physics & BOM | Wearable that's both wearable AND buildable |
-| **UI/UX Expert ↔ Marcus** | Interaction ideal vs. API/data model reality | Screens that the backend can actually serve |
-| **UI/UX Expert ↔ Industrial Designer** | Digital surface vs. physical context-of-use | Coherent experience across glasses + companion app |
-| **Reliability Engineer ↔ Hardware Lead** | Failure-mode coverage vs. ship-the-prototype urgency | Prototype safe enough to put on a real clinician |
+| **Yuki ↔ Diego** | Form factor wishes vs. physics & BOM | Wearable that's both wearable AND buildable |
+| **Sasha ↔ Marcus** | Interaction ideal vs. API/data model reality | Screens that the backend can actually serve |
+| **Sasha ↔ Yuki** | Digital surface vs. physical context-of-use | Coherent experience across glasses + companion app |
+| **Bjorn ↔ Diego** | Failure-mode coverage vs. ship-the-prototype urgency | Prototype safe enough to put on a real clinician |
 
 ## Clinical & Regulatory crosses
 
 | Tension | Type | Produces |
 |---|---|---|
 | **Regina ↔ Marcus** | FDA documentation burden vs. agile iteration | Engineering process that produces audit-ready evidence as a side effect |
-| **Regina ↔ Industrial Designer** | Design-controls discipline vs. design exploration | Controlled design history without killing creativity |
+| **Regina ↔ Yuki** | Design-controls discipline vs. design exploration | Controlled design history without killing creativity |
 | **Helena ↔ Tensor** | EPIC FHIR contract vs. ML pipeline realities | Models that consume what EPIC actually exposes |
-| **Clinical Ops ↔ Suki** | Pilot-site reality vs. compliance paperwork | Pilots that get signed AND start on time |
-| **Reliability Engineer ↔ Clinical Ops** | Lab-bench failure modes vs. real-ward failure modes | FMEA grounded in observed clinical events, not just theory |
+| **Imani ↔ Suki** | Pilot-site reality vs. compliance paperwork | Pilots that get signed AND start on time |
+| **Bjorn ↔ Imani** | Lab-bench failure modes vs. real-ward failure modes | FMEA grounded in observed clinical events, not just theory |
 
 ## Go-to-Market crosses
 
@@ -74,23 +74,23 @@ prematurely.
 |---|---|---|
 | **Maya ↔ Rex** | Demand generation vs. enterprise sales motion | Funnel that produces qualified, closeable pipeline |
 | **Rex ↔ Suki** | Deal velocity vs. compliance / BAA workflow | Sales motion that doesn't stall at security review |
-| **Partnership Lead ↔ Rex** | Long-cycle alliance vs. transactional deal | Coverage map that exploits both motions |
-| **Partnership Lead ↔ Helena** | Strategic integration ambition vs. EPIC-app-orchard reality | Partnership scope that EPIC's process actually permits |
+| **Wei ↔ Rex** | Long-cycle alliance vs. transactional deal | Coverage map that exploits both motions |
+| **Wei ↔ Helena** | Strategic integration ambition vs. EPIC-app-orchard reality | Partnership scope that EPIC's process actually permits |
 
 ## Finance & Operations crosses
 
 | Tension | Type | Produces |
 |---|---|---|
-| **CFO ↔ Athena** | Capital efficiency vs. strategic ambition | Funded version of the strategy |
-| **CFO ↔ Kai** | Story-quality numbers vs. ground-truth numbers | Numbers that hold up to investor diligence |
-| **Manufacturing Ops ↔ Hardware Lead** | Supplier reality vs. design wish-list | BOM that quotes within the funded budget |
-| **Manufacturing Ops ↔ Industrial Designer** | DFM constraints vs. form-factor ideals | Design that survives moulding/assembly |
+| **Naomi ↔ Athena** | Capital efficiency vs. strategic ambition | Funded version of the strategy |
+| **Naomi ↔ Kai** | Story-quality numbers vs. ground-truth numbers | Numbers that hold up to investor diligence |
+| **Ramon ↔ Diego** | Supplier reality vs. design wish-list | BOM that quotes within the funded budget |
+| **Ramon ↔ Yuki** | DFM constraints vs. form-factor ideals | Design that survives moulding/assembly |
 
 ## Special: the "two clinicians" check
 
 | Tension | Type | Produces |
 |---|---|---|
-| **Dr. Claire ↔ CMO Advisor** | Floor-level clinician vs. executive medical leader | Position that resonates with both nurses-at-bedside AND C-suite |
+| **Dr. Claire ↔ Dr. Devon** | Floor-level clinician vs. executive medical leader | Position that resonates with both nurses-at-bedside AND C-suite |
 
 A claim about clinical value should pass *both* views. If only one
 agrees, the message is mis-aimed.
@@ -104,12 +104,12 @@ tensions explicitly. Default invocation rules:
 
 | Workflow | Required tensions to surface |
 |---|---|
-| Clinical Decision Loop | Dr. Claire ↔ Helena, Reliability Engineer ↔ Clinical Ops |
-| Hardware Build Review | Industrial Designer ↔ Hardware Lead, Marcus ↔ Hardware Lead, Reliability Engineer ↔ Hardware Lead |
-| Pilot Site Assessment | Clinical Ops ↔ Suki, Dr. Claire ↔ CMO Advisor |
-| Investor Pitch Review | CFO ↔ Athena, Athena ↔ Rex, Vera ↔ Maya |
-| Regulatory Risk Assessment | Regina ↔ Marcus, Regina ↔ Industrial Designer, IP Counsel ↔ Marcus |
-| Partnership Qualification | Partnership Lead ↔ Helena, Partnership Lead ↔ Rex |
+| Clinical Decision Loop | Dr. Claire ↔ Helena, Bjorn ↔ Imani |
+| Hardware Build Review | Yuki ↔ Diego, Marcus ↔ Diego, Bjorn ↔ Diego |
+| Pilot Site Assessment | Imani ↔ Suki, Dr. Claire ↔ Dr. Devon |
+| Investor Pitch Review | Naomi ↔ Athena, Athena ↔ Rex, Vera ↔ Maya |
+| Regulatory Risk Assessment | Regina ↔ Marcus, Regina ↔ Yuki, Adriana ↔ Marcus |
+| Partnership Qualification | Wei ↔ Helena, Wei ↔ Rex |
 
 Workflows are responsible for *making the tension visible* in the
 conversation transcript, not for resolving it. Resolution is the
