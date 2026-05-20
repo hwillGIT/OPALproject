@@ -7,156 +7,35 @@
  * 3. @mention with role: "@gtm strategist", "@gtm finance"
  * 4. Topic detection (keyword patterns)
  * 5. Default: strategist
+ *
+ * Each persona carries `tier` and `department` metadata so future
+ * routing rules can fire on those (e.g. "for any strategic question
+ * in #leadership, default to Board of Advisors first, Core Team
+ * second"). The taxonomy is documented in
+ * `bots/shared/personas/DEPARTMENTS.md`. Productive-tensions pairings
+ * live in `bots/shared/personas/TENSIONS.md`.
+ *
+ * Validation: `node bots/gtm/scripts/validate-personas.js` enforces
+ * router-vs-DEPARTMENTS consistency.
  */
 
 import personaManager from 'bots-shared/persona-manager.js';
 
-// Persona definitions with routing metadata
-const PERSONAS = {
-  strategist: {
-    key: 'strategist',
-    personaFile: 'gtm/strategist',
-    name: 'Athena',
-    label: 'Strategist',
-    domains: ['strategy'],
-    emits: ['INSIGHT', 'PREDICTION', 'CONTEXT_CHANGE'],
-    commands: ['!strategist', '!strategy', '!athena'],
-    mentionPatterns: ['strategist', 'strategy', 'athena'],
-  },
-  'product-owner': {
-    key: 'product-owner',
-    personaFile: 'gtm/product-owner',
-    name: 'Priya',
-    label: 'Product Owner',
-    domains: ['product'],
-    emits: ['DECISION', 'ACTION', 'ARTIFACT'],
-    commands: ['!product', '!product-owner', '!priya', '!po'],
-    mentionPatterns: ['product', 'product owner', 'priya', 'po'],
-  },
-  'growth-lead': {
-    key: 'growth-lead',
-    personaFile: 'gtm/growth-lead',
-    name: 'Maya',
-    label: 'Growth Lead',
-    domains: ['gtm'],
-    emits: ['ACTION', 'PREDICTION', 'ARTIFACT'],
-    commands: ['!growth', '!marketing', '!gtm', '!maya'],
-    mentionPatterns: ['growth', 'marketing', 'gtm', 'maya', 'launch'],
-  },
-  'sales-bd': {
-    key: 'sales-bd',
-    personaFile: 'gtm/sales-bd',
-    name: 'Rex',
-    label: 'Sales & BD',
-    domains: ['gtm', 'operations'],
-    emits: ['ACTION', 'INSIGHT', 'PREDICTION'],
-    commands: ['!sales', '!bd', '!rex', '!deals'],
-    mentionPatterns: ['sales', 'bd', 'business development', 'rex', 'pipeline', 'deal'],
-  },
-  'finance-analyst': {
-    key: 'finance-analyst',
-    personaFile: 'gtm/finance-analyst',
-    name: 'Kai',
-    label: 'Finance Analyst',
-    domains: ['finance'],
-    emits: ['INSIGHT', 'PREDICTION', 'ARTIFACT'],
-    commands: ['!finance', '!kai', '!budget', '!runway'],
-    mentionPatterns: ['finance', 'kai', 'budget', 'runway', 'investor', 'fundrais'],
-  },
-  'compliance-ops': {
-    key: 'compliance-ops',
-    personaFile: 'gtm/compliance-ops',
-    name: 'Suki',
-    label: 'Compliance & Ops',
-    domains: ['compliance', 'operations'],
-    emits: ['INSIGHT', 'ACTION', 'CONTEXT_CHANGE'],
-    commands: ['!compliance', '!ops', '!suki', '!legal'],
-    mentionPatterns: ['compliance', 'ops', 'operations', 'suki', 'fcc', 'legal', 'supply chain'],
-  },
+// Persona metadata + tier/department vocabulary live in a sibling
+// file with zero external imports, so the standalone validator
+// (bots/gtm/scripts/validate-personas.js) can load them without
+// pulling in the workspace `bots-shared` dependency.
+import {
+  TIERS,
+  DEPARTMENTS,
+  PERSONAS as PERSONA_METADATA,
+} from './persona-metadata.js';
 
-  // === TECHNICAL SUB-TEAM ===
+export { TIERS, DEPARTMENTS };
 
-  'software-architect': {
-    key: 'software-architect',
-    personaFile: 'gtm/software-architect',
-    name: 'Marcus',
-    label: 'Software Architect',
-    domains: ['engineering'],
-    emits: ['INSIGHT', 'DECISION', 'ARTIFACT'],
-    commands: ['!software', '!architect', '!marcus', '!code'],
-    mentionPatterns: ['software', 'architect', 'marcus', 'api', 'architecture', 'system design'],
-  },
-  'enterprise-architect': {
-    key: 'enterprise-architect',
-    personaFile: 'gtm/enterprise-architect',
-    name: 'Helena',
-    label: 'Enterprise Architect (Healthcare)',
-    domains: ['healthcare-systems'],
-    emits: ['INSIGHT', 'DECISION', 'ARTIFACT'],
-    commands: ['!enterprise', '!ehr', '!fhir', '!hl7', '!helena'],
-    mentionPatterns: ['enterprise', 'ehr', 'emr', 'fhir', 'hl7', 'helena', 'epic', 'cerner', 'integration'],
-  },
-  'security-architect': {
-    key: 'security-architect',
-    personaFile: 'gtm/security-architect',
-    name: 'Cyrus',
-    label: 'Security & Privacy Architect',
-    domains: ['security'],
-    emits: ['INSIGHT', 'ACTION', 'GAP'],
-    commands: ['!security', '!hipaa', '!privacy', '!cyrus'],
-    mentionPatterns: ['security', 'hipaa', 'privacy', 'cyrus', 'encryption', 'authentication', 'breach'],
-  },
-  'cloud-architect': {
-    key: 'cloud-architect',
-    personaFile: 'gtm/cloud-architect',
-    name: 'Nimbus',
-    label: 'Cloud Architect',
-    domains: ['infrastructure'],
-    emits: ['INSIGHT', 'DECISION', 'ARTIFACT'],
-    commands: ['!cloud', '!infra', '!infrastructure', '!nimbus', '!aws', '!azure', '!gcp'],
-    mentionPatterns: ['cloud', 'infrastructure', 'nimbus', 'aws', 'azure', 'gcp', 'kubernetes', 'serverless'],
-  },
-  'healthcare-analyst': {
-    key: 'healthcare-analyst',
-    personaFile: 'gtm/healthcare-analyst',
-    name: 'Vera',
-    label: 'Healthcare Industry Analyst',
-    domains: ['healthcare-industry'],
-    emits: ['INSIGHT', 'PREDICTION', 'CONTEXT_CHANGE'],
-    commands: ['!healthcare', '!industry', '!vera', '!market-intel'],
-    mentionPatterns: ['healthcare', 'vera', 'epic', 'cerner', 'vendor', 'incumbent', 'market intel'],
-  },
-  'clinical-advisor': {
-    key: 'clinical-advisor',
-    personaFile: 'gtm/clinical-advisor',
-    name: 'Dr. Claire',
-    label: 'Clinical Advisor',
-    domains: ['clinical'],
-    emits: ['INSIGHT', 'GAP', 'DECISION'],
-    commands: ['!clinical', '!claire', '!doctor', '!clinician'],
-    mentionPatterns: ['clinical', 'claire', 'doctor', 'clinician', 'nurse', 'physician', 'patient', 'workflow'],
-  },
-  'ml-engineer': {
-    key: 'ml-engineer',
-    personaFile: 'gtm/ml-engineer',
-    name: 'Tensor',
-    label: 'ML/AI Engineer',
-    domains: ['ai-ml'],
-    emits: ['INSIGHT', 'DECISION', 'ARTIFACT'],
-    commands: ['!ml', '!ai', '!tensor', '!model'],
-    mentionPatterns: ['ml', 'machine learning', 'ai', 'tensor', 'model', 'inference', 'training', 'edge ai'],
-  },
-  'regulatory-affairs': {
-    key: 'regulatory-affairs',
-    personaFile: 'gtm/regulatory-affairs',
-    name: 'Regina',
-    label: 'Regulatory Affairs Specialist',
-    domains: ['regulatory'],
-    emits: ['INSIGHT', 'ACTION', 'GAP'],
-    commands: ['!fda', '!510k', '!regina', '!regulatory-affairs', '!samd'],
-    mentionPatterns: ['fda', '510k', 'de novo', 'regina', 'samd', 'clearance', 'submission', 'mdr'],
-  },
-};
+// Re-bound to the local name so the rest of this file (route(),
+// getPersona(), etc.) keeps reading from `PERSONAS` unchanged.
+const PERSONAS = PERSONA_METADATA;
 
 // Topic keywords for automatic persona detection
 const TOPIC_PATTERNS = {
