@@ -1,0 +1,64 @@
+[
+  {
+    "id": "open-actions",
+    "trigger": "session_start",
+    "description": "Every ACTION still in open/in-progress state.",
+    "match": {"types": ["ACTION"]},
+    "filter_metadata": {"status": ["open", "in-progress"]},
+    "window": {"max_events": 20, "sort": "timestamp_desc"}
+  },
+  {
+    "id": "recent-decisions",
+    "trigger": "session_start",
+    "description": "DECISION events in the last 14 days.",
+    "match": {"types": ["DECISION"], "lookback_days": 14},
+    "window": {"max_events": 15, "sort": "timestamp_desc"}
+  },
+  {
+    "id": "recent-context-changes",
+    "trigger": "session_start",
+    "description": "CONTEXT_CHANGE events in the last 30 days.",
+    "match": {"types": ["CONTEXT_CHANGE"], "lookback_days": 30},
+    "window": {"max_events": 10, "sort": "timestamp_desc"}
+  },
+  {
+    "id": "clinical-safety-touched",
+    "trigger": "session_start",
+    "description": "Anything tagged clinical-safety or patient-safety recently.",
+    "match": {
+      "tags_any": ["clinical-safety", "patient-safety", "fmea"],
+      "lookback_days": 30
+    },
+    "window": {"max_events": 10, "sort": "timestamp_desc"}
+  },
+  {
+    "id": "regulatory-touched",
+    "trigger": "session_start",
+    "description": "Anything regulatory or design-controls touched recently.",
+    "match": {
+      "tags_any": ["regulatory", "fda", "hipaa", "design-controls"],
+      "lookback_days": 30
+    },
+    "window": {"max_events": 10, "sort": "timestamp_desc"}
+  },
+  {
+    "id": "investor-pitch-tracking",
+    "trigger": "session_start",
+    "description": "Anything tagged fundraising / pitch recently.",
+    "match": {
+      "tags_any": ["fundraising", "investor", "term-sheet", "runway"],
+      "lookback_days": 21
+    },
+    "window": {"max_events": 10, "sort": "timestamp_desc"}
+  },
+  {
+    "id": "pilot-status",
+    "trigger": "session_start",
+    "description": "Recent pilot-related events.",
+    "match": {
+      "tags_any": ["pilot", "pilot-site", "champion", "deployment"],
+      "lookback_days": 21
+    },
+    "window": {"max_events": 10, "sort": "timestamp_desc"}
+  }
+]

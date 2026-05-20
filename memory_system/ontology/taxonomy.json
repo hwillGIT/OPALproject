@@ -1,0 +1,148 @@
+{
+  "concepts": {
+    "clinical": {
+      "prefLabel": "Clinical",
+      "altLabel": ["bedside", "clinical-care"],
+      "broader": [],
+      "narrower": ["clinical-workflow", "clinical-validation", "clinical-safety"]
+    },
+    "clinical-workflow": {
+      "prefLabel": "Clinical Workflow",
+      "altLabel": ["workflow", "bedside-workflow"],
+      "broader": ["clinical"],
+      "narrower": ["icu-workflow", "ed-workflow"]
+    },
+    "clinical-validation": {
+      "prefLabel": "Clinical Validation",
+      "altLabel": ["clinical-evidence", "rct"],
+      "broader": ["clinical"],
+      "narrower": []
+    },
+    "clinical-safety": {
+      "prefLabel": "Clinical Safety",
+      "altLabel": ["patient-safety", "adverse-event"],
+      "broader": ["clinical"],
+      "narrower": ["fmea"]
+    },
+    "hardware": {
+      "prefLabel": "Hardware",
+      "altLabel": ["device", "wearable"],
+      "broader": [],
+      "narrower": ["firmware", "pcb", "audio-codec", "ota"]
+    },
+    "firmware": {
+      "prefLabel": "Firmware",
+      "altLabel": ["esp-idf", "esp-adf"],
+      "broader": ["hardware"],
+      "narrower": []
+    },
+    "pcb": {
+      "prefLabel": "PCB",
+      "altLabel": ["printed-circuit-board", "schematic"],
+      "broader": ["hardware"],
+      "narrower": []
+    },
+    "audio-codec": {
+      "prefLabel": "Audio Codec",
+      "altLabel": ["es8311", "i2s"],
+      "broader": ["hardware"],
+      "narrower": []
+    },
+    "ota": {
+      "prefLabel": "OTA Update",
+      "altLabel": ["firmware-update", "ota-update"],
+      "broader": ["hardware"],
+      "narrower": []
+    },
+    "regulatory": {
+      "prefLabel": "Regulatory",
+      "altLabel": [],
+      "broader": [],
+      "narrower": ["fda", "hipaa", "design-controls"]
+    },
+    "fda": {
+      "prefLabel": "FDA",
+      "altLabel": ["510k", "de-novo", "samd"],
+      "broader": ["regulatory"],
+      "narrower": []
+    },
+    "hipaa": {
+      "prefLabel": "HIPAA",
+      "altLabel": ["phi", "baa"],
+      "broader": ["regulatory"],
+      "narrower": []
+    },
+    "design-controls": {
+      "prefLabel": "Design Controls",
+      "altLabel": ["iso-13485", "dhf"],
+      "broader": ["regulatory"],
+      "narrower": []
+    },
+    "ehr-integration": {
+      "prefLabel": "EHR Integration",
+      "altLabel": ["epic", "cerner", "fhir", "smart-on-fhir"],
+      "broader": [],
+      "narrower": ["app-orchard"]
+    },
+    "app-orchard": {
+      "prefLabel": "Epic App Orchard",
+      "altLabel": ["app-orchard-listing"],
+      "broader": ["ehr-integration"],
+      "narrower": []
+    },
+    "pilot": {
+      "prefLabel": "Pilot",
+      "altLabel": ["pilot-site", "deployment"],
+      "broader": [],
+      "narrower": ["pilot-readiness", "champion"]
+    },
+    "pilot-readiness": {
+      "prefLabel": "Pilot Readiness",
+      "altLabel": ["site-readiness"],
+      "broader": ["pilot"],
+      "narrower": []
+    },
+    "champion": {
+      "prefLabel": "Clinical Champion",
+      "altLabel": ["clinical-champion"],
+      "broader": ["pilot"],
+      "narrower": []
+    },
+    "fundraising": {
+      "prefLabel": "Fundraising",
+      "altLabel": ["investor", "series-a", "seed"],
+      "broader": [],
+      "narrower": ["term-sheet", "runway"]
+    },
+    "term-sheet": {
+      "prefLabel": "Term Sheet",
+      "altLabel": ["liquidation-preference", "pre-money"],
+      "broader": ["fundraising"],
+      "narrower": []
+    },
+    "runway": {
+      "prefLabel": "Runway",
+      "altLabel": ["burn", "cash"],
+      "broader": ["fundraising"],
+      "narrower": []
+    },
+    "manufacturing": {
+      "prefLabel": "Manufacturing",
+      "altLabel": ["bom", "dfm", "yield", "supplier"],
+      "broader": [],
+      "narrower": []
+    },
+    "ip": {
+      "prefLabel": "Intellectual Property",
+      "altLabel": ["patent", "claim", "prior-art"],
+      "broader": [],
+      "narrower": []
+    },
+    "strategy": {
+      "prefLabel": "Strategy",
+      "altLabel": ["positioning", "moat", "thesis"],
+      "broader": [],
+      "narrower": []
+    }
+  }
+}

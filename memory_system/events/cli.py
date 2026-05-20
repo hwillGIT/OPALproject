@@ -69,6 +69,26 @@ def _cmd_write(args: argparse.Namespace) -> int:
             chroma_path=args.chroma_path,
         )
         print(f"chroma upsert: {'OK' if ok else 'FAILED (see stderr)'}")
+    if not args.no_autodetect:
+        # Best-effort scope auto-detection. The function logs to stderr
+        # and returns [] if anything goes wrong; the event is already
+        # safely in the JSONL log.
+        from ..scopes.auto_detect import autodetect_for_event
+        from .write import read_log
+        recent = list(read_log(args.log_dir))
+        # Drop the just-appended event from the recent buffer (we don't
+        # want detect() to count it as "prior context to itself").
+        recent = [r for r in recent if r.get("id") != ev.id]
+        mats = autodetect_for_event(
+            ev.to_dict(),
+            recent_events=recent[-200:],
+        )
+        for mat in mats:
+            print(
+                f"scope: detected {mat.scope.id!r} "
+                f"({len(mat.scope.member_tags)} provisional tags) "
+                f"reason: {mat.transition.reason}",
+            )
     return 0
 
 
@@ -123,6 +143,8 @@ def build_parser() -> argparse.ArgumentParser:
     pw.add_argument("--collection", default=DEFAULT_CHROMA_COLLECTION)
     pw.add_argument("--chroma-path", type=Path,
                     help="Override ChromaDB persistent directory")
+    pw.add_argument("--no-autodetect", action="store_true",
+                    help="Skip the scope burst-detector hook")
     pw.set_defaults(func=_cmd_write)
 
     pb = sub.add_parser("briefing", help="Render a session-start briefing")
