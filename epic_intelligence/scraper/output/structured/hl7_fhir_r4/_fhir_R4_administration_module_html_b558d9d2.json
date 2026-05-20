@@ -1,0 +1,71 @@
+{
+  "url": "https://hl7.org/fhir/R4/administration-module.html",
+  "fileId": "_fhir_R4_administration_module_html_b558d9d2",
+  "title": "Administration-module - FHIR v4.0.1",
+  "description": "",
+  "crawledAt": "2026-05-16T14:44:13.071Z",
+  "depth": 1,
+  "textLength": 10079,
+  "wordCount": 1429,
+  "links": [
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/administration-module.html",
+    "https://hl7.org/fhir/R4/patient.html",
+    "https://hl7.org/fhir/R4/relatedperson.html",
+    "https://hl7.org/fhir/R4/person.html",
+    "https://hl7.org/fhir/R4/group.html",
+    "https://hl7.org/fhir/R4/practitioner.html",
+    "https://hl7.org/fhir/R4/practitionerrole.html",
+    "https://hl7.org/fhir/R4/organization.html",
+    "https://hl7.org/fhir/R4/location.html",
+    "https://hl7.org/fhir/R4/healthcareservice.html",
+    "https://hl7.org/fhir/R4/endpoint.html",
+    "https://hl7.org/fhir/R4/schedule.html",
+    "https://hl7.org/fhir/R4/slot.html",
+    "https://hl7.org/fhir/R4/episodeofcare.html",
+    "https://hl7.org/fhir/R4/encounter.html",
+    "https://hl7.org/fhir/R4/appointment.html",
+    "https://hl7.org/fhir/R4/appointmentresponse.html",
+    "https://hl7.org/fhir/R4/account.html",
+    "https://hl7.org/fhir/R4/flag.html",
+    "https://hl7.org/fhir/R4/device.html",
+    "https://hl7.org/fhir/R4/devicedefinition.html",
+    "https://hl7.org/fhir/R4/devicemetric.html",
+    "https://hl7.org/fhir/R4/substance.html",
+    "https://hl7.org/fhir/R4/financial-module.html",
+    "https://hl7.org/fhir/R4/resource.html",
+    "https://hl7.org/fhir/R4/security-labels.html",
+    "https://hl7.org/fhir/R4/secpriv-module.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "8.0  Administration Module"
+    },
+    {
+      "level": 3,
+      "text": "8.0.1 Introduction"
+    },
+    {
+      "level": 3,
+      "text": "8.0.2 Index"
+    },
+    {
+      "level": 3,
+      "text": "8.0.3 Security and Privacy"
+    },
+    {
+      "level": 3,
+      "text": "8.0.4 Common Use Cases"
+    },
+    {
+      "level": 3,
+      "text": "8.0.5 Developmental Roadmap"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}

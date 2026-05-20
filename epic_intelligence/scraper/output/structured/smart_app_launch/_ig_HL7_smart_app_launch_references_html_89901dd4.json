@@ -1,0 +1,26 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/references.html",
+  "fileId": "_ig_HL7_smart_app_launch_references_html_89901dd4",
+  "title": "References - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:47.780Z",
+  "depth": 1,
+  "textLength": 870,
+  "wordCount": 122,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "References"
+    },
+    {
+      "level": 3,
+      "text": "Underlying Standards"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

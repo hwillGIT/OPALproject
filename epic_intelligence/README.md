@@ -126,14 +126,39 @@ the same message rather than failing inside ChromaDB internals.
 
 | Phase | State |
 |---|---|
-| Scraper (Playwright + HTTP) | Working — 32 pages of open.epic.com captured |
+| Scraper (Playwright + HTTP) | Working — 147 pages across 5 sites captured |
 | Chunker (entity-aware) | Working — 19 unit tests green |
 | Embedder (default + Gemini) | Working — both backends wired |
-| ChromaDB store + citation metadata | Working — 3 integration tests, env-gated |
+| ChromaDB store + citation metadata | Working — 3 integration tests green |
 | Ingestion CLI (scraper → store) | Working — `python -m epic_intelligence.ingestion.pipeline` |
 | Query CLI (citation-aware) | Working — `python -m epic_intelligence.query` |
-| Live end-to-end smoke against the 32 scraped pages | **Pending** — ChromaDB env conflict above |
+| Live end-to-end against the full corpus | Working — **8,556 chunks indexed**, 22/22 tests pass |
 | Voice assistant integration | Not yet wired — separate epic |
+
+## Indexed corpus (per site)
+
+| Site | Files | Chunks | Source |
+|---|---:|---:|---|
+| `open_epic` | 31 | 358 | https://open.epic.com |
+| `epic_on_fhir` | 44 | 7,343 | https://fhir.epic.com |
+| `hl7_fhir_r4` | 40 | 515 | https://hl7.org/fhir/R4 |
+| `cds_hooks` | 2 | 90 | https://cds-hooks.hl7.org/2.0 |
+| `smart_app_launch` | 29 | 236 | SMART App Launch IG (build.fhir.org) |
+| curated synthesis doc | 1 | 14 | `docs/analysis/epic-clinical-data-patient-context.md` |
+| **total** | **147** | **8,556** | |
+
+Sample queries that work today:
+
+```
+$ python -m epic_intelligence.query "SMART on FHIR launch token contents" --top-k 2
+  -> hits citing build.fhir.org/ig/HL7/smart-app-launch/...
+
+$ python -m epic_intelligence.query "CDS hooks order-sign request schema" --top-k 2
+  -> hits citing cds-hooks.hl7.org/2.0
+
+$ python -m epic_intelligence.query "Epic OAuth backend services JWT" --top-k 2
+  -> hits citing fhir.epic.com/Documentation?docId=oauth2
+```
 
 ## Where this plugs into OPAL
 
