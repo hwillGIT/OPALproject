@@ -1,0 +1,81 @@
+# Mt Sinai - candidate pilot site (template — operator fills with real data)
+#
+# Per AI-CONTEXT.md: Mt Sinai is OPAL's primary beachhead via the
+# Innovation Program; Ruth Okyere (CEO, RN at Mt Sinai) is the
+# insider. This file is the structured input the rubric scores; it
+# replaces gut-feel triage with a transparent score.
+
+name: Mount Sinai (NYC) — Innovation Program
+
+# ── Clinical fit ────────────────────────────────────────────────────
+clinical_pain_addressed: true        # nursing communication crisis is
+                                     # well-documented at Sinai (Ruth's
+                                     # own floor experience)
+week_one_plausible: true             # iPhone-based policy lookup +
+                                     # voice comms; minimal procurement
+                                     # friction
+
+champion_candidates:
+  - name: Ruth Okyere
+    role: RN, Mt Sinai (CEO of OPAL)
+    authority_level: 1               # floor-level for Sinai's hierarchy;
+                                     # but she's also OPAL's CEO so she
+                                     # carries founder credibility
+    bandwidth: 9
+    motivation: 10
+    evidence:
+      - "Active participant in Mt Sinai Innovation Program (Q4 2025-Q1 2026)"
+      - "On-the-ground at Sinai; institutional credibility as an RN"
+  - name: (TBD — Director of Nursing Innovation or equivalent)
+    role: Director, Nursing Innovation
+    authority_level: 2               # need a director-level greenlight
+                                     # for any pilot at scale
+    bandwidth: 0                     # unknown; operator to fill
+    motivation: 0                    # unknown
+    evidence: []
+
+# ── Executive resonance ────────────────────────────────────────────
+cmo_aligned: false                   # not confirmed yet — needs a
+                                     # CMO-level conversation via the
+                                     # Innovation Program
+c_suite_metric_mapped: false         # nursing-vacancy / retention is
+                                     # the obvious one; not yet
+                                     # explicitly mapped
+
+# ── Integration feasibility ────────────────────────────────────────
+epic_version: ""                     # operator: confirm with Sinai IT
+epic_supported: false                # unknown until version is known
+fhir_endpoints_exposed: false        # unknown
+device_provisioning_path: false      # v1 iPhone path avoids most of
+                                     # this; not yet validated though
+
+# ── Compliance burden ──────────────────────────────────────────────
+baa_path_days: null                  # unknown — large academic medical
+                                     # center BAAs are historically slow
+                                     # (60-120 days)
+irb_required: null                   # unknown; voice + decision support
+                                     # at bedside likely needs IRB
+                                     # protocol
+security_review_path: false          # unknown
+
+# ── Deal economics ─────────────────────────────────────────────────
+pricing_fit: false                   # academic medical centers often
+                                     # negotiate aggressively; not yet
+                                     # confirmed in our pricing band
+reference_design_value: true         # a flagship Sinai pilot would
+                                     # validate the entire academic-
+                                     # medical-center segment
+
+# ── Operator ground-truth ──────────────────────────────────────────
+site_bandwidth: true                 # Ruth is on the ground; this is
+                                     # the structural advantage
+decision_maker_accessible: false     # signer at scale is not yet
+                                     # accessible — Innovation Program
+                                     # is the proxy
+
+notes:
+  - "Primary beachhead per AI-CONTEXT.md."
+  - "Innovation Program is the structured channel; fills the gap that
+     'cold outreach to a CMO' would otherwise be."
+  - "Most fields default to false/null because the discovery work hasn't
+     happened yet — that IS the score we want surfaced."

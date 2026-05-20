@@ -1,0 +1,43 @@
+# Strong-fit example — a hypothetical site where everything has been
+# validated. Used to anchor the upper end of the rubric for tests +
+# operator calibration.
+
+name: Riverside Regional Medical Center (hypothetical)
+
+clinical_pain_addressed: true
+week_one_plausible: true
+
+champion_candidates:
+  - name: Dr. Elena Reyes
+    role: VP Nursing Operations
+    authority_level: 3               # VP — can greenlight + remove
+                                     # cross-functional blockers
+    bandwidth: 7
+    motivation: 9
+    evidence:
+      - "Initiated pilot inquiry herself after attending nursing-AI panel"
+      - "Provided 3 floor nurses for discovery interviews"
+      - "Has board-approved innovation budget line"
+
+cmo_aligned: true
+c_suite_metric_mapped: true          # nursing turnover %, mapped to
+                                     # quarterly board report
+
+epic_version: "May 2023"
+epic_supported: true
+fhir_endpoints_exposed: true
+device_provisioning_path: true       # MDM + dedicated wifi VLAN already
+                                     # in production for hospital iPads
+
+baa_path_days: 21
+irb_required: false                  # standard QI exemption
+security_review_path: true
+
+pricing_fit: true
+reference_design_value: true
+
+site_bandwidth: true
+decision_maker_accessible: true
+
+notes:
+  - "Hypothetical. Anchors the rubric's upper bound for calibration."

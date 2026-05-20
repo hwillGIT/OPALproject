@@ -48,6 +48,14 @@ EPIC EHR INTELLIGENCE LAYER (RAG over Epic docs):
 - Citation-aware query:         python -m epic_intelligence.query "<question>" --top-k 5
 - Pytest:                       python -m pytest epic_intelligence/tests/
 
+PILOT-SITE RUBRIC (D-1; scoring + champion ID):
+- Module:                       pilot/
+- Score a site:                 python -m pilot.cli score <site.yaml> [--json]
+- Rank champions:               python -m pilot.cli champions <site.yaml>
+- Example sites:                pilot/examples/{strong-fit,weak-fit,mt-sinai}.yaml
+- README:                       pilot/README.md
+- Pytest:                       python -m pytest pilot/tests/
+
 WORKFLOW ORCHESTRATOR RUNTIME (turns YAML workflows into executable runs):
 - Module:                       orchestrator/
 - List workflows:               python -m orchestrator.cli list
