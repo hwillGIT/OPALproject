@@ -1,0 +1,87 @@
+# Pilot Site Assessment
+# Qualify a hospital pilot site and define success criteria before
+# any contract is signed.
+
+name: pilot-site-assessment
+category: business
+domain: pilot
+version: "1.0"
+description: >
+  Run a candidate pilot hospital through clinical fit, integration
+  feasibility, compliance burden, deal economics, and operator
+  ground-truth. Produces a go/no-go with named success metrics + a
+  named clinical champion.
+
+backpressure:
+  - Named clinical champion identified at the site (not "the IT team")
+  - Pilot success metrics are quantitative and reviewable in ≤30 days
+  - EPIC integration scope is mapped to specific FHIR resources
+  - Compliance path (BAA, IRB if needed) has a written timeline
+  - Deal economics are profitable or explicitly subsidized as a reference design
+
+phases:
+  - id: clinical-fit
+    lead: clinical-ops
+    supporting: [clinical-advisor]
+    tensions:
+      - clinical-ops<>compliance-ops
+    questions:
+      - "What clinical pain does this site actually feel that OPAL addresses?"
+      - "Who at the site has authority + bandwidth to be the champion?"
+      - "What does week-1 look like for the on-floor clinicians?"
+    output: "Site clinical-fit brief + named champion + week-1 day-in-life"
+
+  - id: executive-resonance
+    lead: cmo-advisor
+    supporting: [clinical-advisor]
+    tensions:
+      - clinical-advisor<>cmo-advisor
+    questions:
+      - "Does the CMO at the site see the same problem the floor sees?"
+      - "What metric does this move that the C-suite already tracks?"
+    output: "C-suite framing + expected reported metric movement"
+
+  - id: integration-feasibility
+    lead: enterprise-architect
+    supporting: [hardware-lead, security-architect]
+    questions:
+      - "What EPIC build/version is in production at this site?"
+      - "Which FHIR endpoints are exposed; which require IT enablement?"
+      - "What's the device provisioning path? Wifi, segmentation, MDM?"
+    output: "Integration feasibility verdict + IT prerequisite checklist"
+
+  - id: compliance-and-paperwork
+    lead: compliance-ops
+    supporting: [regulatory-affairs]
+    tensions:
+      - clinical-ops<>compliance-ops
+    questions:
+      - "BAA status? IRB needed? Existing precedent at the site?"
+      - "What's the realistic time-to-signature given their procurement?"
+    output: "Compliance timeline with named owners + dates"
+
+  - id: deal-economics
+    lead: sales-bd
+    supporting: [finance-analyst, cfo]
+    tensions:
+      - sales-bd<>partnership-lead
+    questions:
+      - "Is this a paid pilot, free pilot, or reference design?"
+      - "What does success here unlock — same-system expansion, payer attention, both?"
+      - "What's the floor we'll accept on a paid pilot vs. signal value of a free one?"
+    output: "Pricing + expansion strategy + walk-away terms"
+
+  - id: synthesis
+    lead: partnership-lead
+    supporting: [strategist, product-owner]
+    pattern: dialectic-debate
+    questions:
+      - "Go, no-go, or stage-gate?"
+      - "What single signal in the first 30 days would convince us to expand vs withdraw?"
+    output: "Go/no-go decision + 30-day signal + memory writes"
+
+emits:
+  - DECISION
+  - PREDICTION
+  - ACTION
+  - ARTIFACT

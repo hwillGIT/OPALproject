@@ -1,0 +1,90 @@
+# Investor Pitch Review
+# Stress-test a pitch deck / data-room artifact before external
+# exposure. Surfaces contradictions, missing slides, weak claims.
+
+name: investor-pitch-review
+category: business
+domain: investor
+version: "1.0"
+description: >
+  Pre-flight a pitch through strategic logic, capital efficiency,
+  market sizing, market timing, and narrative clarity. Sends nothing
+  out until backpressure is met.
+
+backpressure:
+  - Zero internal contradictions across slides (numbers, claims, dates)
+  - "Why now" answer is specific and citation-backed
+  - Use-of-funds maps to named milestones with named owners
+  - Story-quality numbers (deck) and ground-truth numbers (model) reconcile
+  - At least one named comparable + one named differentiator
+
+phases:
+  - id: strategic-logic
+    lead: strategist
+    supporting: [product-owner]
+    tensions:
+      - strategist<>sales-bd
+      - strategist<>finance-analyst
+    questions:
+      - "What is the one thing this pitch is asking the investor to believe?"
+      - "Where does the strategic story not survive 5 minutes of probing?"
+      - "Is the ICP actually who's in the pipeline, or aspirational?"
+    output: "List of strategic gaps + the one-thing-to-believe statement"
+
+  - id: capital-efficiency
+    lead: cfo
+    supporting: [finance-analyst]
+    tensions:
+      - cfo<>strategist
+      - cfo<>finance-analyst
+    questions:
+      - "Does the use-of-funds buy a credible step-change or just survival?"
+      - "Where are the deck numbers more optimistic than the model?"
+      - "What runway scenario survives a 50% revenue miss?"
+    output: "Capital-efficiency verdict + reconciled funding ask"
+
+  - id: market-sizing
+    lead: healthcare-analyst
+    supporting: [growth-lead]
+    tensions:
+      - healthcare-analyst<>growth-lead
+    questions:
+      - "Is the TAM defensible with primary sources, not just McKinsey citations?"
+      - "Does the SAM match the actual go-to-market in the deck?"
+      - "What hospital-system count, in named accounts, gets us to year-3 revenue?"
+    output: "Market sizing verdict + named-account list for year-3 plan"
+
+  - id: technical-defensibility
+    lead: software-architect
+    supporting: [ip-counsel, ml-engineer]
+    tensions:
+      - ip-counsel<>software-architect
+    questions:
+      - "Are the technical claims defensible if a competitor reads this deck?"
+      - "Does the IP story (patent claims, defensive publications) match the architecture?"
+      - "Which slides accidentally telegraph our roadmap to a competitor?"
+    output: "Technical/IP redaction list + defensibility verdict"
+
+  - id: narrative-clarity
+    lead: growth-lead
+    supporting: [product-owner]
+    pattern: internal-review
+    questions:
+      - "What's the one line a partner shares with their network?"
+      - "What slide could be removed without weakening the case?"
+      - "Where does jargon hide a missing claim?"
+    output: "Tightened deck + one-line shareable thesis"
+
+  - id: synthesis
+    lead: strategist
+    supporting: [cfo]
+    pattern: dialectic-debate
+    questions:
+      - "Ship as-is, ship with edits, or rework?"
+      - "What single edit would most increase first-meeting-to-second-meeting conversion?"
+    output: "Ship/edit/rework verdict + the single highest-leverage edit + memory writes"
+
+emits:
+  - DECISION
+  - INSIGHT
+  - ARTIFACT

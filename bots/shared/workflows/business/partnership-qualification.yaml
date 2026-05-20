@@ -1,0 +1,87 @@
+# Partnership Qualification
+# Decide whether to invest cycles in a hospital-system, App-Orchard,
+# or payer partnership opportunity.
+
+name: partnership-qualification
+category: business
+domain: partnership
+version: "1.0"
+description: >
+  Qualify a partnership opportunity by strategic fit, integration
+  feasibility (especially EPIC's process gates), deal structure, and
+  opportunity cost vs the direct-sales motion.
+
+backpressure:
+  - Strategic fit is rated against the funded strategy (not aspirational)
+  - EPIC App Orchard / integration gate is mapped to a real timeline
+  - Deal structure (rev share, exclusive, MFN, term) has named acceptable floors
+  - Opportunity cost vs the direct-sales pipeline is explicit
+
+phases:
+  - id: strategic-fit
+    lead: partnership-lead
+    supporting: [strategist]
+    tensions:
+      - partnership-lead<>sales-bd
+    questions:
+      - "Does this partnership ladder to our funded strategy or is it strategy-creep?"
+      - "What does success here unlock that direct sales cannot?"
+      - "Is this a 12-month bet or a 36-month bet, and do we have runway for it?"
+    output: "Strategic-fit verdict + horizon classification"
+
+  - id: epic-app-orchard-gate
+    lead: enterprise-architect
+    supporting: [partnership-lead, regulatory-affairs]
+    tensions:
+      - partnership-lead<>enterprise-architect
+    questions:
+      - "Where in the App Orchard lifecycle is this opportunity (intake, review, listing)?"
+      - "What technical/security gates does EPIC require before listing?"
+      - "What's the realistic time from kickoff to first joint hospital go-live?"
+    output: "App Orchard gate map + realistic timeline"
+
+  - id: clinical-resonance
+    lead: clinical-advisor
+    supporting: [cmo-advisor]
+    tensions:
+      - clinical-advisor<>cmo-advisor
+    questions:
+      - "Does the partner's clinical leadership see the same opportunity?"
+      - "Is the clinical value story the same across the partner's hospital portfolio?"
+    output: "Clinical-resonance verdict per partner site"
+
+  - id: deal-structure
+    lead: sales-bd
+    supporting: [cfo, finance-analyst]
+    tensions:
+      - sales-bd<>partnership-lead
+    questions:
+      - "Rev share, OEM, white-label, or co-sell?"
+      - "What's the exclusivity floor we'll accept?"
+      - "What's the cash-flow shape: upfront, milestone, recurring?"
+    output: "Deal structure menu + acceptable floor on each axis"
+
+  - id: opportunity-cost
+    lead: strategist
+    supporting: [growth-lead, product-owner]
+    pattern: dialectic-debate
+    questions:
+      - "If we say yes, what do we not do this quarter?"
+      - "If we say no, what's the cost in 12 months?"
+      - "Is there a smaller commitment that captures most of the option value?"
+    output: "Opportunity-cost ledger + smallest-viable-commitment option"
+
+  - id: synthesis
+    lead: partnership-lead
+    supporting: [strategist, cfo]
+    pattern: team-deliberation
+    questions:
+      - "Pursue full, pursue scoped, or decline?"
+      - "Who owns next step? With what deadline?"
+    output: "Pursue/scope/decline verdict + named owner + deadline + memory writes"
+
+emits:
+  - DECISION
+  - PREDICTION
+  - ACTION
+  - ARTIFACT
