@@ -3,11 +3,15 @@ ROOT: G:\Projects\OPALproject\ProjectWork
 
 PRIMARY USER-FACING REFERENCE:
 - INTELLIGENCE_LAYER.md (repo root) — plain-English guide to the
-  OPAL Intelligence Layer + the 7 LYNA clinical-staff user stories
+  OPAL Intelligence Layer + the 9 LYNA clinical-staff user stories
   (Sarah/bedside med, Linh/float-nurse onboarding, Marcus/charge
-  handoff, Jamal/coming-on-shift, Tanya/new-grad policy lookup,
-  Robert/med-admin safety check, Sofia/ICU deterioration). Uses
-  Epic as the reference EHR throughout. Start here for anyone new.
+  handoff in resource-offline window, Jamal/coming-on-shift,
+  Tanya/new-grad policy lookup, Robert/AI-awareness-gap routing,
+  Sofia/cardiac-step-down rapid response, Priya/isolation-room
+  broadcast, Aisha/phone-camera handoff). Every story is anchored
+  to the I-Corps customer-discovery research (H1–H18, BMC V2
+  themes, Interview #1 and #2 transcripts). Uses Epic as the
+  reference EHR throughout. Start here for anyone new.
 
 SYSTEM CONFIGURATION:
 - Framework: SAFe 6.0

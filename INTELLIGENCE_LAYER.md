@@ -218,14 +218,25 @@ is invisible plumbing that makes those answers fast, accurate, and
 cited — sub-two-second voice replies grounded in the hospital's own
 Epic instance and in published Epic documentation.
 
-Seven stories from the floor, spanning the day-to-day shape of
+Nine stories from the floor, spanning the day-to-day shape of
 nursing work: a routine bedside lookup, onboarding to an unfamiliar
-unit, a multi-patient handoff, taking over patients at the start of
-shift, a new graduate building confidence, a safety check at the
-point of medication administration, and a single-patient
-deterioration in the ICU. All seven are nurses, because LYNA is
+unit, a charge-nurse handoff during the resource-nurse-offline
+window, taking over a patient assignment at start of shift, a new
+graduate looking up policy at the bedside, a nurse finding an AI
+tool the hospital has been paying for that nobody on the floor
+knew was there, a step-down rapid response, a hands-free broadcast
+from an isolation room, and a clean handoff to the phone for a
+camera-dependent task. All nine are nurses, because LYNA is
 positioned for nurses specifically — "Information OUT for nurses,"
 distinct from physician-documentation tools like Suki or Abridge.
+
+Every story is anchored to the I-Corps customer-discovery research
+(`i-corps/interviews/`, `i-corps/hypothesis-map.md`,
+`i-corps/data-room/problem-validation-research.md`). Each story
+ends with an **Interview anchor** block citing the specific
+interview transcripts, hypotheses (H1–H18), and BMC V2 themes
+that the scenario dramatizes — so we never write a journey we
+can't trace back to something a real nurse said.
 
 ### Story index — what's covered, at a glance
 
@@ -233,35 +244,59 @@ Quick scan before you commit to reading each one in full. Each row
 points at the section that has the full narrative, the dialogue,
 and the "under the hood" walkthrough.
 
-| §    | Nurse  | Setting                                | Trigger phrase                             | Layer capability exercised                                            |
-|------|--------|----------------------------------------|--------------------------------------------|------------------------------------------------------------------------|
-| 4.1  | Sarah  | Med-surg, 2:15 AM bedside              | "What's the last pain med for bed 14?"     | Live Epic FHIR (MedicationAdministration) + Epic-doc citation         |
-| 4.2  | Linh   | Float pool, first shift on 4-South     | "Where are the sterile dressings?"         | Operational Knowledge Base (door codes, supplies, on-call)            |
-| 4.3  | Marcus | Charge nurse, end of 7p–7a shift       | "Give me a unit status for 4-South"        | Parallel FHIR fan-out + per-site handoff template (I-PASS / SBAR)     |
-| 4.4  | Jamal  | Day-shift, taking over 4 patients      | "Sign-on summary for my four patients"     | Per-shift cutover + sign-on template + cross-shift continuity         |
-| 4.5  | Tanya  | 2 weeks off orientation, refused med   | "Policy for a patient refusing a cardiac med?" | Policy system + Drug Info (both cited explicitly)                  |
-| 4.6  | Robert | Med-surg, new cipro at bedside         | "Verify safety for bed 22"                 | Drug Info interaction matrix + FHIR med list + renal dose check       |
-| 4.7  | Sofia  | ICU, single patient deteriorating      | "Rapid response, bed 6, ST changes"        | Emergency-intent path: parallel paging + protocol surfacing + FHIR    |
+| §    | Nurse  | Setting                                | Trigger phrase                                | Layer capability                                                       | Interview anchor                                        |
+|------|--------|----------------------------------------|-----------------------------------------------|------------------------------------------------------------------------|---------------------------------------------------------|
+| 4.1  | Sarah  | Med-surg, 2:15 AM bedside              | "What's the last pain med for bed 14?"        | Live Epic FHIR (MedicationAdministration) + Epic-doc citation          | H5, H7, H9 — bypass-the-screen at point of care         |
+| 4.2  | Linh   | Float pool, first shift on 4-South     | "Where are the sterile dressings?"            | Operational Knowledge Base (door codes, supplies, on-call)             | Interview #1 (David, float pool); BMC V2 three-layer baseline |
+| 4.3  | Marcus | Charge, late in the no-resource window | "Give me a unit status for 4-South"           | Parallel FHIR fan-out + per-site handoff template (I-PASS / SBAR)      | H12 (12–17 charge-as-sole-routing), H9                  |
+| 4.4  | Jamal  | Day-shift, taking over 4 patients      | "Sign-on summary for my four patients"        | Per-shift cutover + sign-on template + cross-shift continuity          | H5, H9; cross-shift continuity inferred from cluster 1  |
+| 4.5  | Tanya  | 2 weeks off orientation, refused med   | "Policy for a patient refusing a cardiac med?"| Policy system + Drug Info (both cited explicitly)                      | Interview #2 (Policy Tech complaint); H4, H5            |
+| 4.6  | Robert | Med-surg, new admit with 6 active meds | "Is the new cipro okay with what he's on?"    | Hospital AI registry + integrated nursing-reference AI + Drug Info     | H6 (AI-awareness gap), H13 (silent abandonment), H18    |
+| 4.7  | Sofia  | Cardiac step-down (4-East), deteriorating | "Rapid response, bed 6, ST changes"        | Emergency-intent path: parallel paging + protocol surfacing + FHIR     | H1 (med-surg/cardiac beachhead), H7; not day-one ICU    |
+| 4.8  | Priya  | Med-surg, mid-procedure in isolation   | "Broadcast 4-South: I need a saline flush in 305" | Execution layer in non-emergency mode: targeted broadcast + ack    | Interview #2 (group-chat-from-isolation feature request); H7, H14 |
+| 4.9  | Aisha  | Med-surg, wound documentation          | "LYNA, document a pressure injury on bed 18"  | Phone coexistence: voice ↔ camera handoff + workflow resume            | H14 (phone owns camera; LYNA must coexist)              |
 
-**Cross-cutting themes the seven stories establish:**
+**Cross-cutting themes the nine stories establish:**
 
-- **Sub-2-second answer latency** is the bar in every story — the
-  voice round-trip must complete fast enough that the nurse never
-  takes her hands off the patient (§4.1, §4.7) or her eyes off the
-  task (§4.6).
+- **Faster than asking a person — not just faster than the
+  screen.** The benchmark from the I-Corps interviews is the
+  ~5 minutes a float nurse spends finding a senior nurse to ask
+  (Interview #1, David Hernandez), not the 2-4 minutes spent at
+  a workstation. Every story shows LYNA beating the human-first
+  bypass that nurses already adopted (H5) — sub-2-second voice
+  round-trip, hands-free, no eyes off the patient (§4.1, §4.6,
+  §4.7, §4.8).
 - **Every answer carries a citation.** Sarah sees "via Epic MAR /
-  FHIR Observation"; Tanya sees "hospital policy NU-MED-027 + Drug
-  Info"; Marcus sees "all data pulled from Epic at 06:42 AM." LYNA
-  is never allowed to make a claim without its source.
-- **Three knowledge surfaces** appear across the seven: the live
-  EHR (Epic via FHIR), the per-site Operational Knowledge Base
-  (Linh, Marcus, Jamal), and indexed published documentation (Epic
-  developer docs in §4.1, hospital policy in §4.5).
+  FHIR Observation"; Tanya sees "hospital policy NU-MED-027 +
+  Drug Info"; Robert sees the integrated AI tool named by name;
+  Marcus sees "all data pulled from Epic at 06:42 AM." LYNA is
+  never allowed to make a claim without naming where it came from —
+  including naming the hospital's own AI tools when they are the
+  source (§4.6).
+- **Five knowledge surfaces** appear across the nine: the live EHR
+  (Epic via FHIR), the per-site Operational Knowledge Base (Linh,
+  Marcus, Jamal, Priya), the per-site Policy system (Tanya, Sofia),
+  Drug Info, and a **per-site AI registry** that catalogs every
+  clinical AI tool the hospital has bought (Robert).
+- **LYNA as the router across the hospital's existing AI
+  investments.** BMC V2 framing: hospitals are deploying clinical
+  AI but nurses don't know it exists at the point of care (H6).
+  LYNA's defensibility is not "we have a better model" — it's "we
+  are the single voice surface the nurse already uses, and we
+  surface every clinical AI tool the hospital already paid for"
+  (§4.6 explicitly; §4.5 implicitly via Policy + Drug Info routing).
 - **The execution layer** (page, call, broadcast, render to a
   bedside display) shows up in §4.2 (deferred — operator-confirmed),
-  §4.6 (deferred — operator-confirmed), and §4.7 (autonomous within
-  declared emergency intents). The discipline is consistent:
-  routine actions need confirmation; emergency-intent actions don't.
+  §4.6 (deferred — operator-confirmed), §4.7 (autonomous within
+  declared emergency intents), and §4.8 (autonomous within the
+  declared broadcast-with-acknowledgment intent — the *content* is
+  the authorization). Discipline: routine actions need explicit
+  confirmation; emergency-intent and help-broadcast actions don't.
+- **Phone coexistence, not replacement.** Validated explicitly in
+  the BMC V2 update: the phone owns camera-dependent workflows
+  (med scanning, pressure-injury photos) and LYNA must hand off
+  cleanly (§4.9). Positioning LYNA as a phone replacement is the
+  fastest way to lose a CNIO conversation (H14).
 
 ### 4.1 — Sarah, a med-surg nurse, at the bedside
 
@@ -308,6 +343,24 @@ She walks back to the room knowing exactly what to do.
 - Doc citations: `epic_intelligence/query.py` against the indexed
   corpus in `epic_intelligence/scraper/output/markdown/`.
 - Synthesis: `epic_intelligence/synthesis/synthesizer.py`.
+
+**Interview anchor:** Sarah's story dramatizes the bypass-the-screen
+pattern that cluster-1 interviewees consistently described — nurses
+choose the fastest information source available, and at 2 AM that
+has historically been "walk to the workstation" because there is no
+faster option. Maps to **H5** (nurses bypass hospital systems and
+go human-first across experience levels and unit types — but at 2
+AM there is no human to go to), **H7** (the Vocera-to-smartphone
+transition removed hands-free capability nurses still want back —
+6/7 cluster-1 nurses confirmed; CNIO confirmed nothing hands-free
+exists in the market), and **H9** (screen interruptions during care
+increase clinical error risk by ~13%; LYNA replaces a screen lookup
+with a voice round-trip). The bedside med-administration timing
+detail wasn't directly surfaced by Interview #1 or #2 as a
+top-of-mind pain — both interviewees couldn't recall a specific
+"critical lab / med info was inconvenient" instance — so the
+specific scenario is plausible-but-not-quoted, supported by the
+broader bypass-the-screen pattern rather than a literal transcript.
 
 ### 4.2 — Linh, a float nurse, on her first shift on 4-South
 
@@ -380,13 +433,38 @@ unit well enough to work without flagging anyone down.
 - Execution layer (page / call / broadcast): not yet implemented —
   documented as a v2 capability in the LYNA product brief.
 
+**Interview anchor:** Linh's story is the closest of the nine to a
+direct transcript. **Interview #1** (David Hernandez, float pool
+RN, 8 years experience) described almost every beat: gets his
+assignment 5-10 minutes before shift, takes 15-20 minutes to feel
+settled on a new unit, struggles with remembering access codes
+across units, sometimes lacks system access entirely. Described
+units as "territorial" ("this is my computer, this is my that").
+Goes to a senior nurse or charge nurse *first* for protocols
+because he already knows who's senior; intranet is a distant second
+because "navigating the computer would probably take longer."
+Estimated ~5 minutes to get an answer from a person. The
+**Operational Knowledge Base** — door codes, supply locations,
+pager numbers, prep checklists — is the BMC V2 "three-layer
+baseline (navigation, reminders, unit-specific knowledge) — works
+day one" promise. Maps to **H1** (problem-universality at the
+mechanism level; the float onboarding gap exists across every unit
+and experience level), **H5** (human-first bypass), and the BMC V2
+addition of "screenless clinical workstation" framing.
+
 ### 4.3 — Marcus, charge nurse on 4-South, end of shift handoff
 
 It's 6:45 AM. Marcus has been charge on 4-South for the 7p-7a
-shift. In 15 minutes he hands off to the day-shift charge, Anita.
-He needs to compile a unit-status summary: which patients have open
-issues, who's NPO for AM procedures, who's pending discharge, and
-whether any beds are free for the ED to admit into.
+shift — the second half of which is the **resource-nurse-offline
+window**: on this unit, like most med-surg floors at this site,
+the resource nurse goes offline 00:00–05:00 to cover staff breaks
+and meals, which makes the charge nurse the sole routing layer
+for clinical questions, admits, and family escalations for those
+five hours (H12). Marcus has been carrying that load. In 15 minutes
+he hands off to the day-shift charge, Anita. He needs to compile a
+unit-status summary: which patients have open issues, who's NPO
+for AM procedures, who's pending discharge, and whether any beds
+are free for the ED to admit into.
 
 **Without LYNA:** Marcus opens Epic, scans every chart on the unit
 (28 patients tonight), writes notes on a paper sheet, doublechecks
@@ -458,6 +536,25 @@ from 20 minutes to 6.
 - Citation strategy: same as Sarah's bedside query in §4.1 — every
   fact carries its source, never narrate a claim without a
   citation.
+
+**Interview anchor:** Marcus is the charge-nurse counterpart to
+the staff-nurse stories. Cluster 1 interviewed staff nurses, not
+charge nurses, so this story is supported by the hypothesis layer
+rather than a direct transcript: **H12** (resource nurses go
+offline 12:00–17:00 to cover breaks, leaving the charge nurse as
+sole routing layer — explicitly identified in the BMC V2 update
+as the specific deployment window where LYNA earns its keep),
+**H9** (cognitive overload from batching 28 patient charts at end
+of shift is exactly the cog-load dimension that interview-2 of the
+problem-validation work flags as a separate validated pain
+alongside time-loss), and **H1** (the severity tracks unit
+structure: floors without a resource nurse to share the routing
+load are the beachhead). Cross-validation against cluster-2
+interviews — which include charge-nurse roles — is open
+follow-up; transcripts not yet ingested. The 12:00–17:00 window
+in H12 is the day-shift mirror of the overnight pattern shown
+here (00:00–05:00 on this unit); the BMC V2 hypothesis explicitly
+names the day-shift window as the validated deployment slot.
 
 ### 4.4 — Jamal, day-shift med-surg nurse, coming onto a 4-patient assignment
 
@@ -544,6 +641,20 @@ chart-scanning; it goes into rounds.
   artifact storage (per-site, lives alongside the unit board in
   the Operational KB layer).
 
+**Interview anchor:** No cluster-1 nurse explicitly described an
+"AI compiles my brain sheet at sign-on" pattern, so this story is
+an inference from the validated themes rather than a direct
+transcript. The 30-minute "first hour lost to chart-scanning"
+framing maps to the time-loss dimension validated across the
+BMC V2 update; the "since-handoff" cutover hook is the natural
+extension of the per-site Operational KB pattern from §4.2 (Linh)
+and §4.3 (Marcus). Maps to **H5** (bypass screens; trade workstation
+chart-reading for voice summary), **H9** (cog-load batching across
+4 patient charts), and **H1** (med-surg beachhead). Direct
+transcript validation is open follow-up. The bowel-prep dialogue
+ties back to Sarah's overnight handoff (§4.1 / §4.3) so the nine
+stories read as a single unit on continuous coverage.
+
 ### 4.5 — Tanya, two weeks out of orientation, with a patient refusing a med
 
 Tanya is fourteen days off her formal preceptor period on 4-North.
@@ -617,86 +728,167 @@ Eight minutes total instead of 25.
 - Citation strategy: same as §4.1 — every answer carries its
   source, never narrate a claim without a citation.
 
-### 4.6 — Robert verifies a new medication at the point of administration
+**Interview anchor:** Tanya's story has the cleanest direct
+transcript support of any of the nine, drawn from **Interview #2**
+(anonymous ICU travel nurse, 9 years experience): "She uses Policy
+Tech but said it often doesn't answer her question, so she ends up
+hunting for people to find answers." That's exactly the gap LYNA
+closes here — voice access to the *same* hospital policy index,
+with the answer formatted for action and cited. Tanya's "two weeks
+off orientation" framing maps to the BMC V2 beachhead language
+("mixed experience" — floors with new grads alongside seniors),
+and to **H4** (nurse educators provide PDFs and training but no
+audit of sustained use, so post-orientation nurses fall into the
+gap she's in). Maps to **H5** (human-first bypass when the system
+fails — pages preceptor, hunts for charge), **H4** (educator gap),
+and the Policy + Drug Info routing pattern that the BMC V2 update
+identified as a core LYNA capability.
 
-It's 14:20. Robert is administering a first dose of ciprofloxacin
-500 mg to Mr. Alvarez in bed 22. The order is new — it came in
-from infectious disease this morning for a wound infection.
-Mr. Alvarez is on six other active medications, including warfarin
-for a-fib.
+### 4.6 — Robert finds an AI tool the hospital has been paying for
 
-**Without LYNA (current best practice):** Robert scans the
-medication barcode, the system confirms it matches the order, and
-the dose is administered. The check-against-everything-else
-happens at pharmacy verification before the order goes live. *In
-theory* it catches interactions. *In practice* the cipro-warfarin
-interaction (cipro inhibits warfarin metabolism, raising INR over
-3-5 days) is a known one but routinely missed if the patient's INR
-isn't already trending high.
+It's 13:50. Robert is admitting Mr. Alvarez to bed 22 — wound
+infection, started on ciprofloxacin in the ED, six other active
+meds including warfarin for a-fib. Robert is two years into
+med-surg. His go-to when he's not sure about a drug combination is
+the charge nurse, or sometimes the pharmacist if she happens to be
+on the unit. He's never used a computer-based reference tool at
+the bedside because the workstation is down the hall and he'd
+rather just ask.
 
-**With LYNA:** Robert scans the barcode at bedside as usual, then
-adds:
+What Robert doesn't know — and what nobody on 4-South knows — is
+that the hospital bought an **integrated nursing clinical-reference
+AI** eight months ago. It sits behind one tile in the Epic
+Hyperspace launcher and a second tile in the hospital-issued phone
+app. Robert has never clicked either. Nor has Tanya, nor Linh,
+nor anyone else on the unit. Hospital leadership counts the purchase
+on the FY26 capital report as "AI deployed for nursing." Nursing
+informatics has no usage data on Robert's unit — because there
+isn't any.
 
-> "Verify safety for bed 22."
+**Without LYNA:** Robert pages the pharmacist. She's on another
+unit. While he waits, he writes "check cipro vs. warfarin" on his
+brain sheet and starts the rest of the admission. Forty minutes
+later the pharmacist calls back; the interaction gets noted. Robert
+documents and moves on. The hospital's integrated reference AI was
+never touched — same as last week, same as the week before.
 
-In about 4 seconds:
+**With LYNA:** Robert taps the badge mid-admission.
 
-> "Ciprofloxacin 500 mg PO for Mr. Alvarez, bed 22 — verified
-> against active orders and barcode.
+> "Is the new cipro okay with what Mr. Alvarez is already on?"
+
+In about three seconds:
+
+> "Your hospital integrated **a nursing clinical-reference AI** into
+> Epic last September — I'm using it for this answer.
 >
-> **Allergies:** no documented cipro or fluoroquinolone allergy.
+> Ciprofloxacin 500 mg PO for Mr. Alvarez, cross-checked against
+> his six active meds. **One interaction flagged:** ciprofloxacin
+> inhibits warfarin metabolism; INR can rise over 3–5 days.
+> Patient's last INR (2026-05-14): 2.4, in range. The reference AI
+> recommends a recheck at 48 hours and a routine note to
+> anticoagulation pharmacy.
 >
-> **Interaction flag:** ciprofloxacin + warfarin. Cipro inhibits
-> warfarin metabolism and typically raises INR over 3-5 days.
-> Patient's last INR (2026-05-14) was 2.4, in range. Recommend:
-> recheck INR in 48 hours, communicate to anticoag service.
+> No allergies on file. No renal-dose adjustment needed at the
+> patient's current creatinine (1.1).
 >
-> **Other:** no max-dose issues, no renal-dose adjustment needed
-> at the patient's most recent creatinine (1.1)."
+> Source: hospital-integrated nursing reference AI (registry ID
+> NU-AI-014) + Epic FHIR MedicationRequest + Observation."
 
-Robert administers the dose. Before the end of his shift, he sends
-a routine message to anticoagulation pharmacy flagging the new
-cipro start and the INR recheck recommendation. The interaction
-gets handled the same shift it was introduced — not 72 hours later
-when the patient's INR is suddenly 4.8.
+Robert acts on it. Before end of shift he sends the routine note to
+anticoag — same destination as before, but the interaction was
+named at the moment of admission instead of forty minutes later.
+The hospital's reference AI is now in his workflow. Not because
+anyone trained him on it, but because LYNA *routed through it and
+named it*. Tomorrow when he sees the same situation he'll know the
+tool exists.
+
+**What this story is about:** the **AI-awareness gap** (H6). The
+I-Corps research surfaced a pattern that holds at every site we've
+talked to: hospitals are deploying clinical AI tools, the tools end
+up behind a tile nurses never click, and nursing informatics has no
+usage data to prove it. The BMC V2 update names this explicitly —
+"AI awareness gap: nurses don't know tools exist, LYNA routes
+automatically." LYNA's defensibility here is not "we have a better
+model than the hospital's reference AI." It's "we are the single
+voice surface the nurse already uses, and we surface every clinical
+AI tool the hospital already paid for — and we name them, so the
+tools get credit, the contract gets renewed, and the nurse learns."
 
 **Under the hood:**
 
-1. The barcode scan is normal Epic / BCMA flow; LYNA layers on a
-   second, broader safety pass.
-2. The interaction check pulls from the **Drug Info system**
-   (cross-reference: meds the patient is actively on per FHIR
-   `MedicationRequest`, plus the one being administered).
-3. The dose-adjustment check uses the patient's recent `Observation`
-   values (creatinine) via Epic FHIR.
-4. The "flag and recommend" output is structured so Robert can act
-   immediately without having to go back to a workstation to look
-   things up.
-5. LYNA does **not** auto-page anticoagulation pharmacy here —
-   that's an action that needs Robert's deliberate confirmation
-   via the execution layer. The recommendation is surfaced; the
-   action is operator-initiated.
+1. The query "is X okay with what they're on?" is classified by
+   the query router as a multi-source safety check.
+2. The router consults the **hospital AI registry** — a per-site
+   catalog the operator maintains of every clinical AI tool
+   integrated into Epic, the phone app, the intranet, or any other
+   surface. Each registry entry declares: name, integration
+   surface, what kinds of questions it answers authoritatively,
+   auth flow, citation format, fallback behavior.
+3. For this query, the integrated nursing-reference AI is the
+   registered authority. LYNA queries it via the documented API,
+   names it explicitly in the response, and falls back to native
+   Drug Info + FHIR if the integrated AI is unreachable.
+4. **Manager visibility (H13).** Every routed query is logged with
+   the destination AI named. Tomorrow's unit-manager briefing
+   shows "integrated reference AI: used 14× yesterday, average
+   response 2.8s, top users: Robert, Tanya, Linh." Silent tool
+   abandonment — the V2 BMC concern — becomes visible.
+5. **Renewal economics (H18).** When the integrated reference AI
+   contract comes up for renewal, the hospital can show
+   measurable usage that didn't exist before LYNA. The reference
+   AI vendor and LYNA are complementary, not competitive — H17.
 
 **Where in the code:**
 
-- Drug Info + Epic FHIR pull: query router dispatches based on the
-  intent ("verify safety" classifies as a multi-source safety
-  check) — `epic_intelligence/assistant/voice_router_stub.py`.
-- Interaction matrix: the Drug Info system carries pairwise + n-way
-  interactions; the Intelligence Layer composes them with the
-  patient's active med list to produce a per-patient verdict.
-- Execution-layer paging (when Robert chooses to send): same path
-  as Linh's "page Devon Park" in §4.2, requires explicit operator
-  confirmation.
+- **Hospital AI registry:** per-site Operational KB entry. Same
+  data-position story as Linh's door codes — every pilot site
+  contributes its own registry, the registry compounds with every
+  nurse-shift, and the cumulative registry is one of the most
+  defensible data positions LYNA accumulates.
+- Query router classification + multi-AI dispatch:
+  `epic_intelligence/assistant/voice_router_stub.py`.
+- **"Name the source" discipline:** same citation strategy as §4.1
+  and §4.5. LYNA never claims a finding without naming where it
+  came from — and that *includes* naming the hospital's own AI
+  tools when they are the source, because the naming is what
+  closes the awareness gap.
+- Integrated-AI failover: if the registered AI is unreachable,
+  LYNA composes the answer from native Drug Info + FHIR and says
+  so ("hospital reference AI unreachable; this answer is from
+  LYNA's own Drug Info + Epic FHIR"). Never silent fallback.
 
-### 4.7 — Sofia, ICU nurse, single patient deteriorating at 04:35
+**Interview anchor:** Maps to **H6** ("hospitals are deploying
+clinical AI but nurses do not know it exists at the point of care.
+NI team confirmed no usage data for clinical reference tools on
+the phone") — the single strongest validated hypothesis in the
+post-39-participants map for the BMC V2 "platform integration
+layer" addition. Interview #2 explicitly reported being **unaware
+of AI tools** at her own hospital (the AI note-taker on other
+units). Also maps to **H13** (managers have no visibility into
+silent tool abandonment; no current system tracks it),
+**H17** (clinical AI vendors are complementary — LYNA drives
+bedside adoption of their products), and **H18** (hospitals will
+pay for a device that increases utilization of existing AI
+investments — incremental spend additive to the phone, not a
+replacement). The cipro-warfarin interaction itself is clinical
+flavor; the story would work for any cross-AI routing — the
+*point* of the story is the routing through the unloved-and-unused
+existing investment, not the specific drug interaction.
 
-Sofia is the assigned RN for bed 6 in the ICU — a 68-year-old man
-on day 2 post-CABG. The unit is quiet. At 04:35 the cardiac
-monitor alarms: heart rate jumped from 78 to 130 with new ST
-depression in leads II and aVF. Sofia looks at the patient: he's
-diaphoretic and gripping his chest. The on-call resident is on
-another unit. The attending is at home.
+### 4.7 — Sofia, cardiac step-down nurse, single patient deteriorating at 04:35
+
+Sofia is the assigned RN for bed 6 on **4-East**, the cardiac
+step-down unit — a 68-year-old man on day 2 post-CABG, moved out
+of CTICU yesterday afternoon per the standard recovery pathway.
+4-East is a typical med-surg/cardiac floor: long hallways, mixed
+experience levels, no resource nurse overnight, four-to-one ratio.
+This is the LYNA beachhead per the BMC V2 update — exactly the
+unit type where the communication gap is real and where the
+Vocera-to-smartphone regression hurts most. The unit is quiet at
+04:35. The cardiac monitor alarms: heart rate jumped from 78 to
+130 with new ST depression in leads II and aVF. Sofia looks at the
+patient: he's diaphoretic and gripping his chest. The on-call
+resident is two floors away. The attending is at home.
 
 She has 60-90 seconds before this becomes a code.
 
@@ -715,7 +907,7 @@ the patient codes before any of it is in place.
 
 LYNA executes in parallel, in under 5 seconds:
 
-> "Rapid response activated for ICU bed 6 — overhead page sent,
+> "Rapid response activated for 4-East bed 6 — overhead page sent,
 > RRT alerted by direct page, ETA 90 seconds.
 >
 > **On-call cardiology paged:** Dr. Chen, room 2418, acknowledged.
@@ -778,6 +970,235 @@ the patient is never alone.
   (bedside display vs. nurse's headset).
 - Patient-context fan-out: same parallel FHIR pattern as §4.3 and
   §4.4, scoped to one patient and one clinical concern (ACS).
+- Emergency-intent path applies on every floor LYNA is deployed
+  on; the choice to set this story on cardiac step-down (and not
+  ICU) is a positioning choice driven by the I-Corps findings,
+  not a technical limitation.
+
+**Interview anchor:** Sofia's story is set on cardiac step-down
+rather than the ICU deliberately. **Interview #2** (anonymous ICU
+travel nurse, 9 years experience) reported that ICU layout,
+proximity, high experience levels, and teamwork "reduce the
+problem significantly" — and she explicitly said she didn't miss
+Vocera, "hated wearing something heavy, found it annoying to be
+interrupted in patient rooms." The BMC V2 update names this:
+"Vocera communication gap validated on med-surg/cardiac, **not**
+ICU." Per **H1**, the severity of the communication gap tracks
+unit structure, not unit type — ICU's close proximity and resource
+sharing buffer the gap LYNA is designed to close. Per the BMC V2
+beachhead update, **med-surg and cardiac floors without resource
+nurses, long hallways, mixed experience** are the day-one target;
+ICU is explicitly flagged as a weaker first market that needs
+further validation. The 4-East setting honors that finding while
+keeping the emergency-intent capability demo intact: the
+parallel-dispatch, autonomous-execution, protocol-surfacing pattern
+is the same in ICU when it eventually deploys. Maps to **H1**
+(structural severity, not unit type), **H7** (hands-free
+restoration, validated on med-surg/cardiac), and the BMC V2
+beachhead-sharpening update.
+
+### 4.8 — Priya broadcasts from an isolation room
+
+It's 09:20. Priya is in bed 305 — contact + droplet isolation,
+full PPE. She is mid-procedure on a deep wound dressing change.
+The sterile field is open. The saline flushes she expected to be
+at the bedside aren't there; the night-shift PCA stocked the cart
+for a different room. Priya needs **one 10mL flush, right now**,
+without breaking the field, without de-gowning, and without
+leaving the patient.
+
+This is the most ordinary kind of bedside emergency: nothing
+clinical is on fire, but the next ninety seconds will either be
+spent finishing the dressing change or spent on a chain of
+workarounds that breaks sterility.
+
+**Without LYNA:** Priya pushes the call light. The unit secretary
+answers from the desk; Priya has to yell through the door because
+she can't touch the call-light intercom while gloved and in the
+field. The secretary doesn't know what a "10mL saline flush" looks
+like or where they're stocked. She walks to clean utility, looks,
+walks back, asks Priya which size again. A PCA two doors down
+overhears, grabs the flush, gowns up, brings it in. Best case
+four minutes. Worst case ten. Meanwhile the field is open and
+Priya is one-handed on the wound.
+
+**With LYNA:** Priya nudges the badge with the side of her wrist.
+
+> "Broadcast 4-South: I need a 10mL saline flush in 305, isolation."
+
+In under two seconds, every available RN, PCA, and the unit
+secretary on 4-South hears, each in their own headset:
+
+> "Priya in 305 needs a 10mL saline flush — isolation. First
+> available, please acknowledge."
+
+Three seconds later, Devon (the PCA two rooms down) taps
+acknowledge. Priya hears:
+
+> "Devon picking it up — 90 seconds. Iso-room, he'll gown before
+> entering."
+
+Devon brings the flush. Priya never lifts her hands off the
+patient. The field stays sterile. Total elapsed time from request
+to delivery: under two minutes.
+
+**Under the hood:**
+
+1. "Broadcast {unit}: I need {item} in {room}" is classified by
+   the query router as a **broadcast-with-acknowledgment** request.
+   The execution layer fires immediately — no operator
+   confirmation, because the content of the request *is* the
+   authorization (a nurse asking the unit for help is not the same
+   risk profile as placing a clinical order).
+2. The broadcast targets the on-shift roster from the Operational
+   KB scoped to 4-South: every RN and PCA currently logged in for
+   the shift. The unit secretary is included automatically because
+   at this site secretaries are routed help requests (configurable
+   per-site).
+3. **First-acknowledge wins.** The other recipients hear "Devon's
+   got it" and dismiss. No three people walking to clean utility
+   for the same flush.
+4. **Isolation tag is composed in.** The Operational KB knows that
+   305 is in contact+droplet isolation today; the broadcast carries
+   that tag so Devon knows to gown before approaching.
+5. **Event logged:** who asked, who covered, time-to-acknowledge,
+   time-to-delivery. The manager dashboard surfaces unit
+   responsiveness without surveilling individuals (closes the H13
+   abandonment-visibility gap from a different angle than §4.6).
+
+**Where in the code:**
+
+- Broadcast routing + first-acknowledge semantics: execution layer,
+  v2 capability per the LYNA product brief, currently documented as
+  deferred.
+- On-shift roster scope + secretary-included rules: Operational KB
+  per-site (same data position as Linh's door codes in §4.2).
+- Isolation tag compose-in: Operational KB per-site, populated from
+  the unit's current census / isolation board.
+- Execution-layer policy: this is the second non-emergency
+  execution path in the doc (the first is the "page Devon Park"
+  example in §4.2). The discipline is "the request itself is the
+  authorization" for broadcasts asking for help, but not for
+  clinical actions — which keeps the line between routine and
+  emergency clear.
+
+**Interview anchor:** This is the only one of the nine that comes
+from a **direct, unprompted feature request** by an interviewee.
+**Interview #2** (anonymous ICU travel nurse, 9 years): "She
+suggested a group chat feature where nurses could message everyone
+on the unit at once, especially useful from isolation rooms when
+you need someone to grab something." We took her at her word —
+this story is that feature, scoped to a med-surg setting (the
+beachhead per BMC V2 — long hallways amplify the value, where in
+ICU the close proximity reduces it, per the same interviewee).
+Also maps to **H7** (hands-free is the unmet need; Priya cannot
+touch a phone or call-light intercom while gloved in a sterile
+field), **H14** (phone coexistence — Priya's phone is in her
+pocket but useless in this moment; LYNA does what the phone
+can't), and the BMC V2 addition of execution layer in non-emergency
+mode. Cluster-1 staff nurses described falling back to the **call
+bell** when hands were full (Interview #1, David: "phones not the
+easiest to use" → defaults to call bell when hands full); the
+broadcast-with-ack pattern is the natural upgrade from the
+call-bell-as-broadcast workaround.
+
+### 4.9 — Aisha hands off to her phone for a wound photo
+
+It's 10:40. Aisha just admitted Ms. Tate to bed 18 — readmission
+from skilled nursing for a worsening sacral pressure injury. Per
+hospital wound-care policy, every admission with a documented
+pressure injury needs a baseline photo within four hours, uploaded
+to the patient's chart with the staging, dimensions, and a
+nurse-authored note. The photo is non-negotiable — wound-care
+nursing reviews them every morning, and the policy explicitly
+requires images for stages 3 and 4.
+
+LYNA can do many things. It cannot take a photo.
+
+**Without LYNA:** Aisha gets the phone-app workflow started, then
+spends two minutes hunting for the right form (wound assessment
+lives under "documentation" in the Epic Haiku menu, not under
+"vitals" where she keeps expecting it). She takes the photo,
+remembers there's a staging field, scrolls back, fills it in,
+saves, and starts the note. Total time: 12 minutes, broken across
+several attempts because Ms. Tate kept asking questions.
+
+**With LYNA:** Aisha taps the badge.
+
+> "LYNA, document a pressure injury on bed 18."
+
+> "Pressure-injury documentation needs your phone camera — I can't
+> take photos. I've opened the wound-imaging form in Epic Haiku on
+> your phone and pre-filled it for bed 18, sacral, on-admission. Tap
+> when you're ready to capture. I'll pick the workflow back up when
+> you're done."
+
+Aisha takes the photos: overview, close-up, with the staging
+ruler. Two taps; Haiku uploads them. She nudges the badge.
+
+> "Photos uploaded?"
+
+> "Three photos uploaded to bed 18, encounter #4429-A, tagged
+> 'sacral, on-admission.' Stage isn't classified yet. Want me to
+> walk you through the staging criteria, or do you want to dictate
+> the stage and the note?"
+
+Aisha says "stage 3, full-thickness, no slough or eschar visible,
+3.4 by 2.1 cm." LYNA renders the note, reads it back, files it.
+Total time: under five minutes. Photo, staging, note, all anchored
+to the same encounter in Epic.
+
+**Under the hood:**
+
+1. The query router recognizes "document a pressure injury" as a
+   **camera-dependent intent** and dispatches it through the
+   phone-coexistence path: open the right form in Epic Haiku,
+   pre-fill what LYNA already knows (patient, room, anatomical
+   site if dictated, on-admission timestamp), and hand off
+   gracefully.
+2. **Voice-to-Haiku handoff** uses Epic's existing SMART app
+   launch into Haiku with context parameters — nothing custom on
+   the Epic side; LYNA just composes the launch URL.
+3. **Resume after handoff:** LYNA monitors the encounter for the
+   photo upload event (via Epic FHIR `DocumentReference` polled or
+   subscribed to). When images appear, it resumes the workflow,
+   offers the staging dialog, and writes the note via voice
+   dictation.
+4. **No LYNA replication of camera workflows.** This is a deliberate
+   non-feature. We could put a camera on a future LYNA badge form
+   factor; we have chosen not to. The phone owns camera-dependent
+   workflows because the phone is already in every nurse's pocket
+   and every hospital's BYOD/MDM policy already covers it. LYNA's
+   defensibility is not "we replace the phone" — it's "we are the
+   voice surface the phone never had."
+
+**Where in the code:**
+
+- Camera-dependent intent classification + Haiku handoff:
+  `epic_intelligence/assistant/voice_router_stub.py` (the
+  production handoff lives downstream; the router contract is the
+  same).
+- Resume-after-handoff via FHIR `DocumentReference`: same FHIR
+  client used by Sarah's `MedicationAdministration` query in §4.1.
+- Note dictation + staging dialog: synthesis layer composes a
+  structured wound-care note from the dictated fields against the
+  per-site Policy system's wound-staging schema (same Policy system
+  used by Tanya in §4.5 and surfaced as ACS protocol by Sofia in
+  §4.7).
+
+**Interview anchor:** Maps cleanly to **H14** (LYNA must coexist
+with the phone, not replace it; the CNIO will redirect to phone
+capabilities if positioned as replacement — explicitly named in
+the BMC V2 update as "phone coexistence for camera-dependent
+workflows (med scanning, pressure injury photos)"). This is the
+single most CNIO-sensitive story of the nine: getting this
+boundary right is the difference between LYNA being adopted as an
+additive incremental device and being killed as "another phone."
+Also reinforces **H17** (LYNA is the bedside surfacing layer for
+Epic — and for the hospital's phone-side tools — rather than a
+competing system) and the BMC V2 framing of LYNA as "screenless
+clinical workstation: one voice interface to every tool the
+hospital has."
 
 ---
 

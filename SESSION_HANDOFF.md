@@ -1,6 +1,6 @@
 # Session Handoff — OPAL Intelligence Layer Documentation
 
-**Last updated:** 2026-05-19
+**Last updated:** 2026-05-20
 **Branch we're on:** `docs/intelligence-layer-readme` (PR [#20](https://github.com/collabPGC/OPALproject/pull/20))
 **Repo:** `collabPGC/OPALproject` (org repo)
 
@@ -11,83 +11,113 @@ the whole transcript. Update it at the end of each working session.
 
 ## 1. Where we are right now
 
-Seven LYNA clinical-staff user stories live in
+**Nine** LYNA clinical-staff user stories live in
 [`INTELLIGENCE_LAYER.md`](INTELLIGENCE_LAYER.md) §4 — all nurses,
-spanning the day-to-day shape of nursing work:
+all anchored to the I-Corps customer-discovery research (H1–H18 +
+BMC V2 themes + Interview #1 David Hernandez and Interview #2
+anonymous ICU travel nurse). Each story ends with an **Interview
+anchor** block citing what specifically grounds the scenario.
 
-| § | Nurse | Setting | Trigger |
-|---|---|---|---|
-| 4.1 | Sarah | Med-surg, 2 AM bedside | "What's the last pain med for bed 14?" |
-| 4.2 | Linh | Float pool, first shift on 4-South | "Where are the sterile dressings?" |
-| 4.3 | Marcus | Charge nurse, end of 7p–7a shift | "Give me a unit status for handoff" |
-| 4.4 | Jamal | Day-shift, taking over 4 patients | "Sign-on summary for my four patients" |
-| 4.5 | Tanya | 2 weeks off orientation, refused med | "Policy for a patient refusing a cardiac med?" |
-| 4.6 | Robert | Med-surg, new cipro at bedside | "Verify safety for bed 22" |
-| 4.7 | Sofia | ICU, single patient deteriorating | "Rapid response, bed 6, ST changes" |
+| § | Nurse | Setting | Trigger | Interview anchor |
+|---|---|---|---|---|
+| 4.1 | Sarah | Med-surg, 2 AM bedside | "What's the last pain med for bed 14?" | H5, H7, H9 — bypass-the-screen |
+| 4.2 | Linh | Float pool, first shift on 4-South | "Where are the sterile dressings?" | Interview #1 (David); BMC V2 three-layer baseline |
+| 4.3 | Marcus | Charge, late in no-resource window (00:00–05:00) | "Give me a unit status for 4-South" | H12 (resource offline → charge as sole router) |
+| 4.4 | Jamal | Day-shift, taking over 4 patients | "Sign-on summary for my four patients" | H5, H9; direct transcript open follow-up |
+| 4.5 | Tanya | 2 weeks off orientation, refused med | "Policy for a patient refusing a cardiac med?" | Interview #2 (Policy Tech complaint); H4, H5 |
+| 4.6 | Robert | Med-surg admit, AI-awareness gap | "Is the new cipro okay with what he's on?" | H6 (AI awareness), H13 (silent abandonment), H17, H18 |
+| 4.7 | Sofia | Cardiac step-down (4-East), deteriorating | "Rapid response, bed 6, ST changes" | H1, H7; BMC V2 ICU explicitly *not* day-one beachhead |
+| 4.8 | Priya | Med-surg, mid-procedure in isolation | "Broadcast 4-South: I need a saline flush in 305" | Interview #2 (group-chat-from-iso unprompted feature request); H7, H14 |
+| 4.9 | Aisha | Med-surg wound documentation | "LYNA, document a pressure injury on bed 18" | H14 (phone owns camera) |
+
+**Changes vs. the prior 7-story shape:**
+- §4.6 rewritten from cipro-warfarin safety check → **AI-awareness gap** (H6) — hospital has bought a nursing clinical-reference AI nobody opens; LYNA routes through it and names it. New "hospital AI registry" concept introduced as a per-site Operational KB extension.
+- §4.7 moved from **ICU → cardiac step-down (4-East)** — interview #2 was explicit that ICU layout / proximity / experience reduces the gap; BMC V2 names med-surg/cardiac as beachhead and ICU as weaker first market.
+- §4.3 setup reframed against **H12** (resource-nurse-offline window as the deployment-window hypothesis).
+- §4.8 NEW — isolation-room broadcast. Direct unprompted feature request from Interview #2.
+- §4.9 NEW — phone coexistence / camera handoff. H14, the most CNIO-sensitive boundary.
+- Citation footers ("Interview anchor") added to all nine stories.
+- Cross-cutting themes expanded from 3 to 5; added "LYNA as router across the hospital's existing AI investments" and "phone coexistence, not replacement."
+- §4 preamble rewritten: "seven stories" → "nine stories" with the new descriptors.
 
 Cross-referenced from `epic_intelligence/README.md` and `AI-CONTEXT.md`.
 
 PR [#20](https://github.com/collabPGC/OPALproject/pull/20) is draft,
 stacked on `feat/baa-irb-templates` (PR #19), open and ready for
-review/merge.
+review/merge — now carrying the alignment pass on top of the
+original 7-story draft.
 
 ---
 
-## 2. The immediate next ask (BEFORE any UI design)
+## 2. The immediate next ask (BEFORE any UI design) — DONE
 
-> **User's exact words:** "before we do that, let's make sure that the
+> **User's original words:** "before we do that, let's make sure that the
 > user journeys align with the interviews and specific interactions
 > captured from the interviews. Please look at the research paper from
 > Ruth and **Kofi** and brainstorm and discuss this with me using
 > ultra thinking."
 
-(The phrase "Ruth and coffee" in the prompt was almost certainly
-"Ruth and Kofi" — Kofi Agyeman is on the OPAL team per AI-CONTEXT.)
+(The phrase "Ruth and coffee" in the original prompt was "Ruth and
+Kofi" — Kofi Agyeman is on the OPAL team per AI-CONTEXT.)
 
-### What this means for the next session
+### Status — completed 2026-05-20
 
-**Do not jump to UI design yet.** First, read the I-Corps research
-and check the seven user stories against what real nurses said.
+The journey-vs-interview alignment is **done** and applied to
+INTELLIGENCE_LAYER.md §4. PR #20 now carries the alignment pass.
+See §1 above for the diff summary.
 
-### Research sources to read first
+The brainstorm produced six adjustments (A–F), all approved and
+applied:
+
+- **A.** Citation footers on §4.1, §4.2, §4.5 (and on every story).
+- **B.** §4.6 rewrite from cipro-safety → AI-awareness gap (H6).
+- **C.** §4.7 moved from ICU → cardiac step-down.
+- **D.** §4.8 NEW isolation-room broadcast.
+- **E.** §4.9 NEW phone-coexistence / camera handoff (originally an
+  optional 9th journey on the AI-awareness angle; redirected to the
+  H14 phone-coexistence gap because §4.6 already absorbed the
+  AI-awareness intent and we did not want duplicate stories).
+- **F.** §4.3 reframed against H12 (12:00–17:00 resource-offline
+  window — adapted to 00:00–05:00 to fit the existing overnight
+  shift framing). §4.4 was originally in scope for F but excluded
+  during drafting because start-of-shift sign-on doesn't fit the
+  midday H12 window; §4.4 now carries an H5/H9-based footer instead.
+
+### Constraints respected
+
+- Direct interview transcripts beyond Interview #1 (David
+  Hernandez) and Interview #2 (anonymous ICU travel) **not
+  available** — the alignment leaned on the BMC V2 synthesis
+  (`i-corps/interviews/interviews-index.md`) and the
+  post-39-participants `hypothesis-map.md` H1–H18 for everything
+  beyond those two interviews. Cluster-2 transcripts remain an
+  open item; if they surface, §4.3 / §4.4 should be cross-validated
+  against the charge-nurse and start-of-shift interviews.
+
+### Research sources consulted
 
 In `i-corps/` (already in this repo):
 
 - [`i-corps/data-room/problem-validation-research.md`](i-corps/data-room/problem-validation-research.md)
-  — synthesized stakeholder themes from 18+ interviews (anonymized).
+  — table of contents only; full prose not yet ingested.
 - [`i-corps/interviews/interviews-index.md`](i-corps/interviews/interviews-index.md)
-  — index of 18 interviews conducted Mar 3–19, 2026. Individual
-  canvases live in Slack (access-restricted to team members).
+  — index of 18 interviews conducted Mar 3–19, 2026 + V1→V2 BMC
+  change log. Individual canvases live in Slack (access-restricted
+  to team members; **not available** to this session).
 - [`i-corps/interviews/interview-scripts-cluster1.md`](i-corps/interviews/interview-scripts-cluster1.md)
-  — the question scripts used.
-- [`i-corps/hypothesis-map.md`](i-corps/hypothesis-map.md) — 18
+  — question scripts + IYE summaries for Interview #1 (David
+  Hernandez, float pool) and Interview #2 (anonymous ICU travel).
+- [`i-corps/hypothesis-map.md`](i-corps/hypothesis-map.md) — H1–H18
   validated hypotheses, updated post-39-participants.
 - [`i-corps/mount-sinai-hub.md`](i-corps/mount-sinai-hub.md) —
   Mt Sinai Regional I-Corps Spring 2026 program hub.
 
-### What the alignment review needs to produce
-
-For each of the seven journeys (§4.1–4.7), the next session should
-answer:
-
-1. **Is this scenario one nurses actually described in interviews?**
-   If yes, cite the interview / theme. If no, flag and decide:
-   strengthen with evidence, soften, or remove.
-2. **Are the trigger phrases linguistically natural** — would the
-   nurses we interviewed actually say "give me a unit status for
-   handoff" or do they say something else?
-3. **What LYNA capabilities did nurses ASK FOR that we don't yet
-   have a journey for?** Those become candidate journeys 4.8+.
-4. **What pain points from the interviews are MISSING from our
-   journeys?** Common ones likely to surface: interruptions,
-   alarm fatigue, family communication, charting burden after
-   shift end.
-
 Recommended approach (the user asked for "ultra thinking" —
 brainstorm-first, propose-then-implement):
 
-- Read the i-corps research files end-to-end before touching
-  INTELLIGENCE_LAYER.md.
+- Brainstorm-first, propose-then-implement was honored: the
+  alignment table + proposed adjustments + sample drafts were
+  reviewed before any edit was applied.
 - Build a side-by-side table: each interview theme → which of
   our 7 journeys covers it / which doesn't.
 - Surface 3–5 candidate adjustments (rewrites, additions,
@@ -141,7 +171,7 @@ squash-merge sequentially.
 | [#17](https://github.com/collabPGC/OPALproject/pull/17) | `feat/briefing-mattermost-cron` | draft | Briefing → Mattermost webhook + cron docs (A-3) |
 | [#18](https://github.com/collabPGC/OPALproject/pull/18) | `feat/pilot-site-scoring` | draft | Pilot-site scoring rubric + champion ID (D-1) |
 | [#19](https://github.com/collabPGC/OPALproject/pull/19) | `feat/baa-irb-templates` | draft | BAA + IRB workflow YAMLs + operator templates (D-2) |
-| [#20](https://github.com/collabPGC/OPALproject/pull/20) | `docs/intelligence-layer-readme` | **current** | INTELLIGENCE_LAYER.md + 7 LYNA user stories + cross-refs |
+| [#20](https://github.com/collabPGC/OPALproject/pull/20) | `docs/intelligence-layer-readme` | **current** | INTELLIGENCE_LAYER.md + 9 LYNA user stories (alignment pass over original 7) + cross-refs |
 
 **Cumulative test status (last full run):** 282 Python tests passed +
 1 skipped (Neo4j live-integration auto-skip when DB unreachable);

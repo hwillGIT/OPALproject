@@ -6,12 +6,16 @@ behavior with verifiable citations back to the source page and section.
 
 > **End-user context:** This module is the backbone of every LYNA
 > clinical-staff journey. See [`INTELLIGENCE_LAYER.md`](../INTELLIGENCE_LAYER.md)
-> for the seven user stories that exercise it — bedside med lookup
-> (§4.1), float-nurse onboarding (§4.2), charge-nurse handoff (§4.3),
-> coming-on-shift sign-on (§4.4), new-grad policy lookup (§4.5),
-> med-admin safety check (§4.6), and ICU patient deterioration
-> (§4.7). The query router, citation strategy, and FHIR fan-out
-> described below are what make those stories work.
+> for the nine user stories that exercise it — bedside med lookup
+> (§4.1), float-nurse onboarding (§4.2), charge-nurse handoff in the
+> resource-offline window (§4.3), coming-on-shift sign-on (§4.4),
+> new-grad policy lookup (§4.5), surfacing a hospital AI tool the
+> nurse didn't know existed (§4.6), cardiac step-down rapid response
+> (§4.7), isolation-room broadcast (§4.8), and a clean handoff to
+> the phone for a pressure-injury photo (§4.9). Every story is
+> anchored to the I-Corps customer-discovery research (H1–H18). The
+> query router, citation strategy, FHIR fan-out, and per-site AI
+> registry described below are what make those stories work.
 
 ## What this answers
 
