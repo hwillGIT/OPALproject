@@ -56,6 +56,13 @@ PILOT-SITE RUBRIC (D-1; scoring + champion ID):
 - README:                       pilot/README.md
 - Pytest:                       python -m pytest pilot/tests/
 
+BAA + IRB WORKFLOW TEMPLATES (D-2):
+- BAA workflow:                 bots/shared/workflows/business/baa-negotiation.yaml
+- BAA checklist (operator):     pilot/templates/baa-checklist.md
+- IRB workflow:                 bots/shared/workflows/business/irb-submission.yaml
+- IRB protocol skeleton:        pilot/templates/irb-protocol-skeleton.md
+- Run BAA / IRB workflow:       python -m orchestrator.cli run {baa-negotiation|irb-submission} [--provider auto]
+
 WORKFLOW ORCHESTRATOR RUNTIME (turns YAML workflows into executable runs):
 - Module:                       orchestrator/
 - List workflows:               python -m orchestrator.cli list

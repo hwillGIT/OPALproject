@@ -1,0 +1,98 @@
+# IRB Submission
+# Walk a pilot site's Institutional Review Board submission from
+# protocol classification to approved-or-amended without burning a
+# review cycle on something that should have been exempt.
+#
+# Used by: the operator + a candidate site's IRB office.
+# Pairs with: the BAA negotiation workflow (BAA + IRB run in parallel),
+# the pilot/ rubric (compliance_burden dimension), and the IRB
+# protocol skeleton in pilot/templates/irb-protocol-skeleton.md.
+
+name: irb-submission
+category: business
+domain: pilot
+version: "1.0"
+description: >
+  Classify the pilot for the right IRB review level, write the data-
+  use statement, decide consent strategy, package the submission,
+  map the site's IRB-specific quirks, and set the review + amendment
+  cadence. The output is a submission package, a decision about
+  consent strategy, and a dated timeline.
+
+backpressure:
+  - Protocol classified (exempt / expedited / full board) with cited 45 CFR 46 rationale
+  - Data-use statement names every dataset + retention period + de-id status
+  - Consent strategy decided (informed consent / waiver / QI exemption) with rationale
+  - Submission package complete (every form on the site's IRB checklist)
+  - Review timeline maps to the pilot's start date with buffer for one amendment cycle
+
+phases:
+  - id: classify-protocol
+    lead: regulatory-affairs
+    supporting: [clinical-advisor]
+    questions:
+      - "Is this research (45 CFR 46.102(l)) or quality improvement?"
+      - "If research: which exemption category in 45 CFR 46.104 applies, if any?"
+      - "If not exempt: does it qualify for expedited review (45 CFR 46.110)?"
+    output: "Classification + cited regulatory basis + plain-English summary"
+
+  - id: data-use-statement
+    lead: regulatory-affairs
+    supporting: [security-architect, clinical-ops]
+    tensions:
+      - regulatory-affairs<>security-architect
+    questions:
+      - "What data is collected (per FHIR resource / field)?"
+      - "By whom (clinician-entered / device-captured / EHR pull)?"
+      - "Retained how long, where, who has access?"
+      - "Is it de-identified? Per HIPAA Safe Harbor or Expert Determination?"
+    output: "Data-use statement: source -> field -> retention -> access -> de-id status"
+
+  - id: consent-strategy
+    lead: clinical-advisor
+    supporting: [regulatory-affairs, clinical-ops]
+    tensions:
+      - clinical-advisor<>regulatory-affairs
+    questions:
+      - "Does the protocol require informed consent (45 CFR 46.116)?"
+      - "Can we request a waiver under 45 CFR 46.116(f)? On what grounds?"
+      - "If QI-only: does the site's IRB accept a QI determination letter?"
+      - "Who delivers the consent if needed (RN at intake, prior to enrollment)?"
+    output: "Consent strategy + rationale + (if needed) draft consent text"
+
+  - id: submission-package
+    lead: regulatory-affairs
+    supporting: [compliance-ops]
+    questions:
+      - "What forms does this IRB require (protocol, application, conflict of interest, training)?"
+      - "What supporting documents (data-use statement, consent form, BAA, security review)?"
+      - "What CITI / equivalent training do the named investigators have on file?"
+    output: "Submission package checklist marked done / not-yet with owners"
+
+  - id: site-irb-specifics
+    lead: regulatory-affairs
+    supporting: [partnership-lead, clinical-ops]
+    questions:
+      - "Does this IRB meet monthly or bi-weekly? What's the submission cutoff?"
+      - "Are there local pre-review committees (department QI, nursing research) that gate IRB submission?"
+      - "What's their typical first-review verdict pattern (approve / minor revisions / major revisions)?"
+      - "Who is the IRB analyst assigned to our category (name, email)?"
+    output: "Site-specific calendar + pre-review path + named IRB contact"
+
+  - id: review-timeline-and-amendments
+    lead: regulatory-affairs
+    supporting: [partnership-lead, clinical-ops]
+    pattern: dialectic-debate
+    tensions:
+      - regulatory-affairs<>partnership-lead
+    questions:
+      - "What's the realistic submission -> approval timeline (with one amendment cycle baked in)?"
+      - "Does that fit before the pilot's planned start? If not, what gives?"
+      - "What changes during the pilot would require an amendment vs. a continuing review?"
+    output: "Dated submission/approval calendar + amendment-triggering change list"
+
+emits:
+  - DECISION
+  - ACTION
+  - ARTIFACT
+  - CONTEXT_CHANGE

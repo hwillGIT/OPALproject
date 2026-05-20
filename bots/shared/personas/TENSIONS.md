@@ -48,6 +48,8 @@ prematurely.
 | **Tensor ↔ Diego** | Model size/latency targets vs. on-device compute budget | ML approach that actually fits the device |
 | **Cyrus ↔ Diego** | Security ideal vs. firmware/OTA constraints | Threat model achievable on the actual device |
 | **Nimbus ↔ Cyrus** | Operational simplicity vs. security posture | Cloud architecture defensible at audit |
+| **Helena ↔ Cyrus** | EPIC integration shape vs. PHI surface minimization | Integration scope that asks for the minimum PHI necessary |
+| **Suki ↔ Cyrus** | Compliance/BAA contract language vs. security architecture | BAA redlines that match what the architecture actually does, not what marketing wishes |
 
 ## Hardware & Design internal
 
@@ -67,6 +69,8 @@ prematurely.
 | **Helena ↔ Tensor** | EPIC FHIR contract vs. ML pipeline realities | Models that consume what EPIC actually exposes |
 | **Imani ↔ Suki** | Pilot-site reality vs. compliance paperwork | Pilots that get signed AND start on time |
 | **Bjorn ↔ Imani** | Lab-bench failure modes vs. real-ward failure modes | FMEA grounded in observed clinical events, not just theory |
+| **Dr. Claire ↔ Regina** | Clinician's "we'll figure it out at the bedside" vs. regulatory protocol discipline | Consent + data-use strategy that holds up at IRB without alienating the floor |
+| **Regina ↔ Cyrus** | Regulatory data-use language vs. security architecture reality | Data-use statement that the IRB accepts AND the threat model supports |
 
 ## Go-to-Market crosses
 
@@ -76,6 +80,8 @@ prematurely.
 | **Rex ↔ Suki** | Deal velocity vs. compliance / BAA workflow | Sales motion that doesn't stall at security review |
 | **Wei ↔ Rex** | Long-cycle alliance vs. transactional deal | Coverage map that exploits both motions |
 | **Wei ↔ Helena** | Strategic integration ambition vs. EPIC-app-orchard reality | Partnership scope that EPIC's process actually permits |
+| **Suki ↔ Wei** | Compliance / BAA close timeline vs. partnership relationship building | Pilot-site sign that doesn't burn the relationship for follow-on deals |
+| **Regina ↔ Wei** | IRB submission cadence vs. partnership-driven start-date pressure | Realistic pilot start date that doesn't promise IRB review faster than it can deliver |
 
 ## Finance & Operations crosses
 
@@ -110,6 +116,8 @@ tensions explicitly. Default invocation rules:
 | Investor Pitch Review | Naomi ↔ Athena, Athena ↔ Rex, Vera ↔ Maya |
 | Regulatory Risk Assessment | Regina ↔ Marcus, Regina ↔ Yuki, Adriana ↔ Marcus |
 | Partnership Qualification | Wei ↔ Helena, Wei ↔ Rex |
+| BAA Negotiation | Helena ↔ Cyrus, Suki ↔ Cyrus, Suki ↔ Wei |
+| IRB Submission | Regina ↔ Cyrus, Dr. Claire ↔ Regina, Regina ↔ Wei |
 
 Workflows are responsible for *making the tension visible* in the
 conversation transcript, not for resolving it. Resolution is the
