@@ -130,9 +130,14 @@ def _print_run_pretty(result: WorkflowResult, *, dry_run: bool) -> None:
     print()
     for pr in result.phase_results:
         print(f"## phase {pr.phase.id}  (lead: {pr.persona.name} / {pr.persona.label})")
-        print(f"   emitted: {', '.join(pr.emitted_event_ids) or '(none)'}")
+        print(f"   emitted: {', '.join(pr.emitted_event_ids) or '(none — persona judged nothing memory-worthy)'}")
+        if pr.triggered_predicates:
+            tp_lines = ", ".join(
+                f"{pid}({len(ids)})" for pid, ids in pr.triggered_predicates.items()
+            )
+            print(f"   tripped predicates: {tp_lines}")
         print()
-        # First ~30 lines of the response for readability
+        # First ~30 lines of the (clean, emit-stripped) response
         for line in pr.response_text.splitlines()[:30]:
             print(f"    {line}")
         if len(pr.response_text.splitlines()) > 30:
@@ -157,6 +162,9 @@ def _print_run_json(result: WorkflowResult, *, dry_run: bool) -> None:
                 },
                 "response": pr.response_text,
                 "emitted_event_ids": list(pr.emitted_event_ids),
+                "triggered_predicates": {
+                    pid: list(ids) for pid, ids in pr.triggered_predicates.items()
+                },
             }
             for pr in result.phase_results
         ],

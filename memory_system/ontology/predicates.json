@@ -60,5 +60,27 @@
       "lookback_days": 21
     },
     "window": {"max_events": 10, "sort": "timestamp_desc"}
+  },
+  {
+    "id": "matches-open-action",
+    "trigger": "post_write",
+    "description": "ACTION just emitted is still open — surfaces for follow-up.",
+    "match": {"types": ["ACTION"]},
+    "filter_metadata": {"status": ["open", "in-progress"]},
+    "window": {"max_events": 5, "sort": "timestamp_desc"}
+  },
+  {
+    "id": "matches-prediction",
+    "trigger": "post_write",
+    "description": "PREDICTION just emitted — consumers should expect a later OUTCOME to verify it.",
+    "match": {"types": ["PREDICTION"]},
+    "window": {"max_events": 5, "sort": "timestamp_desc"}
+  },
+  {
+    "id": "matches-context-change",
+    "trigger": "post_write",
+    "description": "CONTEXT_CHANGE just emitted — broader scope likely needs re-evaluation.",
+    "match": {"types": ["CONTEXT_CHANGE"]},
+    "window": {"max_events": 5, "sort": "timestamp_desc"}
   }
 ]

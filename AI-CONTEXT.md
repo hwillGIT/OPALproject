@@ -54,5 +54,8 @@ WORKFLOW ORCHESTRATOR RUNTIME (turns YAML workflows into executable runs):
 - Run a workflow:               python -m orchestrator.cli run <name> [--provider stub|auto|...] [--dry-run] [--json]
 - Default provider:             built-in StubProvider (no deps, no API key)
 - Real LLMs:                    --provider auto delegates to epic_intelligence.synthesis
-- Emits typed events to:        memory_system.events.write.append_event
+- Memory-emit protocol:         personas author fenced YAML blocks; runner parses + validates
+                                (see orchestrator/README.md "Memory-emit protocol" section)
+- Post-write predicates:        memory_system/ontology/predicates.json — runner evaluates
+                                post_write triggers after each phase's emits land
 - Pytest:                       python -m pytest orchestrator/tests/
