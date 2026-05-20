@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LYNA · S8 Camera Handoff Banner</title>
+<link rel="stylesheet" href="lyna.css">
+<style>
+  body.lyna-phone-page { flex-direction: row; flex-wrap: wrap; align-items: flex-start; }
+  .ch-banner {
+    background: var(--lyna-normal-tint);
+    border-left: 3px solid var(--lyna-normal);
+    border-radius: 0 var(--r-2) var(--r-2) 0;
+    padding: var(--s-3);
+    margin: var(--s-3) var(--s-4) 0;
+  }
+  .ch-banner.success {
+    background: var(--lyna-success-tint);
+    border-left-color: var(--lyna-success);
+  }
+  .ch-title {
+    font-size: 14px; font-weight: 600; color: var(--lyna-text); margin-bottom: 4px;
+    display: flex; align-items: center; gap: var(--s-2);
+  }
+  .ch-body {
+    font-size: 13px; color: var(--lyna-text-3); margin-bottom: var(--s-3); line-height: 1.4;
+  }
+  .ch-btn {
+    height: 36px; border-radius: var(--r-2);
+    background: var(--lyna-normal); color: white;
+    font-size: 14px; font-weight: 600; border: none;
+    padding: 0 var(--s-3);
+  }
+  .ch-btn.secondary {
+    background: white; color: var(--lyna-text-3); border: 1px solid var(--lyna-border);
+  }
+  .ch-btn-row { display: flex; gap: var(--s-2); }
+</style>
+</head>
+<body class="lyna-phone-page">
+
+  <!-- Initial handoff -->
+  <div>
+    <div class="lyna-phone">
+      <div class="lyna-status-bar"><span class="lyna-time">10:40</span><span class="lyna-status-right">5G ▣ 87%</span></div>
+      <div class="lyna-app-content">
+        <div class="ch-banner">
+          <div class="ch-title">📸 Wound photo needs your camera</div>
+          <div class="ch-body">
+            I've opened Haiku for bed 18, sacral, on-admission. Tap when ready to capture.
+          </div>
+          <button class="ch-btn" style="width:100%">Open Haiku →</button>
+        </div>
+
+        <!-- Home below the banner -->
+        <div class="lyna-app-header">
+          <div class="lyna-logo">LYNA</div>
+          <button class="lyna-settings">⚙</button>
+        </div>
+        <div class="lyna-identity">
+          <div class="lyna-name">Aisha N.</div>
+          <div class="lyna-meta">4-South · Day Shift</div>
+        </div>
+        <button class="lyna-mode-pill">Mode: NORMAL <span>▼</span></button>
+        <div class="lyna-section-header">Recent</div>
+        <div class="lyna-list">
+          <div class="lyna-row">Bed 18 admission orders</div>
+        </div>
+        <div class="lyna-spacer"></div>
+        <div class="lyna-talk-area">
+          <button class="lyna-talk-btn">
+            <div class="lyna-talk-icon">🎤</div>
+            <div class="lyna-talk-label">TALK</div>
+          </button>
+        </div>
+      </div>
+      <div class="lyna-home-indicator"></div>
+    </div>
+    <div class="lyna-phone-frame-caption">S8 — Camera handoff (initial state)</div>
+  </div>
+
+  <!-- After upload -->
+  <div>
+    <div class="lyna-phone">
+      <div class="lyna-status-bar"><span class="lyna-time">10:43</span><span class="lyna-status-right">5G ▣ 87%</span></div>
+      <div class="lyna-app-content">
+        <div class="ch-banner success">
+          <div class="ch-title">✓ 3 photos uploaded · bed 18</div>
+          <div class="ch-body">Stage not yet classified. Want to dictate the staging note?</div>
+          <div class="ch-btn-row">
+            <button class="ch-btn" style="flex:1">Dictate now</button>
+            <button class="ch-btn secondary" style="flex:1">Later</button>
+          </div>
+        </div>
+
+        <div class="lyna-app-header">
+          <div class="lyna-logo">LYNA</div>
+          <button class="lyna-settings">⚙</button>
+        </div>
+        <div class="lyna-identity">
+          <div class="lyna-name">Aisha N.</div>
+          <div class="lyna-meta">4-South · Day Shift</div>
+        </div>
+        <button class="lyna-mode-pill">Mode: NORMAL <span>▼</span></button>
+        <div class="lyna-section-header">Recent</div>
+        <div class="lyna-list">
+          <div class="lyna-row">Document a pressure injury on bed 18</div>
+          <div class="lyna-row">Bed 18 admission orders</div>
+        </div>
+        <div class="lyna-spacer"></div>
+        <div class="lyna-talk-area">
+          <button class="lyna-talk-btn">
+            <div class="lyna-talk-icon">🎤</div>
+            <div class="lyna-talk-label">TALK</div>
+          </button>
+        </div>
+      </div>
+      <div class="lyna-home-indicator"></div>
+    </div>
+    <div class="lyna-phone-frame-caption">S8 — Camera handoff (after photos uploaded; dictate the note)</div>
+  </div>
+
+</body>
+</html>

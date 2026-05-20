@@ -53,10 +53,10 @@ shipped on the same PR:**
   — paste-ready prompts for Claude Design (claude.ai/design),
   one per surface and dashboard view + composite journey flows.
 - [`hardware/opalDevice/docs/ux/implementation/html-mockups/`](hardware/opalDevice/docs/ux/implementation/html-mockups/)
-  — first-pass interactive HTML prototype. Open `index.html`
-  in a browser. Covers 6 v1 iPhone surfaces (S1.A, S3.B, S4.A,
-  S5.A, S6a, S7.B) + 3 dashboard views (D1, D2, D10) against
-  the LYNA design tokens.
+  — **complete** interactive HTML prototype. Open `index.html`
+  in a browser. All 15 v1 iPhone surfaces (S1.A through S10) +
+  all 10 dashboard views (D1 through D10) against the LYNA
+  design tokens.
 - [`hardware/opalDevice/docs/ux/README.md`](hardware/opalDevice/docs/ux/README.md)
   — updated index distinguishing canonical v1 specs from v3 reference material.
 

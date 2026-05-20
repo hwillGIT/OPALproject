@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LYNA Dashboard · D9 Per-AI-Tool Detail</title>
+<link rel="stylesheet" href="lyna-dashboard.css">
+<style>
+  .tool-header {
+    border-bottom: 1px solid var(--lyna-border); padding-bottom: 16px; margin-bottom: 24px;
+  }
+  .tool-header .back { font-size: 13px; color: var(--lyna-normal); margin-bottom: 8px; display: inline-block; }
+  .tool-header h1 { font-size: 26px; font-weight: 600; color: var(--lyna-text); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .tool-header .tool-meta { font-size: 13px; color: var(--lyna-text-3); }
+  .kpi-strip-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 24px; }
+  .intent-row { display: flex; justify-content: space-between; padding: 12px 8px; border-bottom: 1px solid var(--lyna-surface-2); font-size: 14px; }
+  .intent-row:last-child { border-bottom: none; }
+  .issue-row { display: grid; grid-template-columns: 90px 60px 1fr 1fr; gap: 16px; padding: 12px 8px; border-bottom: 1px solid var(--lyna-surface-2); font-size: 14px; }
+  .issue-row:last-child { border-bottom: none; }
+  .issue-row .when { font-family: 'SF Mono', Monaco, Consolas, monospace; color: var(--lyna-text-3); }
+  .roi-card {
+    background: var(--lyna-normal-tint); border: 1.5px solid var(--lyna-normal);
+    border-radius: 12px; padding: 24px; margin-bottom: 24px;
+  }
+  .roi-card h2 { color: var(--lyna-normal-deep); margin-bottom: 16px; }
+  .roi-stat { display: flex; justify-content: space-between; align-items: baseline; padding: 8px 0; border-bottom: 1px solid rgba(37,99,235,0.15); font-size: 15px; }
+  .roi-stat:last-child { border-bottom: none; }
+  .roi-stat .label { color: var(--lyna-text-2); }
+  .roi-stat .value { font-weight: 700; color: var(--lyna-normal-deep); }
+</style>
+</head>
+<body>
+<div class="dashboard">
+  <header class="topbar">
+    <div class="topbar-left"><div class="logo">LYNA</div><div class="scope">Mt. Sinai · All units</div></div>
+    <div class="topbar-right"><span class="user-name">Dr. Ramirez</span><span class="role-chip">CCIO</span><button class="icon-btn">⚙</button></div>
+  </header>
+  <div class="body-row">
+    <nav class="leftnav">
+      <a href="d1-adoption.html">Overview</a>
+      <a href="d2-ai-tools.html">AI tool routing</a>
+      <a href="d3-top-queries.html">Top queries</a>
+      <a href="d4-response-times.html">Response times</a>
+      <a href="d5-abandonment.html">Abandonment alerts</a>
+      <a href="d6-broadcast-coverage.html">Broadcast coverage</a>
+      <a href="d7-critical-audit.html">Critical alerts audit</a>
+      <a href="d8-interpreter-sessions.html">Interpreter sessions</a>
+      <a href="d9-per-tool.html" class="active">Per-tool detail</a>
+      <a href="d10-roi.html">Buyer ROI</a>
+      <div class="divider"></div><a>Settings</a>
+    </nav>
+
+    <main class="content">
+      <div class="tool-header">
+        <a class="back" href="d2-ai-tools.html">◀ Back to AI tool routing</a>
+        <h1>Nursing Reference AI</h1>
+        <div class="tool-meta">Registry ID: NU-AI-014 · added: 2025-09 · Vendor: [vendor name] · Integration: Epic + phone app</div>
+      </div>
+
+      <div class="kpi-strip-5">
+        <div class="kpi-card"><div class="kpi-label">Routed (30d)</div><div class="kpi-value">587</div></div>
+        <div class="kpi-card"><div class="kpi-label">First-time</div><div class="kpi-value">37</div></div>
+        <div class="kpi-card"><div class="kpi-label">Coverage</div><div class="kpi-value success">84% ✓</div></div>
+        <div class="kpi-card"><div class="kpi-label">Issues</div><div class="kpi-value warn">2 ⚠</div></div>
+        <div class="kpi-card"><div class="kpi-label">Est. value / qry</div><div class="kpi-value">$4.20</div></div>
+      </div>
+
+      <div class="card">
+        <h2>Routing volume (daily, 90d)</h2>
+        <div class="sparkline" style="height:120px">
+          <div class="bar" style="height:35%"></div><div class="bar" style="height:42%"></div><div class="bar" style="height:38%"></div>
+          <div class="bar" style="height:45%"></div><div class="bar" style="height:40%"></div><div class="bar" style="height:48%"></div>
+          <div class="bar" style="height:52%"></div><div class="bar" style="height:55%"></div><div class="bar" style="height:58%"></div>
+          <div class="bar" style="height:62%"></div><div class="bar" style="height:55%"></div><div class="bar" style="height:50%"></div>
+          <div class="bar" style="height:48%"></div><div class="bar" style="height:62%"></div><div class="bar" style="height:68%"></div>
+          <div class="bar" style="height:72%"></div><div class="bar" style="height:75%"></div><div class="bar" style="height:70%"></div>
+          <div class="bar" style="height:78%"></div><div class="bar" style="height:82%"></div><div class="bar" style="height:88%"></div>
+          <div class="bar" style="height:85%"></div><div class="bar" style="height:78%"></div><div class="bar" style="height:82%"></div>
+          <div class="bar" style="height:90%"></div><div class="bar" style="height:88%"></div><div class="bar" style="height:92%"></div>
+          <div class="bar" style="height:88%"></div><div class="bar" style="height:90%"></div><div class="bar" style="height:95%"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Top intents routed</h2>
+        <div class="intent-row"><div>Drug-drug interaction</div><div><strong>387×</strong></div></div>
+        <div class="intent-row"><div>Renal dose check</div><div><strong>112×</strong></div></div>
+        <div class="intent-row"><div>Pregnancy / lactation safety</div><div><strong>54×</strong></div></div>
+        <div class="intent-row"><div>Geriatric dosing</div><div><strong>34×</strong></div></div>
+      </div>
+
+      <div class="card">
+        <h2>First-time exposures (cumulative, 90d)</h2>
+        <p class="muted" style="margin-bottom:12px">Nurses who heard this tool named by LYNA for the first time. Growth implies the awareness gap is closing.</p>
+        <div class="sparkline" style="height:80px">
+          <div class="bar" style="height:8%"></div><div class="bar" style="height:12%"></div>
+          <div class="bar" style="height:18%"></div><div class="bar" style="height:22%"></div>
+          <div class="bar" style="height:28%"></div><div class="bar" style="height:34%"></div>
+          <div class="bar" style="height:40%"></div><div class="bar" style="height:48%"></div>
+          <div class="bar" style="height:54%"></div><div class="bar" style="height:62%"></div>
+          <div class="bar" style="height:68%"></div><div class="bar" style="height:74%"></div>
+          <div class="bar" style="height:78%"></div><div class="bar" style="height:84%"></div>
+          <div class="bar" style="height:90%"></div><div class="bar" style="height:95%"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Issues (last 14d)</h2>
+        <div class="issue-row" style="font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;color:var(--lyna-text-3);background:var(--lyna-surface);border-radius:8px 8px 0 0">
+          <div>Date</div><div>Time</div><div>Issue</div><div>Resolution</div>
+        </div>
+        <div class="issue-row"><div class="when">05-18</div><div class="when">14:22</div><div>API 500 (vendor side)</div><div>Fallback to LYNA native ✓</div></div>
+        <div class="issue-row"><div class="when">05-15</div><div class="when">09:11</div><div>Timeout 8s</div><div>Fallback to LYNA native ✓</div></div>
+      </div>
+
+      <div class="roi-card">
+        <h2>ROI estimate (renewal conversation)</h2>
+        <div class="roi-stat"><div class="label">Annual contract</div><div class="value">$48,000</div></div>
+        <div class="roi-stat"><div class="label">Routings (annualized)</div><div class="value">~7,000</div></div>
+        <div class="roi-stat"><div class="label">Cost per routing</div><div class="value">$6.86</div></div>
+        <div class="roi-stat"><div class="label">Estimated value per query (LYNA-derived)</div><div class="value">$4.20</div></div>
+        <div class="roi-stat"><div class="label">ROI before LYNA</div><div class="value" style="color:var(--lyna-text-3)">n/a (no usage data)</div></div>
+        <div class="roi-stat"><div class="label">ROI with LYNA (current)</div><div class="value" style="color:var(--lyna-warning-deep)">~ –0.39 ⚠</div></div>
+        <p style="margin-top:16px;font-size:13px;color:var(--lyna-text-2);font-style:italic">
+          Vendor relationship: request usage data from vendor to recalculate, or adjust contract structure.
+          The H6 awareness gap is closing — first-time-exposure trend suggests routing volume will continue
+          to grow as more nurses learn this tool is available.
+        </p>
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LYNA · S5.B/C Alert Follow-up</title>
+<link rel="stylesheet" href="lyna.css">
+<style>
+  body.lyna-phone-page { flex-direction: row; flex-wrap: wrap; align-items: flex-start; }
+  .alert-banner {
+    background: var(--lyna-critical-tint); border-bottom: 1px solid rgba(220,38,38,0.2);
+    padding: var(--s-3) var(--s-4);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .alert-banner .ab-left { display: flex; align-items: center; gap: var(--s-2); }
+  .alert-banner .dot {
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--lyna-critical); animation: pulse 1.2s infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
+  .alert-banner .text {
+    font-size: 14px; font-weight: 600; color: var(--lyna-critical-deep);
+  }
+  .alert-banner .tap-hint {
+    font-size: 12px; color: var(--lyna-critical-deep);
+  }
+  .protocol-card {
+    margin: var(--s-4); padding: var(--s-4); border: 1px solid var(--lyna-border);
+    border-radius: var(--r-3); background: white;
+  }
+  .protocol-card h2 {
+    font-size: 18px; font-weight: 600; color: var(--lyna-text); margin-bottom: var(--s-2);
+  }
+  .protocol-card .meta {
+    font-size: 13px; color: var(--lyna-text-3); margin-bottom: var(--s-3);
+  }
+  .protocol-list { list-style: none; }
+  .protocol-list li {
+    display: flex; align-items: flex-start; gap: var(--s-3);
+    padding: var(--s-3) 0; border-bottom: 1px solid var(--lyna-surface-2);
+    font-size: 15px;
+  }
+  .protocol-list li:last-child { border-bottom: none; }
+  .pcheck {
+    width: 22px; height: 22px; border-radius: 4px; border: 2px solid var(--lyna-border-2);
+    flex-shrink: 0; margin-top: 1px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .pcheck.done {
+    background: var(--lyna-success); border-color: var(--lyna-success);
+    color: white; font-weight: 700;
+  }
+  .protocol-list li.done .ptext { color: var(--lyna-text-3); text-decoration: line-through; }
+  .ptext { color: var(--lyna-text); line-height: 1.4; flex: 1; }
+</style>
+</head>
+<body class="lyna-phone-page">
+
+  <!-- S5.B Status banner over S2 Home -->
+  <div>
+    <div class="lyna-phone">
+      <div class="lyna-status-bar"><span class="lyna-time">4:36</span><span class="lyna-status-right">5G ▣ 87%</span></div>
+      <div class="lyna-app-content">
+        <div class="alert-banner">
+          <div class="ab-left">
+            <span class="dot"></span>
+            <span class="text">RR active · 4-East bed 6</span>
+          </div>
+          <span class="tap-hint">Tap to expand →</span>
+        </div>
+
+        <div class="lyna-app-header">
+          <div class="lyna-logo">LYNA</div>
+          <button class="lyna-settings">⚙</button>
+        </div>
+        <div class="lyna-identity">
+          <div class="lyna-name">Sofia C.</div>
+          <div class="lyna-meta">4-East · Night Shift</div>
+        </div>
+        <button class="lyna-mode-pill">Mode: NORMAL <span>▼</span></button>
+
+        <div class="lyna-section-header">Recent</div>
+        <div class="lyna-list">
+          <div class="lyna-row">🚨 Rapid response, bed 6, ST changes</div>
+          <div class="lyna-row">Bed 6 troponin trend</div>
+        </div>
+        <div class="lyna-spacer"></div>
+        <div class="lyna-talk-area">
+          <button class="lyna-talk-btn">
+            <div class="lyna-talk-icon">🎤</div>
+            <div class="lyna-talk-label">TALK</div>
+          </button>
+        </div>
+      </div>
+      <div class="lyna-home-indicator"></div>
+    </div>
+    <div class="lyna-phone-frame-caption">S5.B — Active-alert status banner over Home (post-ACK)</div>
+  </div>
+
+  <!-- S5.C Protocol View -->
+  <div>
+    <div class="lyna-phone">
+      <div class="lyna-status-bar"><span class="lyna-time">4:38</span><span class="lyna-status-right">5G ▣ 87%</span></div>
+      <div class="lyna-app-content">
+        <div class="alert-banner">
+          <div class="ab-left">
+            <span class="dot"></span>
+            <span class="text">RR active · 4-East bed 6</span>
+          </div>
+          <span class="tap-hint">▼</span>
+        </div>
+        <div class="lyna-nav"><button>◀ Back to alert</button><span></span></div>
+
+        <div class="protocol-card">
+          <h2>ACS Protocol</h2>
+          <div class="meta">Per hospital policy NU-CARD-014 (revised 2025-11-02)</div>
+          <ul class="protocol-list">
+            <li class="done">
+              <div class="pcheck done">✓</div>
+              <div class="ptext">Activate RRT</div>
+            </li>
+            <li class="done">
+              <div class="pcheck done">✓</div>
+              <div class="ptext">Page cardiology</div>
+            </li>
+            <li>
+              <div class="pcheck"></div>
+              <div class="ptext">Establish 2nd IV (large bore)</div>
+            </li>
+            <li>
+              <div class="pcheck"></div>
+              <div class="ptext">12-lead EKG</div>
+            </li>
+            <li>
+              <div class="pcheck"></div>
+              <div class="ptext">Recheck troponin</div>
+            </li>
+            <li>
+              <div class="pcheck"></div>
+              <div class="ptext">Prepare for possible cath lab activation</div>
+            </li>
+          </ul>
+          <div class="lyna-citation" style="margin-top:var(--s-3)">
+            Source: Hospital policy NU-CARD-014
+          </div>
+        </div>
+      </div>
+      <div class="lyna-home-indicator"></div>
+    </div>
+    <div class="lyna-phone-frame-caption">S5.C — Protocol view (drill-down from active alert)</div>
+  </div>
+
+</body>
+</html>

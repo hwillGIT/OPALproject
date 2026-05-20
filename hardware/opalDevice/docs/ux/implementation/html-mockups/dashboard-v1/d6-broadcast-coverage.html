@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LYNA Dashboard · D6 Broadcast Coverage</title>
+<link rel="stylesheet" href="lyna-dashboard.css">
+<style>
+  .shift-cell { padding: 8px; text-align: center; font-weight: 600; }
+  .shift-cell.good { color: var(--lyna-success); }
+  .shift-cell.warn { color: var(--lyna-warning-deep); background: var(--lyna-warning-tint); border-radius: 4px; }
+  .esc-row { display: grid; grid-template-columns: 100px 1fr 1fr 2fr; gap: 16px; padding: 12px 8px; border-bottom: 1px solid var(--lyna-surface-2); font-size: 14px; }
+  .esc-row:last-child { border-bottom: none; }
+  .esc-row .esc-time { font-family: 'SF Mono', Monaco, Consolas, monospace; color: var(--lyna-text-3); }
+</style>
+</head>
+<body>
+<div class="dashboard">
+  <header class="topbar">
+    <div class="topbar-left"><div class="logo">LYNA</div><div class="scope">Mt. Sinai · 4-South</div></div>
+    <div class="topbar-right"><span class="user-name">Marcus Wells</span><span class="role-chip">Mgr</span><button class="icon-btn">⚙</button></div>
+  </header>
+  <div class="body-row">
+    <nav class="leftnav">
+      <a href="d1-adoption.html">Overview</a>
+      <a href="d2-ai-tools.html">AI tool routing</a>
+      <a href="d3-top-queries.html">Top queries</a>
+      <a href="d4-response-times.html">Response times</a>
+      <a href="d5-abandonment.html">Abandonment alerts</a>
+      <a href="d6-broadcast-coverage.html" class="active">Broadcast coverage</a>
+      <a href="d7-critical-audit.html">Critical alerts audit</a>
+      <a href="d8-interpreter-sessions.html">Interpreter sessions</a>
+      <a href="d9-per-tool.html">Per-tool detail</a>
+      <a href="d10-roi.html">Buyer ROI</a>
+      <div class="divider"></div><a>Settings</a>
+    </nav>
+
+    <main class="content">
+      <div class="page-header">
+        <h1>Broadcast / help coverage</h1>
+        <div class="subtitle">Is my unit responsive when someone asks for help? Aggregate-only — no per-nurse responsiveness shown.</div>
+      </div>
+      <div class="filters">
+        <button class="filter-pill">Unit ▼</button>
+        <button class="filter-pill">Shift ▼</button>
+        <button class="filter-pill active">7 days ▼</button>
+        <button class="filter-pill">Category ▼</button>
+      </div>
+
+      <div class="kpi-strip">
+        <div class="kpi-card"><div class="kpi-label">Total broadcasts</div><div class="kpi-value">142</div></div>
+        <div class="kpi-card"><div class="kpi-label">Ack within 30s</div><div class="kpi-value success">87% ✓</div><div class="kpi-sub">Target ≥85</div></div>
+        <div class="kpi-card"><div class="kpi-label">Ack within 60s</div><div class="kpi-value success">95% ✓</div><div class="kpi-sub">Target ≥95</div></div>
+        <div class="kpi-card"><div class="kpi-label">Escalations</div><div class="kpi-value">3 (2%)</div><div class="kpi-sub">Target &lt;5%</div></div>
+      </div>
+
+      <div class="card">
+        <h2>Response-time distribution (4-South, 7d)</h2>
+        <div class="histogram" style="position:relative">
+          <div class="h-bar" style="height:35%;background:var(--lyna-broadcast)"></div>
+          <div class="h-bar" style="height:55%;background:var(--lyna-broadcast)"></div>
+          <div class="h-bar" style="height:72%;background:var(--lyna-broadcast)"></div>
+          <div class="h-bar" style="height:85%;background:var(--lyna-broadcast)"></div>
+          <div class="h-bar" style="height:92%;background:var(--lyna-broadcast)"></div>
+          <div class="h-bar" style="height:88%;background:var(--lyna-broadcast)"></div>
+          <div class="h-bar" style="height:75%;background:var(--lyna-broadcast)"></div>
+          <div class="h-bar" style="height:60%;background:var(--lyna-broadcast)"></div>
+          <div class="h-bar" style="height:42%;background:var(--lyna-broadcast)"></div>
+          <div class="h-bar" style="height:28%;background:var(--lyna-broadcast)"></div>
+          <div class="h-bar" style="height:18%;background:var(--lyna-broadcast)"></div>
+          <div class="h-bar" style="height:12%;background:var(--lyna-broadcast)"></div>
+          <div class="h-bar" style="height:8%;background:var(--lyna-broadcast)"></div>
+          <div class="h-bar" style="height:5%;background:var(--lyna-broadcast)"></div>
+          <div class="h-bar" style="height:3%;background:var(--lyna-broadcast)"></div>
+          <div class="threshold" style="left:55%"></div>
+        </div>
+        <div class="histogram-axis"><span>0s</span><span>30s</span><span>60s (target)</span><span>90s</span><span>2m+</span></div>
+      </div>
+
+      <div class="card">
+        <h2>Per-shift comparison (ack-within-60s)</h2>
+        <table class="lyna-table">
+          <thead><tr><th>Unit</th><th>Day</th><th>Night</th><th>Weekday</th><th>Weekend</th></tr></thead>
+          <tbody>
+            <tr><td>4-South</td><td class="shift-cell good">94%</td><td class="shift-cell warn">78% ⚠</td><td class="shift-cell good">92%</td><td class="shift-cell warn">82% ⚠</td></tr>
+            <tr><td>4-East</td><td class="shift-cell good">96%</td><td class="shift-cell good">88%</td><td class="shift-cell good">95%</td><td class="shift-cell good">89%</td></tr>
+            <tr><td>5-North</td><td class="shift-cell good">91%</td><td class="shift-cell warn">74% ⚠</td><td class="shift-cell good">89%</td><td class="shift-cell warn">78% ⚠</td></tr>
+            <tr><td>6-South</td><td class="shift-cell good">93%</td><td class="shift-cell good">85%</td><td class="shift-cell good">91%</td><td class="shift-cell good">84%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2>Escalations (when no one acked within timeout)</h2>
+        <div class="esc-row" style="font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;color:var(--lyna-text-3);background:var(--lyna-surface);border-radius:8px 8px 0 0;">
+          <div>Time</div><div>Sender</div><div>Category</div><div>Notes</div>
+        </div>
+        <div class="esc-row"><div class="esc-time">03:14</div><div>Priya</div><div>Supply</div><div>Devon was on break</div></div>
+        <div class="esc-row"><div class="esc-time">04:38</div><div>Maya</div><div>Help</div><div>No PCA on shift</div></div>
+        <div class="esc-row"><div class="esc-time">07:22</div><div>Sarah</div><div>Isolation</div><div>Iso-cart not stocked</div></div>
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>

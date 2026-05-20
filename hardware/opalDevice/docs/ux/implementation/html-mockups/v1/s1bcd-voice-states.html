@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LYNA · S1 Voice States (B/C/D/E)</title>
+<link rel="stylesheet" href="lyna.css">
+<style>
+  body.lyna-phone-page { flex-direction: row; flex-wrap: wrap; align-items: flex-start; }
+  .voice-waveform {
+    display: flex; align-items: flex-end; justify-content: center;
+    height: 120px; gap: 2px; margin: var(--s-7) auto;
+  }
+  .voice-waveform .bar {
+    width: 4px; background: var(--lyna-normal); border-radius: 2px;
+  }
+  .voice-spinner {
+    width: 48px; height: 48px; border: 4px solid var(--lyna-surface-2);
+    border-top-color: var(--lyna-normal); border-radius: 50%;
+    margin: var(--s-7) auto; animation: spin 1s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .voice-state-label { font-size: 20px; font-weight: 500; text-align: center; color: var(--lyna-text); margin: var(--s-2) 0; }
+  .voice-latency {
+    display: inline-block; padding: 2px 10px; background: var(--lyna-success-tint);
+    color: #047857; font-size: 13px; border-radius: 999px; margin-left: var(--s-2);
+  }
+  .voice-transcript {
+    background: var(--lyna-surface-2); border-radius: var(--r-3);
+    padding: var(--s-3); margin: var(--s-3) var(--s-4); font-size: 16px;
+    color: var(--lyna-text); line-height: 1.5;
+  }
+  .voice-transcript.preview { font-style: italic; color: var(--lyna-text-3); }
+  .voice-source-caption { font-size: 14px; color: var(--lyna-text-3); padding: 0 var(--s-4); margin-top: var(--s-3); }
+  .voice-speaker {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: var(--lyna-normal); margin: var(--s-7) auto var(--s-4);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 28px;
+    box-shadow: 0 0 0 12px rgba(37,99,235,0.15), 0 0 0 24px rgba(37,99,235,0.08);
+  }
+  .voice-stop-btn {
+    width: 96px; height: 96px; border-radius: 50%;
+    background: #EF4444; color: white; margin: var(--s-4) auto var(--s-5);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    box-shadow: 0 8px 24px rgba(239,68,68,0.3);
+  }
+  .voice-stop-btn .icon { font-size: 32px; }
+  .voice-stop-btn .label { font-size: 14px; font-weight: 600; }
+  .voice-error-icon {
+    font-size: 56px; text-align: center; margin: var(--s-7) 0 var(--s-3); color: var(--lyna-warning);
+  }
+  .voice-mute-btn {
+    color: var(--lyna-text-3); font-size: 14px;
+  }
+</style>
+</head>
+<body class="lyna-phone-page">
+
+  <!-- S1.B LISTENING -->
+  <div>
+    <div class="lyna-phone">
+      <div class="lyna-status-bar"><span class="lyna-time">9:41</span><span class="lyna-status-right">5G ▣ 87%</span></div>
+      <div class="lyna-app-content">
+        <div class="lyna-nav"><button>◀ Cancel</button><span></span></div>
+        <div class="voice-waveform">
+          <div class="bar" style="height:20px"></div><div class="bar" style="height:40px"></div>
+          <div class="bar" style="height:60px"></div><div class="bar" style="height:90px"></div>
+          <div class="bar" style="height:110px"></div><div class="bar" style="height:80px"></div>
+          <div class="bar" style="height:50px"></div><div class="bar" style="height:70px"></div>
+          <div class="bar" style="height:100px"></div><div class="bar" style="height:75px"></div>
+          <div class="bar" style="height:45px"></div><div class="bar" style="height:60px"></div>
+          <div class="bar" style="height:85px"></div><div class="bar" style="height:55px"></div>
+          <div class="bar" style="height:30px"></div><div class="bar" style="height:50px"></div>
+          <div class="bar" style="height:70px"></div><div class="bar" style="height:40px"></div>
+          <div class="bar" style="height:25px"></div><div class="bar" style="height:15px"></div>
+        </div>
+        <div class="voice-state-label">Listening...</div>
+        <div class="voice-transcript preview">
+          "what's the last pain med for bed fourteen"
+        </div>
+        <div class="lyna-spacer"></div>
+        <div class="voice-stop-btn"><div class="icon">⏹</div><div class="label">STOP</div></div>
+      </div>
+      <div class="lyna-home-indicator"></div>
+    </div>
+    <div class="lyna-phone-frame-caption">S1.B — Listening</div>
+  </div>
+
+  <!-- S1.C PROCESSING -->
+  <div>
+    <div class="lyna-phone">
+      <div class="lyna-status-bar"><span class="lyna-time">9:41</span><span class="lyna-status-right">5G ▣ 87%</span></div>
+      <div class="lyna-app-content">
+        <div class="lyna-nav"><button>◀ Cancel</button><span></span></div>
+        <div class="voice-spinner"></div>
+        <div class="voice-state-label">Processing...<span class="voice-latency">~2s</span></div>
+        <div class="voice-transcript">"What's the last pain med for bed 14?"</div>
+        <div class="voice-source-caption">Querying: Epic MAR via FHIR</div>
+        <div class="lyna-spacer"></div>
+      </div>
+      <div class="lyna-home-indicator"></div>
+    </div>
+    <div class="lyna-phone-frame-caption">S1.C — Processing</div>
+  </div>
+
+  <!-- S1.D SPEAKING -->
+  <div>
+    <div class="lyna-phone">
+      <div class="lyna-status-bar"><span class="lyna-time">9:41</span><span class="lyna-status-right">5G ▣ 87%</span></div>
+      <div class="lyna-app-content">
+        <div class="lyna-nav"><button>◀ Done</button><button class="voice-mute-btn">🔇 Mute</button></div>
+        <div class="voice-speaker">🔊</div>
+        <div class="voice-transcript">
+          Mrs. Reynolds in bed 14 last had hydromorphone 0.5 mg IV at 11:43 PM — about 2.5 hours ago. PRN q3h. Due in 30 minutes.
+        </div>
+        <div class="voice-source-caption">Source: Epic MAR via FHIR Observation. Pulled 09:41:12.</div>
+        <div class="lyna-spacer"></div>
+        <div class="lyna-px-4" style="display:flex;gap:var(--s-3);padding-bottom:var(--s-5)">
+          <button class="lyna-btn" style="flex:1">Say it again</button>
+          <button class="lyna-btn" style="flex:1">Show on card</button>
+        </div>
+      </div>
+      <div class="lyna-home-indicator"></div>
+    </div>
+    <div class="lyna-phone-frame-caption">S1.D — Speaking (response readback)</div>
+  </div>
+
+  <!-- S1.E ERROR -->
+  <div>
+    <div class="lyna-phone">
+      <div class="lyna-status-bar"><span class="lyna-time">9:41</span><span class="lyna-status-right">⚠ 0G ▣ 87%</span></div>
+      <div class="lyna-app-content">
+        <div class="lyna-nav"><button>◀ Cancel</button><span></span></div>
+        <div class="voice-error-icon">⚠</div>
+        <div class="voice-state-label">Offline</div>
+        <div style="text-align:center;padding:0 var(--s-5);color:var(--lyna-text-3);font-size:16px;line-height:1.5;margin-bottom:var(--s-4)">
+          I can't reach Epic right now. The workstation in the corridor has the MAR.
+        </div>
+        <div class="lyna-px-4">
+          <button class="lyna-btn primary">Retry when reconnected</button>
+        </div>
+        <div style="padding:var(--s-5) var(--s-4) 0">
+          <div class="lyna-section-header" style="padding:0">Last known data available</div>
+          <div class="lyna-list" style="margin-top:var(--s-2)">
+            <div class="lyna-row">📋 Brain sheet (06:42 AM)</div>
+            <div class="lyna-row">📞 Unit on-call roster</div>
+          </div>
+        </div>
+      </div>
+      <div class="lyna-home-indicator"></div>
+    </div>
+    <div class="lyna-phone-frame-caption">S1.E — Error (offline state)</div>
+  </div>
+
+</body>
+</html>

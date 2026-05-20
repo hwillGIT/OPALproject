@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LYNA · S10 Settings</title>
+<link rel="stylesheet" href="lyna.css">
+<style>
+  .settings-section-label {
+    font-size: 12px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.6px; color: var(--lyna-text-3);
+    padding: var(--s-4) var(--s-4) var(--s-2);
+  }
+  .settings-list {
+    background: white; border-top: 1px solid var(--lyna-border);
+    border-bottom: 1px solid var(--lyna-border);
+  }
+  .settings-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: var(--s-3) var(--s-4); min-height: 44px;
+    border-bottom: 1px solid var(--lyna-border);
+    font-size: 16px; color: var(--lyna-text);
+  }
+  .settings-row:last-child { border-bottom: none; }
+  .settings-row .right {
+    color: var(--lyna-text-3); font-size: 14px;
+    display: flex; align-items: center; gap: var(--s-2);
+  }
+  .settings-row.signout { color: var(--lyna-critical); justify-content: center; }
+  .slider {
+    flex: 1; max-width: 140px; height: 28px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .slider-track {
+    flex: 1; height: 4px; background: var(--lyna-border);
+    border-radius: 2px; position: relative;
+  }
+  .slider-fill {
+    position: absolute; left: 0; top: 0; bottom: 0; width: 60%;
+    background: var(--lyna-normal); border-radius: 2px;
+  }
+  .slider-knob {
+    position: absolute; left: 60%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px; height: 18px; background: white;
+    border: 1px solid var(--lyna-border);
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  }
+</style>
+</head>
+<body class="lyna-phone-page">
+  <div class="lyna-phone">
+    <div class="lyna-status-bar"><span class="lyna-time">9:41</span><span class="lyna-status-right">5G ▣ 87%</span></div>
+    <div class="lyna-app-content" style="background:var(--lyna-bg-page);background-color:var(--lyna-surface);">
+      <div class="lyna-nav"><button>◀ Back</button><span></span></div>
+
+      <div style="padding:0 var(--s-4) var(--s-3)">
+        <div style="font-size:24px;font-weight:700;color:var(--lyna-text)">Settings</div>
+      </div>
+
+      <div class="settings-section-label">Voice</div>
+      <div class="settings-list">
+        <div class="settings-row">
+          <span>Wake word</span>
+          <div class="right">"Hey LYNA" ›</div>
+        </div>
+        <div class="settings-row">
+          <span>Earpiece</span>
+          <div class="right">AirPods Pro ›</div>
+        </div>
+        <div class="settings-row">
+          <span>Voice volume</span>
+          <div class="slider">
+            <div class="slider-track"><div class="slider-fill"></div><div class="slider-knob"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-section-label">Modes</div>
+      <div class="settings-list">
+        <div class="settings-row">
+          <span>Default mode</span>
+          <div class="right">NORMAL ›</div>
+        </div>
+        <div class="settings-row">
+          <span>Interpreter language</span>
+          <div class="right">Spanish ›</div>
+        </div>
+      </div>
+
+      <div class="settings-section-label">Privacy</div>
+      <div class="settings-list">
+        <div class="settings-row">
+          <span>My queries log</span>
+          <div class="right">›</div>
+        </div>
+        <div class="settings-row">
+          <span>Compliance audit</span>
+          <div class="right">›</div>
+        </div>
+      </div>
+
+      <div style="height:24px"></div>
+
+      <div class="settings-list">
+        <div class="settings-row signout">
+          Sign out
+        </div>
+      </div>
+
+      <div class="lyna-spacer"></div>
+      <div style="padding:var(--s-4);text-align:center;font-size:11px;color:var(--lyna-text-3)">
+        LYNA v1.0 (pilot)
+      </div>
+    </div>
+    <div class="lyna-home-indicator"></div>
+  </div>
+  <div class="lyna-phone-frame-caption">S10 — Settings</div>
+</body>
+</html>

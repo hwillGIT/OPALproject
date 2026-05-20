@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LYNA · S3.C First-time AI exposure</title>
+<link rel="stylesheet" href="lyna.css">
+<style>
+  .modal-backdrop { background: rgba(0,0,0,0.4); flex: 1; }
+  .first-time-sheet {
+    background: white; border-radius: 24px 24px 0 0;
+    padding: var(--s-2) 0 var(--s-5); margin-top: auto; max-height: 70%;
+    box-shadow: 0 -8px 32px rgba(0,0,0,0.15);
+    overflow-y: auto;
+  }
+  .sheet-handle {
+    width: 36px; height: 4px; background: var(--lyna-border-2);
+    border-radius: 2px; margin: var(--s-2) auto var(--s-4);
+  }
+  .ft-title {
+    font-size: 22px; font-weight: 600; color: var(--lyna-text);
+    padding: 0 var(--s-4) var(--s-3); display: flex; align-items: center; gap: var(--s-2);
+  }
+  .ft-body {
+    font-size: 16px; color: var(--lyna-text-2); line-height: 1.5;
+    padding: 0 var(--s-4) var(--s-3);
+  }
+  .ft-section-label {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.6px; color: var(--lyna-text-3); padding: var(--s-4) var(--s-4) var(--s-2);
+  }
+  .ft-list {
+    background: var(--lyna-surface); border-radius: var(--r-3);
+    padding: var(--s-3); margin: 0 var(--s-4);
+  }
+  .ft-list li {
+    list-style: none; font-size: 16px; color: var(--lyna-text);
+    padding: var(--s-2) 0;
+  }
+  .ft-meta {
+    font-size: 13px; color: var(--lyna-text-3);
+    padding: var(--s-4) var(--s-4) var(--s-2);
+  }
+  .ft-meta div { margin: 2px 0; }
+  .ft-confirm-btn {
+    display: block; margin: var(--s-4) var(--s-4) 0;
+    height: 48px; border-radius: var(--r-3);
+    background: var(--lyna-normal); color: white; font-size: 16px; font-weight: 600;
+    border: none; cursor: pointer; width: calc(100% - 32px);
+  }
+</style>
+</head>
+<body class="lyna-phone-page">
+  <div class="lyna-phone">
+    <div class="lyna-status-bar"><span class="lyna-time">13:50</span><span class="lyna-status-right">5G ▣ 87%</span></div>
+    <div class="lyna-app-content modal-backdrop" style="display:flex;flex-direction:column">
+      <div class="lyna-spacer"></div>
+      <div class="first-time-sheet">
+        <div class="sheet-handle"></div>
+        <div class="ft-title">🎉 New for you!</div>
+        <div class="ft-body">
+          Your hospital has the <strong>nursing reference AI</strong> integrated for this kind of safety check.
+        </div>
+        <div class="ft-body">
+          I'll route through it automatically when it's the right tool for the question.
+        </div>
+        <div class="ft-section-label">What else it answers</div>
+        <ul class="ft-list">
+          <li>• Drug-drug interactions</li>
+          <li>• Renal / hepatic dosing</li>
+          <li>• Pregnancy / lactation safety</li>
+          <li>• Geriatric dosing</li>
+        </ul>
+        <div class="ft-meta">
+          <div>Added by NI team: <strong>September 2025</strong></div>
+          <div>Vendor: [vendor name]</div>
+          <div>Registry ID: NU-AI-014</div>
+        </div>
+        <button class="ft-confirm-btn">Got it</button>
+      </div>
+    </div>
+    <div class="lyna-home-indicator"></div>
+  </div>
+  <div class="lyna-phone-frame-caption">S3.C — First-time AI-tool exposure (slides up after S3.B once per nurse per tool)</div>
+</body>
+</html>

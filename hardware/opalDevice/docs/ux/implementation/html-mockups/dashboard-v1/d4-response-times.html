@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LYNA Dashboard · D4 Response Times</title>
+<link rel="stylesheet" href="lyna-dashboard.css">
+<style>
+  .qt-row { display: flex; align-items: center; padding: 12px 8px; border-bottom: 1px solid var(--lyna-surface-2); font-size: 14px; }
+  .qt-row:last-child { border-bottom: none; }
+  .qt-row .name { flex: 1; font-weight: 500; }
+  .qt-row .num { width: 100px; text-align: right; }
+  .unit-bar-row { display: grid; grid-template-columns: 120px 1fr 100px 60px; gap: 16px; align-items: center; padding: 12px 8px; border-bottom: 1px solid var(--lyna-surface-2); }
+  .unit-bar { height: 8px; background: var(--lyna-surface-2); border-radius: 4px; overflow: hidden; position: relative; }
+  .unit-bar-fill { height: 100%; background: var(--lyna-normal); border-radius: 4px; }
+  .unit-bar-fill.warn { background: var(--lyna-warning); }
+  .slow-query-table { font-size: 13px; }
+  .slow-query-table th { padding: 8px; text-align: right; }
+  .slow-query-table th:first-child { text-align: left; }
+  .slow-query-table td { padding: 8px; text-align: right; font-family: 'SF Mono', Monaco, Consolas, monospace; }
+  .slow-query-table td:first-child { text-align: left; font-family: inherit; }
+</style>
+</head>
+<body>
+<div class="dashboard">
+  <header class="topbar">
+    <div class="topbar-left"><div class="logo">LYNA</div><div class="scope">Mt. Sinai · All units</div></div>
+    <div class="topbar-right"><span class="user-name">Dr. Ramirez</span><span class="role-chip">CCIO</span><button class="icon-btn">⚙</button></div>
+  </header>
+  <div class="body-row">
+    <nav class="leftnav">
+      <a href="d1-adoption.html">Overview</a>
+      <a href="d2-ai-tools.html">AI tool routing</a>
+      <a href="d3-top-queries.html">Top queries</a>
+      <a href="d4-response-times.html" class="active">Response times</a>
+      <a href="d5-abandonment.html">Abandonment alerts</a>
+      <a href="d6-broadcast-coverage.html">Broadcast coverage</a>
+      <a href="d7-critical-audit.html">Critical alerts audit</a>
+      <a href="d8-interpreter-sessions.html">Interpreter sessions</a>
+      <a href="d9-per-tool.html">Per-tool detail</a>
+      <a href="d10-roi.html">Buyer ROI</a>
+      <div class="divider"></div><a>Settings</a>
+    </nav>
+
+    <main class="content">
+      <div class="page-header">
+        <h1>Response times</h1>
+        <div class="subtitle">Is LYNA actually faster than the workstation? Sub-2s is the bar.</div>
+      </div>
+      <div class="filters">
+        <button class="filter-pill">Unit ▼</button>
+        <button class="filter-pill">Hour-of-day ▼</button>
+        <button class="filter-pill active">7 days ▼</button>
+        <button class="filter-pill">Query type ▼</button>
+      </div>
+
+      <div class="card">
+        <h2>Round-trip latency distribution (all queries, 30d)</h2>
+        <div class="histogram" style="position:relative">
+          <div class="h-bar" style="height:18%"></div>
+          <div class="h-bar" style="height:35%"></div>
+          <div class="h-bar" style="height:52%"></div>
+          <div class="h-bar" style="height:68%"></div>
+          <div class="h-bar" style="height:78%"></div>
+          <div class="h-bar" style="height:85%"></div>
+          <div class="h-bar" style="height:92%"></div>
+          <div class="h-bar" style="height:95%"></div>
+          <div class="h-bar" style="height:88%"></div>
+          <div class="h-bar" style="height:80%"></div>
+          <div class="h-bar" style="height:65%"></div>
+          <div class="h-bar" style="height:48%"></div>
+          <div class="h-bar" style="height:32%"></div>
+          <div class="h-bar" style="height:22%"></div>
+          <div class="h-bar" style="height:15%"></div>
+          <div class="h-bar" style="height:10%"></div>
+          <div class="h-bar" style="height:7%"></div>
+          <div class="h-bar" style="height:5%"></div>
+          <div class="h-bar" style="height:3%"></div>
+          <div class="h-bar" style="height:2%"></div>
+          <div class="threshold" style="left:35%"></div>
+        </div>
+        <div class="histogram-axis"><span>0s</span><span>1s</span><span>2s (target)</span><span>3s</span><span>4s</span><span>5s+</span></div>
+        <p style="margin-top:16px;font-size:15px;font-weight:500">
+          p50: <strong>1.4s</strong> · p75: <strong>2.1s</strong> · p95: <strong>4.8s</strong> · <span class="success">89% under 2s ✓</span>
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Latency by query type</h2>
+        <div class="qt-row"><div class="name">FHIR (live Epic data)</div><div class="num">p50: 0.9s</div><div class="num">p95: 2.4s</div></div>
+        <div class="qt-row"><div class="name">OpKB (door codes, supplies)</div><div class="num">p50: 0.6s</div><div class="num">p95: 1.2s</div></div>
+        <div class="qt-row"><div class="name">Policy lookup</div><div class="num">p50: 1.1s</div><div class="num">p95: 2.8s</div></div>
+        <div class="qt-row"><div class="name">AI routing <span class="warn">⚠</span></div><div class="num">p50: 2.1s</div><div class="num warn">p95: 4.8s</div></div>
+        <div class="qt-row"><div class="name">Drug Info</div><div class="num">p50: 1.4s</div><div class="num">p95: 3.1s</div></div>
+        <div class="qt-row"><div class="name">Emergency intent</div><div class="num">p50: 0.8s</div><div class="num">p95: 1.6s</div></div>
+      </div>
+
+      <div class="card">
+        <h2>Per-unit comparison (p95)</h2>
+        <div class="unit-bar-row">
+          <div>4-South</div>
+          <div class="unit-bar"><div class="unit-bar-fill" style="width:38%"></div></div>
+          <div>p95 <strong>1.8s</strong></div><div class="success">✓</div>
+        </div>
+        <div class="unit-bar-row">
+          <div>4-East</div>
+          <div class="unit-bar"><div class="unit-bar-fill" style="width:40%"></div></div>
+          <div>p95 <strong>1.9s</strong></div><div class="success">✓</div>
+        </div>
+        <div class="unit-bar-row">
+          <div>5-North</div>
+          <div class="unit-bar"><div class="unit-bar-fill warn" style="width:88%"></div></div>
+          <div>p95 <strong>4.2s</strong></div><div class="warn">⚠</div>
+        </div>
+        <div class="unit-bar-row">
+          <div>6-South</div>
+          <div class="unit-bar"><div class="unit-bar-fill" style="width:42%"></div></div>
+          <div>p95 <strong>2.0s</strong></div><div class="success">✓</div>
+        </div>
+        <div class="unit-bar-row">
+          <div>Tower-3</div>
+          <div class="unit-bar"><div class="unit-bar-fill" style="width:36%"></div></div>
+          <div>p95 <strong>1.7s</strong></div><div class="success">✓</div>
+        </div>
+        <p class="muted" style="margin-top:12px;font-size:13px">5-North above threshold — check unit wifi coverage.</p>
+      </div>
+
+      <div class="card">
+        <h2>Slow query log (top 50 slowest, 7d)</h2>
+        <table class="lyna-table slow-query-table">
+          <thead><tr><th>Query</th><th>Total</th><th>STT</th><th>Router</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>"verify safety for bed 22"</td><td>6.8s</td><td>0.4</td><td>0.2</td><td>6.1</td></tr>
+            <tr><td>"rapid response trace for bed 6"</td><td>5.2s</td><td>0.6</td><td>0.3</td><td>4.1</td></tr>
+            <tr><td>"AM procedure list for 5-North"</td><td>4.9s</td><td>0.3</td><td>0.2</td><td>4.3</td></tr>
+            <tr><td>"interpreter for Vietnamese, bed 11"</td><td>4.6s</td><td>0.5</td><td>0.4</td><td>3.6</td></tr>
+            <tr><td>"renal-dose check vanco for bed 4"</td><td>4.2s</td><td>0.4</td><td>0.2</td><td>3.5</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>
