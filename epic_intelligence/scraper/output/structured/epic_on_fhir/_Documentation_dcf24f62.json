@@ -1,0 +1,3254 @@
+{
+  "url": "https://fhir.epic.com/Documentation?docId=oauth2tutorial",
+  "fileId": "_Documentation_dcf24f62",
+  "title": "Documentation - Epic on FHIR",
+  "description": "",
+  "crawledAt": "2026-05-16T14:42:55.196Z",
+  "depth": 1,
+  "textLength": 769179,
+  "wordCount": 108288,
+  "links": [
+    "https://fhir.epic.com/Download/ApiLicenseAgreement",
+    "https://fhir.epic.com/Documentation?docId=developerguidelines",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocessstepbystep&section=overview",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocessstepbystep&section=creating",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocessstepbystep&section=devclient",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocessstepbystep&section=marketing",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocessstepbystep&section=devapprove",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocessstepbystep&section=devsecret",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocessstepbystep&section=custreq",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocessstepbystep&section=custlicense",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocessstepbystep&section=custagree",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocessstepbystep&section=custdownload",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocessstepbystep&section=custconfirm",
+    "https://fhir.epic.com/Documentation?docId=sandbox_calls",
+    "https://fhir.epic.com/Documentation?docId=testpatients",
+    "https://fhir.epic.com/Documentation?docId=troubleshooting_eof",
+    "https://fhir.epic.com/Documentation?docId=patientfacingfhirapps",
+    "https://fhir.epic.com/Developer/Apps",
+    "https://fhir.epic.com/Documentation?docId=oauth2",
+    "https://fhir.epic.com/Documentation?docId=oauth2tutorial",
+    "https://fhir.epic.com/Documentation?docId=chlistingrequest&section=Embeddedchlistingrequest1Launch",
+    "https://fhir.epic.com/Documentation?docId=usercontext",
+    "https://fhir.epic.com/Documentation/Index?docId=epicidtypes",
+    "https://fhir.epic.com/Documentation?docId=oauth2&section=Embedded-Oauth2-Launch_Using-Access-Token",
+    "https://fhir.epic.com/Documentation?docId=oauth2&section=Standalone-Oauth2-Launch_Using-Refresh-Token",
+    "https://fhir.epic.com/Documentation?docId=oauth2&section=Standalone-Oauth2-Launch_Access-Token-Request_With-Refresh-Tokens_Client-Secret",
+    "https://fhir.epic.com/Specifications?api=11219",
+    "https://fhir.epic.com/Documentation?docId=oauth2&section=BackendOAuth2Guide",
+    "https://fhir.epic.com/Specifications?api=10423",
+    "https://fhir.epic.com/Documentation?docId=eof_patientsearching",
+    "https://fhir.epic.com",
+    "https://fhir.epic.com/Documentation?docId=cds-hooks",
+    "https://fhir.epic.com/Documentation?docId=cms_prior_auth_playbook",
+    "https://fhir.epic.com/Article/Index?docId=incomingdft",
+    "https://fhir.epic.com/Documentation?docId=launching",
+    "https://fhir.epic.com/Specifications?api=1048",
+    "https://fhir.epic.com/Specifications?api=952",
+    "https://fhir.epic.com/Specifications?api=999",
+    "https://fhir.epic.com/Article/Index?docid=filingdocumentsintoepic",
+    "https://fhir.epic.com/Documentation?docId=oauth2&section=EmbeddedOauth2Launch",
+    "https://fhir.epic.com/Documentation?docId=increasingoauthsuccess",
+    "https://fhir.epic.com/Documentation?docId=patientfacingfhirapps&section=AutomaticClientDistribution",
+    "https://fhir.epic.com/Documentation?docId=patientfacingfhirapps&section=USCDIDistributionCriteria",
+    "https://fhir.epic.com/Documentation?docId=patientfacingfhirapps&section=CCDSDistributionCriteria",
+    "https://fhir.epic.com/Documentation?docId=patientfacingfhirapps&section=CMSPayerCriteria",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocess&section=custreq",
+    "https://fhir.epic.com/Documentation?docId=chlistingrequest",
+    "https://fhir.epic.com/Documentation?docId=patientfacingfhirapps&section=TEFCAIASCriteria",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocess&section=devclient",
+    "https://fhir.epic.com/Documentation?docId=launching&section=token_library",
+    "https://fhir.epic.com/Documentation?docId=oauth2tutorial&section=testing-an-ehr-launch",
+    "https://fhir.epic.com/Documentation?docId=oauth2tutorial&section=testing-a-standalone-launch",
+    "https://fhir.epic.com/Documentation?docId=rpm_devices_software",
+    "https://fhir.epic.com/Documentation?docId=interfaces",
+    "https://fhir.epic.com/Documentation?docId=fhir_bulk_data",
+    "https://fhir.epic.com/Documentation?docId=designing_an_efficient_application",
+    "https://fhir.epic.com/Documentation?docId=cds-hooks&section=feedback",
+    "https://fhir.epic.com/Documentation?docId=fhir",
+    "https://fhir.epic.com/Documentation?docId=epicidtypes",
+    "https://fhir.epic.com/Documentation?docId=xrts_fhir_tutorial",
+    "https://fhir.epic.com/interconnect-fhir-oauth",
+    "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4",
+    "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/STU3",
+    "https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/DSTU2",
+    "https://fhir.epic.com/Documentation?docId=searchparameters",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocess",
+    "https://fhir.epic.com/Documentation?docId=oauth2tutorial&section=securing-your-application",
+    "https://fhir.epic.com/Documentation?docId=oauth2tutorial&section=build-your-application",
+    "https://fhir.epic.com/Documentation?docId=oauth2tutorial&section=app-architecture-considerations",
+    "https://fhir.epic.com/Documentation?docId=http_get_sso_launching",
+    "https://fhir.epic.com/Documentation?docId=eofcollaborate",
+    "https://fhir.epic.com/Documentation?docId=oauth2&section=Basic-Auth",
+    "https://fhir.epic.com/Documentation?docId=oauth2&section=Native-Apps-Consider",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocess&section=overview",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocess&section=creating",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocess&section=devready",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocess&section=devapprove",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocess&section=devsecret",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocess&section=custlicense",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocess&section=custagree",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocess&section=custdownload",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocess&section=custconfirm",
+    "https://fhir.epic.com/Documentation?docId=epiconfhirrequestprocess&section=deactivate",
+    "https://fhir.epic.com/Documentation?docId=appfhirversion",
+    "https://fhir.epic.com/Documentation?docId=testingguide",
+    "https://fhir.epic.com/Download",
+    "https://fhir.epic.com/Documentation?docId=usercontext&section=user-context-additional-security-validation",
+    "https://fhir.epic.com/Documentation?docId=usercontext&section=user-context-types-validation",
+    "https://fhir.epic.com/Documentation?docId=usercontext&section=user-context-types-application",
+    "https://fhir.epic.com/Documentation?docId=usercontext&section=user-context-choose-context",
+    "https://fhir.epic.com/Documentation?docId=usercontext&section=user-context-multi-context",
+    "https://fhir.epic.com/Documentation?docId=oauth2&section=JWKS-URLS",
+    "https://fhir.epic.com/Documentation/Index?docId=oauth2",
+    "https://fhir.epic.com/Documentation/Index?docId=oauth2&section=BackendOAuth2Guide",
+    "https://fhir.epic.com/Resources/sampleprivatekey",
+    "https://fhir.epic.com/Documentation/Index?docId=oauth2&section=JWKS-URLS",
+    "https://fhir.epic.com/Documentation/Index?docId=oauth2&section=Creating-Key-Pair",
+    "https://fhir.epic.com/Documentation/Index?docId=appfhirversion",
+    "https://fhir.epic.com/Documentation?docId=oauth2&section=Creating-Key-Pair",
+    "https://fhir.epic.com/Documentation?docId=oauth2&section=Embedded-Oauth2-Launch_Conformance-Statement",
+    "https://fhir.epic.com/Documentation/Index?docId=oauth2&section=Standalone-Oauth2-OfflineAccess-0",
+    "https://fhir.epic.com/Documentation?docId=oauth2tutorial&section=additional-authorize-request-parameters",
+    "https://fhir.epic.com/interconnect-fhir-oauth/api/epic/2019/Security/Open/PublicKeys/530005/OIDC",
+    "https://fhir.epic.com/interconnect-fhir-oauth/oauth2/.well-known/openid-configuration",
+    "https://fhir.epic.com/Developer/Index",
+    "https://fhir.epic.com/open.epic.com",
+    "https://fhir.epic.com/Documentation?docId=jwtAuthTroubleshooting",
+    "https://fhir.epic.com/Article?docId=oauth2&section=Embedded-Oauth2-Launch_Initial-Launch",
+    "https://fhir.epic.com/Specifications?api=10169",
+    "https://fhir.epic.com/Specifications?api=10170",
+    "https://fhir.epic.com/Specifications?api=10171",
+    "https://fhir.epic.com/Specifications?api=10172",
+    "https://fhir.epic.com/Documentation?docId=patientfacingfhirapps&section=Appendix",
+    "https://fhir.epic.com/Article?docId=interfaces&section=incoming_interfaces",
+    "https://fhir.epic.com/Documentation?docId=interfaces&section=outgoing_interface_auth",
+    "https://fhir.epic.com/Documentation?docId=implementing&section=implementingcdshooks",
+    "https://fhir.epic.com/Documentation?docid=interfaces",
+    "https://fhir.epic.com/Documentation?docId=sgn&section=why-some-fields-arent-clinically-reliable-eof-sgn",
+    "https://fhir.epic.com/Documentation?docId=sgn&section=how-epic-derives-sex-for-clinical-use-eof-sgn",
+    "https://fhir.epic.com/Documentation?docId=sgn&section=what-if-sex-for-clinical-use-is-unknown-eof-sgn",
+    "https://fhir.epic.com/Documentation?docid=EOFcollaborate",
+    "https://fhir.epic.com/Documentation?docid=implementing&section=interfacesetupforapps",
+    "https://fhir.epic.com/Documentation?docId=implementing&section=implementsmartonfhir",
+    "https://fhir.epic.com/Documentation?docId=implementing&section=Article?docid=implementingbackendfhir",
+    "https://fhir.epic.com/Documentation?docId=implementing&section=Article?docid=implementingcdshooks",
+    "https://fhir.epic.com/Documentation?docId=implementing&section=Article?docid=implementingbulkfhir",
+    "https://fhir.epic.com/Documentation?docId=implementing&section=Article?docid=interfacesetupforapps",
+    "https://fhir.epic.com/Documentation?docId=implementing&section=implementingbackendfhir",
+    "https://fhir.epic.com/Documentation?docId=implementing&section=mplementingcdshooks",
+    "https://fhir.epic.com/Documentation?docId=implementing&section=implementingbulkfhir",
+    "https://fhir.epic.com/Documentation?docId=implementing&section=interfacesetupforapps",
+    "https://fhir.epic.com/Documentation?docId=sharing_web_resources",
+    "https://fhir.epic.com/Documentation?docId=oauth2%3ESMART%20on%20FHIR%20tutorial%3C/a%3E,%20our%20%3Ca%20href=",
+    "https://fhir.epic.com/Documentation?docid=collaborate",
+    "https://fhir.epic.com/Documentation?docid=implementing&section=common_build_resources",
+    "https://fhir.epic.com/Documentation?docId=oauth2&section=Backend-Oauth2_Customer-Setup",
+    "https://fhir.epic.com/Article?docId=oauth2&section=JWKS",
+    "https://fhir.epic.com/Documentation?docId=cds-hooks&section=hooks",
+    "https://fhir.epic.com/Documentation?docId=cds-hooks&section=linkattributes",
+    "https://fhir.epic.com/Documentation?docId=cds-hooks&section=prefetch",
+    "https://fhir.epic.com/Documentation?docId=cds-hooks&section=trustingcdsclients",
+    "https://fhir.epic.com/FAQ",
+    "https://fhir.epic.com/Resources/Terms"
+  ],
+  "headings": [
+    {
+      "level": 3,
+      "text": "Document not found"
+    },
+    {
+      "level": 3,
+      "text": "open.epic Terms of Use"
+    },
+    {
+      "level": 2,
+      "text": "open.epic Terms of Use"
+    },
+    {
+      "level": 3,
+      "text": "Introduction"
+    },
+    {
+      "level": 3,
+      "text": "For Epic Community Members"
+    },
+    {
+      "level": 3,
+      "text": "For Developers"
+    },
+    {
+      "level": 3,
+      "text": "For Everyone"
+    },
+    {
+      "level": 3,
+      "text": "Definitions"
+    },
+    {
+      "level": 3,
+      "text": "App Creation & Request Process Step-by-Step"
+    },
+    {
+      "level": 2,
+      "text": "Table of Contents"
+    },
+    {
+      "level": 2,
+      "text": "Overview"
+    },
+    {
+      "level": 2,
+      "text": "Creating, Activating, and Licensing an App"
+    },
+    {
+      "level": 3,
+      "text": "Registering an App / Provisioning Client IDs"
+    },
+    {
+      "level": 3,
+      "text": "Recommendations for Creating your App Listing"
+    },
+    {
+      "level": 3,
+      "text": "Facilitating Epic Community Member Downloads"
+    },
+    {
+      "level": 3,
+      "text": "Provisioning Client Secrets"
+    },
+    {
+      "level": 3,
+      "text": "Customer-specific Endpoint URIs"
+    },
+    {
+      "level": 2,
+      "text": "Requesting An App"
+    },
+    {
+      "level": 3,
+      "text": "Before Starting the Request Process"
+    },
+    {
+      "level": 3,
+      "text": "Obtaining the open.epic API Subscription Agreement"
+    },
+    {
+      "level": 3,
+      "text": "Downloading Client Records"
+    },
+    {
+      "level": 3,
+      "text": "Confirm the Client ID was Downloaded"
+    },
+    {
+      "level": 3,
+      "text": "Vaccine Credentials"
+    },
+    {
+      "level": 1,
+      "text": "What's a \"Vaccine Credential\"?"
+    },
+    {
+      "level": 2,
+      "text": "Related Terms & Definitions"
+    },
+    {
+      "level": 2,
+      "text": "Audience and Intent"
+    },
+    {
+      "level": 1,
+      "text": "What's a SMART Health Card?"
+    },
+    {
+      "level": 2,
+      "text": "Accessing Epic-Generated SMART Health Cards"
+    },
+    {
+      "level": 2,
+      "text": "Reading SMART Health Cards"
+    },
+    {
+      "level": 3,
+      "text": "QR codes"
+    },
+    {
+      "level": 3,
+      "text": ".smart-health-card Files"
+    },
+    {
+      "level": 2,
+      "text": "Consuming SMART Health Cards"
+    },
+    {
+      "level": 3,
+      "text": "JOSE Header"
+    },
+    {
+      "level": 3,
+      "text": "Payload"
+    },
+    {
+      "level": 3,
+      "text": "SMART Health Cards & Trust"
+    },
+    {
+      "level": 1,
+      "text": "Open Source Libraries & References"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Remote Patient Monitoring"
+    },
+    {
+      "level": 1,
+      "text": "Remote Patient Monitoring"
+    },
+    {
+      "level": 2,
+      "text": "Overview"
+    },
+    {
+      "level": 2,
+      "text": "Workflow Diagram"
+    },
+    {
+      "level": 2,
+      "text": "Enrollment"
+    },
+    {
+      "level": 2,
+      "text": "Filing Vitals (HL7v2)"
+    },
+    {
+      "level": 2,
+      "text": "Filing Vitals (FHIR Observation.Create)"
+    },
+    {
+      "level": 3,
+      "text": "Account Linking"
+    },
+    {
+      "level": 3,
+      "text": "Observation.Create (Vitals)"
+    },
+    {
+      "level": 2,
+      "text": "Ending Enrollment"
+    },
+    {
+      "level": 2,
+      "text": "Appendix"
+    },
+    {
+      "level": 3,
+      "text": "FAQs"
+    },
+    {
+      "level": 3,
+      "text": "Example Outgoing HL7 Ancillary Orders Message"
+    },
+    {
+      "level": 3,
+      "text": "Example Observation.Create Payload"
+    },
+    {
+      "level": 3,
+      "text": "Example HL7 Incoming Clinical Documentation Flowsheet Data message"
+    },
+    {
+      "level": 3,
+      "text": "International Patient Summary Playbook"
+    },
+    {
+      "level": 2,
+      "text": "About the International Patient Summary"
+    },
+    {
+      "level": 2,
+      "text": "IPS Data Types and Roadmap"
+    },
+    {
+      "level": 2,
+      "text": "Exchange Pattern"
+    },
+    {
+      "level": 2,
+      "text": "Technical Specification"
+    },
+    {
+      "level": 3,
+      "text": "Structure of an IPS"
+    },
+    {
+      "level": 3,
+      "text": "Narrative Content"
+    },
+    {
+      "level": 2,
+      "text": "Sample Request and Response"
+    },
+    {
+      "level": 3,
+      "text": "Request:"
+    },
+    {
+      "level": 3,
+      "text": "Response:"
+    },
+    {
+      "level": 3,
+      "text": "Wound Care Apps"
+    },
+    {
+      "level": 1,
+      "text": "Search for or create a wound in Epic"
+    },
+    {
+      "level": 2,
+      "text": "Observation.Search (LDA-W)"
+    },
+    {
+      "level": 2,
+      "text": "Observation.Create (LDA-W)"
+    },
+    {
+      "level": 3,
+      "text": "Properties vs. Assessments"
+    },
+    {
+      "level": 3,
+      "text": "Flowsheet Row IDs"
+    },
+    {
+      "level": 1,
+      "text": "File a wound image in Epic"
+    },
+    {
+      "level": 1,
+      "text": "File wound data in Epic flowsheet rows"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "JWT Authentication Troubleshooting"
+    },
+    {
+      "level": 2,
+      "text": "Issues with the App Listing"
+    },
+    {
+      "level": 2,
+      "text": "Issues with the Request Body"
+    },
+    {
+      "level": 2,
+      "text": "Issues with the Token Request Formatting"
+    },
+    {
+      "level": 2,
+      "text": "Issues with the JWT"
+    },
+    {
+      "level": 2,
+      "text": "Issues with the Signature"
+    },
+    {
+      "level": 3,
+      "text": "Payer Connections to Epic Provider Systems"
+    },
+    {
+      "level": 2,
+      "text": "Roster Management"
+    },
+    {
+      "level": 2,
+      "text": "Clinical Data Exchange (CDE)"
+    },
+    {
+      "level": 2,
+      "text": "Encounter Notification"
+    },
+    {
+      "level": 2,
+      "text": "Member Insights and Care Gaps"
+    },
+    {
+      "level": 2,
+      "text": "Prior Authorization"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Implantable Cardiac Devices Playbook"
+    },
+    {
+      "level": 1,
+      "text": "Implantable Cardiac Devices"
+    },
+    {
+      "level": 2,
+      "text": "Overview"
+    },
+    {
+      "level": 3,
+      "text": "Workflow Diagrams"
+    },
+    {
+      "level": 2,
+      "text": "Initial Order"
+    },
+    {
+      "level": 2,
+      "text": "Filing Device Data"
+    },
+    {
+      "level": 2,
+      "text": "Finalizing Results"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Computer Telephony Integrations (CTI)"
+    },
+    {
+      "level": 2,
+      "text": "Incoming Calls to Epic"
+    },
+    {
+      "level": 2,
+      "text": "Outgoing Calls from Epic"
+    },
+    {
+      "level": 2,
+      "text": "Pause/Resume Call Recording"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Payment Device Integrations Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Payment Device Technology"
+    },
+    {
+      "level": 2,
+      "text": "Custom Transaction Fields"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Bayesian Medication Dosing Decision Support Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Technology Overview"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Medication Ordering Decision Support Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Technology Overview"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Fully Autonomous Coding Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Financial Transactions Interfaces"
+    },
+    {
+      "level": 2,
+      "text": "Additional Technology"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Automated Dispensing System Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Hardware"
+    },
+    {
+      "level": 2,
+      "text": "Patient Tracking"
+    },
+    {
+      "level": 2,
+      "text": "Medication Tracking"
+    },
+    {
+      "level": 2,
+      "text": "Dispensing Integration"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Hemodynamics System Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Recommended Workflow"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "ECG Management System Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Receiving Orders"
+    },
+    {
+      "level": 2,
+      "text": "Filing Results"
+    },
+    {
+      "level": 2,
+      "text": "SMART on FHIR App Launch"
+    },
+    {
+      "level": 2,
+      "text": "Responding to Release of Information Request"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Point-of-care Lab Middleware Integrations Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Receiving Orders"
+    },
+    {
+      "level": 2,
+      "text": "Filing Results"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Standard Lab Middleware Integrations Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Receiving Orders"
+    },
+    {
+      "level": 2,
+      "text": "Filing Results"
+    },
+    {
+      "level": 2,
+      "text": "High-volume Result Throughput"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Waveform Visualization Playbook"
+    },
+    {
+      "level": 2,
+      "text": "App Launch"
+    },
+    {
+      "level": 2,
+      "text": "Send Images to Epic"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "RTLS Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Location Updates"
+    },
+    {
+      "level": 2,
+      "text": "Badge Associations and Disassociations"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Surgical Materials Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Synchronizing Supply Definitions"
+    },
+    {
+      "level": 2,
+      "text": "Surgical Resources"
+    },
+    {
+      "level": 2,
+      "text": "Supply Depletion"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Digital Pathology Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Overview"
+    },
+    {
+      "level": 2,
+      "text": "Interface Messages"
+    },
+    {
+      "level": 2,
+      "text": "Your IMS System"
+    },
+    {
+      "level": 2,
+      "text": "Consult Workflows"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Wearable Cardiac Devices Playbook"
+    },
+    {
+      "level": 1,
+      "text": "Wearable Cardiac Devices"
+    },
+    {
+      "level": 1,
+      "text": ""
+    },
+    {
+      "level": 2,
+      "text": "Overview"
+    },
+    {
+      "level": 2,
+      "text": "Initial Order"
+    },
+    {
+      "level": 2,
+      "text": "Filing Device Data"
+    },
+    {
+      "level": 2,
+      "text": "Finalizing Results"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Clinical Knowledge Set Apps Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Integrating Targeted Information into Clinical Workflows"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Total Parenteral Nutrition Compounding Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Accepting Orders from Epic"
+    },
+    {
+      "level": 2,
+      "text": "Processing Orders"
+    },
+    {
+      "level": 2,
+      "text": "Order Complete"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Encoder Playbook"
+    },
+    {
+      "level": 2,
+      "text": "DRG Support"
+    },
+    {
+      "level": 2,
+      "text": "Clinical Data Access"
+    },
+    {
+      "level": 2,
+      "text": "Backend Integration"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Medication Carousel Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Hardware"
+    },
+    {
+      "level": 2,
+      "text": "Medication Tracking"
+    },
+    {
+      "level": 2,
+      "text": "Inventory Integration"
+    },
+    {
+      "level": 2,
+      "text": "Optional Integration"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "End-User Authentication Playbook"
+    },
+    {
+      "level": 2,
+      "text": "User Login"
+    },
+    {
+      "level": 2,
+      "text": "Session Management"
+    },
+    {
+      "level": 2,
+      "text": "Reauthentication and Witnessing"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Bedside Dining Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Launching from MyChart Using SMART on FHIR"
+    },
+    {
+      "level": 2,
+      "text": "Dietary Restrictions"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Printing Output Management Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Output Management"
+    },
+    {
+      "level": 3,
+      "text": "Batch Printing"
+    },
+    {
+      "level": 3,
+      "text": "Large Documents"
+    },
+    {
+      "level": 3,
+      "text": "Status Updates"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Wayfinding Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Launching from MyChart"
+    },
+    {
+      "level": 2,
+      "text": "Blue Dot Wayfinding Using BLE APIs"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Infusion Pump Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Outgoing Interfaces (Epic to Pump)"
+    },
+    {
+      "level": 2,
+      "text": "Incoming Interfaces (Pump to Epic)"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Patient-Facing / Consumer Health Apps"
+    },
+    {
+      "level": 1,
+      "text": "Patient-Facing Consumer Health Apps"
+    },
+    {
+      "level": 3,
+      "text": "Connect Your Health Apps and Devices"
+    },
+    {
+      "level": 3,
+      "text": "Encouraging Patient Data Sharing"
+    },
+    {
+      "level": 3,
+      "text": "Client Record Registration and Distribution"
+    },
+    {
+      "level": 1,
+      "text": "Automatic Client ID Distribution"
+    },
+    {
+      "level": 3,
+      "text": "TEFCA for Individual Access Services (IAS)"
+    },
+    {
+      "level": 3,
+      "text": "Patient-Facing Apps through Epic on FHIR"
+    },
+    {
+      "level": 2,
+      "text": "Client Record Distribution by Customer Request"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Client Record Registration"
+    },
+    {
+      "level": 3,
+      "text": "Developer Support"
+    },
+    {
+      "level": 3,
+      "text": "Endoscope Data Capture Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Processing an Order"
+    },
+    {
+      "level": 2,
+      "text": "Sending Data Back to Epic"
+    },
+    {
+      "level": 2,
+      "text": "Timing"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Alert Manager Playbook"
+    },
+    {
+      "level": 2,
+      "text": "IHE ACM PCD Profile"
+    },
+    {
+      "level": 2,
+      "text": "Outgoing HL7v2 ADT"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Telehealth Providers Playbook"
+    },
+    {
+      "level": 2,
+      "text": "MyChart Extensibility & SSO"
+    },
+    {
+      "level": 2,
+      "text": "Clinical Data Exchange"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Vitals Gateway and Middleware Device Integration Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Spot Check Vitals"
+    },
+    {
+      "level": 2,
+      "text": "Continuous Vitals"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Remote Patient Monitoring with Devices Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Bluetooth® Connections"
+    },
+    {
+      "level": 2,
+      "text": "RPM Software"
+    },
+    {
+      "level": 2,
+      "text": "Home Dialysis"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "External Health Records for Patient Treatment"
+    },
+    {
+      "level": 2,
+      "text": "Carequality"
+    },
+    {
+      "level": 2,
+      "text": "The Trusted Exchange Framework and Common Agreement™"
+    },
+    {
+      "level": 2,
+      "text": "Direct Messaging"
+    },
+    {
+      "level": 2,
+      "text": "Health Information Exchanges"
+    },
+    {
+      "level": 3,
+      "text": "Building a Patient Roster"
+    },
+    {
+      "level": 2,
+      "text": "Event Based Interfaces"
+    },
+    {
+      "level": 2,
+      "text": "Bulk FHIR"
+    },
+    {
+      "level": 2,
+      "text": "Extracts"
+    },
+    {
+      "level": 2,
+      "text": "FHIR List.Search API"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Reference Labs"
+    },
+    {
+      "level": 2,
+      "text": "Lab Test Compendium"
+    },
+    {
+      "level": 2,
+      "text": "Receiving Outgoing Orders from Epic"
+    },
+    {
+      "level": 2,
+      "text": "Sending Incoming Results to Epic"
+    },
+    {
+      "level": 3,
+      "text": "Common labs, pathology, and specialty diagnostics"
+    },
+    {
+      "level": 3,
+      "text": "Genomic Results"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Perioperative Workflows Playbook"
+    },
+    {
+      "level": 1,
+      "text": "Perioperative Workflow Data Sharing Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Before The Day Of Surgery"
+    },
+    {
+      "level": 3,
+      "text": "Surgical Consult visits and Pre-Anesthesia Testing (PAT) appointments"
+    },
+    {
+      "level": 3,
+      "text": "Case Request Orders"
+    },
+    {
+      "level": 3,
+      "text": "Scheduled Surgical Cases"
+    },
+    {
+      "level": 3,
+      "text": "Preference Cards"
+    },
+    {
+      "level": 2,
+      "text": "Day Of Surgery"
+    },
+    {
+      "level": 3,
+      "text": "Surgery Progress and Staff Times"
+    },
+    {
+      "level": 3,
+      "text": "Surgical History"
+    },
+    {
+      "level": 3,
+      "text": "Surgical Consent"
+    },
+    {
+      "level": 3,
+      "text": "Orders"
+    },
+    {
+      "level": 3,
+      "text": "Labs"
+    },
+    {
+      "level": 3,
+      "text": "Imaging"
+    },
+    {
+      "level": 3,
+      "text": "Notes"
+    },
+    {
+      "level": 3,
+      "text": "Vitals"
+    },
+    {
+      "level": 3,
+      "text": "Lines, Drains, Airways, and Wounds"
+    },
+    {
+      "level": 3,
+      "text": "Medications"
+    },
+    {
+      "level": 3,
+      "text": "Implants"
+    },
+    {
+      "level": 3,
+      "text": "Specimens"
+    },
+    {
+      "level": 3,
+      "text": "Blood Products"
+    },
+    {
+      "level": 3,
+      "text": "Supply Usage"
+    },
+    {
+      "level": 2,
+      "text": "After The Surgery"
+    },
+    {
+      "level": 3,
+      "text": "Outcomes"
+    },
+    {
+      "level": 3,
+      "text": "Patient Location"
+    },
+    {
+      "level": 3,
+      "text": "Charges"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Deploying Predictive Models Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Deploying Predictive Models to Epic Provider Systems"
+    },
+    {
+      "level": 3,
+      "text": "Epic's Cognitive Computing Platform"
+    },
+    {
+      "level": 3,
+      "text": "Filing scores using FHIR APIs"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Clinical Decision Support Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Applicable Use Cases"
+    },
+    {
+      "level": 2,
+      "text": "Developer Considerations"
+    },
+    {
+      "level": 2,
+      "text": "Workflow Overview"
+    },
+    {
+      "level": 2,
+      "text": "Technology Details"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "ED Pre-Arrival EMS Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Identity Matching"
+    },
+    {
+      "level": 2,
+      "text": "Pre-Arrival Notification"
+    },
+    {
+      "level": 2,
+      "text": "Encounter Linking"
+    },
+    {
+      "level": 2,
+      "text": "Filing Vitals and Assessments"
+    },
+    {
+      "level": 2,
+      "text": "Documents"
+    },
+    {
+      "level": 2,
+      "text": "Post Arrival Feedback"
+    },
+    {
+      "level": 2,
+      "text": "Identifier Patterns"
+    },
+    {
+      "level": 2,
+      "text": "Operational Notes"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Specialty Registries Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Getting Started"
+    },
+    {
+      "level": 2,
+      "text": "Cohort and Trigger Definition"
+    },
+    {
+      "level": 2,
+      "text": "Data Extraction Methods"
+    },
+    {
+      "level": 3,
+      "text": "SQL Reporting"
+    },
+    {
+      "level": 3,
+      "text": "Event-Based Interfaces and Additional APIs"
+    },
+    {
+      "level": 3,
+      "text": "Bulk FHIR"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Validating AI Features Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Connecting to the Data"
+    },
+    {
+      "level": 3,
+      "text": "SQL"
+    },
+    {
+      "level": 3,
+      "text": "FHIR"
+    },
+    {
+      "level": 2,
+      "text": "Setup and Installation"
+    },
+    {
+      "level": 2,
+      "text": "Using the Tools"
+    },
+    {
+      "level": 2,
+      "text": "Workflow Considerations"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "CMS-0057 Prior Authorization Playbook"
+    },
+    {
+      "level": 1,
+      "text": "CMS-0057 Prior Authorization APIs"
+    },
+    {
+      "level": 2,
+      "text": "The Three Components of Electronic Prior Authorization"
+    },
+    {
+      "level": 3,
+      "text": "Coverage Requirements Discovery (CRD)"
+    },
+    {
+      "level": 3,
+      "text": "Documentation Templates and Rules (DTR)"
+    },
+    {
+      "level": 3,
+      "text": "Prior Authorization Support (PAS)"
+    },
+    {
+      "level": 2,
+      "text": "Accessing Epic Prior Authorization APIs"
+    },
+    {
+      "level": 3,
+      "text": "I am a..."
+    },
+    {
+      "level": 3,
+      "text": "Health System Connecting with an Epic Payer"
+    },
+    {
+      "level": 3,
+      "text": "Payer System Connecting with an Epic Payer or Provider"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "CMS-0057 Access Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Patient Access"
+    },
+    {
+      "level": 3,
+      "text": "Automatic Client Distribution"
+    },
+    {
+      "level": 2,
+      "text": "Provider and Payer-to-Payer Access"
+    },
+    {
+      "level": 3,
+      "text": "Client Registration"
+    },
+    {
+      "level": 3,
+      "text": "Configuration"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "Radiation Therapy Treatment Management System Playbook"
+    },
+    {
+      "level": 1,
+      "text": "Radiation Therapy Treatment Management System Playbook"
+    },
+    {
+      "level": 2,
+      "text": "Getting information from Epic"
+    },
+    {
+      "level": 2,
+      "text": "Sending information to Epic"
+    },
+    {
+      "level": 2,
+      "text": "Additional features"
+    },
+    {
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "level": 3,
+      "text": "XRTS FHIR API Tutorial"
+    },
+    {
+      "level": 2,
+      "text": "Overview"
+    },
+    {
+      "level": 2,
+      "text": "FHIR Resource Structure"
+    },
+    {
+      "level": 2,
+      "text": "Workflow for Data Exchange"
+    },
+    {
+      "level": 3,
+      "text": "Basic Interactions"
+    },
+    {
+      "level": 3,
+      "text": "Order of Operations"
+    },
+    {
+      "level": 3,
+      "text": "Expected Timing of Communication"
+    },
+    {
+      "level": 3,
+      "text": "App Developer Guidelines"
+    },
+    {
+      "level": 2,
+      "text": "Overview"
+    },
+    {
+      "level": 2,
+      "text": "App Developer Guidelines"
+    },
+    {
+      "level": 2,
+      "text": "1. Safety"
+    },
+    {
+      "level": 2,
+      "text": "2. Security"
+    },
+    {
+      "level": 2,
+      "text": "3. Privacy and Data Use"
+    },
+    {
+      "level": 2,
+      "text": "4. Reliability"
+    },
+    {
+      "level": 2,
+      "text": "5. Scalability"
+    },
+    {
+      "level": 2,
+      "text": "6. Data Integrity"
+    },
+    {
+      "level": 2,
+      "text": "7. System Integrity"
+    },
+    {
+      "level": 2,
+      "text": "8. Transparency & Honesty"
+    },
+    {
+      "level": 2,
+      "text": "9. Intellectual Property"
+    },
+    {
+      "level": 3,
+      "text": "Footnotes"
+    },
+    {
+      "level": 3,
+      "text": "Developer Testing Guide"
+    },
+    {
+      "level": 1,
+      "text": "Developer Testing Guide"
+    },
+    {
+      "level": 2,
+      "text": "Epic Instances and Environments"
+    },
+    {
+      "level": 3,
+      "text": "Customers"
+    },
+    {
+      "level": 3,
+      "text": "FHIR Developer Sandbox"
+    },
+    {
+      "level": 2,
+      "text": "API Testing"
+    },
+    {
+      "level": 3,
+      "text": "FHIR API Specifications and Test Data"
+    },
+    {
+      "level": 3,
+      "text": "Responsible Sandbox Testing"
+    },
+    {
+      "level": 2,
+      "text": "Launching & Authorizing Your App with Epic"
+    },
+    {
+      "level": 3,
+      "text": "Prerequisites to Testing"
+    },
+    {
+      "level": 3,
+      "text": "Standalone OAuth 2.0"
+    },
+    {
+      "level": 3,
+      "text": "LaunchPad"
+    },
+    {
+      "level": 3,
+      "text": "Hyperdrive"
+    },
+    {
+      "level": 3,
+      "text": "MyChart and Patient-Facing Apps"
+    },
+    {
+      "level": 3,
+      "text": "Backend Systems Apps"
+    },
+    {
+      "level": 2,
+      "text": "Testing with Epic Customers"
+    },
+    {
+      "level": 2,
+      "text": "Troubleshooting & Assistance"
+    },
+    {
+      "level": 3,
+      "text": "App Creation & Request Process Overview"
+    },
+    {
+      "level": 2,
+      "text": "Table of Contents"
+    },
+    {
+      "level": 2,
+      "text": "Overview"
+    },
+    {
+      "level": 2,
+      "text": "Creating, Activating, and Licensing an App"
+    },
+    {
+      "level": 3,
+      "text": "Registering an App"
+    },
+    {
+      "level": 3,
+      "text": "Recommendations for Scoping APIs to your App"
+    },
+    {
+      "level": 3,
+      "text": "Recommendations for Creating your App Listing"
+    },
+    {
+      "level": 3,
+      "text": "Marking an App as Ready for Production"
+    },
+    {
+      "level": 3,
+      "text": "Facilitating Epic Community Member Downloads"
+    },
+    {
+      "level": 3,
+      "text": "Managing Customer Specific Configuration"
+    },
+    {
+      "level": 2,
+      "text": "Requesting an App"
+    },
+    {
+      "level": 3,
+      "text": "Before Starting the Request Process"
+    },
+    {
+      "level": 3,
+      "text": "Obtaining the open.epic API Subscription Agreement"
+    },
+    {
+      "level": 3,
+      "text": "Downloading Client Records"
+    },
+    {
+      "level": 3,
+      "text": "Confirm the Client ID was Downloaded"
+    },
+    {
+      "level": 2,
+      "text": "Deactivate an App"
+    },
+    {
+      "level": 3,
+      "text": "User Context"
+    },
+    {
+      "level": 1,
+      "text": "Application User Context"
+    },
+    {
+      "level": 2,
+      "text": "Choosing a User Context"
+    },
+    {
+      "level": 2,
+      "text": "Multi-Context Applications"
+    },
+    {
+      "level": 3,
+      "text": "Limit APIs to the Required Application"
+    },
+    {
+      "level": 3,
+      "text": "Limit Use of Backend Apps"
+    },
+    {
+      "level": 3,
+      "text": "Use Cases for Backend Apps"
+    },
+    {
+      "level": 1,
+      "text": "Creating a Multi-Context App with Epic on FHIR"
+    },
+    {
+      "level": 2,
+      "text": "Epic Community Member Downloads"
+    },
+    {
+      "level": 1,
+      "text": "API Supported User Types"
+    },
+    {
+      "level": 2,
+      "text": "Overview"
+    },
+    {
+      "level": 2,
+      "text": "User Type Validation"
+    },
+    {
+      "level": 2,
+      "text": "When Does an API Support a Given User Type?"
+    },
+    {
+      "level": 2,
+      "text": "API and User Type in Your Application"
+    },
+    {
+      "level": 3,
+      "text": "Should I Edit My App's User Context?"
+    },
+    {
+      "level": 2,
+      "text": "Additional User Security Validation"
+    },
+    {
+      "level": 3,
+      "text": "OAuth 2.0 Tutorial"
+    },
+    {
+      "level": 1,
+      "text": "OAuth 2.0 Tutorial"
+    },
+    {
+      "level": 1,
+      "text": "Choosing your Workflow"
+    },
+    {
+      "level": 1,
+      "text": "Securing your Application"
+    },
+    {
+      "level": 2,
+      "text": "Using a Library"
+    },
+    {
+      "level": 2,
+      "text": "Session Creation from a Launch"
+    },
+    {
+      "level": 1,
+      "text": "Building your Application"
+    },
+    {
+      "level": 2,
+      "text": "Choosing a Library"
+    },
+    {
+      "level": 3,
+      "text": "Using a SMART App Launch Library"
+    },
+    {
+      "level": 3,
+      "text": "Using an OAuth 2.0 Library"
+    },
+    {
+      "level": 2,
+      "text": "Sample App Config"
+    },
+    {
+      "level": 2,
+      "text": "Define your Architecture"
+    },
+    {
+      "level": 3,
+      "text": "Cloud-Based Architecture"
+    },
+    {
+      "level": 3,
+      "text": "On-Premises Architecture"
+    },
+    {
+      "level": 2,
+      "text": "Build your Application"
+    },
+    {
+      "level": 1,
+      "text": "Implementing a Standalone Launch"
+    },
+    {
+      "level": 2,
+      "text": "Test a Standalone Launch"
+    },
+    {
+      "level": 1,
+      "text": "Implementing an EHR Launch"
+    },
+    {
+      "level": 2,
+      "text": "Customize an OAuth 2.0 Library"
+    },
+    {
+      "level": 3,
+      "text": "Launch Endpoint"
+    },
+    {
+      "level": 3,
+      "text": "Additional Authorize Request Parameters"
+    },
+    {
+      "level": 2,
+      "text": "Specific Redirect URIs"
+    },
+    {
+      "level": 2,
+      "text": "Test an EHR Launch"
+    },
+    {
+      "level": 3,
+      "text": "Handling the State Parameter"
+    },
+    {
+      "level": 2,
+      "text": "Embedding Tips"
+    },
+    {
+      "level": 3,
+      "text": "Embedding in Multiple Tabs"
+    },
+    {
+      "level": 3,
+      "text": "Other Browser Options"
+    },
+    {
+      "level": 1,
+      "text": "App Architecture Considerations"
+    },
+    {
+      "level": 2,
+      "text": "Supporting Multiple FHIR Servers"
+    },
+    {
+      "level": 3,
+      "text": "Defining your Endpoints"
+    },
+    {
+      "level": 3,
+      "text": "Multitenancy and ID Segregation"
+    },
+    {
+      "level": 2,
+      "text": "Endpoint Discovery"
+    },
+    {
+      "level": 2,
+      "text": "Retrieving Launch Context"
+    },
+    {
+      "level": 2,
+      "text": "Identifying the User"
+    },
+    {
+      "level": 3,
+      "text": "On-the-Fly Account Creation"
+    },
+    {
+      "level": 1,
+      "text": "Deploying your Application"
+    },
+    {
+      "level": 2,
+      "text": "Example App Deployments"
+    },
+    {
+      "level": 3,
+      "text": "Cloud-Based App"
+    },
+    {
+      "level": 3,
+      "text": "On-Premises App"
+    },
+    {
+      "level": 1,
+      "text": "Appendix"
+    },
+    {
+      "level": 2,
+      "text": "Considerations for Native Apps"
+    },
+    {
+      "level": 2,
+      "text": "private_key_jwt authentication"
+    },
+    {
+      "level": 3,
+      "text": "Comparison to Mutual TLS"
+    },
+    {
+      "level": 2,
+      "text": "Launching Without SSO"
+    },
+    {
+      "level": 3,
+      "text": "Use Cases"
+    },
+    {
+      "level": 3,
+      "text": "Choosing a Library without SSO"
+    },
+    {
+      "level": 3,
+      "text": "Persistent Access"
+    },
+    {
+      "level": 3,
+      "text": "SMART Scopes"
+    },
+    {
+      "level": 3,
+      "text": "OAuth 2.0 Specification"
+    },
+    {
+      "level": 1,
+      "text": "Using OAuth 2.0"
+    },
+    {
+      "level": 2,
+      "text": "Why OAuth 2.0?"
+    },
+    {
+      "level": 2,
+      "text": "Before You Get Started"
+    },
+    {
+      "level": 1,
+      "text": "EHR Launch (SMART on FHIR)"
+    },
+    {
+      "level": 2,
+      "text": "How It Works"
+    },
+    {
+      "level": 3,
+      "text": "Step 1: Your Application is Launched from the Patient Portal or EHR"
+    },
+    {
+      "level": 3,
+      "text": "Step 2: Your Application Retrieves the Conformance Statement or SMART Configuration"
+    },
+    {
+      "level": 3,
+      "text": "Retrieving Conformance Statement: Additional Header Requirements"
+    },
+    {
+      "level": 3,
+      "text": "Step 3: Your Application Requests an Authorization Code"
+    },
+    {
+      "level": 3,
+      "text": "Step 4: EHR's Authorization Server Reviews the Request"
+    },
+    {
+      "level": 3,
+      "text": "Step 5: Your Application Exchanges the Authorization Code for an Access Token"
+    },
+    {
+      "level": 3,
+      "text": "Access Token Request: Non-confidential Clients"
+    },
+    {
+      "level": 3,
+      "text": "Access Token Request: Frontend Confidential Clients"
+    },
+    {
+      "level": 3,
+      "text": "OpenID Connect id_tokens"
+    },
+    {
+      "level": 3,
+      "text": "Validating the OpenID Connect JSON Web Token"
+    },
+    {
+      "level": 3,
+      "text": "Step 6: Your Application Uses FHIR APIs to Access Patient Data"
+    },
+    {
+      "level": 3,
+      "text": "Step 7: Use a Refresh Token to Obtain a New Access Token"
+    },
+    {
+      "level": 1,
+      "text": "Standalone Launch"
+    },
+    {
+      "level": 2,
+      "text": "How It Works"
+    },
+    {
+      "level": 3,
+      "text": "Step 1: Your Application Requests an Authorization Code"
+    },
+    {
+      "level": 3,
+      "text": "Step 2: EHR's Authorization Server Authenticates the User and Authorizes Access"
+    },
+    {
+      "level": 3,
+      "text": "Step 3: Your Application Exchanges the Authorization Code for an Access Token"
+    },
+    {
+      "level": 3,
+      "text": "Access Token Request: Non-confidential Clients"
+    },
+    {
+      "level": 3,
+      "text": "Access Token Request: Frontend Confidential Clients"
+    },
+    {
+      "level": 3,
+      "text": "Step 4: Your Application Uses FHIR APIs to Access Patient Data"
+    },
+    {
+      "level": 3,
+      "text": "Step 5: Use a Refresh Token to Obtain a New Access Token"
+    },
+    {
+      "level": 2,
+      "text": "Offline Access for Native and Browser-Based Applications"
+    },
+    {
+      "level": 3,
+      "text": "Step 1: Get the initial access token you'll use to register a dynamic client"
+    },
+    {
+      "level": 3,
+      "text": "Step 2: Register the dynamic client"
+    },
+    {
+      "level": 3,
+      "text": "Step 3: Get an access token you can use to retrieve FHIR resources"
+    },
+    {
+      "level": 3,
+      "text": "Step 3a: Get an access token using the JWT bearer flow"
+    },
+    {
+      "level": 3,
+      "text": "Step 3b: Alternate flow with refresh tokens"
+    },
+    {
+      "level": 1,
+      "text": "SMART Backend Services (Backend OAuth 2.0)"
+    },
+    {
+      "level": 2,
+      "text": "Overview"
+    },
+    {
+      "level": 2,
+      "text": "Building a Backend OAuth 2.0 App"
+    },
+    {
+      "level": 3,
+      "text": "Complete Required Epic Community Member Setup to Audit Access from Your Backend Application"
+    },
+    {
+      "level": 2,
+      "text": "Using a JWT to Obtain an Access Token for a Backend Service"
+    },
+    {
+      "level": 3,
+      "text": "Step 1: Creating the JWT"
+    },
+    {
+      "level": 3,
+      "text": "Step 2: POSTing the JWT to Token Endpoint to Obtain Access Token"
+    },
+    {
+      "level": 1,
+      "text": "JSON Web Tokens (JWTs)"
+    },
+    {
+      "level": 2,
+      "text": "Background"
+    },
+    {
+      "level": 2,
+      "text": "Creating a Public Private Key Pair for JWT Signature"
+    },
+    {
+      "level": 3,
+      "text": "Creating a Public Private Key Pair: OpenSSL"
+    },
+    {
+      "level": 3,
+      "text": "Creating a Public Private Key Pair: Windows PowerShell"
+    },
+    {
+      "level": 3,
+      "text": "Finding the Public Key Certificate Fingerprint (Also Called Thumbprint)"
+    },
+    {
+      "level": 2,
+      "text": "Creating a JWT"
+    },
+    {
+      "level": 2,
+      "text": "JSON Web Key Sets"
+    },
+    {
+      "level": 3,
+      "text": "Key Identifier Requirements"
+    },
+    {
+      "level": 2,
+      "text": "Hosting a JWK Set URL"
+    },
+    {
+      "level": 3,
+      "text": "App-Level vs Licensing Specific JWK Set URLs"
+    },
+    {
+      "level": 3,
+      "text": "Non-Production and Production Keys"
+    },
+    {
+      "level": 3,
+      "text": "Registering a JWK Set URL"
+    },
+    {
+      "level": 3,
+      "text": "Key Rotation"
+    },
+    {
+      "level": 2,
+      "text": "Providing Multiple Public Keys"
+    },
+    {
+      "level": 3,
+      "text": "How"
+    },
+    {
+      "level": 3,
+      "text": "Why Not?"
+    },
+    {
+      "level": 3,
+      "text": "Use Cases"
+    },
+    {
+      "level": 1,
+      "text": "Appendix"
+    },
+    {
+      "level": 2,
+      "text": "Epic-Issued OAuth 2.0 Tokens"
+    },
+    {
+      "level": 3,
+      "text": "Trusting an OAuth 2.0 Token"
+    },
+    {
+      "level": 2,
+      "text": "Epic-Issued OAuth 2.0 Tokens"
+    },
+    {
+      "level": 3,
+      "text": "Trusting an OAuth 2.0 Token"
+    },
+    {
+      "level": 2,
+      "text": "Refresh Tokens and Persistent Access Periods"
+    },
+    {
+      "level": 3,
+      "text": "Rolling Refresh Persistent Access Periods"
+    },
+    {
+      "level": 3,
+      "text": "Indefinite Persistent Access Periods"
+    },
+    {
+      "level": 2,
+      "text": "Limit Use of Localhost URIs"
+    },
+    {
+      "level": 2,
+      "text": "Considerations for Native Apps"
+    },
+    {
+      "level": 2,
+      "text": "Subspace Security Considerations"
+    },
+    {
+      "level": 3,
+      "text": "SMART App Launch"
+    },
+    {
+      "level": 3,
+      "text": "Multi-Context Application"
+    },
+    {
+      "level": 3,
+      "text": "SMART Scopes"
+    },
+    {
+      "level": 2,
+      "text": "Non-OAuth 2.0 Authentication"
+    },
+    {
+      "level": 3,
+      "text": "HTTP Basic Authentication"
+    },
+    {
+      "level": 3,
+      "text": "Client Certificates and SAML tokens"
+    },
+    {
+      "level": 3,
+      "text": "Additional Required Headers"
+    },
+    {
+      "level": 3,
+      "text": "Epic as a Backend OAuth 2.0 Client"
+    },
+    {
+      "level": 1,
+      "text": "Epic as Backend Client Using OAuth 2.0 Client Credentials Grant"
+    },
+    {
+      "level": 2,
+      "text": "High Level Technical Summary"
+    },
+    {
+      "level": 3,
+      "text": "Key Rotation"
+    },
+    {
+      "level": 3,
+      "text": "Registration"
+    },
+    {
+      "level": 3,
+      "text": "Signing Algorithms"
+    },
+    {
+      "level": 3,
+      "text": "Examples"
+    },
+    {
+      "level": 3,
+      "text": "Reference Documentation"
+    },
+    {
+      "level": 3,
+      "text": "Designing an Efficient Application"
+    },
+    {
+      "level": 2,
+      "text": "Recommended Practices"
+    },
+    {
+      "level": 3,
+      "text": "For apps launched from Hyperspace, aim for an average initial load response time of under 1.5 seconds."
+    },
+    {
+      "level": 3,
+      "text": "Use the right tool for your use case."
+    },
+    {
+      "level": 3,
+      "text": "Only pull the data you need"
+    },
+    {
+      "level": 3,
+      "text": "Bundle related API calls together"
+    },
+    {
+      "level": 3,
+      "text": "Avoid API polling"
+    },
+    {
+      "level": 3,
+      "text": "Cache relatively static data"
+    },
+    {
+      "level": 3,
+      "text": "Set appropriate expectations with customers"
+    },
+    {
+      "level": 3,
+      "text": "Include programmatic guardrails to limit the number of API calls made"
+    },
+    {
+      "level": 3,
+      "text": "Stagger API calls"
+    },
+    {
+      "level": 3,
+      "text": "Test in each customer’s non-production environment"
+    },
+    {
+      "level": 3,
+      "text": "Design Strategies to Increase Patient Data Sharing"
+    },
+    {
+      "level": 1,
+      "text": "Application Design Strategies to Increase Patient Data Sharing"
+    },
+    {
+      "level": 2,
+      "text": "Definitions"
+    },
+    {
+      "level": 2,
+      "text": "Best Practices"
+    },
+    {
+      "level": 3,
+      "text": "Explain why data access is needed before MyChart login"
+    },
+    {
+      "level": 3,
+      "text": "Complete the Data Use Questionnaire"
+    },
+    {
+      "level": 3,
+      "text": "Allow users to opt-in or out of data sharing and delete stored health data"
+    },
+    {
+      "level": 2,
+      "text": "Other Trends Observed"
+    },
+    {
+      "level": 3,
+      "text": "API Usage"
+    },
+    {
+      "level": 3,
+      "text": "Application Modality"
+    },
+    {
+      "level": 3,
+      "text": "Requesting a Listing on Showroom"
+    },
+    {
+      "level": 1,
+      "text": "Connection Hub"
+    },
+    {
+      "level": 1,
+      "text": "Toolbox"
+    },
+    {
+      "level": 2,
+      "text": "Request a Blueprint and Evaluation"
+    },
+    {
+      "level": 2,
+      "text": "Toolbox Categories"
+    },
+    {
+      "level": 1,
+      "text": "Workshop"
+    },
+    {
+      "level": 1,
+      "text": "Rev Cyclers Program"
+    },
+    {
+      "level": 3,
+      "text": "Troubleshooting"
+    },
+    {
+      "level": 1,
+      "text": "Web App and Web Service Troubleshooting"
+    },
+    {
+      "level": 2,
+      "text": "OAuth 2.0 Errors"
+    },
+    {
+      "level": 3,
+      "text": "Authorize Endpoint"
+    },
+    {
+      "level": 3,
+      "text": "Token Endpoint"
+    },
+    {
+      "level": 2,
+      "text": "API Call Errors"
+    },
+    {
+      "level": 2,
+      "text": "Hyperspace/MyChart Embedding Errors"
+    },
+    {
+      "level": 2,
+      "text": "Web Page Errors"
+    },
+    {
+      "level": 3,
+      "text": "FHIR Tutorial"
+    },
+    {
+      "level": 2,
+      "text": "Interacting with the API"
+    },
+    {
+      "level": 3,
+      "text": "Finding Patients via Demographic Data"
+    },
+    {
+      "level": 3,
+      "text": "Interlude: Relative Resource URLs (R4 and Later)"
+    },
+    {
+      "level": 3,
+      "text": "Searching for Clinical Data by Patient ID"
+    },
+    {
+      "level": 3,
+      "text": "Wrap Up"
+    },
+    {
+      "level": 2,
+      "text": "Advanced Topics"
+    },
+    {
+      "level": 3,
+      "text": "Searching from Patient Context in Coordination with OAuth 2.0"
+    },
+    {
+      "level": 3,
+      "text": "Content negotiation in FHIR"
+    },
+    {
+      "level": 3,
+      "text": "Retrieving Additional ID Types with Patient and Practitioner Resources"
+    },
+    {
+      "level": 3,
+      "text": "Constraining ID Length to 64 Characters in the R4 Version of FHIR"
+    },
+    {
+      "level": 3,
+      "text": "FHIR Search Using HTTP POST"
+    },
+    {
+      "level": 3,
+      "text": "Date/Time Information"
+    },
+    {
+      "level": 3,
+      "text": "App Default FHIR Version"
+    },
+    {
+      "level": 2,
+      "text": "SMART on FHIR"
+    },
+    {
+      "level": 3,
+      "text": "iss Element"
+    },
+    {
+      "level": 3,
+      "text": "JSON Payload"
+    },
+    {
+      "level": 2,
+      "text": "Authentication"
+    },
+    {
+      "level": 3,
+      "text": "OpenID Connect (OIDC)"
+    },
+    {
+      "level": 3,
+      "text": "Introspect"
+    },
+    {
+      "level": 2,
+      "text": "CDS Hooks"
+    },
+    {
+      "level": 3,
+      "text": "Prefetch Support"
+    },
+    {
+      "level": 3,
+      "text": "Resource ID Version"
+    },
+    {
+      "level": 3,
+      "text": "Supported Hooks"
+    },
+    {
+      "level": 2,
+      "text": "FHIR ID Generation Scheme"
+    },
+    {
+      "level": 3,
+      "text": "Unconstrained FHIR IDs"
+    },
+    {
+      "level": 3,
+      "text": "64-Character-Limited FHIR IDs"
+    },
+    {
+      "level": 3,
+      "text": "ID Types for FHIR APIs"
+    },
+    {
+      "level": 1,
+      "text": "ID Types for APIs"
+    },
+    {
+      "level": 2,
+      "text": "Table of Contents"
+    },
+    {
+      "level": 2,
+      "text": "FHIR API IDs and HL7 OIDs"
+    },
+    {
+      "level": 3,
+      "text": "Identifier Type"
+    },
+    {
+      "level": 3,
+      "text": "Examples"
+    },
+    {
+      "level": 3,
+      "text": "Identifier System"
+    },
+    {
+      "level": 3,
+      "text": "Obtaining OIDs from Customers"
+    },
+    {
+      "level": 2,
+      "text": "Organization-Specific IDs and Value Sets"
+    },
+    {
+      "level": 3,
+      "text": "Sandbox Test Data"
+    },
+    {
+      "level": 3,
+      "text": "Patient-Facing Apps Using FHIR"
+    },
+    {
+      "level": 2,
+      "text": "FHIR API Response Variations in Patient-Facing Applications"
+    },
+    {
+      "level": 2,
+      "text": "Automatic Client Record Distribution"
+    },
+    {
+      "level": 3,
+      "text": "Automatic Client ID Distribution: USCDI Apps"
+    },
+    {
+      "level": 3,
+      "text": "Automatic Client ID Distribution: CMS Payer Apps"
+    },
+    {
+      "level": 3,
+      "text": "Automatic Client ID Distribution: TEFCA™ IAS via FHIR Apps"
+    },
+    {
+      "level": 2,
+      "text": "Manual Client ID Distribution"
+    },
+    {
+      "level": 2,
+      "text": "Appendix"
+    },
+    {
+      "level": 3,
+      "text": "Search Parameters"
+    },
+    {
+      "level": 1,
+      "text": "FHIR Search Parameters"
+    },
+    {
+      "level": 2,
+      "text": "Overview"
+    },
+    {
+      "level": 2,
+      "text": "General Considerations"
+    },
+    {
+      "level": 3,
+      "text": "Native Search Parameters"
+    },
+    {
+      "level": 3,
+      "text": "Post-Filter Search Parameters"
+    },
+    {
+      "level": 3,
+      "text": "\"Unsupported\" Post-Filter Search Parameters"
+    },
+    {
+      "level": 2,
+      "text": "Common FHIR Parameters"
+    },
+    {
+      "level": 2,
+      "text": "_id Parameter"
+    },
+    {
+      "level": 3,
+      "text": "Examples:"
+    },
+    {
+      "level": 2,
+      "text": "_count Parameter"
+    },
+    {
+      "level": 3,
+      "text": "STU3 and Later FHIR Versions"
+    },
+    {
+      "level": 3,
+      "text": "DSTU2 FHIR Versions"
+    },
+    {
+      "level": 2,
+      "text": "_include Parameter"
+    },
+    {
+      "level": 3,
+      "text": "Examples:"
+    },
+    {
+      "level": 2,
+      "text": "_revInclude Parameter"
+    },
+    {
+      "level": 3,
+      "text": "Provenance"
+    },
+    {
+      "level": 3,
+      "text": "AuditEvent"
+    },
+    {
+      "level": 3,
+      "text": "FHIR Bulk Data Access Tutorial"
+    },
+    {
+      "level": 1,
+      "text": "FHIR Bulk Data Access Tutorial"
+    },
+    {
+      "level": 2,
+      "text": "Background"
+    },
+    {
+      "level": 2,
+      "text": "Important Considerations for Using Bulk Data"
+    },
+    {
+      "level": 3,
+      "text": "Technical Constraints"
+    },
+    {
+      "level": 3,
+      "text": "When to Use Bulk Data"
+    },
+    {
+      "level": 3,
+      "text": "Best Practices"
+    },
+    {
+      "level": 2,
+      "text": "Epic's Implementation of the Bulk Data Standard"
+    },
+    {
+      "level": 2,
+      "text": "Using the Bulk Data APIs"
+    },
+    {
+      "level": 3,
+      "text": "Client Configuration and Authorization"
+    },
+    {
+      "level": 3,
+      "text": "Kicking Off the Bulk Data Request"
+    },
+    {
+      "level": 3,
+      "text": "Checking the Status of the Request"
+    },
+    {
+      "level": 3,
+      "text": "Viewing Resource Files"
+    },
+    {
+      "level": 3,
+      "text": "Viewing Request Errors"
+    },
+    {
+      "level": 3,
+      "text": "Deleting Requests"
+    },
+    {
+      "level": 3,
+      "text": "Interfaces (HL7v2)"
+    },
+    {
+      "level": 2,
+      "text": "What is an Interface?"
+    },
+    {
+      "level": 2,
+      "text": "Why use an Interface?"
+    },
+    {
+      "level": 2,
+      "text": "What are some considerations for using an Interface?"
+    },
+    {
+      "level": 2,
+      "text": "Which Interfaces Does Epic support and How Do I See the Specs?"
+    },
+    {
+      "level": 2,
+      "text": "Connecting Interfaces with Organizations that use Epic"
+    },
+    {
+      "level": 2,
+      "text": "Organization-specific considerations"
+    },
+    {
+      "level": 3,
+      "text": "Identity ID Mapping"
+    },
+    {
+      "level": 3,
+      "text": "Interface Configurations"
+    },
+    {
+      "level": 3,
+      "text": "HL7v2 Versions"
+    },
+    {
+      "level": 3,
+      "text": "Time Zones"
+    },
+    {
+      "level": 2,
+      "text": "Encounters In Epic"
+    },
+    {
+      "level": 3,
+      "text": "Encounter Matching"
+    },
+    {
+      "level": 3,
+      "text": "Encounter Creation"
+    },
+    {
+      "level": 3,
+      "text": "Appointments"
+    },
+    {
+      "level": 3,
+      "text": "Outgoing Interfaces"
+    },
+    {
+      "level": 3,
+      "text": "Incoming Interfaces"
+    },
+    {
+      "level": 3,
+      "text": "CDS Hooks Tutorial"
+    },
+    {
+      "level": 1,
+      "text": "CDS Hooks Tutorial"
+    },
+    {
+      "level": 2,
+      "text": "Introduction"
+    },
+    {
+      "level": 3,
+      "text": "Guidance to CDS Developers"
+    },
+    {
+      "level": 2,
+      "text": "Hooks"
+    },
+    {
+      "level": 3,
+      "text": "patient-view"
+    },
+    {
+      "level": 3,
+      "text": "order-select"
+    },
+    {
+      "level": 3,
+      "text": "order-sign"
+    },
+    {
+      "level": 2,
+      "text": "CDS Hooks Request"
+    },
+    {
+      "level": 3,
+      "text": "Prefetch"
+    },
+    {
+      "level": 3,
+      "text": "Input Fields for JSON POST Body"
+    },
+    {
+      "level": 3,
+      "text": "Epic Extensions"
+    },
+    {
+      "level": 3,
+      "text": "Example HTTP Request"
+    },
+    {
+      "level": 2,
+      "text": "CDS Hooks Response"
+    },
+    {
+      "level": 3,
+      "text": "Suggestion or app launch?"
+    },
+    {
+      "level": 3,
+      "text": "Actions"
+    },
+    {
+      "level": 3,
+      "text": "HTTP Response Fields"
+    },
+    {
+      "level": 3,
+      "text": "Card Attributes"
+    },
+    {
+      "level": 3,
+      "text": "Suggestion Attributes"
+    },
+    {
+      "level": 3,
+      "text": "Codesets for Create APIs"
+    },
+    {
+      "level": 3,
+      "text": "Link Attributes"
+    },
+    {
+      "level": 3,
+      "text": "Supported Extensions"
+    },
+    {
+      "level": 3,
+      "text": "Basic Example HTTP Response with Card"
+    },
+    {
+      "level": 3,
+      "text": "Example HTTP Response for no decision support needed"
+    },
+    {
+      "level": 3,
+      "text": "Example HTTP Response with Links, Override Reasons, and Suggestions"
+    },
+    {
+      "level": 2,
+      "text": "Trusting CDS Clients"
+    },
+    {
+      "level": 3,
+      "text": "JWT Tokens"
+    },
+    {
+      "level": 3,
+      "text": "Install Considerations for the JWT Token"
+    },
+    {
+      "level": 2,
+      "text": "Feedback"
+    },
+    {
+      "level": 2,
+      "text": "Medication References"
+    },
+    {
+      "level": 3,
+      "text": "Example Medication Reference"
+    },
+    {
+      "level": 2,
+      "text": "Implementing CDS Hooks with an Epic Organization"
+    },
+    {
+      "level": 2,
+      "text": "Gotchas"
+    },
+    {
+      "level": 3,
+      "text": "Event Notification Streaming"
+    },
+    {
+      "level": 3,
+      "text": "FHIR Version"
+    },
+    {
+      "level": 3,
+      "text": "Required OAuth 2.0 Scopes"
+    },
+    {
+      "level": 3,
+      "text": "Pre-Registration of Links and SMART Apps"
+    },
+    {
+      "level": 3,
+      "text": "Endpoint URI Validation"
+    },
+    {
+      "level": 3,
+      "text": "Sex, Gender, & Names"
+    },
+    {
+      "level": 1,
+      "text": "Sex, Gender, & Names"
+    },
+    {
+      "level": 2,
+      "text": "Introduction"
+    },
+    {
+      "level": 2,
+      "text": "Considerations for apps involving patient interaction"
+    },
+    {
+      "level": 2,
+      "text": "Considerations for administrative apps (legal, insurance)"
+    },
+    {
+      "level": 2,
+      "text": "Considerations for clinical apps"
+    },
+    {
+      "level": 2,
+      "text": "Available sex, gender, and name data elements"
+    },
+    {
+      "level": 2,
+      "text": "Appendix"
+    },
+    {
+      "level": 3,
+      "text": "Why related fields aren’t reliable for clinical decision making"
+    },
+    {
+      "level": 3,
+      "text": "How Epic derives Sex for Clinical Use"
+    },
+    {
+      "level": 3,
+      "text": "What if Sex for Clinical Use is unknown?"
+    },
+    {
+      "level": 3,
+      "text": "Implementing Apps at Epic Customers"
+    },
+    {
+      "level": 1,
+      "text": "Project Planning for a New App Implementation"
+    },
+    {
+      "level": 2,
+      "text": "Implementation Kick-off Call"
+    },
+    {
+      "level": 2,
+      "text": "Common Build Resources"
+    },
+    {
+      "level": 1,
+      "text": "Implementing a SMART on FHIR EHR or Standalone Launch"
+    },
+    {
+      "level": 2,
+      "text": "Information to send to the Customer"
+    },
+    {
+      "level": 2,
+      "text": "Information to get from the Customer"
+    },
+    {
+      "level": 2,
+      "text": "Organization-Specific Considerations"
+    },
+    {
+      "level": 3,
+      "text": "Launching Your App"
+    },
+    {
+      "level": 3,
+      "text": "Displaying Your App"
+    },
+    {
+      "level": 2,
+      "text": "Helpful References for Implementation Documents"
+    },
+    {
+      "level": 1,
+      "text": "Implementing a Backend FHIR App"
+    },
+    {
+      "level": 2,
+      "text": "Information to send to the Customer"
+    },
+    {
+      "level": 2,
+      "text": "Information to get from the Customer"
+    },
+    {
+      "level": 2,
+      "text": "Helpful References for Implementation Documents"
+    },
+    {
+      "level": 1,
+      "text": "Interface Setup for Apps"
+    },
+    {
+      "level": 2,
+      "text": "Information to send to the Customer"
+    },
+    {
+      "level": 2,
+      "text": "Information to get from the Customer"
+    },
+    {
+      "level": 2,
+      "text": "Helpful References for Implementation Documents"
+    },
+    {
+      "level": 1,
+      "text": "Implementing a CDS Hooks App"
+    },
+    {
+      "level": 2,
+      "text": "Designing your Workflow"
+    },
+    {
+      "level": 3,
+      "text": "When should you see our Decision Support?"
+    },
+    {
+      "level": 3,
+      "text": "What if our Clinical Decision Support is complex and can take a long time to process?"
+    },
+    {
+      "level": 3,
+      "text": "Should we make our linked SMART on FHIR app launch automatically?"
+    },
+    {
+      "level": 2,
+      "text": "Information to send to Customer IT teams"
+    },
+    {
+      "level": 2,
+      "text": "Information to get from Customer IT teams"
+    },
+    {
+      "level": 1,
+      "text": "Implementing a Bulk FHIR App"
+    },
+    {
+      "level": 2,
+      "text": "Information to send to the Customer"
+    },
+    {
+      "level": 2,
+      "text": "Information to get from the Customer"
+    },
+    {
+      "level": 3,
+      "text": "Collaborate with Epic Community Members"
+    },
+    {
+      "level": 2,
+      "text": "Strategies to Effectively Collaborate with Epic Community Members"
+    },
+    {
+      "level": 3,
+      "text": "Understanding Epic Community Members"
+    },
+    {
+      "level": 3,
+      "text": "From Concept to First Customer"
+    },
+    {
+      "level": 3,
+      "text": "Implementation, Ongoing Maintenance, and Version Upgrades"
+    },
+    {
+      "level": 3,
+      "text": "Scoping out Subsequent Installs"
+    },
+    {
+      "level": 3,
+      "text": "In Summary"
+    },
+    {
+      "level": 3,
+      "text": "Sharing Your App's Web Resources"
+    },
+    {
+      "level": 2,
+      "text": "Categorizing Your Resources"
+    },
+    {
+      "level": 3,
+      "text": "Top-Level Navigations:"
+    },
+    {
+      "level": 3,
+      "text": "JavaScript or Cookie Accessors:"
+    },
+    {
+      "level": 3,
+      "text": "Static Resources:"
+    },
+    {
+      "level": 2,
+      "text": "Be Specific:"
+    },
+    {
+      "level": 3,
+      "text": "Wildcarding"
+    },
+    {
+      "level": 2,
+      "text": "Example Resource Breakdown"
+    },
+    {
+      "level": 3,
+      "text": "Top Level Navigations"
+    },
+    {
+      "level": 3,
+      "text": "JavaScript or Cookie Accessors"
+    },
+    {
+      "level": 3,
+      "text": "Other Resources"
+    },
+    {
+      "level": 3,
+      "text": "Patient Searching and Matching"
+    }
+  ],
+  "siteName": "Epic on FHIR"
+}

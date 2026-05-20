@@ -1,0 +1,18 @@
+{
+  "url": "https://fhir.epic.com/Article/Index?docid=filingdocumentsintoepic",
+  "fileId": "_Article_Index_0cd7537f",
+  "title": "Sign out",
+  "description": "",
+  "crawledAt": "2026-05-16T14:43:06.126Z",
+  "depth": 1,
+  "textLength": 97,
+  "wordCount": 16,
+  "links": [],
+  "headings": [
+    {
+      "level": 1,
+      "text": "JavaScript required"
+    }
+  ],
+  "siteName": "Epic on FHIR"
+}

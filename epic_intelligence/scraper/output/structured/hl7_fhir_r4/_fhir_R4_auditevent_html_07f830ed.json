@@ -1,0 +1,129 @@
+{
+  "url": "https://hl7.org/fhir/R4/auditevent.html",
+  "fileId": "_fhir_R4_auditevent_html_07f830ed",
+  "title": "AuditEvent - FHIR v4.0.1Identifier for a family of the event.  For example, a menu item, program, rule, policy, function code, application name or URL. It identifies the performed functionType of event. (Strength=Extensible)Identifier for the category of eventSub-type of event. (Strength=Extensible)Indicator for type of action performed during the event that generated the auditIndicator for type of action performed during the event that generated the event. (Strength=Required)The period during which the activity occurredThe time when the event was recordedIndicates whether the event succeeded or failedIndicates whether the event succeeded or failed. (Strength=Required)A free text description of the outcome of the eventThe purposeOfUse (reason) that was used during the event being recordedThe reason the activity took place. (Strength=Extensible)Specification of the participation type the user plays when performing the eventThe Participation type of the agent to the event. (Strength=Extensible)The security role that the user was acting under, that come from local codes defined by the access control security system (e.g. RBAC, ABAC) used in the local contextWhat security role enabled the agent to participate in the event. (Strength=Example)Reference to who this agent is that was involved in the eventAlternative agent Identifier. For a human, this should be a user identifier text string from authentication system. This identifier would be one known to a common authentication system (e.g. single sign-on), if availableHuman-meaningful name for the agentIndicator that the user is or is not the requestor, or initiator, for the event being auditedWhere the event occurredThe policy or plan that authorized the activity being recorded. Typically, a single activity may have multiple applicable policies, such as patient consent, guarantor funding, etc. The policy would also indicate the security token usedType of media involved. Used when the event is about exporting/importing onto mediaUsed when the event is about exporting/importing onto media. (Strength=Extensible)The reason (purpose of use), specific to this agent, that was used during the event being recordedThe reason the activity took place. (Strength=Extensible)An identifier for the network access point of the user device for the audit eventAn identifier for the type of network access point that originated the audit eventThe type of network access point of this agent in the audit event. (Strength=Required)Logical source location within the healthcare enterprise network.  For example, a hospital or other provider location within a multi-entity provider groupIdentifier of the source where the event was detectedCode specifying the type of source where event originatedCode specifying the type of system that detected and recorded the event. (Strength=Extensible)Identifies a specific instance of the entity. The reference should be version specificThe type of the object that was involved in this audit eventCode for the entity type involved in the audit event. (Strength=Extensible)Code representing the role the entity played in the event being auditedCode representing the role the entity played in the audit event. (Strength=Extensible)Identifier for the data life-cycle stage for the entityIdentifier for the data life-cycle stage for the entity. (Strength=Extensible)Security labels for the identified entitySecurity Labels from the Healthcare Privacy and Security Classification System. (Strength=Extensible)A name of the entity in the audit eventText that describes the entity in more detailThe query parameters for a query-type entitiesThe type of extra detail provided in the valueThe  value of the extra detailLogical network location for application activity, if the activity has a network locationAn actor taking an active role in the event or activity that is loggedThe system that is reporting the eventTagged value pairs for conveying additional information about the entitySpecific instances of data or objects that have been accessedIdentifier for a family of the event.  For example, a menu item, program, rule, policy, function code, application name or URL. It identifies the performed functionType of event. (Strength=Extensible)Identifier for the category of eventSub-type of event. (Strength=Extensible)Indicator for type of action performed during the event that generated the auditIndicator for type of action performed during the event that generated the event. (Strength=Required)The period during which the activity occurredThe time when the event was recordedIndicates whether the event succeeded or failedIndicates whether the event succeeded or failed. (Strength=Required)A free text description of the outcome of the eventThe purposeOfUse (reason) that was used during the event being recordedThe reason the activity took place. (Strength=Extensible)Specification of the participation type the user plays when performing the eventThe Participation type of the agent to the event. (Strength=Extensible)The security role that the user was acting under, that come from local codes defined by the access control security system (e.g. RBAC, ABAC) used in the local contextWhat security role enabled the agent to participate in the event. (Strength=Example)Reference to who this agent is that was involved in the eventAlternative agent Identifier. For a human, this should be a user identifier text string from authentication system. This identifier would be one known to a common authentication system (e.g. single sign-on), if availableHuman-meaningful name for the agentIndicator that the user is or is not the requestor, or initiator, for the event being auditedWhere the event occurredThe policy or plan that authorized the activity being recorded. Typically, a single activity may have multiple applicable policies, such as patient consent, guarantor funding, etc. The policy would also indicate the security token usedType of media involved. Used when the event is about exporting/importing onto mediaUsed when the event is about exporting/importing onto media. (Strength=Extensible)The reason (purpose of use), specific to this agent, that was used during the event being recordedThe reason the activity took place. (Strength=Extensible)An identifier for the network access point of the user device for the audit eventAn identifier for the type of network access point that originated the audit eventThe type of network access point of this agent in the audit event. (Strength=Required)Logical source location within the healthcare enterprise network.  For example, a hospital or other provider location within a multi-entity provider groupIdentifier of the source where the event was detectedCode specifying the type of source where event originatedCode specifying the type of system that detected and recorded the event. (Strength=Extensible)Identifies a specific instance of the entity. The reference should be version specificThe type of the object that was involved in this audit eventCode for the entity type involved in the audit event. (Strength=Extensible)Code representing the role the entity played in the event being auditedCode representing the role the entity played in the audit event. (Strength=Extensible)Identifier for the data life-cycle stage for the entityIdentifier for the data life-cycle stage for the entity. (Strength=Extensible)Security labels for the identified entitySecurity Labels from the Healthcare Privacy and Security Classification System. (Strength=Extensible)A name of the entity in the audit eventText that describes the entity in more detailThe query parameters for a query-type entitiesThe type of extra detail provided in the valueThe  value of the extra detailLogical network location for application activity, if the activity has a network locationAn actor taking an active role in the event or activity that is loggedThe system that is reporting the eventTagged value pairs for conveying additional information about the entitySpecific instances of data or objects that have been accessed",
+  "description": "",
+  "crawledAt": "2026-05-16T14:44:35.276Z",
+  "depth": 1,
+  "textLength": 51109,
+  "wordCount": 6534,
+  "links": [
+    "https://hl7.org/fhir/R4/secpriv-module.html",
+    "https://hl7.org/fhir/R4/auditevent.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/security.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-device.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-patient.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-practitioner.html",
+    "https://hl7.org/fhir/R4/valueset-audit-event-sub-type.html",
+    "https://hl7.org/fhir/R4/provenance.html",
+    "https://hl7.org/fhir/R4/formats.html",
+    "https://hl7.org/fhir/R4/auditevent-definitions.html",
+    "https://hl7.org/fhir/R4/domainresource.html",
+    "https://hl7.org/fhir/R4/resource.html",
+    "https://hl7.org/fhir/R4/elementdefinition-definitions.html",
+    "https://hl7.org/fhir/R4/datatypes.html",
+    "https://hl7.org/fhir/R4/valueset-audit-event-type.html",
+    "https://hl7.org/fhir/R4/terminologies.html",
+    "https://hl7.org/fhir/R4/valueset-audit-event-action.html",
+    "https://hl7.org/fhir/R4/valueset-audit-event-outcome.html",
+    "https://hl7.org/fhir/R4/v3/PurposeOfUse/vs.html",
+    "https://hl7.org/fhir/R4/backboneelement.html",
+    "https://hl7.org/fhir/R4/valueset-participation-role-type.html",
+    "https://hl7.org/fhir/R4/valueset-security-role-type.html",
+    "https://hl7.org/fhir/R4/references.html",
+    "https://hl7.org/fhir/R4/practitionerrole.html",
+    "https://hl7.org/fhir/R4/practitioner.html",
+    "https://hl7.org/fhir/R4/organization.html",
+    "https://hl7.org/fhir/R4/device.html",
+    "https://hl7.org/fhir/R4/patient.html",
+    "https://hl7.org/fhir/R4/relatedperson.html",
+    "https://hl7.org/fhir/R4/location.html",
+    "https://hl7.org/fhir/R4/valueset-dicm-405-mediatype.html",
+    "https://hl7.org/fhir/R4/valueset-network-type.html",
+    "https://hl7.org/fhir/R4/valueset-audit-source-type.html",
+    "https://hl7.org/fhir/R4/conformance-rules.html",
+    "https://hl7.org/fhir/R4/resourcelist.html",
+    "https://hl7.org/fhir/R4/valueset-audit-entity-type.html",
+    "https://hl7.org/fhir/R4/valueset-object-role.html",
+    "https://hl7.org/fhir/R4/valueset-object-lifecycle-events.html",
+    "https://hl7.org/fhir/R4/valueset-security-labels.html",
+    "https://hl7.org/fhir/R4/xml.html",
+    "https://hl7.org/fhir/R4/narrative.html",
+    "https://hl7.org/fhir/R4/extensibility.html",
+    "https://hl7.org/fhir/R4/json.html",
+    "https://hl7.org/fhir/R4/rdf.html",
+    "https://hl7.org/fhir/R4/diff.html",
+    "https://hl7.org/fhir/R4/auditevent-version-maps.html",
+    "https://hl7.org/fhir/R4/auditevent-profiles.html",
+    "https://hl7.org/fhir/R4/auditevent.profile.xml.html",
+    "https://hl7.org/fhir/R4/auditevent.profile.json.html",
+    "https://hl7.org/fhir/R4/auditevent.xsd",
+    "https://hl7.org/fhir/R4/auditevent.sch",
+    "https://hl7.org/fhir/R4/auditevent.schema.json.html",
+    "https://hl7.org/fhir/R4/auditevent.shex.html",
+    "https://hl7.org/fhir/R4/auditevent-dependencies.html",
+    "https://hl7.org/fhir/R4/fhirpath.html",
+    "https://hl7.org/fhir/R4/codesystem-dicom-dcim.html",
+    "https://hl7.org/fhir/R4/audit-event-example-vread.html",
+    "https://hl7.org/fhir/R4/valueset-type-restful-interaction.html",
+    "https://hl7.org/fhir/R4/audit-event-example-search.html",
+    "https://hl7.org/fhir/R4/operationoutcome.html",
+    "https://hl7.org/fhir/R4/http.html",
+    "https://hl7.org/fhir/R4/codesystem-resource-types.html",
+    "https://hl7.org/fhir/R4/auditevent-example-error.html",
+    "https://hl7.org/fhir/R4/search.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "6.4  Resource AuditEvent - Content"
+    },
+    {
+      "level": 2,
+      "text": "6.4.1 Scope and Usage"
+    },
+    {
+      "level": 2,
+      "text": "6.4.2 Background and Context"
+    },
+    {
+      "level": 2,
+      "text": "6.4.3 \nResource Content"
+    },
+    {
+      "level": 3,
+      "text": "6.4.3.1 \nTerminology Bindings"
+    },
+    {
+      "level": 3,
+      "text": "6.4.3.2 Constraints"
+    },
+    {
+      "level": 3,
+      "text": "6.4.3.3  Using Coded Values"
+    },
+    {
+      "level": 3,
+      "text": "6.4.3.4  Event codes for Common Scenarios"
+    },
+    {
+      "level": 3,
+      "text": "6.4.3.5 Encoding a FHIR operation outcome"
+    },
+    {
+      "level": 3,
+      "text": "6.4.3.6  PurposeOfEvent and PurposeOfUse"
+    },
+    {
+      "level": 2,
+      "text": "6.4.4 Search Parameters"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}
