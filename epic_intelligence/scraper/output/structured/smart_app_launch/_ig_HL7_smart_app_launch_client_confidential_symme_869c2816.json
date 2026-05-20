@@ -1,0 +1,36 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/client-confidential-symmetric.html",
+  "fileId": "_ig_HL7_smart_app_launch_client_confidential_symme_869c2816",
+  "title": "Client Authentication: Symmetric (shared secret) - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:21.258Z",
+  "depth": 1,
+  "textLength": 1534,
+  "wordCount": 204,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/client-authentication.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/client-confidential-symmetric.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/app-launch.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/client-confidential-asymmetric.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/backend-services.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Client Authentication: Symmetric (shared secret)"
+    },
+    {
+      "level": 3,
+      "text": "Profile Audience and Scope"
+    },
+    {
+      "level": 3,
+      "text": "Authentication using a client_secret"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

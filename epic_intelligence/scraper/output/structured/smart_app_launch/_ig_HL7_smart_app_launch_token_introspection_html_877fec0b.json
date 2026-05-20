@@ -1,0 +1,40 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/token-introspection.html",
+  "fileId": "_ig_HL7_smart_app_launch_token_introspection_html_877fec0b",
+  "title": "Token Introspection - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:52.476Z",
+  "depth": 1,
+  "textLength": 3571,
+  "wordCount": 487,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/token-introspection.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/scopes-and-launch-context.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Token Introspection"
+    },
+    {
+      "level": 3,
+      "text": "Required fields in the introspection response"
+    },
+    {
+      "level": 3,
+      "text": "Conditional fields in the introspection response"
+    },
+    {
+      "level": 3,
+      "text": "Authorization to perform Token Introspection"
+    },
+    {
+      "level": 3,
+      "text": "Example Request and Response"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

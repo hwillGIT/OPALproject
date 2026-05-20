@@ -1,0 +1,48 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/example-app-launch-symmetric-auth.html",
+  "fileId": "_ig_HL7_smart_app_launch_example_app_launch_symmet_223e0a1c",
+  "title": "Example App Launch for Symmetric Client Auth - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:25.961Z",
+  "depth": 1,
+  "textLength": 13137,
+  "wordCount": 439,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/examples.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/example-app-launch-symmetric-auth.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Example App Launch for Symmetric Client Auth"
+    },
+    {
+      "level": 3,
+      "text": "Launch App"
+    },
+    {
+      "level": 3,
+      "text": "Retrieve .well-known/smart-configuration"
+    },
+    {
+      "level": 3,
+      "text": "Obtain authorization code"
+    },
+    {
+      "level": 3,
+      "text": "Retrieve access token"
+    },
+    {
+      "level": 3,
+      "text": "Access FHIR API"
+    },
+    {
+      "level": 3,
+      "text": "Refresh access token"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}
