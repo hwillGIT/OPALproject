@@ -1,0 +1,160 @@
+{
+  "url": "https://hl7.org/fhir/R4/appointment.html",
+  "fileId": "_fhir_R4_appointment_html_adec8d34",
+  "title": "Appointment - FHIR v4.0.1This records identifiers associated with this appointment concern that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation)The overall status of the Appointment. Each of the participants has their own participation status which indicates their involvement in the process, however this status indicates the shared status (this element modifies the meaning of other elements)The free/busy status of an appointment. (Strength=Required)The coded reason for the appointment being cancelled. This is often used in reporting/billing/futher processing to determine if further actions are required, or specific fees apply (Strength=Example)A broad categorization of the service that is to be performed during this appointment (Strength=Example)The specific service that is to be performed during this appointment (Strength=Example)The specialty of a practitioner that would be required to perform the service requested in this appointment (Strength=Preferred)The style of appointment or patient that has been booked in the slot (not service type) (Strength=Preferred)The coded reason that this appointment is being scheduled. This is more clinical than administrativeThe Reason for the appointment to take place. (Strength=Preferred)Reason the appointment has been scheduled to take place, as specified using information from another resource. When the patient arrives and the encounter begins it may be used as the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a ProcedureThe priority of the appointment. Can be used to make informed decisions if needing to re-prioritize appointments. (The iCal Standard specifies 0 as undefined, 1 as highest, 9 as lowest priority)The brief description of the appointment as would be shown on a subject line in a meeting request, or appointment list. Detailed or expanded information should be put in the comment fieldAdditional information to support the appointment provided when making the appointmentDate/Time that the appointment is to take placeDate/Time that the appointment is to concludeNumber of minutes that the appointment is to take. This can be less than the duration between the start and end times.  For example, where the actual time of appointment is only an estimate or if a 30 minute appointment is being requested, but any time would work.  Also, if there is, for example, a planned 15 minute break in the middle of a long appointment, the duration may be 15 minutes less than the difference between the start and endThe slots from the participants' schedules that will be filled by the appointmentThe date that this appointment was initially created. This could be different to the meta.lastModified value on the initial entry, as this could have been before the resource was created on the FHIR server, and should remain unchanged over the lifespan of the appointmentAdditional comments about the appointmentWhile Appointment.comment contains information for internal use, Appointment.patientInstructions is used to capture patient facing information about the Appointment (e.g. please bring your referral or fast from 8pm night before)The service request this appointment is allocated to assess (e.g. incoming referral or procedure request)A set of date ranges (potentially including times) that the appointment is preferred to be scheduled within.\n\nThe duration (usually in minutes) could also be provided to indicate the length of the appointment to fill and populate the start/end times for the actual allocated time. However, in other situations the duration may be calculated by the scheduling systemRole of participant in the appointmentRole of participant in encounter. (Strength=Extensible)A Person, Location/HealthcareService or Device that is participating in the appointmentWhether this participant is required to be present at the meeting. This covers a use-case where two doctors need to meet to discuss the results for a specific patient, and the patient is not required to be presentIs the Participant required to attend the appointment. (Strength=Required)Participation status of the actorThe Participation status of an appointment. (Strength=Required)Participation period of the actorList of participants involved in the appointmentThis records identifiers associated with this appointment concern that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation)The overall status of the Appointment. Each of the participants has their own participation status which indicates their involvement in the process, however this status indicates the shared status (this element modifies the meaning of other elements)The free/busy status of an appointment. (Strength=Required)The coded reason for the appointment being cancelled. This is often used in reporting/billing/futher processing to determine if further actions are required, or specific fees apply (Strength=Example)A broad categorization of the service that is to be performed during this appointment (Strength=Example)The specific service that is to be performed during this appointment (Strength=Example)The specialty of a practitioner that would be required to perform the service requested in this appointment (Strength=Preferred)The style of appointment or patient that has been booked in the slot (not service type) (Strength=Preferred)The coded reason that this appointment is being scheduled. This is more clinical than administrativeThe Reason for the appointment to take place. (Strength=Preferred)Reason the appointment has been scheduled to take place, as specified using information from another resource. When the patient arrives and the encounter begins it may be used as the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a ProcedureThe priority of the appointment. Can be used to make informed decisions if needing to re-prioritize appointments. (The iCal Standard specifies 0 as undefined, 1 as highest, 9 as lowest priority)The brief description of the appointment as would be shown on a subject line in a meeting request, or appointment list. Detailed or expanded information should be put in the comment fieldAdditional information to support the appointment provided when making the appointmentDate/Time that the appointment is to take placeDate/Time that the appointment is to concludeNumber of minutes that the appointment is to take. This can be less than the duration between the start and end times.  For example, where the actual time of appointment is only an estimate or if a 30 minute appointment is being requested, but any time would work.  Also, if there is, for example, a planned 15 minute break in the middle of a long appointment, the duration may be 15 minutes less than the difference between the start and endThe slots from the participants' schedules that will be filled by the appointmentThe date that this appointment was initially created. This could be different to the meta.lastModified value on the initial entry, as this could have been before the resource was created on the FHIR server, and should remain unchanged over the lifespan of the appointmentAdditional comments about the appointmentWhile Appointment.comment contains information for internal use, Appointment.patientInstructions is used to capture patient facing information about the Appointment (e.g. please bring your referral or fast from 8pm night before)The service request this appointment is allocated to assess (e.g. incoming referral or procedure request)A set of date ranges (potentially including times) that the appointment is preferred to be scheduled within.\n\nThe duration (usually in minutes) could also be provided to indicate the length of the appointment to fill and populate the start/end times for the actual allocated time. However, in other situations the duration may be calculated by the scheduling systemRole of participant in the appointmentRole of participant in encounter. (Strength=Extensible)A Person, Location/HealthcareService or Device that is participating in the appointmentWhether this participant is required to be present at the meeting. This covers a use-case where two doctors need to meet to discuss the results for a specific patient, and the patient is not required to be presentIs the Participant required to attend the appointment. (Strength=Required)Participation status of the actorThe Participation status of an appointment. (Strength=Required)Participation period of the actorList of participants involved in the appointment",
+  "description": "",
+  "crawledAt": "2026-05-16T14:44:06.724Z",
+  "depth": 0,
+  "textLength": 58093,
+  "wordCount": 7367,
+  "links": [
+    "https://hl7.org/fhir/R4/workflow-module.html",
+    "https://hl7.org/fhir/R4/appointment.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/security.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-device.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-patient.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-practitioner.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-relatedperson.html",
+    "https://hl7.org/fhir/R4/slot.html",
+    "https://hl7.org/fhir/R4/schedule.html",
+    "https://hl7.org/fhir/R4/appointmentresponse.html",
+    "https://hl7.org/fhir/R4/careplan.html",
+    "https://hl7.org/fhir/R4/encounter.html",
+    "https://hl7.org/fhir/R4/imagingstudy.html",
+    "https://hl7.org/fhir/R4/formats.html",
+    "https://hl7.org/fhir/R4/appointment-definitions.html",
+    "https://hl7.org/fhir/R4/conformance-rules.html",
+    "https://hl7.org/fhir/R4/domainresource.html",
+    "https://hl7.org/fhir/R4/resource.html",
+    "https://hl7.org/fhir/R4/elementdefinition-definitions.html",
+    "https://hl7.org/fhir/R4/datatypes.html",
+    "https://hl7.org/fhir/R4/valueset-appointmentstatus.html",
+    "https://hl7.org/fhir/R4/terminologies.html",
+    "https://hl7.org/fhir/R4/valueset-appointment-cancellation-reason.html",
+    "https://hl7.org/fhir/R4/valueset-service-category.html",
+    "https://hl7.org/fhir/R4/valueset-service-type.html",
+    "https://hl7.org/fhir/R4/valueset-c80-practice-codes.html",
+    "https://hl7.org/fhir/R4/v2/0276/index.html",
+    "https://hl7.org/fhir/R4/valueset-encounter-reason.html",
+    "https://hl7.org/fhir/R4/references.html",
+    "https://hl7.org/fhir/R4/condition.html",
+    "https://hl7.org/fhir/R4/procedure.html",
+    "https://hl7.org/fhir/R4/observation.html",
+    "https://hl7.org/fhir/R4/immunizationrecommendation.html",
+    "https://hl7.org/fhir/R4/resourcelist.html",
+    "https://hl7.org/fhir/R4/servicerequest.html",
+    "https://hl7.org/fhir/R4/backboneelement.html",
+    "https://hl7.org/fhir/R4/valueset-encounter-participant-type.html",
+    "https://hl7.org/fhir/R4/patient.html",
+    "https://hl7.org/fhir/R4/practitioner.html",
+    "https://hl7.org/fhir/R4/practitionerrole.html",
+    "https://hl7.org/fhir/R4/relatedperson.html",
+    "https://hl7.org/fhir/R4/device.html",
+    "https://hl7.org/fhir/R4/healthcareservice.html",
+    "https://hl7.org/fhir/R4/location.html",
+    "https://hl7.org/fhir/R4/valueset-participantrequired.html",
+    "https://hl7.org/fhir/R4/valueset-participationstatus.html",
+    "https://hl7.org/fhir/R4/xml.html",
+    "https://hl7.org/fhir/R4/narrative.html",
+    "https://hl7.org/fhir/R4/extensibility.html",
+    "https://hl7.org/fhir/R4/json.html",
+    "https://hl7.org/fhir/R4/rdf.html",
+    "https://hl7.org/fhir/R4/diff.html",
+    "https://hl7.org/fhir/R4/appointment-version-maps.html",
+    "https://hl7.org/fhir/R4/appointment-profiles.html",
+    "https://hl7.org/fhir/R4/appointment.profile.xml.html",
+    "https://hl7.org/fhir/R4/appointment.profile.json.html",
+    "https://hl7.org/fhir/R4/appointment.xsd",
+    "https://hl7.org/fhir/R4/appointment.sch",
+    "https://hl7.org/fhir/R4/appointment.schema.json.html",
+    "https://hl7.org/fhir/R4/appointment.shex.html",
+    "https://hl7.org/fhir/R4/appointment-dependencies.html",
+    "https://hl7.org/fhir/R4/fhirpath.html",
+    "https://hl7.org/fhir/R4/search.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "12.10  Resource Appointment - Content"
+    },
+    {
+      "level": 2,
+      "text": "12.10.1 Scope and Usage"
+    },
+    {
+      "level": 3,
+      "text": "12.10.1.1 The basic workflow to create an appointment"
+    },
+    {
+      "level": 3,
+      "text": "12.10.1.2 There are 2 typical workflows that occur with appointments"
+    },
+    {
+      "level": 2,
+      "text": "12.10.2 Boundaries and Relationships"
+    },
+    {
+      "level": 3,
+      "text": "12.10.2.1  Appointment Request/Response Pattern"
+    },
+    {
+      "level": 3,
+      "text": "12.10.2.2 Appointment Statuses and Encounters"
+    },
+    {
+      "level": 3,
+      "text": "12.10.2.3 Appointment Locations and Participation"
+    },
+    {
+      "level": 2,
+      "text": "12.10.3 \nResource Content"
+    },
+    {
+      "level": 3,
+      "text": "12.10.3.1 \nTerminology Bindings"
+    },
+    {
+      "level": 3,
+      "text": "12.10.3.2 Constraints"
+    },
+    {
+      "level": 2,
+      "text": "12.10.4 Typical Status Transition Examples:"
+    },
+    {
+      "level": 3,
+      "text": "12.10.4.1 Typical flow of statuses for an appointment:"
+    },
+    {
+      "level": 3,
+      "text": "12.10.4.2 Flow for the rejection/cancellation of an appointment"
+    },
+    {
+      "level": 3,
+      "text": "12.10.4.3 Flow for re-negotiation:"
+    },
+    {
+      "level": 3,
+      "text": "12.10.4.4 Flow for a patient no-show:"
+    },
+    {
+      "level": 3,
+      "text": "12.10.4.5 Flow for a patient waitlist:"
+    },
+    {
+      "level": 2,
+      "text": "12.10.5 Notes:"
+    },
+    {
+      "level": 2,
+      "text": "12.10.6 Search Parameters"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}

@@ -1,0 +1,120 @@
+{
+  "url": "https://hl7.org/fhir/R4/allergyintolerance.html",
+  "fileId": "_fhir_R4_allergyintolerance_html_a0b669dc",
+  "title": "AllergyIntolerance - FHIR v4.0.1Business identifiers assigned to this AllergyIntolerance by the performer or other systems which remain constant as the resource is updated and propagates from server to serverThe clinical status of the allergy or intolerance (this element modifies the meaning of other elements)The clinical status of the allergy or intolerance. (Strength=Required)Assertion about certainty associated with the propensity, or potential risk, of a reaction to the identified substance (including pharmaceutical product) (this element modifies the meaning of other elements)Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified substance. (Strength=Required)Identification of the underlying physiological mechanism for the reaction riskIdentification of the underlying physiological mechanism for a Reaction Risk. (Strength=Required)Category of the identified substanceCategory of an identified substance associated with allergies or intolerances. (Strength=Required)Estimate of the potential clinical harm, or seriousness, of the reaction to the identified substanceEstimate of the potential clinical harm, or seriousness, of a reaction to an identified substance. (Strength=Required)Code for an allergy or intolerance statement (either a positive or a negated/excluded statement).  This may be a code for a substance or pharmaceutical product that is considered to be responsible for the adverse reaction risk (e.g., \"Latex\"), an allergy or intolerance condition (e.g., \"Latex allergy\"), or a negated/excluded code for a specific substance or class (e.g., \"No latex allergy\") or a general or categorical negated statement (e.g.,  \"No known allergy\", \"No known drug allergies\").  Note: the substance for a specific reaction may be different from the substance identified as the cause of the risk, but it must be consistent with it. For instance, it may be a more specific substance (e.g. a brand medication) or a composite product that includes the identified substance. It must be clinically safe to only process the 'code' and ignore the 'reaction.substance'.  If a receiving system is unable to confirm that AllergyIntolerance.reaction.substance falls within the semantic scope of AllergyIntolerance.code, then the receiving system should ignore AllergyIntolerance.reaction.substanceType of the substance/product, allergy or intolerance condition, or negation/exclusion codes for reporting no known allergies. (Strength=Example)The patient who has the allergy or intoleranceThe encounter when the allergy or intolerance was assertedEstimated or actual date,  date-time, or age when allergy or intolerance was identifiedThe recordedDate represents when this particular AllergyIntolerance record was created in the system, which is often a system-generated dateIndividual who recorded the record and takes responsibility for its contentThe source of the information about the allergy that is recordedRepresents the date and/or time of the last known occurrence of a reaction eventAdditional narrative about the propensity for the Adverse Reaction, not captured in other fieldsIdentification of the specific substance (or pharmaceutical product) considered to be responsible for the Adverse Reaction event. Note: the substance for a specific reaction may be different from the substance identified as the cause of the risk, but it must be consistent with it. For instance, it may be a more specific substance (e.g. a brand medication) or a composite product that includes the identified substance. It must be clinically safe to only process the 'code' and ignore the 'reaction.substance'.  If a receiving system is unable to confirm that AllergyIntolerance.reaction.substance falls within the semantic scope of AllergyIntolerance.code, then the receiving system should ignore AllergyIntolerance.reaction.substanceCodes defining the type of the substance (including pharmaceutical products). (Strength=Example)Clinical symptoms and/or signs that are observed or associated with the adverse reaction eventClinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event. (Strength=Example)Text description about the reaction as a whole, including details of the manifestation if requiredRecord of the date and/or time of the onset of the ReactionClinical assessment of the severity of the reaction event as a whole, potentially considering multiple different manifestationsClinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations. (Strength=Required)Identification of the route by which the subject was exposed to the substanceA coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject. (Strength=Example)Additional text about the adverse reaction event not captured in other fieldsDetails about each adverse reaction event linked to exposure to the identified substanceBusiness identifiers assigned to this AllergyIntolerance by the performer or other systems which remain constant as the resource is updated and propagates from server to serverThe clinical status of the allergy or intolerance (this element modifies the meaning of other elements)The clinical status of the allergy or intolerance. (Strength=Required)Assertion about certainty associated with the propensity, or potential risk, of a reaction to the identified substance (including pharmaceutical product) (this element modifies the meaning of other elements)Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified substance. (Strength=Required)Identification of the underlying physiological mechanism for the reaction riskIdentification of the underlying physiological mechanism for a Reaction Risk. (Strength=Required)Category of the identified substanceCategory of an identified substance associated with allergies or intolerances. (Strength=Required)Estimate of the potential clinical harm, or seriousness, of the reaction to the identified substanceEstimate of the potential clinical harm, or seriousness, of a reaction to an identified substance. (Strength=Required)Code for an allergy or intolerance statement (either a positive or a negated/excluded statement).  This may be a code for a substance or pharmaceutical product that is considered to be responsible for the adverse reaction risk (e.g., \"Latex\"), an allergy or intolerance condition (e.g., \"Latex allergy\"), or a negated/excluded code for a specific substance or class (e.g., \"No latex allergy\") or a general or categorical negated statement (e.g.,  \"No known allergy\", \"No known drug allergies\").  Note: the substance for a specific reaction may be different from the substance identified as the cause of the risk, but it must be consistent with it. For instance, it may be a more specific substance (e.g. a brand medication) or a composite product that includes the identified substance. It must be clinically safe to only process the 'code' and ignore the 'reaction.substance'.  If a receiving system is unable to confirm that AllergyIntolerance.reaction.substance falls within the semantic scope of AllergyIntolerance.code, then the receiving system should ignore AllergyIntolerance.reaction.substanceType of the substance/product, allergy or intolerance condition, or negation/exclusion codes for reporting no known allergies. (Strength=Example)The patient who has the allergy or intoleranceThe encounter when the allergy or intolerance was assertedEstimated or actual date,  date-time, or age when allergy or intolerance was identifiedThe recordedDate represents when this particular AllergyIntolerance record was created in the system, which is often a system-generated dateIndividual who recorded the record and takes responsibility for its contentThe source of the information about the allergy that is recordedRepresents the date and/or time of the last known occurrence of a reaction eventAdditional narrative about the propensity for the Adverse Reaction, not captured in other fieldsIdentification of the specific substance (or pharmaceutical product) considered to be responsible for the Adverse Reaction event. Note: the substance for a specific reaction may be different from the substance identified as the cause of the risk, but it must be consistent with it. For instance, it may be a more specific substance (e.g. a brand medication) or a composite product that includes the identified substance. It must be clinically safe to only process the 'code' and ignore the 'reaction.substance'.  If a receiving system is unable to confirm that AllergyIntolerance.reaction.substance falls within the semantic scope of AllergyIntolerance.code, then the receiving system should ignore AllergyIntolerance.reaction.substanceCodes defining the type of the substance (including pharmaceutical products). (Strength=Example)Clinical symptoms and/or signs that are observed or associated with the adverse reaction eventClinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event. (Strength=Example)Text description about the reaction as a whole, including details of the manifestation if requiredRecord of the date and/or time of the onset of the ReactionClinical assessment of the severity of the reaction event as a whole, potentially considering multiple different manifestationsClinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations. (Strength=Required)Identification of the route by which the subject was exposed to the substanceA coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject. (Strength=Example)Additional text about the adverse reaction event not captured in other fieldsDetails about each adverse reaction event linked to exposure to the identified substance",
+  "description": "",
+  "crawledAt": "2026-05-16T14:43:58.737Z",
+  "depth": 0,
+  "textLength": 61183,
+  "wordCount": 7450,
+  "links": [
+    "https://hl7.org/fhir/R4/clinicalsummary-module.html",
+    "https://hl7.org/fhir/R4/allergyintolerance.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/security.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-patient.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-practitioner.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-relatedperson.html",
+    "https://hl7.org/fhir/R4/extensibility.html",
+    "https://hl7.org/fhir/R4/riskassessment.html",
+    "https://hl7.org/fhir/R4/immunization-definitions.html",
+    "https://hl7.org/fhir/R4/condition.html",
+    "https://hl7.org/fhir/R4/flag.html",
+    "https://hl7.org/fhir/R4/detectedissue.html",
+    "https://hl7.org/fhir/R4/adverseevent.html",
+    "https://hl7.org/fhir/R4/clinicalimpression.html",
+    "https://hl7.org/fhir/R4/familymemberhistory.html",
+    "https://hl7.org/fhir/R4/nutritionorder.html",
+    "https://hl7.org/fhir/R4/formats.html",
+    "https://hl7.org/fhir/R4/allergyintolerance-definitions.html",
+    "https://hl7.org/fhir/R4/conformance-rules.html",
+    "https://hl7.org/fhir/R4/domainresource.html",
+    "https://hl7.org/fhir/R4/resource.html",
+    "https://hl7.org/fhir/R4/elementdefinition-definitions.html",
+    "https://hl7.org/fhir/R4/datatypes.html",
+    "https://hl7.org/fhir/R4/valueset-allergyintolerance-clinical.html",
+    "https://hl7.org/fhir/R4/terminologies.html",
+    "https://hl7.org/fhir/R4/valueset-allergyintolerance-verification.html",
+    "https://hl7.org/fhir/R4/valueset-allergy-intolerance-type.html",
+    "https://hl7.org/fhir/R4/valueset-allergy-intolerance-category.html",
+    "https://hl7.org/fhir/R4/valueset-allergy-intolerance-criticality.html",
+    "https://hl7.org/fhir/R4/valueset-allergyintolerance-code.html",
+    "https://hl7.org/fhir/R4/references.html",
+    "https://hl7.org/fhir/R4/patient.html",
+    "https://hl7.org/fhir/R4/encounter.html",
+    "https://hl7.org/fhir/R4/practitioner.html",
+    "https://hl7.org/fhir/R4/practitionerrole.html",
+    "https://hl7.org/fhir/R4/relatedperson.html",
+    "https://hl7.org/fhir/R4/backboneelement.html",
+    "https://hl7.org/fhir/R4/valueset-substance-code.html",
+    "https://hl7.org/fhir/R4/valueset-clinical-findings.html",
+    "https://hl7.org/fhir/R4/valueset-reaction-event-severity.html",
+    "https://hl7.org/fhir/R4/valueset-route-codes.html",
+    "https://hl7.org/fhir/R4/xml.html",
+    "https://hl7.org/fhir/R4/narrative.html",
+    "https://hl7.org/fhir/R4/json.html",
+    "https://hl7.org/fhir/R4/rdf.html",
+    "https://hl7.org/fhir/R4/diff.html",
+    "https://hl7.org/fhir/R4/allergyintolerance-version-maps.html",
+    "https://hl7.org/fhir/R4/allergyintolerance-profiles.html",
+    "https://hl7.org/fhir/R4/allergyintolerance.profile.xml.html",
+    "https://hl7.org/fhir/R4/allergyintolerance.profile.json.html",
+    "https://hl7.org/fhir/R4/allergyintolerance.xsd",
+    "https://hl7.org/fhir/R4/allergyintolerance.sch",
+    "https://hl7.org/fhir/R4/allergyintolerance.schema.json.html",
+    "https://hl7.org/fhir/R4/allergyintolerance.shex.html",
+    "https://hl7.org/fhir/R4/allergyintolerance-dependencies.html",
+    "https://hl7.org/fhir/R4/fhirpath.html",
+    "https://hl7.org/fhir/R4/list.html",
+    "https://hl7.org/fhir/R4/search.html",
+    "https://hl7.org/fhir/R4/searchparameter-registry.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "9.1  Resource AllergyIntolerance - Content"
+    },
+    {
+      "level": 2,
+      "text": "9.1.1 Scope and Usage"
+    },
+    {
+      "level": 2,
+      "text": "9.1.2 Boundaries and Relationships"
+    },
+    {
+      "level": 2,
+      "text": "9.1.3 \nResource Content"
+    },
+    {
+      "level": 3,
+      "text": "9.1.3.1 \nTerminology Bindings"
+    },
+    {
+      "level": 3,
+      "text": "9.1.3.2 Constraints"
+    },
+    {
+      "level": 3,
+      "text": "9.1.3.3  Negated Allergies and Intolerances"
+    },
+    {
+      "level": 3,
+      "text": "9.1.3.4  Use of AllergyIntolerance.criticality"
+    },
+    {
+      "level": 3,
+      "text": "9.1.3.5  References"
+    },
+    {
+      "level": 2,
+      "text": "9.1.4 Search Parameters"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}

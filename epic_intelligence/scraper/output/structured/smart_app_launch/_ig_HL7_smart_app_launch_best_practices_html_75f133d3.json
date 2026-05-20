@@ -1,0 +1,40 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/best-practices.html",
+  "fileId": "_ig_HL7_smart_app_launch_best_practices_html_75f133d3",
+  "title": "Best Practices - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:54.065Z",
+  "depth": 1,
+  "textLength": 5865,
+  "wordCount": 889,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/best-practices.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/scopes-and-launch-context.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Best Practices"
+    },
+    {
+      "level": 3,
+      "text": "Best practices for server developers include"
+    },
+    {
+      "level": 3,
+      "text": "Best practices for app developers include"
+    },
+    {
+      "level": 3,
+      "text": "Considerations for Scope Consent"
+    },
+    {
+      "level": 3,
+      "text": "App and Server developers should consider trade-offs associated with confidential vs public app architectures"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

@@ -1,0 +1,76 @@
+{
+  "url": "https://hl7.org/fhir/R4/biologicallyderivedproduct.html",
+  "fileId": "_fhir_R4_biologicallyderivedproduct_html_7c7a52a5",
+  "title": "BiologicallyDerivedProduct - FHIR v4.0.1This records identifiers associated with this biologically derived product instance that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation)Broad category of this productBiologically Derived Product Category. (Strength=Required)A code that identifies the kind of this biologically derived product (SNOMED Ctcode)Whether the product is currently availableBiologically Derived Product Status. (Strength=Required)Procedure request to obtain this biologically derived productNumber of discrete units within this productParent product (if any)Healthcare professional who is performing the collectionThe patient or entity, such as a hospital or vendor in the case of a processed/manipulated/manufactured product, providing the productTime of product collectionDescription of of processingProcesing codeBiologically Derived Product Procedure. (Strength=Example)Substance added during processingTime of processingDescription of manipulationTime of manipulationDescription of storageStorage temperatureTemperature scale usedBiologicallyDerived Product Storage Scale. (Strength=Required)Storage timeperiodHow this product was collectedAny processing of the product during collection that does not change the fundamental nature of the product. For example adding anti-coagulants during the collection of Peripheral Blood Stem CellsAny manipulation of product post-collection that is intended to alter the product.  For example a buffy-coat enrichment or CD8 reduction of Peripheral Blood Stem Cells to make it more suitable for infusionProduct storageThis records identifiers associated with this biologically derived product instance that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation)Broad category of this productBiologically Derived Product Category. (Strength=Required)A code that identifies the kind of this biologically derived product (SNOMED Ctcode)Whether the product is currently availableBiologically Derived Product Status. (Strength=Required)Procedure request to obtain this biologically derived productNumber of discrete units within this productParent product (if any)Healthcare professional who is performing the collectionThe patient or entity, such as a hospital or vendor in the case of a processed/manipulated/manufactured product, providing the productTime of product collectionDescription of of processingProcesing codeBiologically Derived Product Procedure. (Strength=Example)Substance added during processingTime of processingDescription of manipulationTime of manipulationDescription of storageStorage temperatureTemperature scale usedBiologicallyDerived Product Storage Scale. (Strength=Required)Storage timeperiodHow this product was collectedAny processing of the product during collection that does not change the fundamental nature of the product. For example adding anti-coagulants during the collection of Peripheral Blood Stem CellsAny manipulation of product post-collection that is intended to alter the product.  For example a buffy-coat enrichment or CD8 reduction of Peripheral Blood Stem Cells to make it more suitable for infusionProduct storage",
+  "description": "",
+  "crawledAt": "2026-05-16T14:44:38.414Z",
+  "depth": 1,
+  "textLength": 26611,
+  "wordCount": 2896,
+  "links": [
+    "https://hl7.org/fhir/R4/diagnostics-module.html",
+    "https://hl7.org/fhir/R4/biologicallyderivedproduct.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/security.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition.html",
+    "https://hl7.org/fhir/R4/formats.html",
+    "https://hl7.org/fhir/R4/biologicallyderivedproduct-definitions.html",
+    "https://hl7.org/fhir/R4/domainresource.html",
+    "https://hl7.org/fhir/R4/resource.html",
+    "https://hl7.org/fhir/R4/elementdefinition-definitions.html",
+    "https://hl7.org/fhir/R4/datatypes.html",
+    "https://hl7.org/fhir/R4/valueset-product-category.html",
+    "https://hl7.org/fhir/R4/terminologies.html",
+    "https://hl7.org/fhir/R4/valueset-product-status.html",
+    "https://hl7.org/fhir/R4/references.html",
+    "https://hl7.org/fhir/R4/servicerequest.html",
+    "https://hl7.org/fhir/R4/backboneelement.html",
+    "https://hl7.org/fhir/R4/practitioner.html",
+    "https://hl7.org/fhir/R4/practitionerrole.html",
+    "https://hl7.org/fhir/R4/patient.html",
+    "https://hl7.org/fhir/R4/organization.html",
+    "https://hl7.org/fhir/R4/valueset-procedure-code.html",
+    "https://hl7.org/fhir/R4/substance.html",
+    "https://hl7.org/fhir/R4/valueset-product-storage-scale.html",
+    "https://hl7.org/fhir/R4/xml.html",
+    "https://hl7.org/fhir/R4/narrative.html",
+    "https://hl7.org/fhir/R4/extensibility.html",
+    "https://hl7.org/fhir/R4/json.html",
+    "https://hl7.org/fhir/R4/rdf.html",
+    "https://hl7.org/fhir/R4/biologicallyderivedproduct-profiles.html",
+    "https://hl7.org/fhir/R4/biologicallyderivedproduct.profile.xml.html",
+    "https://hl7.org/fhir/R4/biologicallyderivedproduct.profile.json.html",
+    "https://hl7.org/fhir/R4/biologicallyderivedproduct.xsd",
+    "https://hl7.org/fhir/R4/biologicallyderivedproduct.sch",
+    "https://hl7.org/fhir/R4/biologicallyderivedproduct.schema.json.html",
+    "https://hl7.org/fhir/R4/biologicallyderivedproduct.shex.html",
+    "https://hl7.org/fhir/R4/biologicallyderivedproduct-dependencies.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "10.11  Resource BiologicallyDerivedProduct - Content"
+    },
+    {
+      "level": 2,
+      "text": "10.11.1 Scope and Usage"
+    },
+    {
+      "level": 2,
+      "text": "10.11.2  Boundaries and Relationships"
+    },
+    {
+      "level": 2,
+      "text": "10.11.3 \nResource Content"
+    },
+    {
+      "level": 3,
+      "text": "10.11.3.1 \nTerminology Bindings"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}
