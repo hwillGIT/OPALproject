@@ -1,0 +1,36 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-brand.html",
+  "fileId": "_ig_HL7_smart_app_launch_StructureDefinition_user__b700b6ec",
+  "title": "User Access Brand (Organization) Profile - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:47:04.415Z",
+  "depth": 1,
+  "textLength": 28233,
+  "wordCount": 3134,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/artifacts.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/brands.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-brands-bundle.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-brand.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-brand-definitions.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/ValueSet-user-access-category.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-endpoint.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-brand.csv",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-brand.xlsx",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/StructureDefinition-user-access-brand.sch",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Resource Profile:\n\n    User Access Brand (Organization) Profile"
+    },
+    {
+      "level": 3,
+      "text": "Formal Views of Profile Content"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}

@@ -1,0 +1,59 @@
+{
+  "url": "https://hl7.org/fhir/R4/patient-extensions.html",
+  "fileId": "_fhir_R4_patient_extensions_html_3f6ee7ed",
+  "title": "Patient-extensions - FHIR v4.0.1",
+  "description": "",
+  "crawledAt": "2026-05-16T14:44:27.086Z",
+  "depth": 1,
+  "textLength": 3282,
+  "wordCount": 426,
+  "links": [
+    "https://hl7.org/fhir/R4/administration-module.html",
+    "https://hl7.org/fhir/R4/patient.html",
+    "https://hl7.org/fhir/R4/patient-extensions.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/extension-patient-mothersmaidenname.html",
+    "https://hl7.org/fhir/R4/extension-patient-birthplace.html",
+    "https://hl7.org/fhir/R4/extension-patient-birthtime.html",
+    "https://hl7.org/fhir/R4/extension-patient-nationality.html",
+    "https://hl7.org/fhir/R4/extension-patient-citizenship.html",
+    "https://hl7.org/fhir/R4/extension-patient-cadavericdonor.html",
+    "https://hl7.org/fhir/R4/extension-patient-congregation.html",
+    "https://hl7.org/fhir/R4/extension-patient-adoptioninfo.html",
+    "https://hl7.org/fhir/R4/extension-patient-disability.html",
+    "https://hl7.org/fhir/R4/extension-patient-importance.html",
+    "https://hl7.org/fhir/R4/extension-patient-interpreterrequired.html",
+    "https://hl7.org/fhir/R4/extension-patient-religion.html",
+    "https://hl7.org/fhir/R4/extension-patient-relatedperson.html",
+    "https://hl7.org/fhir/R4/extension-patient-genderidentity.html",
+    "https://hl7.org/fhir/R4/extension-patient-preferencetype.html",
+    "https://hl7.org/fhir/R4/extension-patient-animal.html",
+    "https://hl7.org/fhir/R4/extension-patient-proficiency.html",
+    "https://hl7.org/fhir/R4/search.html",
+    "https://hl7.org/fhir/R4/patient-extensions-Patient-age.xml.html",
+    "https://hl7.org/fhir/R4/patient-extensions-Patient-age.json.html",
+    "https://hl7.org/fhir/R4/patient-extensions-Patient-birthOrderBoolean.xml.html",
+    "https://hl7.org/fhir/R4/patient-extensions-Patient-birthOrderBoolean.json.html",
+    "https://hl7.org/fhir/R4/patient-extensions-Patient-mothersMaidenName.xml.html",
+    "https://hl7.org/fhir/R4/patient-extensions-Patient-mothersMaidenName.json.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "8.1.19  Patient HL7 Extensions"
+    },
+    {
+      "level": 3,
+      "text": "8.1.19.1 Content"
+    },
+    {
+      "level": 3,
+      "text": "8.1.19.2 Search Parameters"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}

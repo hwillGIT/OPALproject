@@ -1,0 +1,100 @@
+{
+  "url": "https://hl7.org/fhir/R4/security.html",
+  "fileId": "_fhir_R4_security_html_9658d6a3",
+  "title": "Security - FHIR v4.0.1",
+  "description": "",
+  "crawledAt": "2026-05-16T14:44:16.204Z",
+  "depth": 1,
+  "textLength": 22983,
+  "wordCount": 3514,
+  "links": [
+    "https://hl7.org/fhir/R4/secpriv-module.html",
+    "https://hl7.org/fhir/R4/security.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/provenance.html",
+    "https://hl7.org/fhir/R4/auditevent.html",
+    "https://hl7.org/fhir/R4/signatures.html",
+    "https://hl7.org/fhir/R4/security-labels.html",
+    "https://hl7.org/fhir/R4/consent.html",
+    "https://hl7.org/fhir/R4/http.html",
+    "https://hl7.org/fhir/R4/updates.html",
+    "https://hl7.org/fhir/R4/operationoutcome-example-break-the-glass.html",
+    "https://hl7.org/fhir/R4/narrative.html",
+    "https://hl7.org/fhir/R4/documents.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "6.1.0  FHIR Security"
+    },
+    {
+      "level": 2,
+      "text": "6.1.0.1 General Considerations"
+    },
+    {
+      "level": 2,
+      "text": "6.1.0.2 Security and Privacy Considerations"
+    },
+    {
+      "level": 3,
+      "text": "6.1.0.2.1 \n            Anonymous READ Access Resources"
+    },
+    {
+      "level": 3,
+      "text": "6.1.0.2.2 Business Sensitive Resources"
+    },
+    {
+      "level": 3,
+      "text": "6.1.0.2.3 Individual Sensitive"
+    },
+    {
+      "level": 3,
+      "text": "6.1.0.2.4 Patient Sensitive"
+    },
+    {
+      "level": 3,
+      "text": "6.1.0.2.5 Not classified"
+    },
+    {
+      "level": 2,
+      "text": "6.1.0.3 \nCommunications"
+    },
+    {
+      "level": 2,
+      "text": "6.1.0.4 Authentication"
+    },
+    {
+      "level": 2,
+      "text": "6.1.0.5 \nAuthorization/Access Control"
+    },
+    {
+      "level": 3,
+      "text": "6.1.0.5.1  \nAccess Control Considerations"
+    },
+    {
+      "level": 3,
+      "text": "6.1.0.5.2 \nAccess Denied Response Handling"
+    },
+    {
+      "level": 2,
+      "text": "6.1.0.6 Audit Logging"
+    },
+    {
+      "level": 2,
+      "text": "6.1.0.7 Attachments"
+    },
+    {
+      "level": 2,
+      "text": "6.1.0.8 Security Labels"
+    },
+    {
+      "level": 2,
+      "text": "6.1.0.9 Narrative"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}

@@ -1,0 +1,99 @@
+{
+  "url": "https://hl7.org/fhir/R4/coverage.html",
+  "fileId": "_fhir_R4_coverage_html_447774d4",
+  "title": "Coverage - FHIR v4.0.1A unique identifier assigned to this coverageThe status of the resource instance (this element modifies the meaning of other elements)A code specifying the state of the resource instance. (Strength=Required)The type of coverage: social program, medical plan, accident coverage (workers compensation, auto), group health or payment by an individual or organizationThe type of insurance: public health, worker compensation; private accident, auto, private health, etc.) or a direct payment by an individual or organization. (Strength=Preferred)The party who 'owns' the insurance policyThe party who has signed-up for or 'owns' the contractual relationship to the policy or to whom the benefit of the policy for services rendered to them or their family is dueThe insurer assigned ID for the SubscriberThe party who benefits from the insurance coverage; the patient when products and/or services are providedA unique identifier for a dependent under the coverageThe relationship of beneficiary (patient) to the subscriberThe relationship between the Subscriber and the Beneficiary (insured/covered party/patient). (Strength=Extensible)Time period during which the coverage is in force. A missing start date indicates the start date isn't known, a missing end date means the coverage is continuing to be in forceThe program or plan underwriter or payor including both insurance and non-insurance agreements, such as patient-pay agreementsThe order of applicability of this coverage relative to other coverages which are currently in force. Note, there may be gaps in the numbering and this does not imply primary, secondary etc. as the specific positioning of coverages depends upon the episode of careThe insurer-specific identifier for the insurer-defined network of providers to which the beneficiary may seek treatment which will be covered at the 'in-network' rate, otherwise 'out of network' terms and conditions applyWhen 'subrogation=true' this insurance instance has been included not for adjudication but to provide insurers with the details to recover costsThe policy(s) which constitute this insurance coverageThe type of classification for which an insurer-specific class label or number and optional name is provided, for example may be used to identify a class of coverage or employer group, Policy, PlanThe policy classifications, eg. Group, Plan, Class, etc. (Strength=Extensible)The alphanumeric string value associated with the insurer issued labelA short description for the classThe category of patient centric costs associated with treatmentThe types of services to which patient copayments are specified. (Strength=Extensible)The amount due from the patient for the cost categoryThe code for the specific exceptionThe types of exceptions from the part or full value of financial obligations such as copays. (Strength=Example)The timeframe during when the exception is in forceA suite of underwriter specific classifiersA suite of codes indicating exceptions or reductions to patient costs and their effective periodsA suite of codes indicating the cost category and associated amount which have been detailed in the policy and may have been  included on the health cardA unique identifier assigned to this coverageThe status of the resource instance (this element modifies the meaning of other elements)A code specifying the state of the resource instance. (Strength=Required)The type of coverage: social program, medical plan, accident coverage (workers compensation, auto), group health or payment by an individual or organizationThe type of insurance: public health, worker compensation; private accident, auto, private health, etc.) or a direct payment by an individual or organization. (Strength=Preferred)The party who 'owns' the insurance policyThe party who has signed-up for or 'owns' the contractual relationship to the policy or to whom the benefit of the policy for services rendered to them or their family is dueThe insurer assigned ID for the SubscriberThe party who benefits from the insurance coverage; the patient when products and/or services are providedA unique identifier for a dependent under the coverageThe relationship of beneficiary (patient) to the subscriberThe relationship between the Subscriber and the Beneficiary (insured/covered party/patient). (Strength=Extensible)Time period during which the coverage is in force. A missing start date indicates the start date isn't known, a missing end date means the coverage is continuing to be in forceThe program or plan underwriter or payor including both insurance and non-insurance agreements, such as patient-pay agreementsThe order of applicability of this coverage relative to other coverages which are currently in force. Note, there may be gaps in the numbering and this does not imply primary, secondary etc. as the specific positioning of coverages depends upon the episode of careThe insurer-specific identifier for the insurer-defined network of providers to which the beneficiary may seek treatment which will be covered at the 'in-network' rate, otherwise 'out of network' terms and conditions applyWhen 'subrogation=true' this insurance instance has been included not for adjudication but to provide insurers with the details to recover costsThe policy(s) which constitute this insurance coverageThe type of classification for which an insurer-specific class label or number and optional name is provided, for example may be used to identify a class of coverage or employer group, Policy, PlanThe policy classifications, eg. Group, Plan, Class, etc. (Strength=Extensible)The alphanumeric string value associated with the insurer issued labelA short description for the classThe category of patient centric costs associated with treatmentThe types of services to which patient copayments are specified. (Strength=Extensible)The amount due from the patient for the cost categoryThe code for the specific exceptionThe types of exceptions from the part or full value of financial obligations such as copays. (Strength=Example)The timeframe during when the exception is in forceA suite of underwriter specific classifiersA suite of codes indicating exceptions or reductions to patient costs and their effective periodsA suite of codes indicating the cost category and associated amount which have been detailed in the policy and may have been  included on the health card",
+  "description": "",
+  "crawledAt": "2026-05-16T14:44:09.926Z",
+  "depth": 0,
+  "textLength": 34172,
+  "wordCount": 4124,
+  "links": [
+    "https://hl7.org/fhir/R4/financial-module.html",
+    "https://hl7.org/fhir/R4/coverage.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/security.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-patient.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-relatedperson.html",
+    "https://hl7.org/fhir/R4/workflow.html",
+    "https://hl7.org/fhir/R4/contract.html",
+    "https://hl7.org/fhir/R4/insuranceplan.html",
+    "https://hl7.org/fhir/R4/account.html",
+    "https://hl7.org/fhir/R4/claim.html",
+    "https://hl7.org/fhir/R4/claimresponse.html",
+    "https://hl7.org/fhir/R4/coverageeligibilityrequest.html",
+    "https://hl7.org/fhir/R4/coverageeligibilityresponse.html",
+    "https://hl7.org/fhir/R4/devicerequest.html",
+    "https://hl7.org/fhir/R4/enrollmentrequest.html",
+    "https://hl7.org/fhir/R4/explanationofbenefit.html",
+    "https://hl7.org/fhir/R4/medicationrequest.html",
+    "https://hl7.org/fhir/R4/servicerequest.html",
+    "https://hl7.org/fhir/R4/task.html",
+    "https://hl7.org/fhir/R4/formats.html",
+    "https://hl7.org/fhir/R4/coverage-definitions.html",
+    "https://hl7.org/fhir/R4/domainresource.html",
+    "https://hl7.org/fhir/R4/resource.html",
+    "https://hl7.org/fhir/R4/elementdefinition-definitions.html",
+    "https://hl7.org/fhir/R4/datatypes.html",
+    "https://hl7.org/fhir/R4/conformance-rules.html",
+    "https://hl7.org/fhir/R4/valueset-fm-status.html",
+    "https://hl7.org/fhir/R4/terminologies.html",
+    "https://hl7.org/fhir/R4/valueset-coverage-type.html",
+    "https://hl7.org/fhir/R4/references.html",
+    "https://hl7.org/fhir/R4/patient.html",
+    "https://hl7.org/fhir/R4/relatedperson.html",
+    "https://hl7.org/fhir/R4/organization.html",
+    "https://hl7.org/fhir/R4/valueset-subscriber-relationship.html",
+    "https://hl7.org/fhir/R4/backboneelement.html",
+    "https://hl7.org/fhir/R4/valueset-coverage-class.html",
+    "https://hl7.org/fhir/R4/valueset-coverage-copay-type.html",
+    "https://hl7.org/fhir/R4/valueset-coverage-financial-exception.html",
+    "https://hl7.org/fhir/R4/xml.html",
+    "https://hl7.org/fhir/R4/narrative.html",
+    "https://hl7.org/fhir/R4/extensibility.html",
+    "https://hl7.org/fhir/R4/json.html",
+    "https://hl7.org/fhir/R4/rdf.html",
+    "https://hl7.org/fhir/R4/diff.html",
+    "https://hl7.org/fhir/R4/coverage-version-maps.html",
+    "https://hl7.org/fhir/R4/coverage-profiles.html",
+    "https://hl7.org/fhir/R4/coverage.profile.xml.html",
+    "https://hl7.org/fhir/R4/coverage.profile.json.html",
+    "https://hl7.org/fhir/R4/coverage.xsd",
+    "https://hl7.org/fhir/R4/coverage.sch",
+    "https://hl7.org/fhir/R4/coverage.schema.json.html",
+    "https://hl7.org/fhir/R4/coverage.shex.html",
+    "https://hl7.org/fhir/R4/coverage-dependencies.html",
+    "https://hl7.org/fhir/R4/search.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "13.1  Resource Coverage - Content"
+    },
+    {
+      "level": 2,
+      "text": "13.1.1 Scope and Usage"
+    },
+    {
+      "level": 2,
+      "text": "13.1.2 Boundaries and Relationships"
+    },
+    {
+      "level": 2,
+      "text": "13.1.3 \nResource Content"
+    },
+    {
+      "level": 3,
+      "text": "13.1.3.1 \nTerminology Bindings"
+    },
+    {
+      "level": 2,
+      "text": "13.1.4 Search Parameters"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}
