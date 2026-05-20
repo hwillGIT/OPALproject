@@ -25,6 +25,18 @@ Per-journey UI flow specification for the v1 iPhone app:
 - Cross-cutting error handling
 - Mapping from the prior 8-flow draft
 
+### **[opal-ui-wireframes-v1.md](opal-ui-wireframes-v1.md)**
+ASCII wireframes for the 10 v1 iPhone surfaces (S1–S10), plus
+per-journey screen sequences for §4.1–§4.10. Read alongside
+`opal-interaction-flows.md` for layout context.
+
+### **[opal-screen-designs-v1.md](opal-screen-designs-v1.md)**
+Pixel-perfect specifications for the v1 iPhone screens (390 × 844 pt
+viewport): voice surface states, response card variants, brain
+sheet (unit + assignment), critical alert, broadcast composer + ack
+tracker, interpreter session, camera handoff banner. Plus animation
+specs and accessibility requirements.
+
 ### **[manager-dashboard.md](manager-dashboard.md)**
 Companion spec for the web manager dashboard:
 - 10 views (D1–D10) covering adoption, AI routing, top queries,
@@ -33,6 +45,25 @@ Companion spec for the web manager dashboard:
 - Anchored to H13 (silent abandonment), H6 (AI awareness gap), H10
   (CCIO needs ROI), H17/H18 (renewal economics)
 - Privacy + PHI handling, data-source map, deferred work
+
+### **[manager-dashboard-wireframes.md](manager-dashboard-wireframes.md)**
+ASCII wireframes for the dashboard global chrome (top bar, left nav,
+page header) + every view D1–D10.
+
+### **[manager-dashboard-screen-designs.md](manager-dashboard-screen-designs.md)**
+Pixel-perfect specs for the reusable dashboard patterns (KPI strip,
+AI-tool card, heatmap, sparkline, distribution histogram, per-nurse
+table, trend chips, filter bar, reach-out modal) plus
+view-specific detail for D2 (AI-tool grid), D7 (audit log), and D10
+(buyer-facing ROI). Includes PDF export specs.
+
+### **[v3-design-alignment.md](v3-design-alignment.md)**
+Mapping of the existing v3 device assets in this directory to the
+10 journeys. Documents what's reusable, what's stale, what new v3
+screens are required, and what hardware affordances the v1 spec
+assumes v3 will eventually provide (ACK button, broadcast button,
+RFID, bone-conduction audio, paired patient earpiece). The eventual
+v3 design pass (post-v1 pilot) starts from this inventory.
 
 ---
 
@@ -46,14 +77,17 @@ pattern, dashboard wireframe bones) are reusable for v1.
 
 ### **[opal-ui-wireframes.md](opal-ui-wireframes.md)** — v3 reference
 Device UI wireframes (small touch screen) + dashboard wireframes.
+The device wireframes carry forward to v3 (re-anchoring documented
+in `v3-design-alignment.md`); the dashboard wireframes are
+superseded by `manager-dashboard-wireframes.md`.
 
 ### **[opal-design-system.md](opal-design-system.md)** — **reusable as-is**
 Color palette, typography, spacing, components. Used by v1 iPhone
 specs and v3 device specs equally.
 
 ### **[opal-screen-designs.md](opal-screen-designs.md)** — v3 reference
-v3 high-fidelity screens. Useful as visual reference for the
-eventual v3 design pass.
+v3 high-fidelity screens at 240 × 320 px. Useful as visual reference
+for the eventual v3 design pass.
 
 ### **[design-tokens.json](design-tokens.json)** — **reusable as-is**
 Design tokens in JSON for multi-platform use.

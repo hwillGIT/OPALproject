@@ -31,13 +31,24 @@ anchor** block citing what specifically grounds the scenario.
 | 4.9 | Aisha | Med-surg wound documentation | "LYNA, document a pressure injury on bed 18" | H14 (phone owns camera) |
 | 4.10 | Maya | Med-surg night, Spanish-only patient | "Interpreter mode, Spanish" | H5, H8; Mt. Sinai catchment + Title VI; UX-doc Flow 3 precedent |
 
-**UI/UX specs (v1 iPhone app + manager dashboard) shipped on the
-same PR:**
+**UI/UX specs (v1 iPhone app + manager dashboard + v3 alignment)
+shipped on the same PR:**
 
 - [`hardware/opalDevice/docs/ux/opal-interaction-flows.md`](hardware/opalDevice/docs/ux/opal-interaction-flows.md)
   — 10-surface inventory (S1–S10) + per-journey flows for §4.1–§4.10.
+- [`hardware/opalDevice/docs/ux/opal-ui-wireframes-v1.md`](hardware/opalDevice/docs/ux/opal-ui-wireframes-v1.md)
+  — ASCII wireframes for S1–S10 + per-journey screen sequences.
+- [`hardware/opalDevice/docs/ux/opal-screen-designs-v1.md`](hardware/opalDevice/docs/ux/opal-screen-designs-v1.md)
+  — pixel-perfect specs for v1 iPhone screens (390×844pt).
 - [`hardware/opalDevice/docs/ux/manager-dashboard.md`](hardware/opalDevice/docs/ux/manager-dashboard.md)
   — 10-view dashboard spec (D1–D10) anchored to H6, H10, H13, H17, H18.
+- [`hardware/opalDevice/docs/ux/manager-dashboard-wireframes.md`](hardware/opalDevice/docs/ux/manager-dashboard-wireframes.md)
+  — ASCII wireframes for global chrome + all 10 views.
+- [`hardware/opalDevice/docs/ux/manager-dashboard-screen-designs.md`](hardware/opalDevice/docs/ux/manager-dashboard-screen-designs.md)
+  — pixel-perfect specs for reusable patterns + D2/D7/D10 detail.
+- [`hardware/opalDevice/docs/ux/v3-design-alignment.md`](hardware/opalDevice/docs/ux/v3-design-alignment.md)
+  — maps existing v3 assets to the 10 journeys, identifies gaps
+  and required new v3 screens (post-v1-pilot work plan).
 - [`hardware/opalDevice/docs/ux/README.md`](hardware/opalDevice/docs/ux/README.md)
   — updated index distinguishing canonical v1 specs from v3 reference material.
 
@@ -229,7 +240,7 @@ squash-merge sequentially.
 | [#17](https://github.com/collabPGC/OPALproject/pull/17) | `feat/briefing-mattermost-cron` | draft | Briefing → Mattermost webhook + cron docs (A-3) |
 | [#18](https://github.com/collabPGC/OPALproject/pull/18) | `feat/pilot-site-scoring` | draft | Pilot-site scoring rubric + champion ID (D-1) |
 | [#19](https://github.com/collabPGC/OPALproject/pull/19) | `feat/baa-irb-templates` | draft | BAA + IRB workflow YAMLs + operator templates (D-2) |
-| [#20](https://github.com/collabPGC/OPALproject/pull/20) | `docs/intelligence-layer-readme` | **current** | INTELLIGENCE_LAYER.md + 10 LYNA user stories (alignment pass + §4.10 interpreter) + v1 iPhone interaction-flows spec + manager-dashboard spec + cross-refs |
+| [#20](https://github.com/collabPGC/OPALproject/pull/20) | `docs/intelligence-layer-readme` | **current** | INTELLIGENCE_LAYER.md + 10 LYNA stories + v1 iPhone wireframes + v1 screen specs + dashboard wireframes + dashboard screen specs + v3 alignment doc + cross-refs |
 
 **Cumulative test status (last full run):** 282 Python tests passed +
 1 skipped (Neo4j live-integration auto-skip when DB unreachable);
