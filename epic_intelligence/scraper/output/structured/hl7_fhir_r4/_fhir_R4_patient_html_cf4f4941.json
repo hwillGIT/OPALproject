@@ -1,0 +1,218 @@
+{
+  "url": "https://hl7.org/fhir/R4/patient.html",
+  "fileId": "_fhir_R4_patient_html_cf4f4941",
+  "title": "Patient - FHIR v4.0.1An identifier for this patientWhether this patient record is in active use. \nMany systems use this property to mark as non-current patients, such as those that have not been seen for a period of time based on an organization's business rules.\n\nIt is often used to filter patient lists to exclude inactive patients\n\nDeceased patients may also be marked as inactive for the same reasons, but may be active for some time after death (this element modifies the meaning of other elements)A name associated with the individualA contact detail (e.g. a telephone number or an email address) by which the individual may be contactedAdministrative Gender - the gender that the patient is considered to have for administration and record keeping purposesThe gender of a person used for administrative purposes. (Strength=Required)The date of birth for the individualIndicates if the individual is deceased or not (this element modifies the meaning of other elements)An address for the individualThis field contains a patient's most recent marital (civil) statusThe domestic partnership status of a person. (Strength=Extensible)Indicates whether the patient is part of a multiple (boolean) or indicates the actual birth order (integer)Image of the patientPatient's nominated care providerOrganization that is the custodian of the patient recordThe nature of the relationship between the patient and the contact personThe nature of the relationship between a patient and a contact person for that patient. (Strength=Extensible)A name associated with the contact personA contact detail for the person, e.g. a telephone number or an email addressAddress for the contact personAdministrative Gender - the gender that the contact person is considered to have for administration and record keeping purposesThe gender of a person used for administrative purposes. (Strength=Required)Organization on behalf of which the contact is acting or for which the contact is workingThe period during which this contact person or organization is valid to be contacted relating to this patientThe ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. \"en\" for English, or \"en-US\" for American English versus \"en-EN\" for England EnglishA human language. (Strength=Preferred)Indicates whether or not the patient prefers this language (over other languages he masters up a certain level)The other patient resource that the link refers toThe type of link between this patient resource and another patient resourceThe type of link between this patient resource and another patient resource. (Strength=Required)A contact party (e.g. guardian, partner, friend) for the patientA language which may be used to communicate with the patient about his or her healthLink to another patient resource that concerns the same actual patient (this element modifies the meaning of other elements)An identifier for this patientWhether this patient record is in active use. \nMany systems use this property to mark as non-current patients, such as those that have not been seen for a period of time based on an organization's business rules.\n\nIt is often used to filter patient lists to exclude inactive patients\n\nDeceased patients may also be marked as inactive for the same reasons, but may be active for some time after death (this element modifies the meaning of other elements)A name associated with the individualA contact detail (e.g. a telephone number or an email address) by which the individual may be contactedAdministrative Gender - the gender that the patient is considered to have for administration and record keeping purposesThe gender of a person used for administrative purposes. (Strength=Required)The date of birth for the individualIndicates if the individual is deceased or not (this element modifies the meaning of other elements)An address for the individualThis field contains a patient's most recent marital (civil) statusThe domestic partnership status of a person. (Strength=Extensible)Indicates whether the patient is part of a multiple (boolean) or indicates the actual birth order (integer)Image of the patientPatient's nominated care providerOrganization that is the custodian of the patient recordThe nature of the relationship between the patient and the contact personThe nature of the relationship between a patient and a contact person for that patient. (Strength=Extensible)A name associated with the contact personA contact detail for the person, e.g. a telephone number or an email addressAddress for the contact personAdministrative Gender - the gender that the contact person is considered to have for administration and record keeping purposesThe gender of a person used for administrative purposes. (Strength=Required)Organization on behalf of which the contact is acting or for which the contact is workingThe period during which this contact person or organization is valid to be contacted relating to this patientThe ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. \"en\" for English, or \"en-US\" for American English versus \"en-EN\" for England EnglishA human language. (Strength=Preferred)Indicates whether or not the patient prefers this language (over other languages he masters up a certain level)The other patient resource that the link refers toThe type of link between this patient resource and another patient resourceThe type of link between this patient resource and another patient resource. (Strength=Required)A contact party (e.g. guardian, partner, friend) for the patientA language which may be used to communicate with the patient about his or her healthLink to another patient resource that concerns the same actual patient (this element modifies the meaning of other elements)",
+  "description": "",
+  "crawledAt": "2026-05-16T14:43:52.242Z",
+  "depth": 0,
+  "textLength": 55694,
+  "wordCount": 7614,
+  "links": [
+    "https://hl7.org/fhir/R4/administration-module.html",
+    "https://hl7.org/fhir/R4/patient.html",
+    "https://hl7.org/fhir/R4/versions.html",
+    "https://hl7.org/fhir/R4/security.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-patient.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-practitioner.html",
+    "https://hl7.org/fhir/R4/compartmentdefinition-relatedperson.html",
+    "https://hl7.org/fhir/R4/ansi-patient.html",
+    "https://hl7.org/fhir/R4/patient-profiles.html",
+    "https://hl7.org/fhir/R4/patient-extensions.html",
+    "https://hl7.org/fhir/R4/datatypes.html",
+    "https://hl7.org/fhir/R4/account.html",
+    "https://hl7.org/fhir/R4/adverseevent.html",
+    "https://hl7.org/fhir/R4/allergyintolerance.html",
+    "https://hl7.org/fhir/R4/appointment.html",
+    "https://hl7.org/fhir/R4/appointmentresponse.html",
+    "https://hl7.org/fhir/R4/auditevent.html",
+    "https://hl7.org/fhir/R4/basic.html",
+    "https://hl7.org/fhir/R4/biologicallyderivedproduct.html",
+    "https://hl7.org/fhir/R4/bodystructure.html",
+    "https://hl7.org/fhir/R4/careplan.html",
+    "https://hl7.org/fhir/R4/careteam.html",
+    "https://hl7.org/fhir/R4/chargeitem.html",
+    "https://hl7.org/fhir/R4/claim.html",
+    "https://hl7.org/fhir/R4/claimresponse.html",
+    "https://hl7.org/fhir/R4/clinicalimpression.html",
+    "https://hl7.org/fhir/R4/communication.html",
+    "https://hl7.org/fhir/R4/communicationrequest.html",
+    "https://hl7.org/fhir/R4/composition.html",
+    "https://hl7.org/fhir/R4/condition.html",
+    "https://hl7.org/fhir/R4/consent.html",
+    "https://hl7.org/fhir/R4/contract.html",
+    "https://hl7.org/fhir/R4/coverage.html",
+    "https://hl7.org/fhir/R4/coverageeligibilityrequest.html",
+    "https://hl7.org/fhir/R4/coverageeligibilityresponse.html",
+    "https://hl7.org/fhir/R4/detectedissue.html",
+    "https://hl7.org/fhir/R4/device.html",
+    "https://hl7.org/fhir/R4/devicerequest.html",
+    "https://hl7.org/fhir/R4/deviceusestatement.html",
+    "https://hl7.org/fhir/R4/diagnosticreport.html",
+    "https://hl7.org/fhir/R4/documentmanifest.html",
+    "https://hl7.org/fhir/R4/documentreference.html",
+    "https://hl7.org/fhir/R4/encounter.html",
+    "https://hl7.org/fhir/R4/enrollmentrequest.html",
+    "https://hl7.org/fhir/R4/episodeofcare.html",
+    "https://hl7.org/fhir/R4/explanationofbenefit.html",
+    "https://hl7.org/fhir/R4/familymemberhistory.html",
+    "https://hl7.org/fhir/R4/flag.html",
+    "https://hl7.org/fhir/R4/goal.html",
+    "https://hl7.org/fhir/R4/group.html",
+    "https://hl7.org/fhir/R4/guidanceresponse.html",
+    "https://hl7.org/fhir/R4/imagingstudy.html",
+    "https://hl7.org/fhir/R4/immunization.html",
+    "https://hl7.org/fhir/R4/immunizationevaluation.html",
+    "https://hl7.org/fhir/R4/immunizationrecommendation.html",
+    "https://hl7.org/fhir/R4/invoice.html",
+    "https://hl7.org/fhir/R4/list.html",
+    "https://hl7.org/fhir/R4/measurereport.html",
+    "https://hl7.org/fhir/R4/media.html",
+    "https://hl7.org/fhir/R4/medicationadministration.html",
+    "https://hl7.org/fhir/R4/medicationdispense.html",
+    "https://hl7.org/fhir/R4/medicationrequest.html",
+    "https://hl7.org/fhir/R4/medicationstatement.html",
+    "https://hl7.org/fhir/R4/molecularsequence.html",
+    "https://hl7.org/fhir/R4/nutritionorder.html",
+    "https://hl7.org/fhir/R4/observation.html",
+    "https://hl7.org/fhir/R4/person.html",
+    "https://hl7.org/fhir/R4/procedure.html",
+    "https://hl7.org/fhir/R4/provenance.html",
+    "https://hl7.org/fhir/R4/questionnaireresponse.html",
+    "https://hl7.org/fhir/R4/relatedperson.html",
+    "https://hl7.org/fhir/R4/requestgroup.html",
+    "https://hl7.org/fhir/R4/researchsubject.html",
+    "https://hl7.org/fhir/R4/riskassessment.html",
+    "https://hl7.org/fhir/R4/schedule.html",
+    "https://hl7.org/fhir/R4/servicerequest.html",
+    "https://hl7.org/fhir/R4/specimen.html",
+    "https://hl7.org/fhir/R4/supplydelivery.html",
+    "https://hl7.org/fhir/R4/supplyrequest.html",
+    "https://hl7.org/fhir/R4/task.html",
+    "https://hl7.org/fhir/R4/visionprescription.html",
+    "https://hl7.org/fhir/R4/formats.html",
+    "https://hl7.org/fhir/R4/patient-definitions.html",
+    "https://hl7.org/fhir/R4/domainresource.html",
+    "https://hl7.org/fhir/R4/resource.html",
+    "https://hl7.org/fhir/R4/elementdefinition-definitions.html",
+    "https://hl7.org/fhir/R4/conformance-rules.html",
+    "https://hl7.org/fhir/R4/valueset-administrative-gender.html",
+    "https://hl7.org/fhir/R4/terminologies.html",
+    "https://hl7.org/fhir/R4/valueset-marital-status.html",
+    "https://hl7.org/fhir/R4/backboneelement.html",
+    "https://hl7.org/fhir/R4/valueset-patient-contactrelationship.html",
+    "https://hl7.org/fhir/R4/references.html",
+    "https://hl7.org/fhir/R4/organization.html",
+    "https://hl7.org/fhir/R4/valueset-languages.html",
+    "https://hl7.org/fhir/R4/valueset-all-languages.html",
+    "https://hl7.org/fhir/R4/practitioner.html",
+    "https://hl7.org/fhir/R4/practitionerrole.html",
+    "https://hl7.org/fhir/R4/valueset-link-type.html",
+    "https://hl7.org/fhir/R4/xml.html",
+    "https://hl7.org/fhir/R4/narrative.html",
+    "https://hl7.org/fhir/R4/extensibility.html",
+    "https://hl7.org/fhir/R4/json.html",
+    "https://hl7.org/fhir/R4/rdf.html",
+    "https://hl7.org/fhir/R4/diff.html",
+    "https://hl7.org/fhir/R4/patient-version-maps.html",
+    "https://hl7.org/fhir/R4/patient.profile.xml.html",
+    "https://hl7.org/fhir/R4/patient.profile.json.html",
+    "https://hl7.org/fhir/R4/patient.xsd",
+    "https://hl7.org/fhir/R4/patient.sch",
+    "https://hl7.org/fhir/R4/patient.schema.json.html",
+    "https://hl7.org/fhir/R4/patient.shex.html",
+    "https://hl7.org/fhir/R4/patient-dependencies.html",
+    "https://hl7.org/fhir/R4/fhirpath.html",
+    "https://hl7.org/fhir/R4/linkage.html",
+    "https://hl7.org/fhir/R4/observation-example-clinical-gender.html",
+    "https://hl7.org/fhir/R4/extension-patient-genderidentity.html",
+    "https://hl7.org/fhir/R4/encounter-definitions.html",
+    "https://hl7.org/fhir/R4/patient-operation-match.html",
+    "https://hl7.org/fhir/R4/operationoutcome.html",
+    "https://hl7.org/fhir/R4/extension-match-grade.html",
+    "https://hl7.org/fhir/R4/valueset-match-grade.html",
+    "https://hl7.org/fhir/R4/operation-patient-match.html",
+    "https://hl7.org/fhir/R4/extension-patient-animal.html",
+    "https://hl7.org/fhir/R4/search.html",
+    "https://hl7.org/fhir/R4/searchparameter-registry.html",
+    "https://hl7.org/fhir/R4/qa.html",
+    "https://hl7.org/fhir/R4/toc.html",
+    "https://hl7.org/fhir/R4/credits.html",
+    "https://hl7.org/fhir/R4/license.html"
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "8.1  Resource Patient - Content"
+    },
+    {
+      "level": 2,
+      "text": "8.1.1 Scope and Usage"
+    },
+    {
+      "level": 2,
+      "text": "8.1.2 \nResource Content"
+    },
+    {
+      "level": 3,
+      "text": "8.1.2.1 \nTerminology Bindings"
+    },
+    {
+      "level": 3,
+      "text": "8.1.2.2 Constraints"
+    },
+    {
+      "level": 2,
+      "text": "8.1.3 Patient ids and Patient resource ids"
+    },
+    {
+      "level": 2,
+      "text": "8.1.4 Linking Patients"
+    },
+    {
+      "level": 3,
+      "text": "8.1.4.1 Duplicate Patient records"
+    },
+    {
+      "level": 3,
+      "text": "8.1.4.2 Patient record in a Patient index"
+    },
+    {
+      "level": 3,
+      "text": "8.1.4.3 Distributed Patient record"
+    },
+    {
+      "level": 2,
+      "text": "8.1.5 Patient vs. Person vs. Patient.Link vs. Linkage"
+    },
+    {
+      "level": 2,
+      "text": "8.1.6 Patient.contact vs. RelatedPerson"
+    },
+    {
+      "level": 2,
+      "text": "8.1.7 Patient Gender and Sex"
+    },
+    {
+      "level": 2,
+      "text": "8.1.8 Mother and newborn relationships"
+    },
+    {
+      "level": 2,
+      "text": "8.1.9 Merging records"
+    },
+    {
+      "level": 2,
+      "text": "8.1.10 Patient Matching using an MPI"
+    },
+    {
+      "level": 2,
+      "text": "8.1.11 Veterinary Care"
+    },
+    {
+      "level": 2,
+      "text": "8.1.12 Search Parameters"
+    }
+  ],
+  "siteName": "HL7 FHIR R4"
+}

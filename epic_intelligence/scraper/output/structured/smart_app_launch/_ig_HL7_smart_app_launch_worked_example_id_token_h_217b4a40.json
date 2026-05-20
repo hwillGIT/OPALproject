@@ -1,0 +1,36 @@
+{
+  "url": "https://build.fhir.org/ig/HL7/smart-app-launch/worked_example_id_token.html",
+  "fileId": "_ig_HL7_smart_app_launch_worked_example_id_token_h_217b4a40",
+  "title": "Example Id Token - SMART App Launch v2.2.0",
+  "description": "",
+  "crawledAt": "2026-05-16T14:46:30.698Z",
+  "depth": 1,
+  "textLength": 4808,
+  "wordCount": 339,
+  "links": [
+    "https://build.fhir.org/ig/HL7/smart-app-launch/searchform.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/toc.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/examples.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/worked_example_id_token.html",
+    "https://build.fhir.org/ig/HL7/smart-app-launch/qa.html"
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Example Id Token"
+    },
+    {
+      "level": 3,
+      "text": "Setup"
+    },
+    {
+      "level": 3,
+      "text": "Creating an ID Token (for servers)"
+    },
+    {
+      "level": 3,
+      "text": "Validating and using an ID Token (for clients)"
+    }
+  ],
+  "siteName": "SMART App Launch"
+}
